@@ -26,7 +26,7 @@
 
 | Цаг         | Сэдэв                                                                                                            |
 | ----------- | ---------------------------------------------------------------------------------------------------------------- |
-| 00:00–00:20 | [🎬 Intro](https://docs.google.com/presentation/d/1rO9Si7HCjZwQ8k5bvc8YIXt_kID0sUtWDopBxv6kD64/edit?usp=sharing) |
+| 00:00–00:20 | [🎬 Intro](https://docs.google.com/presentation/d/1MZa9MbeeZ4we3Kulk5tbjqmMftkk9MaqCpXOlCkZzeI/edit?usp=sharing) |
 | 00:30–00:50 | [🗺️ Roadmap](#sec-roadmap)                                                                                       |
 | 00:50–01:00 | [📱 Discord-д нэгдэх](#sec-discord)                                                                              |
 | 01:00–01:05 | ☕ Break (5 мин)                                                                                                 |
