@@ -69,23 +69,22 @@ HTML гараар бичихгүйгээр **AI-аар бүтэн website** үү
 | 4   | ✍️ **Final prompt**  | Бүгдийг нэгтгэсэн structured prompt → Generate                                                                                                          |
 ## Google AI studio Веб үүсгэх 3 арга
 
-1. Screenshot
+1. Structured Prompt
 
-2. Structured Prompt
+2. Screenshot
 
 3. Бэлэн загвар жишээ (https://motionsites.ai/)
 
 
 <details>
-<summary>✍️1. Screenshot жишээ</em></summary>
+<summary>✍️1. Structured prompt жишээ</em></summary>
 
-![alt text](image-2.png)
-</details>
+👎Муу жишээ:
 
-
-<details>
-<summary>✍️ 2. Structured prompt жишээ</summary>
-
+```text
+Надад веб сайт хийж өг
+```
+👎Сайн жишээ:
 ```text
 Role: Чи 10+ жилийн туршлагатай senior web designer бөгөөд frontend developer.
        Орчин үеийн, конверс өндөртэй (conversion-focused) сайт хийдэг.
@@ -127,6 +126,14 @@ Style reference: [таалагдсан сайтын screenshot хавсарга�
  
 </details>
 
+
+<details>
+<summary>✍️ 2. Screenshot жишээ </summary>
+
+![alt text](image.png)
+
+</details>
+
 <details>
 <summary>✍️ 3. Бэлэн загвар жишээ  [motion.ai](https://motionsites.ai/) </em></summary>
 
@@ -149,70 +156,14 @@ Style reference: [таалагдсан сайтын screenshot хавсарга�
 
 </details>
 
----
 
-<details open id="sec-deploy">
-<summary><strong>🚀 Deploy + QR + Share</strong></summary>
+<details open id="sec-exercise">
+<summary><strong>📦 Өнөөдрийн дасгал</strong></summary>
 
-> 🟢 **Кредит карт шаардахгүй.** Кодоо **GitHub**-д тавиад **Vercel**-ээр deploy хийнэ — мэргэжлийн хувилбар, дараа нь шинэчлэхэд хялбар.
-
-```
-1️⃣ Export   — AI Studio-гоос кодоо татаж ав (Download / Copy code)
-              → файлуудаа нэг folder-т хий (index.html гэх мэт)
-
-2️⃣ GitHub    — github.com-д үнэгүй бүртгэл үүсгэ (картгүй)
-              → шинэ repository үүсгэ → файлуудаа upload/чирээд тавь → Commit
-
-3️⃣ Vercel    — vercel.com-д "Continue with GitHub"-ээр нэвтэр
-              → Add New → Project → дээрх repo-гоо Import
-              → Deploy дар → хэдхэн секундэд live URL гарна 🎉
-
-4️⃣ QR        — qr-code-generator.com-д URL → QR код
-
-5️⃣ Share     — Discord-д URL + QR тавь → бусдынхыг үз → 👏
-```
-
-> 🎉 **Энэ бол таны интернэтэд тавьсан анхны live сайт!** Линкээ хэнд ч илгээж чадна.
->
-> 🔁 **Дараа нь:** кодоо GitHub дээр шинэчлэхэд Vercel **автоматаар** дахин deploy хийнэ — нэг л холбосон бол цаашид амар.
-
-</details>
+> Өөрийн танилцуулга сайт үүсгэх. Жишээ [prompt](./portfolio-prompt.md)
 
 ---
-
-<details open id="sec-promptlib">
-<summary><strong>🗂️ Prompt Library — шилдэг prompt-уудаа хадгал</strong></summary>
-
-Хичээл бүрийн хамгийн сайн prompt-уудаа нэг газар хадгал → **дахин ашиглах** хувийн хэрэгсэл. Олон апп туршихгүй — нэг л энгийн хэрэгсэл хангалттай: **[Google Keep](https://keep.google.com)**.
-
-**Яаж эхлэх вэ:**
-
-1. [keep.google.com](https://keep.google.com) нээ (Google account-аар шууд ажиллана, утас+комп хоёулаа sync).
-2. **«Prompt Library»** нэртэй **label** үүсгэ.
-3. Prompt бүрийг **1 note** болгож хадгал, label-аа залга.
-
-> 📌 Өнөөдрөөс хадгалах: ① AI Studio website-ийн final prompt ② таалагдсан design prompt.
-
-</details>
-
----
-
-<details open id="sec-tools">
-<summary><strong>🧰 Tools</strong></summary>
-
-| Tool                 | Линк                                                   | Юунд                | Үнэ  |
-| -------------------- | ------------------------------------------------------ | ------------------- | ---- |
-| VSCode + Live Server | [code.visualstudio.com](https://code.visualstudio.com) | HTML бичих/харах    | Free |
-| Google AI Studio     | [aistudio.google.com](https://aistudio.google.com)     | Website үүсгэх      | Free |
-| GitHub               | [github.com](https://github.com)                       | Код хадгалах (repo) | Free |
-| Vercel               | [vercel.com](https://vercel.com)                       | Deploy (картгүй)    | Free |
-| QR Generator         | [qr-code-generator.com](https://qr-code-generator.com) | URL → QR            | Free |
-| Google Keep          | [keep.google.com](https://keep.google.com)             | Prompt Library      | Free |
-| Discord              | [discord.gg/h8MHmusCKm](https://discord.gg/h8MHmusCKm) | Анги + share        | Free |
-
-</details>
-
----
+      
 
 <details open id="sec-homework">
 <summary><strong>📦 Homework</strong></summary>
