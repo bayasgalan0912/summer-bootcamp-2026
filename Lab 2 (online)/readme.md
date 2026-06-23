@@ -102,8 +102,7 @@ HTML гараар бичихгүйгээр **AI-аар бүтэн website** үү
 Role: Чи 10+ жилийн туршлагатай senior web designer бөгөөд frontend developer.
        Орчин үеийн, конверс өндөртэй (conversion-focused) сайт хийдэг.
 
-Task: Доорх бизнес / хувийн брэндийг тусгасан, нэг хуудастай (single-page),
-      responsive landing page-ийг бүтэн HTML/CSS/JS-ээр үүсгэ.
+Task: Доорх бизнес / хувийн брэндийг тусгасан, responsive landing page-ийг NEXT.js-ээр үүсгэ.
 
 Who:
   - Нэр / бизнесийн нэр: [...]
