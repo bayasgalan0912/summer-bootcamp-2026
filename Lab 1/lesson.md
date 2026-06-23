@@ -33,10 +33,7 @@
 | 01:05–01:40 | [👩‍💻 First code: HTML](#sec-html)                                                                                 |
 | 01:40–02:10 | [🎨 Exercise: HTML intro + зорилго](#sec-exercise)                                                               |
 | 02:10–02:20 | ☕ Break (10 мин)                                                                                                |
-| 02:20–03:05 | [🌐 Portfolio site (AI Studio)](#sec-aistudio)                                                                   |
 |             |
-| 03:20–03:50 | [🚀 Deploy + QR + Share](#sec-deploy)                                                                            |
-| 03:50–04:00 | [📦 Wrap + homework](#sec-homework)                                                                              |
 
 </details>
 
@@ -155,167 +152,13 @@ VSCode-д `intro.html` нээ → доорхийг **гараараа** бич �
 
 ---
 
-<details open id="sec-aistudio">
-<summary><strong>🌐 Portfolio website — Google AI Studio</strong></summary>
-
-HTML гараар бичихгүйгээр **AI-аар бүтэн website** үүсгэе.
-
-**1. Setup**
-
-- [aistudio.google.com](https://aistudio.google.com) нээ → товч tour
-- **Үндсэн заавар (instructions)** тохируул:
-
-<details>
-<summary>📋 Жишээ System instructions <em>(хуулж тавь — copy)</em></summary>
-
-```text
-- Монгол хэлээр харилц.
-- Цэвэр, ойлгомжтой, мэргэжлийн код бич.
-- Бүх кодыг нэг файлд бөөгнөрүүлэхгүй. Тохиромжтой бүтэц, файл, модуль болгон хуваа.
-- Код бүрийг maintainable, reusable байдлаар бич.
-- Шаардлага тодорхойгүй бол таамаглахгүй, эхлээд асуулт асуу.
-- Том өөрчлөлт хийхээс өмнө төлөвлөгөөгөө товч тайлбарла.
-- Илүүдэл код, шаардлагагүй dependency, overengineering-ээс зайлсхий.
-- Шилдэг практик (best practices)-ийг баримтал.
-- Алдаа гарвал шалтгааныг тайлбарлаж, засах аргыг санал болго.
-- Эхлэгч хэрэглэгч гэж үзээд энгийн, ойлгомжтой тайлбар өг.
-- Кодын өөрчлөлтийг алхам алхмаар тайлбарла.
-- Боломжтой бол нэг дор бүх шийдлийг биш, хамгийн энгийн шийдлээс эхэл.
-- Эргэлзээтэй үед баримтгүй зүйл зохиохгүй. Мэдэхгүй бол шууд хэл.
-- Хариултыг товч боловч хангалттай дэлгэрэнгүй байлга.
-```
-
-</details>
-
-**2. Build — 4 алхам**
-
-| #   | Алхам                | Тайлбар                                                                                                                                                 |
-| --- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | 🎨 **Design prompt** | Орчин үеийн загвараас санаа ав ([motion.ai](https://motionsites.ai/)) — таалагдсан сайтынхаа **screenshot**-ыг хавсаргаж "ийм загвартай" гэж зааж болно |
-| 2   | 🧱 **Structure**     | Hero · About · Services/Products · Contact                                                                                                              |
-| 3   | 👤 **Reuse info**    | HTML intro-д бичсэн мэдээллээ дахин ашигла                                                                                                              |
-| 4   | ✍️ **Final prompt**  | Бүгдийг нэгтгэсэн structured prompt → Generate                                                                                                          |
-
-<details>
-<summary>✍️ Жишээ structured prompt <em>(хуулж тавь — copy)</em></summary>
-
-```text
-Role: Чи 10+ жилийн туршлагатай senior web designer бөгөөд frontend developer.
-       Орчин үеийн, конверс өндөртэй (conversion-focused) сайт хийдэг.
-
-Task: Доорх хүний хувийн брэндийг тусгасан, нэг хуудастай (single-page),
-      responsive portfolio/landing website-ийг бүтэн HTML/CSS-ээр үүсгэ.
-
-Who:
-  - Нэр: [Нэр]
-  - Мэргэжил / бизнес: [...]
-  - Онцлог давуу тал (value): [...]
-  - Зорилтот хэрэглэгч: [хэнд зориулсан]
-
-Structure:
-  - Sticky navbar: нэр/лого + хэсгүүд рүү шилжих холбоос
-  - Hero: гарчиг (1 хүчтэй өгүүлбэр) + дэд өгүүлбэр + үндсэн CTA товч
-  - About: 2–3 өгүүлбэр танилцуулга + зураг
-  - Services / Products: 3 card (icon + гарчиг + товч тайлбар)
-  - Testimonials эсвэл онцлох тоо баримт (нэг хэсэг)
-  - Contact: имэйл, утас, нийгмийн сүлжээ + энгийн холбоо барих форм
-  - Footer: copyright + холбоосууд
-
-Design:
-  - Хэв маяг: цэвэрхэн, минимал, мэргэжлийн; уншихад амар
-  - Өнгө: [гол өнгө] + саармаг дэвсгэр; тогтвортой палитр (3–4 өнгө)
-  - Typography: тод hierarchy (гарчиг/текст), уншигдахуйц фонт
-  - Layout: сайхан зайтай (whitespace), grid дээр суурилсан
-  - Микро-эффект: hover, зөөлөн scroll, энгийн appear animation
-  - Responsive: mobile / tablet / desktop бүгдэд төгс харагдана
-
-Constraints:
-  - Гадны framework ашиглахгүй — цэвэр HTML + CSS (хэрэгтэй бол бага зэрэг JS)
-  - Бүх контент монгол хэл дээр, дүрэм зөв
-  - Бэлэн дуусгасан, шууд ажиллахуйц нэг файл буцаа
-
-Style reference: [таалагдсан сайтын screenshot хавсаргасан бол түүн шиг загвартай хий]
-```
-
-</details>
-
-> 💡 **Business angle:** Бизнестэй бол → landing page. Бизнесгүй бол → **personal brand**-ийн нэрийн хуудас.
-
-</details>
-
----
-
-> AI бол **co-pilot** — шийдвэр гаргагч биш. Эцсийн хариуцлага **танд**.
-
-| Дүрэм                | Тайлбар                                                 |
-| -------------------- | ------------------------------------------------------- |
-| ⚠️ **Hallucination** | AI итгэлтэйгээр буруу хэлдэг → чухал баримтыг **шалга** |
-| 🔒 **Privacy**       | Хувийн дата AI-д **бүү оруул**                          |
-
-| 🌐 **Public** | ✅ нэр, бизнес, дуртай зүйл · ❌ хаяг, утас, нууц үг, customer data |
-
-</details>
-
----
-
-<details open id="sec-deploy">
-<summary><strong>🚀 Deploy + QR + Share</strong></summary>
-
-> 🟢 **Кредит карт шаардахгүй.** Кодоо **GitHub**-д тавиад **Vercel**-ээр deploy хийнэ — мэргэжлийн хувилбар, дараа нь шинэчлэхэд хялбар.
-
-```
-1️⃣ Export   — AI Studio-гоос кодоо татаж ав (Download / Copy code)
-              → файлуудаа нэг folder-т хий (index.html гэх мэт)
-
-2️⃣ GitHub    — github.com-д үнэгүй бүртгэл үүсгэ (картгүй)
-              → шинэ repository үүсгэ → файлуудаа upload/чирээд тавь → Commit
-
-3️⃣ Vercel    — vercel.com-д "Continue with GitHub"-ээр нэвтэр
-              → Add New → Project → дээрх repo-гоо Import
-              → Deploy дар → хэдхэн секундэд live URL гарна 🎉
-
-4️⃣ QR        — qr-code-generator.com-д URL → QR код
-
-5️⃣ Share     — Discord-д URL + QR тавь → бусдынхыг үз → 👏
-```
-
-> 🎉 **Энэ бол таны интернэтэд тавьсан анхны live сайт!** Линкээ хэнд ч илгээж чадна.
->
-> 🔁 **Дараа нь:** кодоо GitHub дээр шинэчлэхэд Vercel **автоматаар** дахин deploy хийнэ — нэг л холбосон бол цаашид амар.
-
-</details>
-
----
-
-<details open id="sec-promptlib">
-<summary><strong>🗂️ Prompt Library — шилдэг prompt-уудаа хадгал</strong></summary>
-
-Хичээл бүрийн хамгийн сайн prompt-уудаа нэг газар хадгал → **дахин ашиглах** хувийн хэрэгсэл. Олон апп туршихгүй — нэг л энгийн хэрэгсэл хангалттай: **[Google Keep](https://keep.google.com)**.
-
-**Яаж эхлэх вэ:**
-
-1. [keep.google.com](https://keep.google.com) нээ (Google account-аар шууд ажиллана, утас+комп хоёулаа sync).
-2. **«Prompt Library»** нэртэй **label** үүсгэ.
-3. Prompt бүрийг **1 note** болгож хадгал, label-аа залга.
-
-> 📌 Өнөөдрөөс хадгалах: ① AI Studio website-ийн final prompt ② таалагдсан design prompt.
-
-</details>
-
----
-
 <details open id="sec-tools">
 <summary><strong>🧰 Tools</strong></summary>
 
-| Tool                 | Линк                                                   | Юунд                | Үнэ  |
-| -------------------- | ------------------------------------------------------ | ------------------- | ---- |
-| VSCode + Live Server | [code.visualstudio.com](https://code.visualstudio.com) | HTML бичих/харах    | Free |
-| Google AI Studio     | [aistudio.google.com](https://aistudio.google.com)     | Website үүсгэх      | Free |
-| GitHub               | [github.com](https://github.com)                       | Код хадгалах (repo) | Free |
-| Vercel               | [vercel.com](https://vercel.com)                       | Deploy (картгүй)    | Free |
-| QR Generator         | [qr-code-generator.com](https://qr-code-generator.com) | URL → QR            | Free |
-| Google Keep          | [keep.google.com](https://keep.google.com)             | Prompt Library      | Free |
-| Discord              | [discord.gg/h8MHmusCKm](https://discord.gg/h8MHmusCKm) | Анги + share        | Free |
+| Tool                 | Линк                                                   | Юунд             | Үнэ  |
+| -------------------- | ------------------------------------------------------ | ---------------- | ---- |
+| VSCode + Live Server | [code.visualstudio.com](https://code.visualstudio.com) | HTML бичих/харах | Free |
+| Discord              | [discord.gg/h8MHmusCKm](https://discord.gg/h8MHmusCKm) | Анги + share     | Free |
 
 </details>
 
