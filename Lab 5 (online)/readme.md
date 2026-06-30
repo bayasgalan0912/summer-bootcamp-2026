@@ -54,3 +54,5 @@
 ```
 
 3. **Github + Vercel ашиглан интернетэд байршуулах** — [Энд дар](./vercel_deployment/readme.md)
+
+![alt text](image-1.png)
