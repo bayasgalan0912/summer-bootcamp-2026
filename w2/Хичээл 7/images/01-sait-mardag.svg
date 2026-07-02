@@ -1,0 +1,30 @@
+<svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg7a" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1026"/>
+      <stop offset="1" stop-color="#161b3d"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="480" rx="24" fill="url(#bg7a)"/>
+  <text x="450" y="56" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="800">🤔 Оноо яагаад алга болдог вэ?</text>
+
+  <!-- WITHOUT DB -->
+  <rect x="50" y="100" width="380" height="320" rx="20" fill="#2a1430" stroke="#ff5470" stroke-width="3"/>
+  <text x="240" y="142" text-anchor="middle" fill="#ff8da0" font-size="22" font-weight="800">❌ DB-гүй бол</text>
+  <text x="240" y="205" text-anchor="middle" font-size="64">🧠💨</text>
+  <text x="240" y="255" text-anchor="middle" fill="#fff" font-size="19">Оноо зөвхөн "санах ойд"</text>
+  <text x="240" y="295" text-anchor="middle" fill="#ff8da0" font-size="40">🔄</text>
+  <text x="240" y="335" text-anchor="middle" fill="#fff" font-size="18">Хуудсаа Refresh хийхэд...</text>
+  <text x="240" y="380" text-anchor="middle" fill="#ff5470" font-size="22" font-weight="800">Оноо алга! 😱</text>
+
+  <!-- WITH DB -->
+  <rect x="470" y="100" width="380" height="320" rx="20" fill="#14302a" stroke="#3ddc97" stroke-width="3"/>
+  <text x="660" y="142" text-anchor="middle" fill="#7af0c0" font-size="22" font-weight="800">✅ DB-тэй бол</text>
+  <text x="660" y="205" text-anchor="middle" font-size="64">📒☁️</text>
+  <text x="660" y="255" text-anchor="middle" fill="#fff" font-size="19">Оноо "дэвтэрт" бичигдэнэ</text>
+  <text x="660" y="295" text-anchor="middle" fill="#7af0c0" font-size="40">🔄</text>
+  <text x="660" y="335" text-anchor="middle" fill="#fff" font-size="18">Refresh хийсэн ч...</text>
+  <text x="660" y="380" text-anchor="middle" fill="#3ddc97" font-size="22" font-weight="800">Оноо хэвээрээ! 🏆</text>
+
+  <text x="450" y="455" text-anchor="middle" fill="#ffd84d" font-size="18" font-weight="700">💡 Оноог үлдээхийн тулд бидэнд Database (DB) хэрэгтэй</text>
+</svg>
