@@ -4,6 +4,7 @@
 | --------------------- | ------------------------------------------------------------------- |
 
 👉 **[Жишээ тоглоом](https://ai.studio/apps/c075aff4-289c-45c8-a050-9207f9afe5ac)**
+👉 **[Слайд](https://docs.google.com/presentation/d/1gkr-FtMoqvbcnMxoqXikT_y95mFhnsXFOmQnL9j33DM/edit?usp=sharing)**
 
 # Хичээл 7 — 🦸 Баатар таах горим + 🏆 Оноогоо хадгалах (Firestore)
 
