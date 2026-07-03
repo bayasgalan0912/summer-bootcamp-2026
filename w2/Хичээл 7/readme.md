@@ -1,8 +1,7 @@
 <!-- https://create.kahoot.it/share/lesson-07-kids/dbecbd33-19b3-4553-bef4-57c0125b98ce -->
 
-| Өмнөх хичээл бататгах | [🎮 Kahoot — JSON, data.json, Vibe Coding](https://play.kahoot.it/) |
-| --------------------- | ------------------------------------------------------------------- |
-
+👉 **[Хурдан бичилтийн тэмцээн](http://typer.io/)**
+👉 **[Kahoot — JSON, data.json, Vibe Coding](https://play.kahoot.it)**
 👉 **[Жишээ тоглоом](https://ai.studio/apps/c075aff4-289c-45c8-a050-9207f9afe5ac)**
 👉 **[Слайд](https://docs.google.com/presentation/d/1gkr-FtMoqvbcnMxoqXikT_y95mFhnsXFOmQnL9j33DM/edit?usp=sharing)**
 
