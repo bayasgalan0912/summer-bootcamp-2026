@@ -1,0 +1,41 @@
+<svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg9a" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1026"/>
+      <stop offset="1" stop-color="#161b3d"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="480" rx="24" fill="url(#bg9a)"/>
+  <text x="450" y="52" text-anchor="middle" fill="#ffffff" font-size="30" font-weight="800">🗺️ Том зураг — App чинь яаж ажилладаг вэ?</text>
+
+  <!-- Player -->
+  <rect x="40" y="120" width="200" height="220" rx="20" fill="#1d2a52" stroke="#5b8cff" stroke-width="3"/>
+  <text x="140" y="185" text-anchor="middle" font-size="56">🧒</text>
+  <text x="140" y="235" text-anchor="middle" fill="#9db8ff" font-size="20" font-weight="800">ТОГЛОГЧ</text>
+  <text x="140" y="268" text-anchor="middle" fill="#fff" font-size="15">Бичнэ, тоглоно</text>
+
+  <!-- Frontend -->
+  <rect x="330" y="120" width="240" height="220" rx="20" fill="#14302a" stroke="#3ddc97" stroke-width="3"/>
+  <text x="450" y="185" text-anchor="middle" font-size="56">🖥️</text>
+  <text x="450" y="235" text-anchor="middle" fill="#7af0c0" font-size="20" font-weight="800">FRONTEND</text>
+  <text x="450" y="266" text-anchor="middle" fill="#fff" font-size="15">Тоглогчийн хардаг хэсэг</text>
+  <text x="450" y="290" text-anchor="middle" fill="#8fd9bd" font-size="14">текст · машин 🏎️ · WPM</text>
+
+  <!-- Database -->
+  <rect x="660" y="120" width="200" height="220" rx="20" fill="#332a10" stroke="#ffd84d" stroke-width="3"/>
+  <text x="760" y="185" text-anchor="middle" font-size="56">☁️📒</text>
+  <text x="760" y="235" text-anchor="middle" fill="#ffe58a" font-size="20" font-weight="800">FIRESTORE</text>
+  <text x="760" y="266" text-anchor="middle" fill="#fff" font-size="15">Оноо хадгална</text>
+  <text x="760" y="290" text-anchor="middle" fill="#d9c78f" font-size="14">name + wpm</text>
+
+  <!-- arrows -->
+  <text x="285" y="200" text-anchor="middle" fill="#ffffff" font-size="26">⌨️ →</text>
+  <text x="285" y="255" text-anchor="middle" fill="#ffffff" font-size="26">← 👀</text>
+  <text x="615" y="200" text-anchor="middle" fill="#ffffff" font-size="24">✍️ хадгална →</text>
+  <text x="615" y="255" text-anchor="middle" fill="#ffffff" font-size="24">← 📖 уншина</text>
+
+  <!-- bottom note -->
+  <rect x="60" y="380" width="780" height="70" rx="16" fill="#101637" stroke="#5b8cff" stroke-width="2"/>
+  <text x="450" y="410" text-anchor="middle" fill="#ffd84d" font-size="17" font-weight="700">📱 TikTok, Instagram ч мөн ижил бүтэцтэй: Frontend + Database</text>
+  <text x="450" y="436" text-anchor="middle" fill="#ffffff" font-size="15">Чи одоо жинхэнэ app-ын бүтцээр бүтээж байна! 💪</text>
+</svg>

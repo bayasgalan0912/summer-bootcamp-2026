@@ -1,0 +1,32 @@
+<svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg9b" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1026"/>
+      <stop offset="1" stop-color="#161b3d"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="480" rx="24" fill="url(#bg9b)"/>
+  <text x="450" y="56" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="800">⚡ WPM = Words Per Minute (минутад бичсэн үг)</text>
+
+  <!-- formula -->
+  <rect x="150" y="95" width="600" height="80" rx="18" fill="#1d2a52" stroke="#5b8cff" stroke-width="3"/>
+  <text x="450" y="145" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="800">WPM = бичсэн үгийн тоо ÷ минут</text>
+
+  <!-- levels: racing theme -->
+  <rect x="60" y="210" width="245" height="180" rx="18" fill="#2a1430" stroke="#ff5470" stroke-width="3"/>
+  <text x="182" y="272" text-anchor="middle" font-size="52">🚶</text>
+  <text x="182" y="320" text-anchor="middle" fill="#ff8da0" font-size="24" font-weight="800">20 WPM</text>
+  <text x="182" y="352" text-anchor="middle" fill="#fff" font-size="16">Дөнгөж сурч байгаа</text>
+
+  <rect x="327" y="210" width="245" height="180" rx="18" fill="#332a10" stroke="#ffd84d" stroke-width="3"/>
+  <text x="450" y="272" text-anchor="middle" font-size="52">🚗</text>
+  <text x="450" y="320" text-anchor="middle" fill="#ffe58a" font-size="24" font-weight="800">40–60 WPM</text>
+  <text x="450" y="352" text-anchor="middle" fill="#fff" font-size="16">Сайн! Ихэнх насанд хүрэгчид</text>
+
+  <rect x="594" y="210" width="245" height="180" rx="18" fill="#14302a" stroke="#3ddc97" stroke-width="3"/>
+  <text x="717" y="272" text-anchor="middle" font-size="52">🚀</text>
+  <text x="717" y="320" text-anchor="middle" fill="#7af0c0" font-size="24" font-weight="800">80+ WPM</text>
+  <text x="717" y="352" text-anchor="middle" fill="#fff" font-size="16">ПРО! Programmer түвшин</text>
+
+  <text x="450" y="445" text-anchor="middle" fill="#ffd84d" font-size="18" font-weight="700">💡 Дэлхийн рекорд 300+ WPM — чи өнөөдөр өөрийнхөө рекордыг тогтооно!</text>
+</svg>
