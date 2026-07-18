@@ -2,7 +2,7 @@
 
 ## 1. Удиртгал (Introduction)
 
-- Slide: _(нэмэгдэнэ)_
+- [Slide үзэх](https://notebooklm.google.com/notebook/6987292a-5420-47e1-8d58-928cece19d31/artifact/28daec18-1412-4e49-bd5f-fa24afc89996?utm_source=nlm_web_share&utm_medium=google_oo&utm_campaign=art_share_1&utm_content=&utm_smc=nlm_web_share_google_oo_art_share_1_)
 
 ### 1.1 Claude Code-ийн тухай
 
@@ -51,11 +51,11 @@ Claude судлах, хайх, тест хийх зэрэгт **зэрэгцээ
 
 ## 3. Дасгал ажил (Exercises)
 
-| # | Дасгал | Түвшин | Ашиглах ойлголт |
-|---|--------|--------|-----------------|
-| 1 | Файл цэгцлэгч скрипт | ⭐ | Энгийн даалгавар, файлтай ажиллах |
-| 2 | Хувийн Portfolio вэб хуудас | ⭐⭐ | CLAUDE.md, Plan Mode |
-| 3 | Шалгалтын бэлтгэл Quiz апп | ⭐⭐⭐ | Plan Mode, iteration |
+| #   | Дасгал                      | Түвшин | Ашиглах ойлголт                   |
+| --- | --------------------------- | ------ | --------------------------------- |
+| 1   | Файл цэгцлэгч скрипт        | ⭐     | Энгийн даалгавар, файлтай ажиллах |
+| 2   | Хувийн Portfolio вэб хуудас | ⭐⭐   | CLAUDE.md, Plan Mode              |
+| 3   | Шалгалтын бэлтгэл Quiz апп  | ⭐⭐⭐ | Plan Mode, iteration              |
 
 ### Дасгал 1: Файл цэгцлэгч (Downloads Organizer) ⭐
 
