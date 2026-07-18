@@ -1,35 +1,51 @@
-1. ## Intro
-   - Creative introduction video: (agent should skip) https://www.instagram.com/p/DZT9BgyN0Ej/
-   - Claude desktop Setup
-     - global instructions
-     - Enable dispatch amd capabilities
-     - connectors
-   2. Claude use cases and automations
-   3. Claude Cowork showcases
-   4. Claude Design showcases
-   5. Claude Code showcases
-   6. Skills:
-      1. intro
-      2. Use cases
-   7. Exercises: Showcase power of skills:
-      1. Install Mongolian voice to text prompt apps
-      2. Create or download pre defined skills "alex hormozi mind" and use it for business plan
-      3. Create or download pre defined skills using science based marketing books and use it for marketing plan (you dont need to read all books to create marketing and content)
-      4. Personal mentor using mamba mentality or Elon musk mind etc...
-      5. Use these skills and practice this on their own
-      6. Data analyze and Visualization
-2. Online session: Claude Cowork
-   1. Intro:
-      - Project
-      - Connectors
-      - Automations & Scheduled task
-      - Dispatch: Control your computer from app when computer is awake
-      - ...
-   2. Exercises:
-      1. self assistant: send daily briefs such as schedule and preparement using calendar, email automation, overnight news …
-      2. ...
+# Lab 8 — Claude: Автоматжуулалтаас AI Экосистем хүртэл
 
-3. Online session: Claude Design (Alternative: Google stitch for no subscription )
-   1. Intro: ...
-   2. Hands-on ...
-   3. ...
+Энэ лаб нь Claude-ийг зөвхөн чатлах хэрэгсэл биш, харин таны өмнөөс ажилладаг
+**дижитал ажилтан** болгон ашиглахыг зорино. Гурван online session-ээс бүрдэнэ:
+**Cowork** (локаль агент, автоматжуулалт), **Design** (визуал бүтээл),
+**Code** (кодын агент).
+
+- [Creative introduction video](https://www.instagram.com/p/DZT9BgyN0Ej/)
+
+---
+
+## Сессүүд
+
+| # | Session | Агуулга | Материал |
+|---|---------|---------|----------|
+| 1 | **Claude Cowork** | Projects, Connectors, Skills, Memory, PRD-first, Scheduled tasks, Dispatch | [claude-cowork.md](./claude-cowork.md) |
+| 2 | **Claude Design** | Artifacts, DESIGN.md дизайн систем, брэнд дизайн (Alternative: Google Stitch) | [claude-design.md](./claude-design.md) |
+| 3 | **Claude Code** | CLAUDE.md, Context Window, Plan Mode, MCP, Subagents | [claude-code.md](./claude-code.md) |
+
+Session бүрийн файлд: дэлгэрэнгүй тайлбар, слайд, бодит хэрэгцээт дасгалуудын
+**алхам алхмаар заавар** болон жишээ prompt-ууд багтсан.
+
+---
+
+## Суралцах зүйлс (Learning Outcomes)
+
+Лабыг дуусгаснаар та:
+
+1. **Автоматжуулалт** — календарь, имэйл зэргээ холбож өдөр тутмын ажлаа автоматжуулна _(Cowork, Дасгал 2)_
+2. **Өгөгдөл визуалчлал** — өөрийн өгөгдлөөс интерактив dashboard гаргана _(Cowork, Дасгал 1)_
+3. **Skills** — мэргэжилтний мэдлэгийг дахин ашиглагдах ур чадвар болгон хадгална _(Cowork, Дасгал 3-4)_
+4. **Memory** — Claude-д урт хугацааны санах ой тохируулж, контекстээ хадгална _(Cowork, 2.2)_
+5. **PRD-first** — барихаасаа өмнө төлөвлөж, чанартай үр дүн гаргана _(Cowork, 3.1)_
+6. **Дизайн систем** — DESIGN.md үүсгэж, брэнд материалыг мэргэжлийн түвшинд бүтээнэ _(Design)_
+7. **Кодын агент** — файл цэгцлэлтээс апп барих хүртэл ажлыг Claude Code-д даалгана _(Code)_
+
+---
+
+## Дасгалуудын тойм
+
+Бүх дасгал өдөр тутмын бодит хэрэгцээнд суурилсан бөгөөд хялбараас хүнд рүү
+эрэмбэлэгдсэн. Дэлгэрэнгүй заавар нь session бүрийн файлд байгаа.
+
+**Cowork:** Spending Dashboard → Self-Assistant (Daily Digest) → Personal Mentor Skill → Brand Skill
+
+**Design:** DESIGN.md дизайн систем үүсгэх → Чанартай Social Media постер
+
+**Code:** Файл цэгцлэгч → Portfolio вэб хуудас → Шалгалтын Quiz апп
+
+> 💡 Дасгалууд хоорондоо уялдаатай: Cowork дээр үүсгэсэн **Brand Skill** болон
+> **DESIGN.md**-ээ Design-ийн Social Media постер дасгалд дахин ашиглана.
