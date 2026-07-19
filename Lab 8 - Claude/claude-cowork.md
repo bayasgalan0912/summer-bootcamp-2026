@@ -25,7 +25,7 @@
 ```
 
 - **Dispatch:** Гар утаснаасаа компьютер дээрх Claude-г удирдаж, даалгавар өгөх боломж [3].
-
+- **Chrome Integration:** Claude Chrome Extension-ийг суулгаж, Chrome-той холбон Browser integration-ийг идэвхжүүлэх. Ингэснээр Claude нь нээлттэй tab болон веб хуудсуудтай ажиллах боломжтой.
 - connectors: Бусад аппуудтай холбогдож ажиллах. Settings -> Connectors
   Жишээ нь: Gmail, Google Calendar...
   ![alt text](image-1.png)
