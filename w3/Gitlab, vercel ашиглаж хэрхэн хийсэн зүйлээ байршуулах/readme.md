@@ -114,10 +114,9 @@ GitLab Web IDE нь GitLab-ийн вэб хөтөч дээр ажилладаг 
 
 </details>
 
+---
 
 ### 📍4. Одоо GitLab дээр байгаа төслөө Vercel ашиглан интернетэд байршуулна📍
-
-# 3. Vercel ашиглан веб сайт байршуулах
 
 1. Vercel веб сайт руу орно. (https://vercel.com/new)
 2. **Continue with Gitlab** товчийг дарна.
@@ -132,5 +131,3 @@ GitLab Web IDE нь GitLab-ийн вэб хөтөч дээр ажилладаг 
 ![Зургийн тайлбар](images/image%20copy.png)
 ---
 
-
----
