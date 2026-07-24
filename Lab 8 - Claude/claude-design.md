@@ -3,7 +3,7 @@
 ## 1. Удиртгал (Introduction)
 
 - [Slide үзэх](https://notebooklm.google.com/notebook/6987292a-5420-47e1-8d58-928cece19d31/artifact/fa90c5e6-d576-4b04-ad90-233059dd1814?utm_source=nlm_web_share&utm_medium=google_oo&utm_campaign=art_share_1&utm_content=&utm_smc=nlm_web_share_google_oo_art_share_1_)
-- _(Alternative: [Google Stitch](https://stitch.withgoogle.com) — subscription шаардахгүй)_
+- _(Alternative: [Google Stitch](./google-stitch.md) — subscription шаардахгүй, тусдаа заавартай)_ ([Intro video](https://www.youtube.com/watch?v=qaB5HF4ax9M))
 
 ### 1.1 Claude Design-ийн тухай
 
