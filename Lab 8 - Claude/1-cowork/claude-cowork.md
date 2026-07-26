@@ -28,12 +28,12 @@
 - **Chrome Integration:** Claude Chrome Extension-ийг суулгаж, Chrome-той холбон Browser integration-ийг идэвхжүүлэх. Ингэснээр Claude нь нээлттэй tab болон веб хуудсуудтай ажиллах боломжтой.
 - connectors: Бусад аппуудтай холбогдож ажиллах. Settings -> Connectors
   Жишээ нь: Gmail, Google Calendar...
-  ![alt text](image-1.png)
+  ![alt text](images/image-1.png)
 - Bring your memory to Claude: Settings -> Capabilities -> Import memory From Other AI Providers:
-  ![alt text](image.png)
+  ![alt text](images/image.png)
 
 - Enable dispatch and capabilities: Гар утаснаас удирдах (Settings -> Cowork -> Dispatch)
-  ![alt text](image-2.png)
+  ![alt text](images/image-2.png)
 
 > 💡 **Зөвлөгөө:** Монгол хэлний voice-to-text апп суулгавал prompt-оо бичихийн оронд ярьж өгч, ажлын хурдаа нэмэгдүүлж болно.
 
@@ -218,7 +218,7 @@
 **Жишээ Prompt (үндсэн):**
 
 ```text
-Хавсаргасан transactions.csv (24 сарын банкны хуулга) дээр үндэслэн
+Хавсаргасан data/transactions.csv (24 сарын банкны хуулга) дээр үндэслэн
 интерактив HTML dashboard үүсгэ:
 - Зардлыг ангиллаар автоматаар бүлэглэ
 - Сар бүрийн нийт зардлын trend график
@@ -233,7 +233,7 @@
 ```text
 Одоо чи Уоррен Баффет, Роберт Кийосаки хоёрын мэдлэгийг хослуулсан,
 20 жилийн туршлагатай хувийн санхүүгийн зөвлөх (financial advisor)
-болж дүрд ор. Миний transactions.csv (сүүлийн 12–24 сарын гүйлгээ)-г
+болж дүрд ор. Миний data/transactions.csv (сүүлийн 12–24 сарын гүйлгээ)-г
 шинжлээд, дашбордод дараах "Санхүүгийн зөвлөгөө" таб/хэсгийг нэм:
 
 1. ЭРҮҮЛ МЭНДИЙН ҮНЭЛГЭЭ — орлого/зарлагын харьцаа, хадгаламжийн түвшин

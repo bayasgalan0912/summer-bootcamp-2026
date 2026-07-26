@@ -13,12 +13,32 @@
 
 | # | Session | Агуулга | Материал |
 |---|---------|---------|----------|
-| 1 | **Claude Cowork** | Projects, Connectors, Skills, Memory, PRD-first, Scheduled tasks, Dispatch | [claude-cowork.md](./claude-cowork.md) |
-| 2 | **Claude Design** | Artifacts, DESIGN.md дизайн систем, брэнд дизайн (Alternative: Google Stitch) | [claude-design.md](./claude-design.md) |
-| 3 | **Claude Code** | CLAUDE.md, Context Window, Plan Mode, MCP, Subagents | [claude-code.md](./claude-code.md) |
+| 1 | **Claude Cowork** | Projects, Connectors, Skills, Memory, PRD-first, Scheduled tasks, Dispatch | [claude-cowork.md](./1-cowork/claude-cowork.md) |
+| 2 | **Claude Design** | Artifacts, DESIGN.md дизайн систем, брэнд дизайн (Alternative: Google Stitch) | [claude-design.md](./2-design/claude-design.md) |
+| 3 | **Claude Code** | CLAUDE.md, Context Window, Plan Mode, MCP, Subagents | [claude-code.md](./3-code/claude-code.md) |
 
 Session бүрийн файлд: дэлгэрэнгүй тайлбар, слайд, бодит хэрэгцээт дасгалуудын
 **алхам алхмаар заавар** болон жишээ prompt-ууд багтсан.
+
+---
+
+## Файлын бүтэц
+
+```
+Lab 8 - Claude/
+├── readme.md
+├── 1-cowork/
+│   ├── claude-cowork.md          # Session 1 үндсэн материал
+│   ├── claude-cowork-skill.md    # Skill үүсгэх заавар + дасгал
+│   ├── images/                   # Connectors, memory, dispatch скриншотууд
+│   ├── data/                     # transactions.csv / .xlsx (dashboard дасгал)
+│   └── skills/                   # Жишээ .skill файлууд
+├── 2-design/
+│   ├── claude-design.md          # Session 2 үндсэн материал
+│   └── google-stitch.md          # Subscription шаардахгүй хувилбар
+└── 3-code/
+    └── claude-code.md            # Session 3 үндсэн материал
+```
 
 ---
 
@@ -41,7 +61,8 @@ Session бүрийн файлд: дэлгэрэнгүй тайлбар, слай
 Бүх дасгал өдөр тутмын бодит хэрэгцээнд суурилсан бөгөөд хялбараас хүнд рүү
 эрэмбэлэгдсэн. Дэлгэрэнгүй заавар нь session бүрийн файлд байгаа.
 
-**Cowork:** Spending Dashboard → Self-Assistant (Daily Digest) → Personal Mentor Skill → Brand Skill
+**Cowork:** Spending Dashboard → Self-Assistant (Daily Digest) → Brand Skill →
+[Fashion Shoot Prompt Skill](./1-cowork/claude-cowork-skill.md#7-дасгал-хувцасны-зураг-авалтын-постер-prompt-үүсгэгч-skill) (Skill → Gemini зураг)
 
 **Design:** DESIGN.md дизайн систем үүсгэх → Чанартай Social Media постер
 
