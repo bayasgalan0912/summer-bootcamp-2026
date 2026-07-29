@@ -11,11 +11,11 @@
 
 ## Сессүүд
 
-| # | Session | Агуулга | Материал |
-|---|---------|---------|----------|
-| 1 | **Claude Cowork** | Projects, Connectors, Skills, Memory, PRD-first, Scheduled tasks, Dispatch | [claude-cowork.md](./1-cowork/claude-cowork.md) |
-| 2 | **Claude Design** | Artifacts, DESIGN.md дизайн систем, брэнд дизайн (Alternative: Google Stitch) | [claude-design.md](./2-design/claude-design.md) |
-| 3 | **Claude Code** | CLAUDE.md, Context Window, Plan Mode, MCP, Subagents | [claude-code.md](./3-code/claude-code.md) |
+| #   | Session           | Агуулга                                                                       | Материал                                        |
+| --- | ----------------- | ----------------------------------------------------------------------------- | ----------------------------------------------- |
+| 1   | **Claude Cowork** | Projects, Connectors, Skills, Memory, PRD-first, Scheduled tasks, Dispatch    | [claude-cowork.md](./1-cowork/claude-cowork.md) |
+| 2   | **Claude Design** | Artifacts, DESIGN.md дизайн систем, брэнд дизайн (Alternative: Google Stitch) | [claude-design.md](./2-design/claude-design.md) |
+| 3   | **Claude Code**   | CLAUDE.md, Context Window, Plan Mode, MCP, Subagents                          | [claude-code.md](./3-code/claude-code.md)       |
 
 Session бүрийн файлд: дэлгэрэнгүй тайлбар, слайд, бодит хэрэгцээт дасгалуудын
 **алхам алхмаар заавар** болон жишээ prompt-ууд багтсан.
@@ -70,3 +70,7 @@ Lab 8 - Claude/
 
 > 💡 Дасгалууд хоорондоо уялдаатай: Cowork дээр үүсгэсэн **Brand Skill** болон
 > **DESIGN.md**-ээ Design-ийн Social Media постер дасгалд дахин ашиглана.
+
+## Free tier usage tool of Agentic AI
+
+- https://omniroute.online/
