@@ -16,17 +16,16 @@
 
 > Доорх сэдвүүд дээр дарж **шууд шилжинэ.**
 
-| Цаг         | Сэдэв                                                                                                            |
-| ----------- | ---------------------------------------------------------------------------------------------------------------- |
-| 15 мин | [✨Kahoot тест (PIN: 02607784)](https://kahoot.it/challenge/02607784?challenge-id=52e8dc11-25fb-4f0e-bbb7-bfe2b8499817_1782053153131) |                                                                           
-| 20 мин | [🎬 Google AI Studio танилцуулга](https://www.youtube.com/watch?v=meUr8fjy8lQ) |                                                                           
-| 30 мин | [🌐 Portfolio site (AI Studio)](#sec-aistudio)                                                                   |
-| 30 мин | [🚀 Deploy + QR + Share](#sec-deploy)                                                                            |
-| 30 мин | [📦 Wrap + homework](#sec-homework)                                                                              |
+| Цаг    | Сэдэв                                                                                                                                 |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------- |
+| 15 мин | [✨Kahoot тест (PIN: 02607784)](https://kahoot.it/challenge/02607784?challenge-id=52e8dc11-25fb-4f0e-bbb7-bfe2b8499817_1782053153131) |
+| 15 мин | [✨Type racer](https://typer.io/)                                                                                                     |
+| 20 мин | [🎬 Google AI Studio танилцуулга](https://www.youtube.com/watch?v=meUr8fjy8lQ)                                                        |
+| 30 мин | [🌐 Portfolio site (AI Studio)](#sec-aistudio)                                                                                        |
+| 30 мин | [🚀 Deploy + QR + Share](#sec-deploy)                                                                                                 |
+| 30 мин | [📦 Wrap + homework](#sec-homework)                                                                                                   |
 
 </details>
-
-
 
 <details open id="sec-aistudio">
 <summary><strong>🌐 Portfolio website — Google AI Studio</strong></summary>
@@ -61,12 +60,13 @@ HTML гараар бичихгүйгээр **AI-аар бүтэн website** үү
 
 **2. Build — 4 алхам**
 
-| #   | Алхам                | Тайлбар                                                                                                                                                 |
-| --- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| #   | Алхам                | Тайлбар                                                                                                                                                         |
+| --- | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1   | 🎨 **Design prompt** | Орчин үеийн веб загваруудаас санаа ав ([motion.ai](https://motionsites.ai/)) — таалагдсан сайтынхаа **screenshot** зургийг хавсаргаж "дууриалган" хийлгэж болно |
-| 2   | 🧱 **Structure**     | Hero · About · Services/Products · Contact                                                                                                              |
-| 3   | 👤 **Reuse info**    | HTML intro-д бичсэн мэдээллээ дахин ашигла                                                                                                              |
-| 4   | ✍️ **Final prompt**  | Бүгдийг нэгтгэсэн structured prompt → Generate                                                                                                          |
+| 2   | 🧱 **Structure**     | Hero · About · Services/Products · Contact                                                                                                                      |
+| 3   | 👤 **Reuse info**    | HTML intro-д бичсэн мэдээллээ дахин ашигла                                                                                                                      |
+| 4   | ✍️ **Final prompt**  | Бүгдийг нэгтгэсэн structured prompt → Generate                                                                                                                  |
+
 ## Google AI studio Веб үүсгэх 3 арга
 
 1. Structured Prompt
@@ -74,7 +74,6 @@ HTML гараар бичихгүйгээр **AI-аар бүтэн website** үү
 2. Screenshot
 
 3. Бэлэн загвар жишээ (https://motionsites.ai/)
-
 
 <details>
 <summary>✍️1. Structured prompt жишээ</em></summary>
@@ -84,7 +83,9 @@ HTML гараар бичихгүйгээр **AI-аар бүтэн website** үү
 ```text
 Надад веб сайт хийж өг
 ```
+
 👎Сайн жишээ:
+
 ```text
 Role: Чи 10+ жилийн туршлагатай senior web designer бөгөөд frontend developer.
        Орчин үеийн, конверс өндөртэй (conversion-focused) сайт хийдэг.
@@ -98,7 +99,7 @@ Who:
   - Хобби: [...]
   - Сонсох дуртай дуу/хамтлаг: [...]
   - Үзэх дуртай кино, аниме: [...]
-  
+
 Structure:
   - Sticky navbar: нэр/лого + хэсгүүд рүү шилжих холбоос
   - Hero: гарчиг (1 хүчтэй өгүүлбэр) + дэд өгүүлбэр + үндсэн CTA товч
@@ -123,9 +124,8 @@ Constraints:
 
 Style reference: [таалагдсан сайтын screenshot хавсаргасан бол түүн шиг загвартай хий]
 ```
- 
-</details>
 
+</details>
 
 <details>
 <summary>✍️ 2. Screenshot жишээ </summary>
@@ -138,8 +138,6 @@ Style reference: [таалагдсан сайтын screenshot хавсарга�
 <summary>✍️ 3. Бэлэн загвар жишээ  [motion.ai](https://motionsites.ai/) </em></summary>
 
 ![alt text](image-3.png)</details>
-
-
 
 </details>
 
@@ -156,14 +154,12 @@ Style reference: [таалагдсан сайтын screenshot хавсарга�
 
 </details>
 
-
 <details open id="sec-exercise">
 <summary><strong>📦 Өнөөдрийн дасгал</strong></summary>
 
 > Өөрийн танилцуулга сайт үүсгэх. Жишээ [prompt](./portfolio-prompt.md)
 
 ---
-      
 
 <details open id="sec-homework">
 <summary><strong>📦 Homework</strong></summary>
