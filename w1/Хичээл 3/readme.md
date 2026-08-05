@@ -1,7 +1,5 @@
 [🎮 Kahoot — өнгөрсөн хичээлийн тулаан](https://create.kahoot.it/share/intro-to-web-dev-ai-studio-basics/4be9f8de-622b-4700-b280-0daceb45e03b)
 
-<!-- | 1-р долоо хоног бататгах | [🎮 Kahoot ](https://play.kahoot.it/v2/?quizId=e23d2909-7ceb-43f6-b6c0-7a1e94d6f80a&hostId=683fb2da-0012-40c6-9a66-cd7954ce4560) | -->
-
 # Хийсэн веб сайтаа GitHub болон Vercel ашиглан deploy хийж интернэтэд байршуулцгаая.
 
 ## 1. Ашиглах технологиуд
