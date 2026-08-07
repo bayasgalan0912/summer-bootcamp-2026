@@ -1,0 +1,7 @@
+- Antigravity
+- expo - create project
+- Git bash:
+- Shell command: ls - list, mkdir - make directory, cd - change directory , pwd - current directory
+-
+- Create expo project
+- Run app on your mobile
