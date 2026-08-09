@@ -1,0 +1,80 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg5g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1026"/>
+      <stop offset="1" stop-color="#161b3d"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="500" rx="24" fill="url(#bg5g)"/>
+  <text x="450" y="52" text-anchor="middle" fill="#ffffff" font-size="30" font-weight="800">📊 Хүснэгт = JSON</text>
+  <text x="450" y="80" text-anchor="middle" fill="#9aa3d6" font-size="16">Чи Excel мэддэг бол JSON-ыг аль хэдийн мэддэг байна</text>
+
+  <!-- LEFT: spreadsheet -->
+  <rect x="30" y="100" width="390" height="300" rx="18" fill="#1b2348" stroke="#3ddc97" stroke-width="3"/>
+  <text x="225" y="133" text-anchor="middle" fill="#7af0c0" font-size="20" font-weight="800">Google Sheets</text>
+
+  <!-- header row -->
+  <g font-size="14" font-weight="700">
+    <rect x="52" y="148" width="112" height="32" rx="5" fill="#1c7a52"/>
+    <rect x="168" y="148" width="112" height="32" rx="5" fill="#1c7a52"/>
+    <rect x="284" y="148" width="112" height="32" rx="5" fill="#1c7a52"/>
+    <text x="108" y="170" text-anchor="middle" fill="#e8fff5">id</text>
+    <text x="224" y="170" text-anchor="middle" fill="#e8fff5">emojis</text>
+    <text x="340" y="170" text-anchor="middle" fill="#e8fff5">answer</text>
+  </g>
+
+  <!-- row 1 (highlighted) -->
+  <rect x="48" y="186" width="352" height="38" rx="7" fill="#3a3220" stroke="#ffd84d" stroke-width="2.5"/>
+  <g font-size="14" fill="#fff">
+    <text x="108" y="211" text-anchor="middle">1</text>
+    <text x="224" y="212" text-anchor="middle" font-size="17">🏴‍☠️👒</text>
+    <text x="340" y="211" text-anchor="middle">One Piece</text>
+  </g>
+
+  <!-- row 2 -->
+  <rect x="48" y="230" width="352" height="38" rx="7" fill="#22305f"/>
+  <g font-size="14" fill="#cdd3f5">
+    <text x="108" y="255" text-anchor="middle">2</text>
+    <text x="224" y="256" text-anchor="middle" font-size="17">🍥🦊</text>
+    <text x="340" y="255" text-anchor="middle">Naruto</text>
+  </g>
+
+  <!-- row 3 -->
+  <rect x="48" y="274" width="352" height="38" rx="7" fill="#22305f"/>
+  <g font-size="14" fill="#cdd3f5">
+    <text x="108" y="299" text-anchor="middle">3</text>
+    <text x="224" y="300" text-anchor="middle" font-size="17">⚔️🌸</text>
+    <text x="340" y="299" text-anchor="middle">Bleach</text>
+  </g>
+
+  <text x="225" y="345" text-anchor="middle" fill="#ffd84d" font-size="15" font-weight="700">☝️ Гэрэлтсэн 1 мөр</text>
+  <text x="225" y="375" text-anchor="middle" fill="#9aa3d6" font-size="14">бүх хүснэгт = 3 мөр</text>
+
+  <!-- ARROW -->
+  <text x="450" y="250" text-anchor="middle" font-size="38">➡️</text>
+  <text x="450" y="288" text-anchor="middle" fill="#8dd2ff" font-size="13" font-weight="700">CSVJSON</text>
+
+  <!-- RIGHT: JSON -->
+  <rect x="480" y="100" width="390" height="300" rx="18" fill="#1b2348" stroke="#52b9ff" stroke-width="3"/>
+  <text x="675" y="133" text-anchor="middle" fill="#8dd2ff" font-size="20" font-weight="800">data.json</text>
+
+  <rect x="500" y="148" width="350" height="200" rx="10" fill="#0e1430"/>
+  <g font-family="'Courier New', monospace" font-size="13.5">
+    <text x="516" y="174" fill="#52b9ff" font-weight="700">[</text>
+
+    <!-- highlighted object -->
+    <rect x="524" y="182" width="312" height="26" rx="5" fill="#3a3220" stroke="#ffd84d" stroke-width="2"/>
+    <text x="534" y="200" fill="#ffd84d">{ "id": 1, "answer": "One Piece" },</text>
+
+    <text x="534" y="232" fill="#cdd3f5">{ "id": 2, "answer": "Naruto" },</text>
+    <text x="534" y="258" fill="#cdd3f5">{ "id": 3, "answer": "Bleach" }</text>
+    <text x="516" y="286" fill="#52b9ff" font-weight="700">]</text>
+  </g>
+
+  <text x="675" y="345" text-anchor="middle" fill="#ffd84d" font-size="15" font-weight="700">☝️ Гэрэлтсэн 1 object { }</text>
+  <text x="675" y="375" text-anchor="middle" fill="#9aa3d6" font-size="14">бүх жагсаалт = 1 array [ ]</text>
+
+  <!-- bottom key takeaway -->
+  <rect x="130" y="425" width="640" height="50" rx="14" fill="#22305f" stroke="#ffd84d" stroke-width="2.5"/>
+  <text x="450" y="457" text-anchor="middle" fill="#ffd84d" font-size="20" font-weight="800">🔑 1 мөр = 1 { }   ·   бүх хүснэгт = 1 [ ]</text>
+</svg>

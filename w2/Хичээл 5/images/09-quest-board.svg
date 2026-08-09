@@ -1,0 +1,62 @@
+<svg viewBox="0 0 900 470" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg5i" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1026"/>
+      <stop offset="1" stop-color="#161b3d"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="470" rx="24" fill="url(#bg5i)"/>
+  <text x="450" y="48" text-anchor="middle" fill="#ffffff" font-size="29" font-weight="800">🏅 Quest Board</text>
+  <text x="450" y="75" text-anchor="middle" fill="#9aa3d6" font-size="16">Bronze <tspan fill="#ffd84d" font-weight="700">заавал</tspan> — дуусвал дараагийн шат руу 🚀</text>
+
+  <!-- BRONZE -->
+  <rect x="30" y="95" width="270" height="300" rx="18" fill="#2e2318" stroke="#cd7f32" stroke-width="3"/>
+  <text x="165" y="140" text-anchor="middle" font-size="34">🥉</text>
+  <text x="165" y="172" text-anchor="middle" fill="#e3a565" font-size="21" font-weight="800">BRONZE</text>
+  <text x="165" y="195" text-anchor="middle" fill="#9aa3d6" font-size="13">заавал — бүгд хийнэ</text>
+  <g font-size="14" fill="#e8ddd0">
+    <text x="55" y="228">☐  10+ асуулт ажиллана</text>
+    <text x="55" y="255">☐  Оноо · амь · хугацаа</text>
+    <text x="55" y="282">☐  2 механик ажиллана</text>
+    <text x="55" y="309">☐  Өөрийн 3 локал асуулт</text>
+    <text x="55" y="336">☐  Publish хийсэн</text>
+  </g>
+  <rect x="75" y="352" width="180" height="28" rx="8" fill="#0e1430"/>
+  <text x="165" y="371" text-anchor="middle" fill="#cd7f32" font-size="13" font-weight="700">ТОГЛОГДОНО ✅</text>
+
+  <!-- SILVER -->
+  <rect x="315" y="95" width="270" height="300" rx="18" fill="#20263f" stroke="#c0c8de" stroke-width="3"/>
+  <text x="450" y="140" text-anchor="middle" font-size="34">🥈</text>
+  <text x="450" y="172" text-anchor="middle" fill="#dde3f2" font-size="21" font-weight="800">SILVER</text>
+  <text x="450" y="195" text-anchor="middle" fill="#9aa3d6" font-size="13">тоглоом шиг мэдрэмж</text>
+  <g font-size="14" fill="#dde3f2">
+    <text x="340" y="228">🔊  Дуу — ding / buzz</text>
+    <text x="340" y="255">🖼️  Зураг / видео reveal</text>
+    <text x="340" y="282">🎨  Нэр + title screen</text>
+    <text x="340" y="309">📈  20+ асуулт</text>
+    <text x="340" y="336">💥  Confetti + shake</text>
+  </g>
+  <rect x="360" y="352" width="180" height="28" rx="8" fill="#0e1430"/>
+  <text x="450" y="371" text-anchor="middle" fill="#c0c8de" font-size="13" font-weight="700">АМЬД МЭДРЭГДЭНЭ ✨</text>
+
+  <!-- GOLD -->
+  <rect x="600" y="95" width="270" height="300" rx="18" fill="#332a12" stroke="#ffd84d" stroke-width="3"/>
+  <text x="735" y="140" text-anchor="middle" font-size="34">🥇</text>
+  <text x="735" y="172" text-anchor="middle" fill="#ffe57a" font-size="21" font-weight="800">GOLD</text>
+  <text x="735" y="195" text-anchor="middle" fill="#9aa3d6" font-size="13">эрхмүүдийн бүс</text>
+  <g font-size="14" fill="#fff3c4">
+    <text x="625" y="228">🎵  "Дуу таах" горим</text>
+    <text x="625" y="255">🗣️  "Хэн хэлсэн бэ?"</text>
+    <text x="625" y="282">🎨  "Өнгөөр таах"</text>
+    <text x="625" y="309">💾  High-score хадгалах</text>
+    <text x="625" y="336">🌍  easy / medium / hard</text>
+  </g>
+  <rect x="645" y="352" width="180" height="28" rx="8" fill="#0e1430"/>
+  <text x="735" y="371" text-anchor="middle" fill="#ffd84d" font-size="13" font-weight="700">ТОГЛООМ ЗОХИОГЧ 🎮</text>
+
+  <!-- arrows -->
+  <text x="307" y="255" text-anchor="middle" font-size="24">➡️</text>
+  <text x="592" y="255" text-anchor="middle" font-size="24">➡️</text>
+
+  <text x="450" y="432" text-anchor="middle" fill="#9aa3d6" font-size="15">💾 High-score-оо Хичээл 6-д <tspan fill="#8dd2ff" font-weight="700">жинхэнэ database</tspan> руу зөөнө 👀</text>
+</svg>
