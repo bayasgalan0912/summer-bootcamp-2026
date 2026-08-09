@@ -1,6 +1,6 @@
 - 👉 **[🎮 Kahoot — өмнөх хичээл бататгах](https://create.kahoot.it/share/lesson-5-batatgal/7237bb40-6e26-4c4f-a055-01f06ebdbf32)**
 - 👉 **[🕹️ Жишээ тоглоом үзэх](https://ai.studio/apps/c075aff4-289c-45c8-a050-9207f9afe5ac)** — чи иймэрхүүг хийнэ
-- 👉 **[🖼️ Слайд](https://docs.google.com/presentation/d/1Xu-jnS15SjZXO6QSQS04RBZPNlw5gtN18Asrtgxhv58/edit?usp=sharing)**
+- 👉 **[🖼️ Слайд](./Хичээл-6-слайд.pdf)**
 
 # Хичээл 5 — 🧩 JSON дата бэлдэж 🎮 таавар тоглоом бүтээх
 
