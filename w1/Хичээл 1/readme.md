@@ -1,274 +1,154 @@
-# 🎒 Хичээл 1
+- 👉 **[🎬 Жишээ апп үзэх](#)** — өнөөдрийн эцэст чи иймэрхүү апп-ыг **өөрийн утсан дээрээ** ажиллуулна _(багш: линкээ энд тавь)_
+- 👉 **[🎮 Kahoot — танилцах icebreaker](#)** _(багш: линкээ энд тавь)_
+- 👉 **[🖼️ Слайд](#)** _(багш: линкээ энд тавь)_
 
-### ✨ Өнөөдөр өөрийнхөө тухай **вэб хуудас** үүсгэж, ангийхантайгаа танилцана!
+# Хичээл 1 — 🚀 Anti­gravity суулгаж 📱 анхны апп-аа утсандаа ажиллуулах
 
-🎮 [Хичээлийн слайд](https://docs.google.com/presentation/d/1CN9uhCejRB8ouXW7FF_JXq0rSZEA5ud48B8FAhyxqwg/edit?usp=sharing)
+> 🎯 **Өнөөдөр:** AI кодын орчин **Antigravity** суулгана → **Expo** гэж юу болохыг мэдэж бэлтгэнэ → **терминал** дээр ажиллаж сурна → анхны Expo төслөө **үүсгэнэ** → түүнийгээ **утсан дээрээ** ажиллуулна. 🎉
 
-> Доорх алхам дээр **дарж нээнэ** 👇
+**🛠️ Хэрэгсэл:** [Antigravity](https://antigravity.google) · [Node.js](https://nodejs.org) · [Expo](https://expo.dev) · **Expo Go** (утасны апп) · [Kahoot](https://kahoot.it)
 
----
-
-<details>
-<summary><b>1️⃣ 👯 Найзтайгаа танилц + Discord</b></summary>
-
-<br>
-
-Ширээний найзтайгаа танилц → [Discord группдээ](https://discord.gg/h8MHmusCKm) ор.
-
-<img src="image.png" width="250" />
-
-</details>
+> 🔴 **Улаан текст (алдаа) бол дэлбэрэлт биш!** Терминал улаан бичвэл зүгээр л **уншаад засна**. Ойлгохгүй бол улаан текстээ AI-д хуулж өг → _"Энэ алдаа юу гэсэн үг вэ, яаж засах вэ?"_
 
 ---
 
-<details>
-<summary><b>2️⃣ 💻 VSCode нээх</b></summary>
+# 🗺️ Өнөөдрийн зам — 5 хэсэг
 
-<br>
+> Хэсэг бүрийг дараад нээ 👇 Дараа нь **линк** дээр дарж дасгал руу ор.
 
-VSCode нээ → шинэ файл үүсгэ: **`my-first-page.html`**
+<details open>
+<summary>🚀 <b>ХЭСЭГ 1 — Antigravity суулгах</b> · ⏱️ ~20 мин</summary>
 
-</details>
+Antigravity бол бидний өнөөдрийн **байшин** — код бичих, терминал ажиллуулах, AI-тай хамт кодлох нэг л орчин.
 
----
+- 💾 [antigravity.google](https://antigravity.google)-аас татаж суулгах
+- 🔑 Google хаягаараа нэвтрэх
+- 🧭 Editor · Terminal · AI panel — 3 хэсэгтэй танилцах
+- ✅ Терминалаа нээж чадвал бэлэн
 
-<details>
-<summary><b>3️⃣ ✍️ HTML — өөрийнхөө тухай бич</b></summary>
-
-<br>
-
-Доорх кодыг бичээд өөрийн мэдээллээ тавь 👇
-
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Миний хуудас</title>
-  </head>
-  <body>
-    <h1>Сайн уу, намайг Бат гэдэг! 👋</h1>
-    <img src="my-photo.png" width="250" />
-    <p>🎂 Би 13 настай.</p>
-    <p>🏀 Хобби: сагс тоглох</p>
-    <p>🎵 Дуртай хамтлаг: BTS</p>
-    <p>🕷️ Дуртай кино: Spider-Man</p>
-
-    <h2>🤩 Сонирхолтой фактууд</h2>
-    <p>🍕 Дуртай хоол: пицца</p>
-    <p>🎮 Дуртай тоглоом: Roblox</p>
-    <p>🐶 Гэрт минь Бобби гэдэг нохой байдаг</p>
-    <p>😆 One piece анимийг бүтэн үзсэн!</p>
-    <p>🤫 Хэн ч мэдэхгүй: би зүүн гараараа бичдэг</p>
-  </body>
-</html>
-```
-
-🤩 **Фактууд** дээр найзаа гайхшруулах зүйлээ бич!
-
-<details>
-<summary>❓ Таг гэж юу вэ?</summary>
-
-<br>
-
-| Таг      | Тайлбар                     |
-| -------- | --------------------------- |
-| `body`   | Харагдах бүх агуулга        |
-| `h1`     | Том гарчиг                  |
-| `h2`     | Жижиг гарчиг                |
-| `p`      | Жирийн текст                |
-| `img`    | Зураг 🖼️                    |
-| `audio`  | Дуу 🎵                      |
-| `iframe` | YouTube бичлэг 📺           |
-
-💡 Таг = `< >` дотор бичигдэх тушаал. VSCode-д `!` бичээд Enter дарвал HTML бүтэц автоматаар гарна.
+### ➡️ <a href="dasgal/1-antigravity-suulgah.md" target="_blank">ХЭСЭГ 1-ийг нээх 🔗</a>
 
 </details>
 
+<details>
+<summary>📱 <b>ХЭСЭГ 2 — Expo гэж юу вэ? + бэлтгэл</b> · ⏱️ ~20 мин</summary>
+
+Кодоо утсан дээр ажиллуулах **гүүр** нь Expo. Төсөл үүсгэхээс өмнө хэрэгслээ бэлдэнэ.
+
+- 🤔 Expo гэж юу вэ — **нэг код → iOS + Android** апп
+- 🟢 [Node.js](https://nodejs.org) суусан эсэхийг шалгах (`node -v`, `npm -v`)
+- 📲 Утсандаа **Expo Go** апп-аа суулгах (App Store / Google Play)
+- 📶 Утас, компьютер **нэг Wi-Fi**-д байх ёстойг мэдэх
+
+### ➡️ <a href="dasgal/2-expo-beltgel.md" target="_blank">ХЭСЭГ 2-ыг нээх 🔗</a>
+
 </details>
 
----
-
 <details>
-<summary><b>4️⃣ 🌈 CSS — өнгө нэмэх</b></summary>
+<summary>⌨️ <b>ХЭСЭГ 3 — Терминалын 4 үндсэн команд</b> · ⏱️ ~20 мин</summary>
 
-<br>
+Апп үүсгэхийн өмнө **терминалаар явж сурна.** 4 команд — үүнээс илүү хэрэггүй.
 
-`<head>` дотор доорхийг нэм → **save** → өнгө солигдохыг хар 🎨
+- 📍 `pwd` — **хаана байна?** · 📂 `ls` — **энд юу байна?**
+- 🆕 `mkdir` — **шинэ фолдер** · 🚪 `cd` — **фолдер руу ор / гар (`cd ..`)**
+- 🗺️ **Terminal Treasure Hunt** — командаар лабиринт туул
+- 🏅 4/4 команд эзэмшсэн хос → 🧭 **Terminal Navigator** цол
 
-```html
-<style>
-  body {
-    background: beige; /* 🎨 арын өнгө */
-    color: black; /* ✏️ текстийн өнгө */
-    text-align: center;
-    font-family: Arial, sans-serif;
-  }
-  h1 {
-    color: #7c3aed;
-  } /* 🟣 гарчгийн өнгө */
-  img {
-    border-radius: 20px;
-  } /* 🖼️ булан мөлгөр */
-  p {
-    font-size: 18px;
-  } /* 🔤 текстийн хэмжээ */
-</style>
-```
-
-👉 Өнгө, хэмжээг сольж туршаарай!
-
-<details>
-<summary>📄 Бүтэн код харах</summary>
-
-<br>
-
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Миний хуудас</title>
-    <style>
-      body {
-        background: beige; /* 🎨 арын өнгө */
-        color: black; /* ✏️ текстийн өнгө */
-        text-align: center;
-        font-family: Arial, sans-serif;
-      }
-      h1 {
-        color: #7c3aed;
-      } /* 🟣 гарчгийн өнгө */
-      img {
-        border-radius: 20px;
-      } /* 🖼️ булан мөлгөр */
-      p {
-        font-size: 18px;
-      } /* 🔤 текстийн хэмжээ */
-    </style>
-  </head>
-  <body>
-    <h1>Сайн уу, намайг Бат гэдэг! 👋</h1>
-    <img src="my-photo.png" width="250" />
-    <p>🎂 Би 13 настай.</p>
-    <p>🏀 Хобби: сагс тоглох</p>
-    <p>🎵 Дуртай хамтлаг: BTS</p>
-    <p>🕷️ Дуртай кино: Spider-Man</p>
-
-    <h2>🤩 Сонирхолтой фактууд</h2>
-    <p>🍕 Дуртай хоол: пицца</p>
-    <p>🎮 Дуртай тоглоом: Roblox</p>
-    <p>🐶 Гэрт минь Бобби гэдэг нохой байдаг</p>
-    <p>😆 One piece анимийг бүтэн үзсэн!</p>
-    <p>🤫 Хэн ч мэдэхгүй: би зүүн гараараа бичдэг</p>
-
-    <p>🎵 Миний зохиосон дуу:</p>
-    <audio src="my-song.mp3" controls></audio>
-
-    <p>📺 Дуртай аниме бичлэг:</p>
-    <iframe
-      width="400"
-      height="220"
-      src="https://www.youtube.com/embed/xxxxx"
-    ></iframe>
-  </body>
-</html>
-```
+### ➡️ <a href="dasgal/3-git-bash-commands.md" target="_blank">ХЭСЭГ 3-ыг нээх 🔗</a>
 
 </details>
+
+<details>
+<summary>🛠️ <b>ХЭСЭГ 4 — Анхны Expo төслөө үүсгэх</b> · ⏱️ ~20 мин</summary>
+
+Сая сурсан командаа **хэрэглэж** жинхэнэ апп-ын араг ясыг гаргана.
+
+- 📂 `cd`-ээр зөв газраа очих → `mkdir`-ээр төслийн фолдер
+- ✨ `npx create-expo-app@latest my-first-app` → хүлээх
+- 📁 Төслөө Antigravity-д нээж бүтцийг нь харах (`app/`, `package.json`)
+- ✅ Алдаагүй үүссэн бол бэлэн
+
+### ➡️ <a href="dasgal/4-expo-project-uusgeh.md" target="_blank">ХЭСЭГ 4-ийг нээх 🔗</a>
+
+</details>
+
+<details>
+<summary>🎉 <b>ХЭСЭГ 5 — Утсан дээрээ ажиллуулах (Expo Go)</b> · ⏱️ ~15 мин</summary>
+
+Өнөөдрийн **гайхах мөч** — код чинь утсан дээр амьд болно.
+
+- ▶️ `npx expo start` → терминалд **QR код** гарна
+- 📷 Expo Go-гоор QR уншуулж апп-аа нээх
+- ✏️ Текстээ өөрчил → **Save** → утсан дээр **шууд шинэчлэгдэхийг** хар (hot reload)
+
+### ➡️ <a href="dasgal/5-expo-go-mobile.md" target="_blank">ХЭСЭГ 5-ыг нээх 🔗</a>
 
 </details>
 
 ---
 
 <details>
-<summary><b>5️⃣ 🖼️ Зураг нэмэх (Gemini)</b></summary>
+<summary>🆘 <b>Гацвал — түгээмэл 4 асуудал</b></summary>
 
-<br>
+**🔴 Терминал улаан "command not found" гэж байна** → командын нэрээ буруу бичсэн (жишээ: `npm` биш `nmp`) эсвэл Node.js суугаагүй. ХЭСЭГ 2.2 руу буц → `node -v` ажиллаж байгаа эсэхийг шалга. Болохгүй бол улаан текстээ AI-д хуулж өг.
 
-[gemini.google.com](https://gemini.google.com) → өөрийн профайл зураг үүсгэ → татаж авч **`my-photo.png`** болгон хадгал.
+**📶 Утас QR уншсан ч апп нээгдэхгүй** → утас, компьютер **нэг Wi-Fi**-д байгаа эсэхийг шалга (хамгийн түгээмэл шалтгаан!). Болохгүй бол терминалыг зогсоо (`Ctrl + C`) → `npx expo start --tunnel` гэж дахин эхлүүл. Дэлгэрэнгүй: ХЭСЭГ 5.3.
 
-```html
-<img src="my-photo.png" width="250" />
-```
+**⏳ `create-expo-app` эсвэл `npm install` удаан байна** → энэ хэвийн. Интернэтээс олон файл татаж байгаа — 1–3 минут. Терминал хөдлөхгүй байвал ч **бүү зогсоо**, хүлээ.
+
+**🚪 "Би одоо хаана байна?" ойлгохгүй байна** → `pwd` бич → одоо байгаа замаа хар. `ls` бич → энд юу байгааг хар. Буруу газар байвал `cd ..`-ээр ухарч эхэл. ХЭСЭГ 3-ын 4 команд бол чиний луужин.
 
 </details>
-
----
 
 <details>
-<summary><b>6️⃣ 🎵 Өөрийн дуу зохиох (Gemini)</b></summary>
+<summary>🛡️ <b>AI Smart &amp; Safe</b></summary>
 
-<br>
-
-[gemini.google.com](https://gemini.google.com) → ингэж бич 👇
-
-```
-Намайг Бат гэдэг, 13 настай. Сагс тоглох дуртай.
-Дуртай хамтлаг BTS, дуртай хоол пицца.
-Миний тухай хөгжилтэй богино дуу зохиож, дуулж өгөөч 🎶
-```
-
-⬇️ **Download** → нэрийг **`my-song.mp3`** болго → кодоо нэм:
-
-```html
-<p>🎵 Миний зохиосон дуу:</p>
-<audio src="my-song.mp3" controls></audio>
-```
+- **AI-д код бичүүлж болно — гэхдээ уншиж ойлго.** Хуулаад л тавихгүй, юу хийж байгааг нь асуу.
+- **Нууц хаяг, нууц үгээ** промпт эсвэл кодондоо бүү бич.
+- **Алдаа бол найз.** Улаан текстийг айж бүү унт — AI-д хуулж өгөөд _"энэ юу гэсэн үг вэ?"_ гэж асуу.
+- **AI эндүүрдэг.** Заасан команд ажиллахгүй бол албадаж бүү давт — нэрийг нь шалгаж, өөр эх сурвалжтай тулга.
 
 </details>
-
----
 
 <details>
-<summary><b>7️⃣ 📺 Дуртай аниме бичлэг (YouTube)</b></summary>
+<summary>🏠 <b>Гэрийн даалгавар</b></summary>
 
-<br>
+**1️⃣ 🎨 Апп-аа өнгөлж эхлүүл**
 
-YouTube → бичлэг ол → **Share** → **Embed** → **Copy** → `</body>`-ын дээр paste:
+AI Studio биш — энэ удаад **Antigravity-ийн AI panel**-д гэрийн даалгавраа өг:
 
-```html
-<p>📺 Дуртай аниме бичлэг:</p>
-<iframe
-  width="400"
-  height="220"
-  src="https://www.youtube.com/embed/xxxxx"
-></iframe>
+```text
+Миний Expo апп-ын нүүр дэлгэц дээр том гарчиг болон миний нэрийг
+гаргаж, дэвсгэр өнгийг нь дуртай өнгөөр минь солиод өгөөч.
 ```
 
+Утсан дээрээ ажиллаж байгааг screenshot-оор аваад **Discord** руу тавь. 📸
+
+**2️⃣ ⌨️ Терминал бататгал (~5 мин)**
+
+- Гэртээ шинэ фолдер `mkdir`-ээр үүсгэ → `cd`-ээр ор → `pwd`-ээр хаана байгаагаа шалга → `ls`-ээр дотор нь юу байгааг хар.
+- 4 команд **зааваргүйгээр** бичиж чадаж байвал бэлэн.
+
+**3️⃣ 📱 Expo Go бэлэн үү?** Утсан дээрх Expo Go апп-аа шалга — маргааш дахин хэрэглэнэ.
+
+</details>
+
 <details>
-<summary>❓ Яагаад <code>video</code> таг болохгүй вэ?</summary>
+<summary>📚 <b>Glossary — шинэ үгс</b></summary>
 
-<br>
-
-`<video>` нь `.mp4` файл шаарддаг. YouTube линк mp4 файл биш.
-
-- YouTube → `<iframe>`
-- Татсан mp4 файл → `<video src="my-video.mp4" controls>`
+| Үг                | Тайлбар                                                            |
+| ----------------- | ------------------------------------------------------------------ |
+| **IDE**           | Код бичих орчин (жишээ: Antigravity) — editor + terminal нэг дор   |
+| **Antigravity**   | Google-ийн AI-тай хамт кодлодог IDE                                |
+| **Terminal**      | Текст командаар компьютертэй "ярьдаг" цонх                         |
+| **Command**       | Терминалд бичээд Enter дардаг заавар (`ls`, `cd` …)                |
+| **Node.js / npm** | JavaScript-ийг компьютер дээр ажиллуулах хөдөлгүүр + багц суулгагч |
+| **Expo**          | Нэг кодоор iOS + Android апп бүтээх framework                      |
+| **Expo Go**       | Төслөө утсан дээр ажиллуулж үздэг утасны апп                       |
+| **QR код**        | Утас, компьютерийг холбодог дөрвөлжин код                          |
+| **Hot reload**    | Кодоо хадгалахад апп **шууд** шинэчлэгддэг ид шид                  |
+| **`npx`**         | Багцыг суулгалгүйгээр шууд ажиллуулах команд                       |
 
 </details>
 
-</details>
-
----
-
-<!--
-1. Meet teachers
-2. Meet buddy, Your teammate: Front and back desk
-3. Teacher presentation:
-   1. Roadmap
-      1. (What we learn): Web + AI + Web based game development
-      - Week 1: First website + how AI works
-      - Week 2: Game development in AI Studio.
-      - Week 3: Custom game development & Demo Day (Team up)
-      2. Team game contest: best game + best gamer with prize
-   2. Show prototype of websites and game idea
-   3. Job market and Ai engineer salary
-   4. How website works: Html, css, js
-4. Time break
-5. First code
-   1. Vs code
-   2. Html?
-   3. Introduce yourself: Suno, gemini
-6. What is next: show modern website
-7. Homework
-   1. Gmail
-   2. Google LM -->
+> 💡 Алдаа гарвал улаан текстээ AI-д хуулж өгөөд _"Энэ алдааг яаж засах вэ?"_ гэж шууд асуу. Амжилт! 😉
