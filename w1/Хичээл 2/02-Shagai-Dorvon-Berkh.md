@@ -1,6 +1,6 @@
 # Апп 2 — Шагай: Дөрвөн бэрх
 
-> **Түвшин:** Дунд · **Хугацаа:** 3-4 хичээл (~6 цаг) · **Database:** Supabase
+> **Түвшин:** Дунд · **Хугацаа:** 3-4 хичээл (~6 цаг) · **Database:** Firebase Firestore
 
 ---
 
@@ -9,7 +9,7 @@
 - Санамсаргүй тоо (random) ба тоглоомын логик
 - Анимаци (Animated / Reanimated)
 - Утасны мэдрэгч (accelerometer) ашиглах
-- **Supabase-тэй анх танилцах** — хүснэгт, мөр, багана
+- **Firestore-той анх танилцах** — цуглуулга (collection), баримт (document), талбар (field)
 - Өгөгдөл хадгалах, буцааж унших, эрэмбэлэх
 - Монгол өв соёлыг технологитой холбох
 
@@ -41,57 +41,72 @@
 
 ---
 
-## Supabase бэлтгэл
+## Firebase бэлтгэл
 
-### 1. Төсөл үүсгэх
+> **Яагаад Firebase вэ?** Бүх тохиргоо нь **дарах товчнууд** — SQL бичихгүй, нууц үг үүсгэхгүй, `.env` файл хэрэггүй. Хүүхдүүд өөрсдөө 10 минутад хийж чадна.
 
-1. [supabase.com](https://supabase.com) → Sign up (үнэгүй)
-2. New Project → нэр: `shagai-app` → бүс: Singapore эсвэл Tokyo
-3. Database нууц үгээ **хадгалж авах**
-4. Settings → API → `Project URL` болон `anon public key`-г хуулж авах
+### 1. Төсөл үүсгэх (~5 мин)
 
-### 2. Хүснэгт үүсгэх
+1. [console.firebase.google.com](https://console.firebase.google.com) → Google хаягаараа нэвтрэх
+2. **Create a project** → нэр: `shagai-app` → Continue
+3. Google Analytics → **Disable** (хэрэггүй) → **Create project**
+4. Нүүр дэлгэц дээрх **`</>`** (Web) icon дар → nickname: `shagai` → **Register app**
+5. Гарч ирсэн `firebaseConfig = { ... }` блокийг **бүтнээр нь хуулж ав** ⭐
 
-SQL Editor руу орж дараах кодыг ажиллуул:
-
-```sql
--- Шидэлт бүрийн бичлэг
-create table throws (
-  id uuid primary key default gen_random_uuid(),
-  player_name text not null,
-  mori int default 0,
-  temee int default 0,
-  honi int default 0,
-  yamaa int default 0,
-  score int not null,
-  is_durvun_berkh boolean default false,
-  created_at timestamptz default now()
-);
-
--- Хичээлийн үед бүх хүн уншиж, бичиж чадна
-alter table throws enable row level security;
-
-create policy "anyone can read" on throws
-  for select using (true);
-
-create policy "anyone can insert" on throws
-  for insert with check (true);
+```js
+// иймэрхүү харагдана — энэ чинь өөрийн утгууд
+const firebaseConfig = {
+  apiKey: "AIzaSy...",
+  authDomain: "shagai-app.firebaseapp.com",
+  projectId: "shagai-app",
+  storageBucket: "shagai-app.firebasestorage.app",
+  messagingSenderId: "123456789",
+  appId: "1:123456789:web:abc123",
+};
 ```
 
-> **Багшид:** RLS (Row Level Security) гэдэг нь "хэн юу хийж болох вэ" гэсэн дүрэм. Эхлээд бүгдэд нээлттэй болгож байна. Сүүлийн хичээл дээр "яагаад бодит апп дээр ингэж болохгүй вэ" гэдгийг ярилцана.
+> **Багшид:** Энэ түлхүүрүүд **нууц биш** — Firebase-ийн web config нь ил байхаар зохиогдсон. Хамгаалалт нь түлхүүрт биш, **Rules** дээр байдаг (доор). Тиймээс `.env` файл шаардлагагүй → сурагчдын хамгийн түгээмэл гацаа арилна.
 
-### 3. Аппад холбох
+### 2. Firestore үүсгэх (~2 мин)
+
+1. Зүүн цэс → **Build → Firestore Database** → **Create database**
+2. Location: `asia-southeast1` (Singapore) эсвэл `asia-northeast1` (Tokyo)
+3. **Start in test mode** → **Enable**
+
+### 3. Rules нээх (~2 мин)
+
+**Rules** таб руу орж доорхийг буулгаад **Publish**:
+
+```js
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if true;   // ⚠️ зөвхөн хичээлийн үед
+    }
+  }
+}
+```
+
+> **Багшид:** Rules гэдэг нь "хэн юу хийж болох вэ" гэсэн дүрэм. Эхлээд бүгдэд нээлттэй болгож байна. Сүүлийн хичээл дээр "яагаад бодит апп дээр ингэж болохгүй вэ" гэдгийг ярилцана.
+>
+> ⚠️ **Test mode** нь 30 хоногийн дараа автоматаар хаагддаг. Дээрх дүрмийг гараар буулгасан бол хаагдахгүй — тиймээс энэ алхмыг **бүү алгас.**
+
+### 4. Аппад холбох
 
 ```bash
-npx expo install @supabase/supabase-js @react-native-async-storage/async-storage react-native-url-polyfill
+npx expo install firebase @react-native-async-storage/async-storage
 ```
 
-`.env` файл үүсгэж:
+> ⚠️ `firebase@12.0.0`-с дээш хувилбар хэрэгтэй. `npx expo install` өөрөө зөв хувилбарыг сонгоно.
 
-```
-EXPO_PUBLIC_SUPABASE_URL=https://xxxxx.supabase.co
-EXPO_PUBLIC_SUPABASE_ANON_KEY=eyJhbGci...
-```
+### Шинэ үгс (самбарт бич)
+
+| Firestore   | Энгийн үгээр                              |
+| ----------- | ----------------------------------------- |
+| Collection  | **Хайрцаг** — ижил төрлийн зүйл хадгалдаг |
+| Document    | **Хуудас** — нэг бичлэг (нэг шидэлт)      |
+| Field       | **Мөр** — нэг утга (`score: 10`)          |
 
 ---
 
@@ -175,42 +190,48 @@ npx expo install expo-sensors
 
 ---
 
-## Алхам 4 — Supabase холбох
+## Алхам 4 — Firestore холбох
 
 ### Prompt 5
 
 ```
-Supabase нэм.
+Firebase Firestore нэм.
+
+- Firebase холболтыг lib/firebase.js файлд тусад нь бич. Доорх config-ыг ашигла:
+
+[ЭНД ӨӨРИЙН firebaseConfig БЛОКОО БҮТНЭЭР БУУЛГА]
 
 - Апп анх нээгдэхэд тоглогч нэрээ оруулна. Нэрийг AsyncStorage-д хадгалж,
   дараагийн удаа дахин асуухгүй.
-- Шидэлт бүрийн дараа `throws` хүснэгтэд дараах өгөгдлийг хадгал:
-  player_name, mori, temee, honi, yamaa, score, is_durvun_berkh
-- Supabase холболтыг lib/supabase.ts файлд тусад нь бич.
-- URL болон key-г .env файлаас EXPO_PUBLIC_SUPABASE_URL,
-  EXPO_PUBLIC_SUPABASE_ANON_KEY нэрээр ав.
+- Шидэлт бүрийн дараа `throws` цуглуулгад (collection) шинэ баримт (document) нэм:
+  playerName, mori, temee, honi, yamaa, score, isDurvunBerkh,
+  createdAt (serverTimestamp())
+- firebase/firestore-ийн collection, addDoc, serverTimestamp ашигла.
 ```
 
-**Шалгах:** Supabase dashboard → Table Editor → `throws` хүснэгт рүү орж, шидэлт бүрийн мөр орж ирж байгааг **сурагчдад нүдээр харуул**. Энэ мөч хамгийн чухал.
+**Шалгах:** Firebase console → **Firestore Database → Data** таб руу орж, шидэлт бүрд шинэ баримт нэмэгдэж байгааг **сурагчдад нүдээр харуул**. Энэ мөч хамгийн чухал.
 
 ### Prompt 6 — Тэргүүлэгчид
 
 ```
 "Тэргүүлэгчид" гэсэн шинэ дэлгэц нэм.
 
-- throws хүснэгтээс тоглогч бүрийн нийт оноог нэгтгэж,
-  өндрөөс нам руу эрэмбэлж жагсаа
+- throws цуглуулгын бүх баримтыг getDocs-оор татаж ав
+- Тоглогч бүрийн нийт оноог playerName-ээр нь бүлэглэж аппдаа тооцоол,
+  дараа нь өндрөөс нам руу эрэмбэл
 - Мөр бүр дээр: байр, нэр, нийт оноо, шидэлтийн тоо
 - 1, 2, 3-р байрыг 🥇🥈🥉 тэмдгээр ялгаж харуул
 - Хамгийн олон дөрвөн бэрх буулгасан тоглогчийн нэрний хажууд 👑 тавь
 - Доош татахад (pull to refresh) жагсаалт шинэчлэгдэнэ
 ```
 
+> **Заах цэг:** Firestore-т SQL-ийн `group by` **байхгүй.** Тоглогчоор нэгтгэх ажлыг **апп өөрөө** хийж байна. Асуулт сурагчдад: "10,000 шидэлттэй бол энэ яах вэ?" (Удаан болно → бодит апп нийлбэрийг тусдаа хадгалдаг.)
+
 ### Prompt 7 — Realtime (нэмэлт)
 
 ```
-Supabase Realtime ашиглан throws хүснэгтэд шинэ мөр нэмэгдэх бүрд
-Тэргүүлэгчид жагсаалт өөрөө шинэчлэгддэг болго.
+Firestore-ийн onSnapshot ашиглан throws цуглуулгад шинэ баримт
+нэмэгдэх бүрд Тэргүүлэгчид жагсаалт өөрөө шинэчлэгддэг болго.
 ```
 
 > **Багшид:** Энэ бол хичээлийн оргил үе. Хоёр сурагчийн утсыг зэрэг харуулж, нэг нь шидэхэд нөгөөгийнх нь дэлгэц дээр шууд гарч ирэхийг харуул.
@@ -221,9 +242,11 @@ Supabase Realtime ашиглан throws хүснэгтэд шинэ мөр нэ�
 
 | Алдаа | Шийдэл |
 |---|---|
-| Supabase-д өгөгдөл орохгүй, алдаа гарахгүй | RLS policy тавиагүй. Дээрх SQL-г дахин ажиллуул |
-| "Invalid API key" | `.env` файлын нэр буруу. `EXPO_PUBLIC_` угтвар заавал байх ёстой |
-| `.env` өөрчилсөн ч ажиллахгүй | Серверийг бүрэн унтрааж дахин асаах (`Ctrl+C` → `npx expo start -c`) |
+| `Missing or insufficient permissions` | Rules нээгээгүй. Firebase → Firestore → **Rules** → дээрх дүрмийг буулгаад **Publish** |
+| Firestore-д өгөгдөл орохгүй, алдаа гарахгүй | `addDoc` дуудагдаагүй. AI-д хэл: _"шидэлт болгоны дараа addDoc-оор баримт нэмээд өгөөч"_ |
+| `Firebase: Error (auth/invalid-api-key)` | `firebaseConfig` буруу хуулагдсан. Console → Project settings → дахин хуулж ав |
+| `client is offline` | Интернэт байхгүй, эсвэл `projectId` буруу |
+| Апп ажиллаад л 30 хоногийн дараа зогсов | Test mode дуусжээ. Rules-ээ гараар буулгаад Publish |
 | Анимаци гацна | `react-native-reanimated` babel plugin нэмээгүй. AI-д error-г өгөөд засуул |
 | Accelerometer ажиллахгүй | Симулятор дээр мэдрэгч байхгүй. Жинхэнэ утсан дээр турш |
 
@@ -237,7 +260,7 @@ Supabase Realtime ашиглан throws хүснэгтэд шинэ мөр нэ�
 - [ ] Утсаа сэгсрэхэд шидэгдэнэ
 - [ ] Дөрвөн бэрх таарахад тусгай эффект гарна
 - [ ] Шагай дээр дарахад бэлгэдлийн тайлбар харагдана
-- [ ] Supabase-д өгөгдөл хадгалагдана (dashboard дээр нүдээр шалгасан)
+- [ ] Firestore-д өгөгдөл хадгалагдана (Firebase console → Data таб дээр нүдээр шалгасан)
 - [ ] Тэргүүлэгчид жагсаалт зөв эрэмбэлэгдэнэ
 
 ---

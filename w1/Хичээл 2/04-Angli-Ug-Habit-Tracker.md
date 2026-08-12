@@ -1,6 +1,6 @@
 # Апп 4 — Англи үгийн Habit Tracker
 
-> **Түвшин:** Ахисан · **Хугацаа:** 4-6 хичээл (~8 цаг) · **Database:** Supabase (3 хүснэгт)
+> **Түвшин:** Ахисан · **Хугацаа:** 4-6 хичээл (~8 цаг) · **Database:** Firestore (3 цуглуулга)
 > **Хэлбэр:** Эцсийн төсөл — 2-3 хүний баг
 
 ---
@@ -9,7 +9,7 @@
 
 Энэ бол курсийн эцсийн төсөл. Өмнөх 3 аппын бүх ур чадварыг нэгтгээд, дээр нь:
 
-- **Олон хүснэгт** ба тэдгээрийн хоорондын холбоо (relation, foreign key)
+- **Олон цуглуулга** ба тэдгээрийн хоорондын холбоо (баримтын `id`-аар холбох)
 - Өгөгдлөөс дүгнэлт гаргах (аль үгийг муу мэддэг вэ?)
 - Streak буюу тасралтгүй байдлын логик — огноотой ажиллах
 - Баг болж ажиллах, үүрэг хуваарилах
@@ -17,70 +17,59 @@
 
 ---
 
-## Supabase бэлтгэл
+## Firestore бэлтгэл
 
-```sql
--- 1. Үгсийн сан
-create table words (
-  id uuid primary key default gen_random_uuid(),
-  en text not null,
-  mn text not null,
-  example text,
-  added_by text,
-  created_at timestamptz default now()
-);
+Өмнөх Firebase төслөө дахин ашиглана. Гурван шинэ цуглуулга — **урьдчилан үүсгэх шаардлагагүй**, эхний баримт бичигдэхэд өөрөө үүснэ.
 
--- 2. Давталтын бичлэг — ямар үгийг хэн хэзээ давтсан
-create table reviews (
-  id uuid primary key default gen_random_uuid(),
-  word_id uuid references words(id) on delete cascade,
-  player_name text not null,
-  is_correct boolean not null,
-  created_at timestamptz default now()
-);
+**1. `words` — үгсийн сан**
 
--- 3. Streak
-create table streaks (
-  id uuid primary key default gen_random_uuid(),
-  player_name text unique not null,
-  current_streak int default 0,
-  longest_streak int default 0,
-  last_active_date date
-);
+| Талбар      | Төрөл  | Жишээ                      |
+| ----------- | ------ | -------------------------- |
+| `en`        | string | `"apple"`                  |
+| `mn`        | string | `"алим"`                   |
+| `example`   | string | `"I ate an apple."`        |
+| `addedBy`   | string | `"Бат"`                    |
+| `createdAt` | time   | `serverTimestamp()`        |
 
--- RLS
-alter table words enable row level security;
-alter table reviews enable row level security;
-alter table streaks enable row level security;
+**2. `reviews` — ямар үгийг хэн хэзээ давтсан**
 
-create policy "read words" on words for select using (true);
-create policy "insert words" on words for insert with check (true);
-create policy "delete words" on words for delete using (true);
+| Талбар       | Төрөл   | Жишээ                          |
+| ------------ | ------- | ------------------------------ |
+| `wordId`     | string  | `"kL3n..."` ← words баримтын id |
+| `playerName` | string  | `"Бат"`                        |
+| `isCorrect`  | boolean | `true`                         |
+| `createdAt`  | time    | `serverTimestamp()`            |
 
-create policy "read reviews" on reviews for select using (true);
-create policy "insert reviews" on reviews for insert with check (true);
+**3. `streaks` — тасралтгүй байдал**
 
-create policy "read streaks" on streaks for select using (true);
-create policy "insert streaks" on streaks for insert with check (true);
-create policy "update streaks" on streaks for update using (true);
-```
+Баримтын **id нь тоглогчийн нэр** байна (`streaks/Бат`) — ингэснээр нэг хүнд нэг л баримт байхыг баталгаажуулна.
 
-### Заах цэг: `references words(id)`
+| Талбар           | Төрөл  | Жишээ          |
+| ---------------- | ------ | -------------- |
+| `currentStreak`  | number | `7`            |
+| `longestStreak`  | number | `12`           |
+| `lastActiveDate` | string | `"2026-08-12"` |
+
+> **Заах цэг — `streaks/Бат`:** Firestore-т SQL-ийн `unique` байхгүй. Гэхдээ **баримтын id-г нэр болгож** ашиглавал ижил үр дүн гарна — нэг нэрэнд нэг л баримт. `setDoc(doc(db,'streaks', name), ...)` ашиглана.
+
+### Заах цэг: `wordId` — баримт хоорондын холбоо
 
 Энэ бол хамгийн чухал шинэ ойлголт. Самбар дээр зур:
 
 ```
-words                      reviews
+words цуглуулга             reviews цуглуулга
 ┌────────────────┐        ┌──────────────────┐
-│ id: abc-123    │◄───────│ word_id: abc-123 │
-│ en: "apple"    │        │ is_correct: true │
-│ mn: "алим"     │        │ player: "Бат"    │
+│ id: kL3n...    │◄───────│ wordId: kL3n...  │
+│ en: "apple"    │        │ isCorrect: true  │
+│ mn: "алим"     │        │ playerName: "Бат"│
 └────────────────┘        └──────────────────┘
 ```
 
-Асуулт: **Яагаад `reviews` хүснэгтэд "apple" гэж бичихгүй, зөвхөн id хадгалдаг вэ?**
+Асуулт: **Яагаад `reviews` доторх баримтад "apple" гэж бичихгүй, зөвхөн id хадгалдаг вэ?**
 
 Хариулт: Хэрэв "apple"-ийн орчуулгыг засах хэрэгтэй болбол нэг л газар засна. Мөн газар бага эзэлнэ. Энэ бол өгөгдлийн сангийн үндсэн зарчим.
+
+> ⚠️ **Firestore-ийн онцлог:** SQL-ийн `on delete cascade` **байхгүй.** Үг устгахад түүнд харьяалагдах `reviews` баримтууд **өөрөө үлдэнэ** — кодоороо цуг устгах ёстой. Энэ нь Алхам 1-ийн промптод тусгагдсан.
 
 ---
 
@@ -89,37 +78,42 @@ words                      reviews
 ### Prompt 1
 
 ```
-Expo + Supabase апп хий. `words` хүснэгттэй ажиллана.
+Expo + Firebase Firestore апп хий. `words` цуглуулгатай ажиллана.
+Firebase холболтыг lib/firebase.js дотор тусад нь бич, доорх config-оор:
+
+[ЭНД ӨӨРИЙН firebaseConfig БЛОКОО БУУЛГА]
 
 Дэлгэц 1 — "Үг нэмэх":
 - Англи үг, монгол орчуулга, жишээ өгүүлбэр оруулах талбарууд
-- "Хадгалах" товч → Supabase words хүснэгтэд нэмнэ (added_by = миний нэр)
+- "Хадгалах" товч → words цуглуулгад addDoc-оор нэмнэ
+  (en, mn, example, addedBy = миний нэр, createdAt = serverTimestamp())
 - Хадгалсны дараа талбарууд цэвэрлэгдэж, "Нэмэгдлээ ✓" гэсэн мессеж 2 секунд гарна
 - Хоосон талбартай бол хадгалахгүй, анхааруулга гарна
 
 Дэлгэц 2 — "Миний үгс":
-- Бүх үгийг карт хэлбэрээр жагсаана
+- Бүх үгийг карт хэлбэрээр жагсаана (баримтын id-г заавал хамт хадгал)
 - Дээд талд хайлтын талбар (англи болон монголоор хайна)
 - Карт дээр дарахад эргэж (flip анимаци) орчуулга, жишээ өгүүлбэр харагдана
 - Картыг зүүн тийш чирэхэд устгах товч гарч ирнэ
-
-Supabase холболтыг lib/supabase.ts дотор тусад нь бич.
+- Үг устгахад тэр үгийн wordId-тай бүх reviews баримтыг ХАМТ устга
+  (Firestore-т cascade байхгүй)
 ```
 
 ### Эхлэлийн өгөгдөл
 
-Хоосон аппыг турших боломжгүй. SQL Editor дээр 15-20 үг урьдчилан нэмээд өг:
+Хоосон аппыг турших боломжгүй. Firebase console → **Firestore → Data → Start collection** → `words` → эхний баримтыг гараар нэмээд, дараа нь **Add document** дарж 15-20 үг оруул. (Хурдан хувилбар: аппаараа өөрөө нэмүүл.)
 
-```sql
-insert into words (en, mn, example, added_by) values
-('curious', 'сониуч', 'She is curious about space.', 'багш'),
-('brave', 'зоригтой', 'He was brave during the storm.', 'багш'),
-('gather', 'цуглуулах', 'We gather firewood every autumn.', 'багш'),
-('ancient', 'эртний', 'This is an ancient tradition.', 'багш'),
-('journey', 'аялал', 'The journey took three days.', 'багш');
+```
+en: curious   | mn: сониуч     | example: She is curious about space. | addedBy: багш
+en: brave     | mn: зоригтой   | example: He was brave during the storm. | addedBy: багш
+en: gather    | mn: цуглуулах  | example: We gather firewood every autumn. | addedBy: багш
+en: ancient   | mn: эртний     | example: This is an ancient tradition. | addedBy: багш
+en: journey   | mn: аялал      | example: The journey took three days. | addedBy: багш
 ```
 
 > **Багшид:** Үгсийг сурагчдын англи хэлний хичээлийн одоогийн сэдвээс ав. Тэгвэл апп нь дасгал биш, жинхэнэ хэрэгсэл болно.
+>
+> ⚡ **Цаг хэмнэх:** Гараар 20 үг нэмэх удаан. Багш нэг сурагчийн аппаар 20 үгээ нэмээд өгвөл бүгд **нэг л Firestore**-оос уншина — ангийн хамтын үгсийн сан болно.
 
 ---
 
@@ -130,7 +124,7 @@ insert into words (en, mn, example, added_by) values
 ```
 "Өнөөдрийн давталт" дэлгэц нэм.
 
-- words хүснэгтээс санамсаргүйгээр 5 үг сонгоно
+- words цуглуулгаас санамсаргүйгээр 5 үг сонгоно
 - Үг тус бүрээр: англи үгийг том үсгээр харуулж, доор нь 4 хувилбар
   (1 зөв орчуулга + бусад үгсээс 3 буруу орчуулга) холилдсон дарааллаар
 - Хариулт сонгоход:
@@ -138,11 +132,12 @@ insert into words (en, mn, example, added_by) values
   - буруу бол улаан болж ✗ гарч, зөв хариултыг ногоонoor тодруулна
 - 1 секундын дараа автоматаар дараагийн үг рүү шилжинэ
 - Дээд талд явц харуулах зураас (3/5)
-- Хариулт бүрийг reviews хүснэгтэд хадгал (word_id, player_name, is_correct)
+- Хариулт бүрийг reviews цуглуулгад хадгал
+  (wordId, playerName, isCorrect, createdAt)
 - Төгсгөлд: "5-аас 4 зөв!" гэсэн үр дүн, эмоцийн эможи, "Дахин" товч
 ```
 
-**Шалгах:** Supabase → `reviews` хүснэгт рүү орж мөрүүд орж ирснийг харуул. `word_id` нь `words` хүснэгтийн `id`-тай таарч байгааг заа.
+**Шалгах:** Firebase console → `reviews` цуглуулга руу орж баримтууд орж ирснийг харуул. `wordId` нь `words` доторх нэг баримтын **id**-тай яг таарч байгааг **хамт нүдээр** ол.
 
 ---
 
@@ -154,12 +149,15 @@ insert into words (en, mn, example, added_by) values
 Streak систем нэм.
 
 Логик:
-- Тоглогч өдрийн давталтаа дуусгах бүрд streaks хүснэгтийг шалгана
-- Хэрэв last_active_date = өчигдөр бол current_streak + 1
-- Хэрэв last_active_date = өнөөдөр бол өөрчлөхгүй (өдөрт нэг л удаа тоологдоно)
-- Хэрэв түүнээс өмнө бол current_streak = 1 (тасарсан)
-- current_streak > longest_streak бол longest_streak-ийг шинэчил
-- last_active_date-ийг өнөөдрийн огноогоор шинэчил
+- streaks цуглуулгад баримтын id нь тоглогчийн нэр байна:
+  doc(db, 'streaks', playerName) — уншихдаа getDoc, бичихдээ setDoc
+- Тоглогч өдрийн давталтаа дуусгах бүрд тэр баримтыг шалгана
+- Хэрэв lastActiveDate = өчигдөр бол currentStreak + 1
+- Хэрэв lastActiveDate = өнөөдөр бол өөрчлөхгүй (өдөрт нэг л удаа тоологдоно)
+- Хэрэв түүнээс өмнө бол currentStreak = 1 (тасарсан)
+- Баримт огт байхгүй бол шинээр үүсгэж currentStreak = 1
+- currentStreak > longestStreak бол longestStreak-ийг шинэчил
+- lastActiveDate-ийг өнөөдрийн огноогоор ("YYYY-MM-DD") шинэчил
 
 Нүүр дэлгэц:
 - Голд том 🔥 дүрс, доор нь "7" гэсэн тоо маш том үсгээр
@@ -175,7 +173,7 @@ Streak систем нэм.
 Нүүр дэлгэцэд GitHub маягийн идэвхийн тор нэм.
 
 - Сүүлийн 30 хоногийг 30 жижиг дөрвөлжингөөр харуул
-- reviews хүснэгтээс тухайн өдөр давталт хийсэн эсэхийг шалга
+- reviews цуглуулгаас тухайн өдөр давталт хийсэн эсэхийг шалга
 - Давталт хийсэн өдөр ногоон, хийгээгүй өдөр саарал
 - Их давталт хийсэн өдөр илүү тод ногоон
 - Дөрвөлжин дээр дарахад тэр өдөр хэдэн үг давтсаныг харуул
@@ -192,7 +190,7 @@ Streak систем нэм.
 ```
 Давталтыг ухаалаг болго.
 
-- reviews хүснэгтээс үг тус бүрийн зөв/буруу харьцааг тооцоол
+- reviews цуглуулгаас үг тус бүрийн зөв/буруу харьцааг wordId-аар бүлэглэж тооцоол
 - Өдрийн давталтад сонгохдоо: буруу хариулсан харьцаа өндөр үгсийг
   илүү өндөр магадлалтайгаар сонго (жишээ нь 5 үгийн 3 нь "хэцүү" үгс байх)
 - Тусдаа "Хэцүү үгс" дэлгэц нэм: хамгийн муу мэддэг 10 үгээ жагсаана,
@@ -207,7 +205,7 @@ Streak систем нэм.
 ```
 "Ангийн самбар" дэлгэц нэм:
 
-- Бүх тоглогчийн current_streak-ийг өндрөөс нам руу жагсаа
+- streaks цуглуулгын бүх баримтыг уншиж currentStreak-ээр өндрөөс нам руу жагсаа
 - Мөр бүрд: нэр, 🔥 streak, нийт давтсан үгийн тоо
 - Хамгийн урт streak-тэй хүнд 👑
 - Долоо хоногт хамгийн олон үг давтсан хүнд ⚡
@@ -219,7 +217,7 @@ Streak систем нэм.
 
 | Үүрэг | Хариуцах зүйл |
 |---|---|
-| **Өгөгдөл** | Supabase хүснэгт, SQL, өгөгдөл нэмэх/унших код |
+| **Өгөгдөл** | Firestore цуглуулга, Rules, өгөгдөл нэмэх/унших код |
 | **Дэлгэц** | UI, өнгө, анимаци, дэлгэц хоорондын шилжилт |
 | **Логик** | Давталтын алгоритм, streak тооцоолол, статистик |
 
@@ -231,12 +229,13 @@ Streak систем нэм.
 
 | Алдаа | Шийдэл |
 |---|---|
-| `word_id` null орно | `words` хүснэгтээс id-г буруу дамжуулж байна |
-| Streak өдөрт олон удаа нэмэгдэнэ | `last_active_date = өнөөдөр` шалгалтыг хийгээгүй |
+| `wordId` undefined орно | Firestore-т баримтын id нь өгөгдөл дотор **байдаггүй**. Уншихдаа `doc.id`-г гараар өөрөө хамт хадгал |
+| Streak өдөрт олон удаа нэмэгдэнэ | `lastActiveDate = өнөөдөр` шалгалтыг хийгээгүй |
 | Огноо буруу — цагийн бүс | Огноог `YYYY-MM-DD` форматаар, орон нутгийн цагаар тооцоол |
 | Буруу хувилбар давхардна | Санамсаргүй сонгохдоо давхардлыг шалгаагүй |
-| Үг устгахад алдаа | `reviews` дотор холбоос үлдсэн. `on delete cascade` тавьсан эсэхээ шалга |
-| Тор дээр өдөр 1-ээр гажина | UTC vs орон нутгийн цаг. Хамгийн түгээмэл алдаа |
+| Үг устгасан ч давталтад дахин гарна | `reviews` дотор өнчин баримт үлдсэн. Firestore-т cascade байхгүй — кодоороо цуг устга |
+| `The query requires an index` | Алдаан дахь **линкийг дар** → Create index → 1-2 мин хүлээ |
+| Тор дээр өдөр 1-ээр гажина | UTC vs орон нутгийн цаг. Хамгийн түгээмэл алдаа. `serverTimestamp` нь UTC гэдгийг санаарай |
 
 ---
 
@@ -246,7 +245,7 @@ Streak систем нэм.
 - [ ] Хайлт ажиллана
 - [ ] Карт эргэж орчуулга харагдана
 - [ ] Өдрийн давталт 5 үг гаргана, хариулт зөв шалгагдана
-- [ ] `reviews` хүснэгтэд бичлэг үүсч байгааг dashboard дээр харсан
+- [ ] `reviews` цуглуулгад баримт үүсч байгааг Firebase console дээр харсан
 - [ ] Streak өдөрт нэг л удаа нэмэгдэнэ
 - [ ] Нэг өдөр алгасвал streak тасарна (огноог гараар өөрчилж туршсан)
 - [ ] Идэвхийн тор зөв харагдана
@@ -270,7 +269,7 @@ Streak систем нэм.
 ## Нэмэлт даалгавар
 
 1. **Дуудлага** — үг дээр дарахад англиар унших (`expo-speech`)
-2. **Зурагтай карт** — үг бүрд зураг хавсаргах (Supabase Storage)
+2. **Зурагтай карт** — үг бүрд зураг хавсаргах (зургийн URL-ийг талбарт хадгал)
 3. **Сануулга** — өдөр бүр тодорхой цагт мэдэгдэл ирүүлэх (`expo-notifications`)
 4. **Оффлайн горим** — интернэтгүй үед AsyncStorage-с уншиж, холбогдоход синк хийх
 5. **Түвшин** — үгсийг амархан/дунд/хэцүү гэж ангилах
