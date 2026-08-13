@@ -1,0 +1,77 @@
+<svg viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg7a" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1026"/>
+      <stop offset="1" stop-color="#161b3d"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="520" rx="24" fill="url(#bg7a)"/>
+  <text x="450" y="56" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="800">🥊 Тулаанчин ямар ТӨЛӨВТ байж болох вэ?</text>
+  <text x="450" y="90" text-anchor="middle" fill="#9aa3d6" font-size="19">Тоглоом дүрийг "одоо ямар төлөвт байна?" гэж боддог</text>
+
+  <!-- center IDLE -->
+  <circle cx="450" cy="270" r="88" fill="#2a2150" stroke="#ffd84d" stroke-width="4"/>
+  <text x="450" y="255" text-anchor="middle" font-size="46">🧍</text>
+  <text x="450" y="295" text-anchor="middle" fill="#ffe57a" font-size="24" font-weight="800">IDLE</text>
+  <text x="450" y="320" text-anchor="middle" fill="#cdd3f5" font-size="15">бэлэн зогсоо</text>
+
+  <!-- arrows -->
+  <g stroke="#52b9ff" stroke-width="3" fill="none" opacity="0.75">
+    <path d="M450 178 L450 150"/>
+    <path d="M370 225 L280 190"/>
+    <path d="M530 225 L620 190"/>
+    <path d="M370 315 L280 350"/>
+    <path d="M530 315 L620 350"/>
+    <path d="M450 358 L450 392"/>
+  </g>
+
+  <!-- WALK -->
+  <g>
+    <rect x="150" y="130" width="180" height="76" rx="16" fill="#1f2750" stroke="#52b9ff" stroke-width="3"/>
+    <text x="192" y="180" text-anchor="middle" font-size="34">🚶</text>
+    <text x="255" y="165" fill="#8dd2ff" font-size="20" font-weight="700">WALK</text>
+    <text x="255" y="188" fill="#7f88c4" font-size="14">A / D товч</text>
+  </g>
+
+  <!-- JUMP -->
+  <g>
+    <rect x="370" y="106" width="160" height="46" rx="14" fill="#1f2750" stroke="#8b7bff" stroke-width="3"/>
+    <text x="400" y="138" text-anchor="middle" font-size="26">🦘</text>
+    <text x="425" y="137" fill="#b7adff" font-size="19" font-weight="700">JUMP</text>
+  </g>
+
+  <!-- PUNCH -->
+  <g>
+    <rect x="570" y="130" width="180" height="76" rx="16" fill="#1f2750" stroke="#ff52d9" stroke-width="3"/>
+    <text x="612" y="180" text-anchor="middle" font-size="34">👊</text>
+    <text x="675" y="165" fill="#ff8df0" font-size="20" font-weight="700">PUNCH</text>
+    <text x="675" y="188" fill="#7f88c4" font-size="14">J товч</text>
+  </g>
+
+  <!-- BLOCK -->
+  <g>
+    <rect x="150" y="334" width="180" height="76" rx="16" fill="#1f2750" stroke="#4ee6a8" stroke-width="3"/>
+    <text x="192" y="384" text-anchor="middle" font-size="34">🛡️</text>
+    <text x="255" y="369" fill="#8bf3cd" font-size="20" font-weight="700">BLOCK</text>
+    <text x="255" y="392" fill="#7f88c4" font-size="14">хамгаалах</text>
+  </g>
+
+  <!-- KICK -->
+  <g>
+    <rect x="570" y="334" width="180" height="76" rx="16" fill="#1f2750" stroke="#ff52d9" stroke-width="3"/>
+    <text x="612" y="384" text-anchor="middle" font-size="34">🦵</text>
+    <text x="675" y="369" fill="#ff8df0" font-size="20" font-weight="700">KICK</text>
+    <text x="675" y="392" fill="#7f88c4" font-size="14">K товч</text>
+  </g>
+
+  <!-- HIT / KO -->
+  <g>
+    <rect x="350" y="396" width="200" height="76" rx="16" fill="#3a1a2a" stroke="#ff6b6b" stroke-width="3"/>
+    <text x="392" y="446" text-anchor="middle" font-size="34">😵</text>
+    <text x="455" y="431" fill="#ff9d9d" font-size="20" font-weight="700">HIT / KO</text>
+    <text x="455" y="454" fill="#7f88c4" font-size="14">цохиулах</text>
+  </g>
+
+  <text x="770" y="490" text-anchor="middle" fill="#ffd84d" font-size="17" font-weight="700">Өнөөдөр: 🧍 👊 😵</text>
+  <text x="770" y="512" text-anchor="middle" fill="#5f68a8" font-size="14">бусад → Хичээл 8</text>
+</svg>
