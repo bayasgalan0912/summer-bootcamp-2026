@@ -3,7 +3,10 @@
 
 - 👉 **[🎮 Kahoot — өмнөх хичээл бататгах](https://play.kahoot.it)**
 - 👉 **[🕹️ Жинхэнэ Street Fighter II тогло](https://www.retrogames.cz/play_304-SNES.php)** — 1991 оны эх тоглоом, браузераасаа шууд
-- 👉 **[🖼️ Слайд](./slides.md)**
+- 👉 **[🖼️ Слайд](https://notebooklm.google.com/notebook/9bf92942-413d-457c-a84f-fc65ea748b48/artifact/ee7ae4b6-8eae-496a-a9d1-1d6d490c27bc?utm_source=nlmm_share
+)**
+- 👉 **[🖼️ Video](notebooklm.google.com/notebook/9bf92942-413d-457c-a84f-fc65ea748b48/artifact/7d77f607-2f2c-4224-b398-9e396fd0dc31?utm_source=nlmm_share
+)**
 
 # Хичээл 7 — 🥊 Тулааны тоглоом #1: Дүр, Арт, Анимаци
 
