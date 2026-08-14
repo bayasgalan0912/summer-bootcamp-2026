@@ -1,0 +1,56 @@
+<svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg7e" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1026"/>
+      <stop offset="1" stop-color="#161b3d"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="480" rx="24" fill="url(#bg7e)"/>
+  <text x="450" y="54" text-anchor="middle" fill="#ffffff" font-size="31" font-weight="800">🔗 Зураг тоглоом хүртэл яаж хүрдэг вэ?</text>
+  <text x="450" y="88" text-anchor="middle" fill="#9aa3d6" font-size="18">Компьютер дээрх зургийг тоглоом ХАРЖ ЧАДАХГҮЙ. Интернэт хаяг (URL) хэрэгтэй.</text>
+
+  <!-- step 1 -->
+  <rect x="30" y="130" width="180" height="150" rx="16" fill="#1f2750" stroke="#8b7bff" stroke-width="3"/>
+  <text x="120" y="180" text-anchor="middle" font-size="40">🖼️</text>
+  <text x="120" y="212" text-anchor="middle" fill="#b7adff" font-size="18" font-weight="700">1. PNG зураг</text>
+  <text x="120" y="238" text-anchor="middle" fill="#7f88c4" font-size="14">компьютер дээрээ</text>
+  <text x="120" y="262" text-anchor="middle" fill="#5f68a8" font-size="13">gaia-idle-1.png</text>
+
+  <text x="228" y="212" text-anchor="middle" fill="#ffd84d" font-size="30">→</text>
+
+  <!-- step 2 -->
+  <rect x="246" y="130" width="180" height="150" rx="16" fill="#1f2750" stroke="#52b9ff" stroke-width="3"/>
+  <text x="336" y="180" text-anchor="middle" font-size="40">🐙</text>
+  <text x="336" y="212" text-anchor="middle" fill="#8dd2ff" font-size="18" font-weight="700">2. GitHub-д</text>
+  <text x="336" y="238" text-anchor="middle" fill="#7f88c4" font-size="14">upload хийнэ</text>
+  <text x="336" y="262" text-anchor="middle" fill="#5f68a8" font-size="13">Add file → Upload</text>
+
+  <text x="444" y="212" text-anchor="middle" fill="#ffd84d" font-size="30">→</text>
+
+  <!-- step 3 -->
+  <rect x="462" y="130" width="180" height="150" rx="16" fill="#2a2150" stroke="#ffd84d" stroke-width="4"/>
+  <text x="552" y="180" text-anchor="middle" font-size="40">🌐</text>
+  <text x="552" y="212" text-anchor="middle" fill="#ffe57a" font-size="18" font-weight="700">3. Raw линк</text>
+  <text x="552" y="238" text-anchor="middle" fill="#cdd3f5" font-size="14">хаягийг хуулна</text>
+  <text x="552" y="262" text-anchor="middle" fill="#ffd84d" font-size="12">raw.githubusercontent…</text>
+
+  <text x="660" y="212" text-anchor="middle" fill="#ffd84d" font-size="30">→</text>
+
+  <!-- step 4 -->
+  <rect x="678" y="130" width="192" height="150" rx="16" fill="#132a20" stroke="#4ee6a8" stroke-width="3"/>
+  <text x="774" y="180" text-anchor="middle" font-size="40">🥊</text>
+  <text x="774" y="212" text-anchor="middle" fill="#8bf3cd" font-size="18" font-weight="700">4. sprites.json</text>
+  <text x="774" y="238" text-anchor="middle" fill="#7f88c4" font-size="14">→ тоглоом хөдөлнө</text>
+  <text x="774" y="262" text-anchor="middle" fill="#5f68a8" font-size="13">Хичээл 5-ын JSON!</text>
+
+  <!-- warning box -->
+  <rect x="90" y="320" width="720" height="126" rx="16" fill="#3a2a12" stroke="#ffb84d" stroke-width="3"/>
+  <text x="450" y="352" text-anchor="middle" fill="#ffd18a" font-size="19" font-weight="800">⚠️ Файлын нэрийн 3 дүрэм — эндээс хамгийн их гацдаг</text>
+  <g font-size="16">
+    <text x="130" y="384" fill="#8bf3cd">✅ gaia-idle-1.png</text>
+    <text x="470" y="384" fill="#ff9d9d">❌ Гайа зураг (1).png</text>
+    <text x="130" y="410" fill="#cdd3f5">англи жижиг үсэг · зайгүй · зураас</text>
+    <text x="470" y="410" fill="#e8c9c9">кирилл · зай · хаалт</text>
+    <text x="450" y="436" text-anchor="middle" fill="#ffd84d" font-weight="700">🔑 Хаяг нь "blob" биш "raw" байх ёстой!</text>
+  </g>
+</svg>

@@ -1,0 +1,51 @@
+<svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg7h" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1026"/>
+      <stop offset="1" stop-color="#161b3d"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="480" rx="24" fill="url(#bg7h)"/>
+  <text x="450" y="54" text-anchor="middle" fill="#ffffff" font-size="31" font-weight="800">📎 Reference image — стилийг ЗЭЭЛДЭХ заль</text>
+  <text x="450" y="88" text-anchor="middle" fill="#9aa3d6" font-size="18">Retro arcade стилийг ав — гэхдээ дүрийг <tspan fill="#ffd84d" font-weight="700">ӨӨРИЙНХӨӨР</tspan> гарга</text>
+
+  <!-- input -->
+  <rect x="50" y="126" width="220" height="180" rx="16" fill="#1f2750" stroke="#8b7bff" stroke-width="3"/>
+  <text x="160" y="158" text-anchor="middle" fill="#b7adff" font-size="18" font-weight="700">📎 Хавсаргах</text>
+  <text x="160" y="222" text-anchor="middle" font-size="52">🕹️</text>
+  <text x="160" y="256" text-anchor="middle" fill="#cdd3f5" font-size="15">хуучин arcade</text>
+  <text x="160" y="278" text-anchor="middle" fill="#cdd3f5" font-size="15">тоглоомын зураг</text>
+
+  <text x="298" y="220" text-anchor="middle" fill="#ffd84d" font-size="32">+</text>
+
+  <!-- prompt -->
+  <rect x="326" y="126" width="248" height="180" rx="16" fill="#2a2150" stroke="#ffd84d" stroke-width="3"/>
+  <text x="450" y="158" text-anchor="middle" fill="#ffe57a" font-size="18" font-weight="700">💬 Промпт</text>
+  <text x="450" y="192" text-anchor="middle" fill="#ffffff" font-size="14">"Хавсаргасан зургийн</text>
+  <text x="450" y="214" text-anchor="middle" fill="#ffffff" font-size="14">СТИЛИЙГ хэрэглэ,</text>
+  <text x="450" y="236" text-anchor="middle" fill="#ff8df0" font-size="14" font-weight="700">гэхдээ БҮРЭН ӨӨР,</text>
+  <text x="450" y="258" text-anchor="middle" fill="#ff8df0" font-size="14" font-weight="700">шинэ дүр гарга"</text>
+  <text x="450" y="288" text-anchor="middle" fill="#7f88c4" font-size="13">+ өөрийн дүрийн карт</text>
+
+  <text x="602" y="220" text-anchor="middle" fill="#ffd84d" font-size="32">=</text>
+
+  <!-- output -->
+  <rect x="630" y="126" width="220" height="180" rx="16" fill="#132a20" stroke="#4ee6a8" stroke-width="3"/>
+  <text x="740" y="158" text-anchor="middle" fill="#8bf3cd" font-size="18" font-weight="700">✅ Үр дүн</text>
+  <text x="740" y="222" text-anchor="middle" font-size="52">🥋</text>
+  <text x="740" y="256" text-anchor="middle" fill="#cdd3f5" font-size="15">Retro стиль ✔</text>
+  <text x="740" y="278" text-anchor="middle" fill="#4ee6a8" font-size="15" font-weight="700">Өөрийн дүр ✔</text>
+
+  <!-- rule -->
+  <rect x="70" y="332" width="760" height="122" rx="16" fill="#1b2348" stroke="#2f3a70" stroke-width="2"/>
+  <text x="450" y="360" text-anchor="middle" fill="#ffd84d" font-size="18" font-weight="800">⚖️ Юуг зээлж болох, юуг болохгүй вэ?</text>
+  <g font-size="16">
+    <text x="120" y="392" fill="#8bf3cd" font-weight="700">✅ Зээлж БОЛНО</text>
+    <text x="120" y="416" fill="#cdd3f5">🎨 стиль · өнгөний мэдрэмж</text>
+    <text x="120" y="438" fill="#cdd3f5">📐 камерын зүг · хэмжээ</text>
+
+    <text x="510" y="392" fill="#ff9d9d" font-weight="700">❌ Зээлж БОЛОХГҮЙ</text>
+    <text x="510" y="416" fill="#e8c9c9">🚫 дүрийн нэр, нүүр, хувцас</text>
+    <text x="510" y="438" fill="#e8c9c9">🚫 таних тэмдэг (цагаан гутал 🥋)</text>
+  </g>
+</svg>

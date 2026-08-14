@@ -1,0 +1,59 @@
+<svg viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg7c" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1026"/>
+      <stop offset="1" stop-color="#161b3d"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="520" rx="24" fill="url(#bg7c)"/>
+  <text x="450" y="56" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="800">🎞️ Анимаци = зургаа ХУРДАН солих</text>
+  <text x="450" y="90" text-anchor="middle" fill="#9aa3d6" font-size="19">Дүр хөдөлдөггүй — бид зургийг сольдог. Тархи "хөдөллөө" гэж боддог.</text>
+
+  <!-- frames strip -->
+  <g>
+    <rect x="60" y="130" width="150" height="150" rx="14" fill="#1f2750" stroke="#52b9ff" stroke-width="3"/>
+    <text x="135" y="220" text-anchor="middle" font-size="62">🧍</text>
+    <text x="135" y="258" text-anchor="middle" fill="#8dd2ff" font-size="16" font-weight="700">frame 1</text>
+    <text x="135" y="304" text-anchor="middle" fill="#7f88c4" font-size="14">idle-1.png</text>
+
+    <text x="240" y="215" text-anchor="middle" fill="#ffd84d" font-size="34">→</text>
+    <text x="240" y="245" text-anchor="middle" fill="#5f68a8" font-size="13">150ms</text>
+
+    <rect x="270" y="130" width="150" height="150" rx="14" fill="#1f2750" stroke="#52b9ff" stroke-width="3"/>
+    <text x="345" y="226" text-anchor="middle" font-size="62">🧎</text>
+    <text x="345" y="258" text-anchor="middle" fill="#8dd2ff" font-size="16" font-weight="700">frame 2</text>
+    <text x="345" y="304" text-anchor="middle" fill="#7f88c4" font-size="14">idle-2.png</text>
+
+    <text x="450" y="215" text-anchor="middle" fill="#ffd84d" font-size="34">→</text>
+    <text x="450" y="245" text-anchor="middle" fill="#5f68a8" font-size="13">150ms</text>
+
+    <rect x="480" y="130" width="150" height="150" rx="14" fill="#1f2750" stroke="#52b9ff" stroke-width="3" stroke-dasharray="7 5"/>
+    <text x="555" y="220" text-anchor="middle" font-size="62">🧍</text>
+    <text x="555" y="258" text-anchor="middle" fill="#8dd2ff" font-size="16" font-weight="700">frame 1 (дахин)</text>
+    <text x="555" y="304" text-anchor="middle" fill="#7f88c4" font-size="14">🔁 давтана</text>
+
+    <path d="M660 205 L700 205" stroke="#4ee6a8" stroke-width="3"/>
+    <rect x="700" y="130" width="150" height="150" rx="14" fill="#132a20" stroke="#4ee6a8" stroke-width="3"/>
+    <text x="775" y="222" text-anchor="middle" font-size="62">🫁</text>
+    <text x="775" y="258" text-anchor="middle" fill="#8bf3cd" font-size="17" font-weight="800">амьсгалж байна!</text>
+  </g>
+
+  <text x="450" y="345" text-anchor="middle" fill="#ffd84d" font-size="20" font-weight="700">🔑 Ердөө 2 зураг → дүр амьд болно</text>
+
+  <!-- fps table -->
+  <rect x="130" y="370" width="640" height="118" rx="16" fill="#1b2348" stroke="#2f3a70" stroke-width="2"/>
+  <text x="450" y="399" text-anchor="middle" fill="#cdd3f5" font-size="18" font-weight="700">Хэр хурдан солих вэ? (нэг frame хэдэн ms харагдах)</text>
+  <g font-size="16">
+    <text x="200" y="432" text-anchor="middle" fill="#8dd2ff" font-weight="700">400ms</text>
+    <text x="200" y="456" text-anchor="middle" fill="#7f88c4">🐢 хэт удаан</text>
+    <text x="200" y="476" text-anchor="middle" fill="#5f68a8" font-size="13">салангид харагдана</text>
+
+    <text x="450" y="432" text-anchor="middle" fill="#4ee6a8" font-weight="800">120–160ms</text>
+    <text x="450" y="456" text-anchor="middle" fill="#8bf3cd">✅ яг таарна</text>
+    <text x="450" y="476" text-anchor="middle" fill="#5f68a8" font-size="13">arcade мэдрэмж</text>
+
+    <text x="700" y="432" text-anchor="middle" fill="#ff9d9d" font-weight="700">30ms</text>
+    <text x="700" y="456" text-anchor="middle" fill="#e8c9c9">⚡ хэт хурдан</text>
+    <text x="700" y="476" text-anchor="middle" fill="#5f68a8" font-size="13">чичирсэн шиг</text>
+  </g>
+</svg>

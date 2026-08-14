@@ -1,0 +1,62 @@
+<svg viewBox="0 0 900 540" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg7d" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1026"/>
+      <stop offset="1" stop-color="#161b3d"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="540" rx="24" fill="url(#bg7d)"/>
+  <text x="450" y="54" text-anchor="middle" fill="#ffffff" font-size="31" font-weight="800">🔑 Өнөөдрийн ХАМГИЙН чухал дүрэм</text>
+  <text x="450" y="88" text-anchor="middle" fill="#ffd84d" font-size="22" font-weight="800">Шинээр бүү ҮҮСГЭ — байгаа зургаа ЗАС (edit)</text>
+
+  <!-- WRONG -->
+  <rect x="40" y="115" width="390" height="360" rx="20" fill="#2e1620" stroke="#ff6b6b" stroke-width="3"/>
+  <text x="235" y="150" text-anchor="middle" fill="#ff9d9d" font-size="22" font-weight="800">❌ Frame бүрийг ШИНЭЭР</text>
+  <text x="235" y="176" text-anchor="middle" fill="#e8c9c9" font-size="15">"Тулаанчин зур" → дахин → дахин</text>
+
+  <g>
+    <rect x="70" y="196" width="100" height="120" rx="10" fill="#1f2750"/>
+    <text x="120" y="272" text-anchor="middle" font-size="52">🥋</text>
+    <text x="120" y="300" text-anchor="middle" fill="#7f88c4" font-size="13">frame 1</text>
+
+    <rect x="185" y="196" width="100" height="120" rx="10" fill="#1f2750"/>
+    <text x="235" y="272" text-anchor="middle" font-size="52">🧙</text>
+    <text x="235" y="300" text-anchor="middle" fill="#7f88c4" font-size="13">frame 2</text>
+
+    <rect x="300" y="196" width="100" height="120" rx="10" fill="#1f2750"/>
+    <text x="350" y="272" text-anchor="middle" font-size="52">🤠</text>
+    <text x="350" y="300" text-anchor="middle" fill="#7f88c4" font-size="13">frame 3</text>
+  </g>
+  <text x="235" y="352" text-anchor="middle" fill="#ff6b6b" font-size="19" font-weight="800">→ 3 өөр ХҮН болчихлоо 😱</text>
+  <text x="235" y="392" text-anchor="middle" fill="#e8c9c9" font-size="15">Тоглоомд тавихад дүр frame тутам</text>
+  <text x="235" y="414" text-anchor="middle" fill="#e8c9c9" font-size="15">хувцас, өнгө, өндрөө сольж "мултарна"</text>
+  <text x="235" y="450" text-anchor="middle" fill="#ff9d9d" font-size="16" font-weight="700">🚫 Анимаци болохгүй</text>
+
+  <!-- RIGHT -->
+  <rect x="470" y="115" width="390" height="360" rx="20" fill="#132a20" stroke="#4ee6a8" stroke-width="3"/>
+  <text x="665" y="150" text-anchor="middle" fill="#8bf3cd" font-size="22" font-weight="800">✅ НЭГ зургаа ЗАСАХ</text>
+  <text x="665" y="176" text-anchor="middle" fill="#cdd3f5" font-size="15">"Яг ижил дүр — зөвхөн БАЙРЛАЛ өөр"</text>
+
+  <g>
+    <rect x="500" y="196" width="100" height="120" rx="10" fill="#1b3a2c" stroke="#ffd84d" stroke-width="3"/>
+    <text x="550" y="272" text-anchor="middle" font-size="52">🥋</text>
+    <text x="550" y="300" text-anchor="middle" fill="#ffd84d" font-size="13" font-weight="700">ЭХ зураг</text>
+
+    <text x="620" y="262" text-anchor="middle" fill="#4ee6a8" font-size="26">✏️</text>
+    <text x="620" y="288" text-anchor="middle" fill="#5f68a8" font-size="12">edit</text>
+
+    <rect x="640" y="196" width="100" height="120" rx="10" fill="#1b3a2c"/>
+    <text x="690" y="272" text-anchor="middle" font-size="52">🥋</text>
+    <text x="690" y="300" text-anchor="middle" fill="#8bf3cd" font-size="13">punch</text>
+
+    <rect x="750" y="196" width="100" height="120" rx="10" fill="#1b3a2c"/>
+    <text x="800" y="272" text-anchor="middle" font-size="52">🥋</text>
+    <text x="800" y="300" text-anchor="middle" fill="#8bf3cd" font-size="13">hit</text>
+  </g>
+  <text x="665" y="352" text-anchor="middle" fill="#4ee6a8" font-size="19" font-weight="800">→ Ижил ХҮН, өөр байрлал 🎉</text>
+  <text x="665" y="392" text-anchor="middle" fill="#cdd3f5" font-size="15">Frame солиход зөвхөн хөдөлгөөн өөрчлөгдөнө</text>
+  <text x="665" y="414" text-anchor="middle" fill="#cdd3f5" font-size="15">— хувцас, өнгө, өндөр ХЭВЭЭР</text>
+  <text x="665" y="450" text-anchor="middle" fill="#8bf3cd" font-size="16" font-weight="700">✅ Жинхэнэ анимаци</text>
+
+  <text x="450" y="510" text-anchor="middle" fill="#ffd84d" font-size="18" font-weight="700">💬 "Яг ижил дүр, ижил хувцас, ижил өнгө байлга. ЗӨВХӨН хөдөлгөөнийг өөрчил."</text>
+</svg>

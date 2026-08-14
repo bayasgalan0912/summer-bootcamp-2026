@@ -1,0 +1,47 @@
+<svg viewBox="0 0 900 460" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg7f" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1026"/>
+      <stop offset="1" stop-color="#161b3d"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="460" rx="24" fill="url(#bg7f)"/>
+  <text x="450" y="56" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="800">🗺️ Тулааны тоглоом — 3 хичээлийн зам</text>
+  <text x="450" y="90" text-anchor="middle" fill="#9aa3d6" font-size="18">Нэг хичээлд бүгдийг хийхгүй. Хичээл тутам НЭГ том зүйл нэмнэ.</text>
+
+  <line x1="150" y1="240" x2="750" y2="240" stroke="#2f3a70" stroke-width="6"/>
+
+  <!-- L7 -->
+  <circle cx="190" cy="240" r="34" fill="#2a2150" stroke="#ffd84d" stroke-width="4"/>
+  <text x="190" y="252" text-anchor="middle" fill="#ffd84d" font-size="24" font-weight="800">7</text>
+  <rect x="70" y="118" width="240" height="98" rx="16" fill="#2a2150" stroke="#ffd84d" stroke-width="3"/>
+  <text x="190" y="150" text-anchor="middle" fill="#ffe57a" font-size="20" font-weight="800">🎨 ДҮР + АРТ</text>
+  <text x="190" y="176" text-anchor="middle" fill="#cdd3f5" font-size="15">sprite · анимаци · арена</text>
+  <text x="190" y="200" text-anchor="middle" fill="#ffd84d" font-size="14" font-weight="700">← ӨНӨӨДӨР</text>
+  <text x="190" y="292" text-anchor="middle" fill="#7f88c4" font-size="14">Гарах үр дүн:</text>
+  <text x="190" y="314" text-anchor="middle" fill="#cdd3f5" font-size="14">idle хөдөлж, 1 цохилттой</text>
+
+  <!-- L8 -->
+  <circle cx="450" cy="240" r="34" fill="#1f2750" stroke="#ff52d9" stroke-width="4"/>
+  <text x="450" y="252" text-anchor="middle" fill="#ff8df0" font-size="24" font-weight="800">8</text>
+  <rect x="330" y="118" width="240" height="98" rx="16" fill="#1f2750" stroke="#ff52d9" stroke-width="3"/>
+  <text x="450" y="150" text-anchor="middle" fill="#ff8df0" font-size="20" font-weight="800">🥊 ТУЛААН</text>
+  <text x="450" y="176" text-anchor="middle" fill="#cdd3f5" font-size="15">combo · block · special</text>
+  <text x="450" y="200" text-anchor="middle" fill="#7f88c4" font-size="14">+ дуу чимээ, AI өрсөлдөгч</text>
+  <text x="450" y="292" text-anchor="middle" fill="#7f88c4" font-size="14">Гарах үр дүн:</text>
+  <text x="450" y="314" text-anchor="middle" fill="#cdd3f5" font-size="14">жинхэнэ тулаан — KO!</text>
+
+  <!-- L9 -->
+  <circle cx="710" cy="240" r="34" fill="#1f2750" stroke="#4ee6a8" stroke-width="4"/>
+  <text x="710" y="252" text-anchor="middle" fill="#8bf3cd" font-size="24" font-weight="800">9</text>
+  <rect x="590" y="118" width="240" height="98" rx="16" fill="#1f2750" stroke="#4ee6a8" stroke-width="3"/>
+  <text x="710" y="150" text-anchor="middle" fill="#8bf3cd" font-size="20" font-weight="800">🏆 ТЭМЦЭЭН</text>
+  <text x="710" y="176" text-anchor="middle" fill="#cdd3f5" font-size="15">дүр сонгох · best of 3</text>
+  <text x="710" y="200" text-anchor="middle" fill="#7f88c4" font-size="14">+ Firestore leaderboard</text>
+  <text x="710" y="292" text-anchor="middle" fill="#7f88c4" font-size="14">Гарах үр дүн:</text>
+  <text x="710" y="314" text-anchor="middle" fill="#cdd3f5" font-size="14">ангийн ЧЕМПИОНАТ</text>
+
+  <rect x="150" y="352" width="600" height="66" rx="16" fill="#1b2348" stroke="#2f3a70" stroke-width="2"/>
+  <text x="450" y="380" text-anchor="middle" fill="#ffd84d" font-size="18" font-weight="700">🛡️ 3 хичээлийн ГОЛ ДҮРЭМ</text>
+  <text x="450" y="405" text-anchor="middle" fill="#cdd3f5" font-size="16">"Ажиллаж байгааг бүү эвд" — нэг зүйл нэм → турш → дараагийнх</text>
+</svg>
