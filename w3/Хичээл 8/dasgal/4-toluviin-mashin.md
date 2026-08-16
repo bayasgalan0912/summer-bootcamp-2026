@@ -24,6 +24,12 @@
 | `kick` | L | Анимаци дуусахад | 1 удаа |
 | `hit` | (цохиулахад) | 250ms-ын дараа | 1 удаа |
 
+**Төлөв бүр биеэрээ ямар харагдах вэ** — багшийн багцын жишээ:
+
+| walk | crouch | jump | block | hit |
+| --- | --- | --- | --- | --- |
+| <img src="../../assets/red-brawler/walk-forward-preview.gif" width="120"> | <img src="../../assets/red-brawler/crouch-preview.gif" width="120"> | <img src="../../assets/red-brawler/jump-preview.gif" width="120"> | <img src="../../assets/red-brawler/block-high-preview.gif" width="120"> | <img src="../../assets/red-brawler/hit-high-preview.gif" width="120"> |
+
 ### Дараалал (priority) — хэн хэнийг таслах вэ
 
 ```
@@ -50,12 +56,17 @@ hit  >  punch / kick  >  block  >  jump  >  crouch  >  walk  >  idle
 болсон бөгөөд дүр 8 төлөвтэй болно.
 
 SPRITE SHEET УНШИХ:
-- sprites.json дахь "cell" нь нэг frame-ийн хэмжээ: 256 өргөн, 192 өндөр.
-- Sheet бүр НЭГ мөр — frame-үүд хэвтээ эгнээнд, хооронд нь зай байхгүй.
-- N дугаартай frame-ийг харуулах:
-  background-position-x = -(N × 256) px  (N нь 0-оос эхэлнэ)
-- Анимаци бүрийн frames, fps, loop, hold-ыг sprites.json-оос УНШ.
+- sprites.json дахь "cell" нь нэг frame-ийн хэмжээ: 256 × 256.
+- Sheet бүр "cols" ширхэг баганатай тор. Frame-үүд зүүнээс баруун
+  дүүрч, дараа нь дараагийн мөрөнд үргэлжилнэ. Зай (padding) байхгүй.
+- N дугаартай frame-ийг харуулах (N нь 0-оос эхэлнэ):
+    багана = N % cols
+    мөр    = Math.floor(N / cols)
+    background-position = -(багана × 256)px  -(мөр × 256)px
+- Анимаци бүрийн frames, cols, fps, loop, hold-ыг sprites.json-оос УНШ.
   Эдгээр тоог кодод бүү бич.
+- Дүрийн "facing" нь "left" бол зургийг scaleX(-1)-ээр толиндож
+  баруун тийш харуул. "right" бол шууд хэрэглэ.
 - image-rendering: pixelated хэвээр байг.
 
 ТӨЛӨВИЙН МАШИН (P1):
@@ -169,8 +180,10 @@ export const TUNE = {
 
 | Асуудал | Шийдэл |
 | --- | --- |
-| **Хагас дүр / хоёр дүр нэг нүдэнд** | Sheet-ийн нүд 256×192 биш байна. Алхам 2.2-т буц. |
+| **Хагас дүр / хоёр дүр нэг нүдэнд** | Sheet-ийн нүд 256×256 биш, эсвэл `cols` буруу. Алхам 2.2-т буц. |
+| **Frame-үүд дараалалгүй үсэрнэ** | `cols` буруу — sheet-ийн өргөнийг 256-д хуваасан тоо байх ёстой. |
 | **Анимаци сүүлийн frame дээр хоосон гарна** | JSON дахь `frames` тоо sheet-д байгаагаас их байна. |
+| **Дүр буруу тийш харна** | JSON-ий `facing` талбарыг "left" ↔ "right" болгож сольж үз. |
 | **Block тавьсны дараа ч хамгаалалтад үлдэнэ** | _"K товчийг тавихад block төлвөөс шууд idle руу гар."_ |
 | **punch дарахад анимаци тасарч дахин эхэлнэ** | _"punch анимаци дуустал шинэ товч хүлээж авахгүй болго."_ |
 | **Үсрэхэд дүр дэлгэцээс гарна** | `tuning.js`-ийн `jumpHeight`-ыг өөрөө багасга. |
