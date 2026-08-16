@@ -1,0 +1,66 @@
+<svg viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg8b" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1026"/>
+      <stop offset="1" stop-color="#161b3d"/>
+    </linearGradient>
+    <marker id="ar8" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#5f68a8"/>
+    </marker>
+    <marker id="ar8y" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#ffd84d"/>
+    </marker>
+  </defs>
+  <rect width="900" height="520" rx="24" fill="url(#bg8b)"/>
+
+  <text x="450" y="50" text-anchor="middle" fill="#ffffff" font-size="30" font-weight="800">Төлөвийн машин (state machine)</text>
+  <text x="450" y="82" text-anchor="middle" fill="#9aa3d6" font-size="18">Дүр ямар ч агшинд ЗӨВХӨН НЭГ төлөвт байна</text>
+
+  <!-- idle center -->
+  <circle cx="450" cy="270" r="66" fill="#1c2a5e" stroke="#52b9ff" stroke-width="4"/>
+  <text x="450" y="262" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="800">idle</text>
+  <text x="450" y="288" text-anchor="middle" fill="#8dd2ff" font-size="13">давтагдана</text>
+
+  <!-- surrounding held states -->
+  <g fill="#182046" stroke="#7de08a" stroke-width="3">
+    <rect x="100" y="150" width="150" height="62" rx="14"/>
+    <rect x="100" y="330" width="150" height="62" rx="14"/>
+    <rect x="360" y="120" width="180" height="62" rx="14"/>
+  </g>
+  <text x="175" y="180" text-anchor="middle" fill="#ffffff" font-size="19" font-weight="700">walk</text>
+  <text x="175" y="200" text-anchor="middle" fill="#7de08a" font-size="13">A / D дарж байхад</text>
+  <text x="175" y="360" text-anchor="middle" fill="#ffffff" font-size="19" font-weight="700">crouch</text>
+  <text x="175" y="380" text-anchor="middle" fill="#7de08a" font-size="13">S дарж байхад</text>
+  <text x="450" y="150" text-anchor="middle" fill="#ffffff" font-size="19" font-weight="700">jump</text>
+  <text x="450" y="170" text-anchor="middle" fill="#7de08a" font-size="13">W — агаарт байх хүртэл</text>
+
+  <!-- action states -->
+  <g fill="#182046" stroke="#ffd84d" stroke-width="3">
+    <rect x="650" y="150" width="160" height="62" rx="14"/>
+    <rect x="650" y="240" width="160" height="62" rx="14"/>
+    <rect x="650" y="330" width="160" height="62" rx="14"/>
+  </g>
+  <text x="730" y="180" text-anchor="middle" fill="#ffffff" font-size="19" font-weight="700">punch</text>
+  <text x="730" y="200" text-anchor="middle" fill="#ffd84d" font-size="13">J — 1 удаа тоглоно</text>
+  <text x="730" y="270" text-anchor="middle" fill="#ffffff" font-size="19" font-weight="700">kick</text>
+  <text x="730" y="290" text-anchor="middle" fill="#ffd84d" font-size="13">L — 1 удаа тоглоно</text>
+  <text x="730" y="360" text-anchor="middle" fill="#ffffff" font-size="19" font-weight="700">block</text>
+  <text x="730" y="380" text-anchor="middle" fill="#ffd84d" font-size="13">K дарж байхад</text>
+
+  <!-- hit -->
+  <rect x="360" y="418" width="180" height="62" rx="14" fill="#3a1730" stroke="#ff7ba8" stroke-width="3"/>
+  <text x="450" y="448" text-anchor="middle" fill="#ffffff" font-size="19" font-weight="700">hit</text>
+  <text x="450" y="468" text-anchor="middle" fill="#ff7ba8" font-size="13">цохиулбал — бүх төлвийг таслана</text>
+
+  <!-- arrows -->
+  <line x1="384" y="252" x2="256" y2="196" stroke="#5f68a8" stroke-width="2.5" marker-end="url(#ar8)"/>
+  <line x1="256" y1="346" x2="384" y2="292" stroke="#5f68a8" stroke-width="2.5" marker-end="url(#ar8)"/>
+  <line x1="450" y1="204" x2="450" y2="186" stroke="#5f68a8" stroke-width="2.5" marker-end="url(#ar8)"/>
+  <line x1="516" y1="252" x2="644" y2="196" stroke="#ffd84d" stroke-width="2.5" marker-end="url(#ar8y)"/>
+  <line x1="518" y1="270" x2="644" y2="270" stroke="#ffd84d" stroke-width="2.5" marker-end="url(#ar8y)"/>
+  <line x1="516" y1="292" x2="644" y2="346" stroke="#ffd84d" stroke-width="2.5" marker-end="url(#ar8y)"/>
+  <line x1="450" y1="412" x2="450" y2="340" stroke="#ff7ba8" stroke-width="2.5" marker-end="url(#ar8)"/>
+
+  <text x="115" y="500" fill="#7f88c4" font-size="14">Ногоон = товч дарж байхад ҮРГЭЛЖИЛНЭ (сүүлийн frame давтагдана)</text>
+  <text x="565" y="500" fill="#7f88c4" font-size="14">Шар = 1 удаа тоглоод idle руу буцна</text>
+</svg>

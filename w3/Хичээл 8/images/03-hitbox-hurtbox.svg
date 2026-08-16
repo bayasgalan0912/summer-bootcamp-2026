@@ -1,0 +1,32 @@
+<svg viewBox="0 0 900 460" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg8c" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1026"/>
+      <stop offset="1" stop-color="#161b3d"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="460" rx="24" fill="url(#bg8c)"/>
+
+  <text x="450" y="50" text-anchor="middle" fill="#ffffff" font-size="30" font-weight="800">Хитбокс ба хёртбокс</text>
+  <text x="450" y="82" text-anchor="middle" fill="#9aa3d6" font-size="18">Цохилт нь frame тутам тэмдэглэсэн тойрог биетэй огтлолцвол л хүрнэ</text>
+
+  <!-- P1 cell -->
+  <rect x="90" y="120" width="330" height="248" rx="10" fill="#141a3a" stroke="#2c3567" stroke-width="2"/>
+  <text x="255" y="145" text-anchor="middle" fill="#7f88c4" font-size="14">P1 · kick · frame 1</text>
+  <text x="215" y="290" text-anchor="middle" font-size="86">🥋</text>
+  <circle cx="352" cy="252" r="42" fill="#ff5f7a" fill-opacity="0.28" stroke="#ff5f7a" stroke-width="3"/>
+  <text x="352" y="258" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="800">hit</text>
+  <text x="352" y="318" text-anchor="middle" fill="#ff5f7a" font-size="14">хөл = цохих хэсэг</text>
+
+  <!-- P2 cell -->
+  <rect x="480" y="120" width="330" height="248" rx="10" fill="#141a3a" stroke="#2c3567" stroke-width="2"/>
+  <text x="645" y="145" text-anchor="middle" fill="#7f88c4" font-size="14">P2 · idle</text>
+  <rect x="600" y="180" width="96" height="164" rx="12" fill="#52b9ff" fill-opacity="0.22" stroke="#52b9ff" stroke-width="3"/>
+  <text x="648" y="284" text-anchor="middle" font-size="86">🧍</text>
+  <text x="648" y="366" text-anchor="middle" fill="#52b9ff" font-size="14">бие = цохиулах хэсэг (hurtbox)</text>
+
+  <text x="450" y="248" text-anchor="middle" fill="#ffd84d" font-size="30">→</text>
+
+  <rect x="90" y="392" width="720" height="46" rx="12" fill="#182046" stroke="#2c3567" stroke-width="2"/>
+  <text x="115" y="421" fill="#ffffff" font-size="16">Улаан тойрог хөх дөрвөлжинтэй огтлолцвол → damage, knockback, screen shake. Огтлолцоогүй бол цохилт хоосон явна.</text>
+</svg>
