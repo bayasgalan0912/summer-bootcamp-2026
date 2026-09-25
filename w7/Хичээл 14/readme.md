@@ -11,8 +11,8 @@
 **Багшийн жишээ багц:** [`w7/assets/`](../assets/readme.md) — 3 бүрэн дүр, 2 арена, UI. Бүх алхамд жишээ болгон харагдана. Өөрийн зураг бэлэн болоогүй бол эндээс ав.
 
 | <img src="../assets/red-brawler/portrait.png" width="150"> | <img src="../assets/green-boxer/portrait.png" width="150"> | <img src="../assets/jiujitsu-fighter/portrait.png" width="150"> |
-| --- | --- | --- |
-| red-brawler | green-boxer | jiujitsu-fighter |
+| ---------------------------------------------------------- | ---------------------------------------------------------- | --------------------------------------------------------------- |
+| red-brawler                                                | green-boxer                                                | jiujitsu-fighter                                                |
 
 ---
 
@@ -26,7 +26,7 @@
 - "Төлөвөөс эхлүүлэх" заль — суусан байрлалаас цохих frame гаргах арга
 - Frame бүрийн **яг таг хэмжээ**: 1:1, эх зураг 1024×1024, дараа нь 256×256
 
-### <a href="dasgal/1-shine-hodolgoon.md" target="_blank">Алхам 1-ийг нээх</a>
+### <a href="dasgal/1-shine-hodolgoon.md" target="_blank">Үзэх</a>
 
 </details>
 
@@ -38,7 +38,7 @@
 - Хэрэгсэл: remove.bg / Photoroom · iLoveIMG · Leshy SpriteSheet Tool · ezgif
 - Бэлэн sprite sheet татах сайтууд (гацсан хосуудад)
 
-### <a href="dasgal/2-sprite-sheet.md" target="_blank">Алхам 2-ыг нээх</a>
+### <a href="dasgal/2-sprite-sheet.md" target="_blank">Үзэх</a>
 
 </details>
 
@@ -49,7 +49,7 @@
 - `hold` гэж юу вэ — block дарж байхад сүүлийн frame яагаад давтагдах ёстой вэ
 - GitHub-д upload → raw хаяг → JSONLint
 
-### <a href="dasgal/3-sprites-json.md" target="_blank">Алхам 3-ыг нээх</a>
+### <a href="dasgal/3-sprites-json.md" target="_blank">Үзэх</a>
 
 </details>
 
@@ -60,7 +60,7 @@
 - 8 төлөв, 7 товч, дараалал (аль төлөв алийг таслах вэ)
 - AI Studio-ийн гол промпт + `tuning.js` (тоог өөрөө засах)
 
-### <a href="dasgal/4-toluviin-mashin.md" target="_blank">Алхам 4-ийг нээх</a>
+### <a href="dasgal/4-toluviin-mashin.md" target="_blank">Үзэх</a>
 
 </details>
 
@@ -71,7 +71,7 @@
 - Хитбокс засварлагч хуудсыг AI Studio-гаар бүтээх
 - `hitboxes.json` — frame тутам нэг тойрог, эсвэл `null`
 
-### <a href="dasgal/5-hitbox.md" target="_blank">Алхам 5-ыг нээх</a>
+### <a href="dasgal/5-hitbox.md" target="_blank">Үзэх</a>
 
 </details>
 
@@ -83,7 +83,7 @@
 - Браузер яагаад дууг эхэнд нь хаадаг вэ — first-key заль
 - Checkpoint · quest · publish
 
-### <a href="dasgal/6-duu-hogjim.md" target="_blank">Алхам 6-ыг нээх</a>
+### <a href="dasgal/6-duu-hogjim.md" target="_blank">Үзэх</a>
 
 </details>
 
@@ -130,19 +130,19 @@
 <details>
 <summary><b>Glossary</b></summary>
 
-| Үг | Тайлбар |
-| --- | --- |
-| **Sprite sheet** | Олон frame-ийг нэг зурагт эгнүүлж багцалсан файл |
-| **Cell / нүд** | Sheet доторх нэг frame-ийн талбай (бидэнд 256×256) |
-| **cols** | Sheet-ийн багана тоо — frame-ийн байрлалыг олоход хэрэгтэй |
-| **fps** | Секундэд хэдэн frame солих (12 fps = 83ms тутам) |
+| Үг                | Тайлбар                                                           |
+| ----------------- | ----------------------------------------------------------------- |
+| **Sprite sheet**  | Олон frame-ийг нэг зурагт эгнүүлж багцалсан файл                  |
+| **Cell / нүд**    | Sheet доторх нэг frame-ийн талбай (бидэнд 256×256)                |
+| **cols**          | Sheet-ийн багана тоо — frame-ийн байрлалыг олоход хэрэгтэй        |
+| **fps**           | Секундэд хэдэн frame солих (12 fps = 83ms тутам)                  |
 | **State machine** | Дүр ямар төлөвт байх, хаанаас хаашаа шилжихийг тодорхойлсон дүрэм |
-| **Hold frame** | Товч дарж байх хугацаанд давтагдаж байх сүүлийн frame |
-| **Hitbox** | Цохих хэсэг (нударга, хөл) — frame тутам өөр |
-| **Hurtbox** | Цохиулах хэсэг (бие) |
-| **Chroma key** | Ногоон дэвсгэрийг арилгах арга |
-| **Frame data** | Анимацийн frame тоо, хугацаа, цохилтын мэдээллийн цуглуулга |
-| **CC0 / CC-BY** | Үнэгүй ашиглах лиценз — CC-BY бол зохиогчийг нь бичих ёстой |
+| **Hold frame**    | Товч дарж байх хугацаанд давтагдаж байх сүүлийн frame             |
+| **Hitbox**        | Цохих хэсэг (нударга, хөл) — frame тутам өөр                      |
+| **Hurtbox**       | Цохиулах хэсэг (бие)                                              |
+| **Chroma key**    | Ногоон дэвсгэрийг арилгах арга                                    |
+| **Frame data**    | Анимацийн frame тоо, хугацаа, цохилтын мэдээллийн цуглуулга       |
+| **CC0 / CC-BY**   | Үнэгүй ашиглах лиценз — CC-BY бол зохиогчийг нь бичих ёстой       |
 
 </details>
 
