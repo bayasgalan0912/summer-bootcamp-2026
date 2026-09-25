@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Хичээл 8 — Бодлого</title>
+</head>
+
+<body>
+  <h1>F12 → Console-оо нээ</h1>
+
+  <script>
+    // Шалгагч — бүү өөрчил
+    function check(name, got, want) {
+      const ok = JSON.stringify(got) === JSON.stringify(want);
+      console.log(ok ? "✅" : "❌", name, "→", got);
+    }
+
+    // 1. Тоог гурав дахин өсгө
+    function triple(n) {
+      // ← энд бич
+    }
+    check("1a", triple(4), 12);
+    check("1b", triple(0), 0);
+
+    // 2. Тэгш бол true, сондгой бол false
+    function isEven(n) {
+      // ← энд бич
+    }
+    check("2a", isEven(6), true);
+    check("2b", isEven(7), false);
+
+    // 3. Массивын хамгийн их тоо
+    function maxOf(arr) {
+      // ← энд бич
+    }
+    check("3a", maxOf([3, 9, 2]), 9);
+    check("3b", maxOf([-5, -1, -8]), -1);
+
+    // 4. Текстэд үсэг хэдэн удаа байна? (Зөвлөгөө: text[i])
+    function countLetter(text, letter) {
+      // ← энд бич
+    }
+    check("4a", countLetter("banana", "a"), 3);
+    check("4b", countLetter("hello", "z"), 0);
+
+    // 5. Текстийг урвуулах
+    function reverseText(text) {
+      // ← энд бич
+    }
+    check("5a", reverseText("abc"), "cba");
+    check("5b", reverseText("сайн"), "нйас");
+
+    // 6. Хайлт: x хэддүгээр байранд вэ? Олдохгүй бол -1
+    function findIndex(arr, x) {
+      // ← энд бич
+    }
+    check("6a", findIndex([4, 8, 15, 16], 15), 2);
+    check("6b", findIndex([4, 8, 15, 16], 99), -1);
+
+    // Бонус: Эрэмбэлэх (bubble sort) — хөрш хоёрыг харьцуулж, том нь баруун тийш
+    // .sort() ашиглахгүй!
+    function bubbleSort(arr) {
+      // ← энд бич
+      return arr;
+    }
+    check("бонус", bubbleSort([5, 2, 9, 1, 6]), [1, 2, 5, 6, 9]);
+  </script>
+</body>
+
+</html>

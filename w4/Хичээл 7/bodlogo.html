@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Хичээл 7 — Бодлого</title>
+</head>
+
+<body>
+  <h1>F12 → Console-оо нээ</h1>
+
+  <script>
+    // Шалгагч — бүү өөрчил
+    function check(name, got, want) {
+      const ok = JSON.stringify(got) === JSON.stringify(want);
+      console.log(ok ? "✅" : "❌", name, "→", got);
+    }
+
+    let scores = [70, 95, 80, 60, 100];
+
+    // 1. Эхний ба сүүлийн оноо
+    let first = null;
+    let last = null;
+    check("1a", first, 70);
+    check("1b", last, 100);
+
+    // 2. Бүх онооны нийлбэр
+    let total = 0;
+    // ← энд бич
+    check("2", total, 405);
+
+    // 3. Хамгийн их оноо
+    let best = scores[0];
+    // ← энд бич
+    check("3", best, 100);
+
+    // 4. 60-аас ИХ оноо хэд байна?
+    let count = 0;
+    // ← энд бич
+    check("4", count, 4);
+
+    // 5. Массивыг урвуулж шинэ массивт хий (push ашигла)
+    let reversed = [];
+    // ← энд бич
+    check("5", reversed, [100, 60, 80, 95, 70]);
+
+    // 6. "Сараа" хэддүгээр байранд вэ? Олдохгүй бол -1
+    let names = ["Бат", "Дорж", "Сараа", "Тэмүүлэн"];
+    let where = -1;
+    // ← энд бич
+    check("6", where, 2);
+
+    // Бонус: Хамгийн урт нэр (Зөвлөгөө: names[i].length)
+    let longest = "";
+    // ← энд бич
+    check("бонус", longest, "Тэмүүлэн");
+  </script>
+</body>
+
+</html>

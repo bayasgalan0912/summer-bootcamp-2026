@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Хичээл 5 — Бодлого</title>
+</head>
+
+<body>
+  <h1>F12 → Console-оо нээ</h1>
+
+  <script>
+    // Шалгагч — бүү өөрчил
+    function check(name, got, want) {
+      const ok = JSON.stringify(got) === JSON.stringify(want);
+      console.log(ok ? "✅" : "❌", name, "→", got);
+    }
+
+    // 1. Тэгш үү, сондгой юу? (Зөвлөгөө: n % 2)
+    let n = 7;
+    let result1 = "";
+    // ← энд бич: тэгш бол "тэгш", үгүй бол "сондгой"
+    check("1", result1, "сондгой");
+
+    // 2. Аль нь их вэ?
+    let a = 12;
+    let b = 30;
+    let bigger = null;
+    // ← энд бич
+    check("2", bigger, 30);
+
+    // 3. Үнэлгээ: 90+ → "A", 80+ → "B", 70+ → "C", бусад → "D"
+    let score = 85;
+    let grade = "";
+    // ← энд бич
+    check("3", grade, "B");
+
+    // 4. Кино 13+ насны. Үзэж болох уу?
+    let age = 11;
+    let canWatch = "";
+    // ← энд бич: "Болно" эсвэл "Болохгүй"
+    check("4", canWatch, "Болохгүй");
+
+    // 5. Цагаар мэндлэх: 12-оос өмнө "Өглөөний мэнд", 18-аас өмнө "Өдрийн мэнд", бусад "Оройн мэнд"
+    let hour = 14;
+    let hello = "";
+    // ← энд бич
+    check("5", hello, "Өдрийн мэнд");
+
+    // 6. Тоглоомд орох: 10+ зоос БА 1+ амь хэрэгтэй
+    let coins = 12;
+    let lives = 0;
+    let canPlay = null;
+    // ← энд бич: true эсвэл false
+    check("6", canPlay, false);
+
+    // Бонус: Өндөр жил үү? 4-т хуваагдана, гэхдээ 100-д хуваагдвал 400-д хуваагдах ёстой
+    let year = 2024;
+    let leap = null;
+    // ← энд бич
+    check("бонус", leap, true);
+  </script>
+</body>
+
+</html>

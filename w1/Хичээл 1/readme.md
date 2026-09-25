@@ -1,19 +1,33 @@
-# 🎒 Хичээл 1
+# Хичээл 1
 
-### ✨ Өнөөдөр өөрийнхөө тухай **вэб хуудас** үүсгэж, ангийхантайгаа танилцана!
+### Өнөөдөр өөрийнхөө тухай **вэб хуудас** хийж, ангийхантайгаа танилцана.
 
-🎮 [Хичээлийн слайд](https://docs.google.com/presentation/d/1CN9uhCejRB8ouXW7FF_JXq0rSZEA5ud48B8FAhyxqwg/edit?usp=sharing)
+[Хичээлийн слайд](https://docs.google.com/presentation/d/1CN9uhCejRB8ouXW7FF_JXq0rSZEA5ud48B8FAhyxqwg/edit?usp=sharing)
 
-> Доорх алхам дээр **дарж нээнэ** 👇
+---
+
+## Том зураг — 2 сар, 16 хичээл
+
+| Хичээл     | Юу хийнэ                   | Эцэст нь                              |
+| ---------- | -------------------------- | ------------------------------------- |
+| **1–3** 📍 | Вэб хуудас + AI            | Өөрийн вэб **интернэтэд**             |
+| **4–9**    | JavaScript + алгоритм      | **Code Cup** тэмцээн 🏆               |
+| **10–16**  | AI-аар апп, тоглоом бүтээх | Street fighter тоглоом + **Demo Day** |
+
+📍 = өнөөдөр
+
+---
+
+> Алхам бүр дээр **дарж нээнэ**.
 
 ---
 
 <details>
-<summary><b>1️⃣ 👯 Найзтайгаа танилц + Discord</b></summary>
+<summary><b>1. Найзтайгаа танилц + Discord</b></summary>
 
 <br>
 
-Ширээний найзтайгаа танилц → [Discord группдээ](https://discord.gg/h8MHmusCKm) ор.
+Ширээний найзтайгаа танилц → [Discord](https://discord.gg/h8MHmusCKm) группдээ ор.
 
 <img src="image.png" width="250" />
 
@@ -22,22 +36,22 @@
 ---
 
 <details>
-<summary><b>2️⃣ 💻 VSCode нээх</b></summary>
+<summary><b>2. VSCode нээх</b></summary>
 
 <br>
 
-VSCode нээ → шинэ файл үүсгэ: **`my-first-page.html`**
+Шинэ файл үүсгэ: **`my-first-page.html`**
 
 </details>
 
 ---
 
 <details>
-<summary><b>3️⃣ ✍️ HTML — өөрийнхөө тухай бич</b></summary>
+<summary><b>3. HTML — өөрийнхөө тухай бич</b></summary>
 
 <br>
 
-Доорх кодыг бичээд өөрийн мэдээллээ тавь 👇
+Кодыг бичээд **өөрийн** мэдээллээр соль:
 
 ```html
 <!DOCTYPE html>
@@ -48,39 +62,44 @@ VSCode нээ → шинэ файл үүсгэ: **`my-first-page.html`**
   <body>
     <h1>Сайн уу, намайг Бат гэдэг! 👋</h1>
     <img src="my-photo.png" width="250" />
-    <p>🎂 Би 13 настай.</p>
-    <p>🏀 Хобби: сагс тоглох</p>
-    <p>🎵 Дуртай хамтлаг: BTS</p>
-    <p>🕷️ Дуртай кино: Spider-Man</p>
+    <p>Би 13 настай.</p>
+    <p>Хобби: сагс тоглох</p>
+    <p>Дуртай хамтлаг: BTS</p>
+    <p>Дуртай кино: Spider-Man</p>
 
-    <h2>🤩 Сонирхолтой фактууд</h2>
-    <p>🍕 Дуртай хоол: пицца</p>
-    <p>🎮 Дуртай тоглоом: Roblox</p>
-    <p>🐶 Гэрт минь Бобби гэдэг нохой байдаг</p>
-    <p>😆 One piece анимийг бүтэн үзсэн!</p>
-    <p>🤫 Хэн ч мэдэхгүй: би зүүн гараараа бичдэг</p>
+    <h2>AI + кодоор юу хиймээр байна?</h2>
+    <p>Найзуудтайгаа тоглох өөрийн тоглоом</p>
+
+    <h2>Ямар ур чадвар сурмаар байна?</h2>
+    <p>Вэб сайт хийх, AI-д зөв даалгавар өгөх</p>
+
+    <h2>Сонирхолтой фактууд</h2>
+    <p>Дуртай хоол: пицца</p>
+    <p>Дуртай тоглоом: Roblox</p>
+    <p>Гэрт минь Бобби гэдэг нохой байдаг</p>
+    <p>One Piece анимийг бүтэн үзсэн!</p>
+    <p>Хэн ч мэдэхгүй: би зүүн гараараа бичдэг</p>
   </body>
 </html>
 ```
 
-🤩 **Фактууд** дээр найзаа гайхшруулах зүйлээ бич!
+**Хоёр асуулт** — хамгийн чухал хэсэг. **Фактууд** дээр найзаа гайхшруулах зүйлээ бич.
 
 <details>
-<summary>❓ Таг гэж юу вэ?</summary>
+<summary>Таг гэж юу вэ?</summary>
 
 <br>
 
-| Таг      | Тайлбар                     |
-| -------- | --------------------------- |
-| `body`   | Харагдах бүх агуулга        |
-| `h1`     | Том гарчиг                  |
-| `h2`     | Жижиг гарчиг                |
-| `p`      | Жирийн текст                |
-| `img`    | Зураг 🖼️                    |
-| `audio`  | Дуу 🎵                      |
-| `iframe` | YouTube бичлэг 📺           |
+| Таг      | Тайлбар              |
+| -------- | -------------------- |
+| `body`   | Харагдах бүх агуулга |
+| `h1`     | Том гарчиг           |
+| `h2`     | Жижиг гарчиг         |
+| `p`      | Текст                |
+| `img`    | Зураг                |
+| `iframe` | YouTube бичлэг       |
 
-💡 Таг = `< >` дотор бичигдэх тушаал. VSCode-д `!` бичээд Enter дарвал HTML бүтэц автоматаар гарна.
+VSCode-д `!` бичээд Enter дарвал HTML бүтэц автоматаар гарна.
 
 </details>
 
@@ -89,102 +108,44 @@ VSCode нээ → шинэ файл үүсгэ: **`my-first-page.html`**
 ---
 
 <details>
-<summary><b>4️⃣ 🌈 CSS — өнгө нэмэх</b></summary>
+<summary><b>4. CSS — өнгө нэмэх</b></summary>
 
 <br>
 
-`<head>` дотор доорхийг нэм → **save** → өнгө солигдохыг хар 🎨
+`<head>` дотор нэм → **save** → өнгө солигдохыг хар.
 
 ```html
 <style>
   body {
-    background: beige; /* 🎨 арын өнгө */
-    color: black; /* ✏️ текстийн өнгө */
+    background: beige; /* арын өнгө */
+    color: black; /* текстийн өнгө */
     text-align: center;
     font-family: Arial, sans-serif;
   }
   h1 {
-    color: #7c3aed;
-  } /* 🟣 гарчгийн өнгө */
+    color: #7c3aed; /* гарчгийн өнгө */
+  }
   img {
-    border-radius: 20px;
-  } /* 🖼️ булан мөлгөр */
+    border-radius: 20px; /* булан мөлгөр */
+  }
   p {
-    font-size: 18px;
-  } /* 🔤 текстийн хэмжээ */
+    font-size: 18px; /* текстийн хэмжээ */
+  }
 </style>
 ```
 
-👉 Өнгө, хэмжээг сольж туршаарай!
-
-<details>
-<summary>📄 Бүтэн код харах</summary>
-
-<br>
-
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Миний хуудас</title>
-    <style>
-      body {
-        background: beige; /* 🎨 арын өнгө */
-        color: black; /* ✏️ текстийн өнгө */
-        text-align: center;
-        font-family: Arial, sans-serif;
-      }
-      h1 {
-        color: #7c3aed;
-      } /* 🟣 гарчгийн өнгө */
-      img {
-        border-radius: 20px;
-      } /* 🖼️ булан мөлгөр */
-      p {
-        font-size: 18px;
-      } /* 🔤 текстийн хэмжээ */
-    </style>
-  </head>
-  <body>
-    <h1>Сайн уу, намайг Бат гэдэг! 👋</h1>
-    <img src="my-photo.png" width="250" />
-    <p>🎂 Би 13 настай.</p>
-    <p>🏀 Хобби: сагс тоглох</p>
-    <p>🎵 Дуртай хамтлаг: BTS</p>
-    <p>🕷️ Дуртай кино: Spider-Man</p>
-
-    <h2>🤩 Сонирхолтой фактууд</h2>
-    <p>🍕 Дуртай хоол: пицца</p>
-    <p>🎮 Дуртай тоглоом: Roblox</p>
-    <p>🐶 Гэрт минь Бобби гэдэг нохой байдаг</p>
-    <p>😆 One piece анимийг бүтэн үзсэн!</p>
-    <p>🤫 Хэн ч мэдэхгүй: би зүүн гараараа бичдэг</p>
-
-    <p>🎵 Миний зохиосон дуу:</p>
-    <audio src="my-song.mp3" controls></audio>
-
-    <p>📺 Дуртай аниме бичлэг:</p>
-    <iframe
-      width="400"
-      height="220"
-      src="https://www.youtube.com/embed/xxxxx"
-    ></iframe>
-  </body>
-</html>
-```
-
-</details>
+Өнгө, хэмжээг сольж туршаарай.
 
 </details>
 
 ---
 
 <details>
-<summary><b>5️⃣ 🖼️ Зураг нэмэх (Gemini)</b></summary>
+<summary><b>5. Зураг нэмэх (Gemini)</b></summary>
 
 <br>
 
-[gemini.google.com](https://gemini.google.com) → өөрийн профайл зураг үүсгэ → татаж авч **`my-photo.png`** болгон хадгал.
+[Gemini](https://gemini.google.com) → профайл зураг үүсгэ → **`my-photo.png`** нэрээр хадгал.
 
 ```html
 <img src="my-photo.png" width="250" />
@@ -195,38 +156,14 @@ VSCode нээ → шинэ файл үүсгэ: **`my-first-page.html`**
 ---
 
 <details>
-<summary><b>6️⃣ 🎵 Өөрийн дуу зохиох (Gemini)</b></summary>
+<summary><b>6. Дуртай бичлэг (YouTube)</b></summary>
 
 <br>
 
-[gemini.google.com](https://gemini.google.com) → ингэж бич 👇
-
-```
-Намайг Бат гэдэг, 13 настай. Сагс тоглох дуртай.
-Дуртай хамтлаг BTS, дуртай хоол пицца.
-Миний тухай хөгжилтэй богино дуу зохиож, дуулж өгөөч 🎶
-```
-
-⬇️ **Download** → нэрийг **`my-song.mp3`** болго → кодоо нэм:
+[YouTube](https://www.youtube.com) → дуртай бичлэгээ ол → **Share** → **Embed** → **Copy** → `</body>`-ын дээр paste.
 
 ```html
-<p>🎵 Миний зохиосон дуу:</p>
-<audio src="my-song.mp3" controls></audio>
-```
-
-</details>
-
----
-
-<details>
-<summary><b>7️⃣ 📺 Дуртай аниме бичлэг (YouTube)</b></summary>
-
-<br>
-
-YouTube → бичлэг ол → **Share** → **Embed** → **Copy** → `</body>`-ын дээр paste:
-
-```html
-<p>📺 Дуртай аниме бичлэг:</p>
+<h2>Дуртай бичлэг</h2>
 <iframe
   width="400"
   height="220"
@@ -235,20 +172,32 @@ YouTube → бичлэг ол → **Share** → **Embed** → **Copy** → `</bo
 ```
 
 <details>
-<summary>❓ Яагаад <code>video</code> таг болохгүй вэ?</summary>
+<summary>Яагаад <code>video</code> таг болохгүй вэ?</summary>
 
 <br>
 
-`<video>` нь `.mp4` файл шаарддаг. YouTube линк mp4 файл биш.
-
-- YouTube → `<iframe>`
-- Татсан mp4 файл → `<video src="my-video.mp4" controls>`
+`<video>` нь `.mp4` файл шаарддаг. YouTube-д `<iframe>` хэрэглэнэ.
 
 </details>
 
 </details>
 
 ---
+
+<details>
+<summary><b>7. ✨ Бонус — гоё болгох</b></summary>
+
+<br>
+
+Ийм болгож чадах уу? → **[index.html](index.html)**
+
+Цагаан карт · дугуй зураг · шар хайрцаг
+
+</details>
+
+---
+
+**[Гэртээ хийх даалгавар →](homework.md)**
 
 <!--
 1. Meet teachers
@@ -267,7 +216,7 @@ YouTube → бичлэг ол → **Share** → **Embed** → **Copy** → `</bo
 5. First code
    1. Vs code
    2. Html?
-   3. Introduce yourself: Suno, gemini
+   3. Introduce yourself: Gemini image, YouTube
 6. What is next: show modern website
 7. Homework
    1. Gmail

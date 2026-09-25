@@ -2,55 +2,75 @@
 <html>
 
 <head>
+  <meta charset="UTF-8" />
   <title>Миний хуудас</title>
   <style>
     body {
-      background: beige;
-      /* 🎨 арын өнгө */
-      color: black;
-      /* ✏️ текстийн өнгө */
+      background: pink; /* арын өнгө */
       text-align: center;
       font-family: Arial, sans-serif;
+    }
+
+    .card {
+      background: white; /* цагаан карт */
+      max-width: 500px;
+      margin: auto;
+      padding: 20px;
+      border-radius: 20px;
+    }
+
+    img {
+      width: 150px;
+      border-radius: 50%; /* дугуй зураг */
     }
 
     h1 {
       color: #7c3aed;
     }
 
-    /* 🟣 гарчгийн өнгө */
-    img {
-      border-radius: 20px;
+    .goal {
+      background: #fef3c7; /* шар хайрцаг */
+      padding: 10px;
+      border-radius: 10px;
+      margin: 10px 0;
     }
 
-    /* 🖼️ булан мөлгөр */
-    p {
-      font-size: 18px;
+    iframe {
+      max-width: 100%;
+      border-radius: 10px;
     }
-
-    /* 🔤 текстийн хэмжээ */
   </style>
 </head>
 
 <body>
-  <h1>Сайн уу, намайг Бат гэдэг! 👋</h1>
-  <img src="my-photo.png" width="250" />
-  <p>🎂 Би 13 настай.</p>
-  <p>🏀 Хобби: сагс тоглох</p>
-  <p>🎵 Дуртай хамтлаг: BTS</p>
-  <p>🕷️ Дуртай кино: Spider-Man</p>
+  <div class="card">
+    <img src="my-photo.png" />
+    <h1>Сайн уу, намайг Бат гэдэг! 👋</h1>
+    <p>Би 13 настай.</p>
+    <p>Хобби: сагс тоглох</p>
+    <p>Дуртай хамтлаг: BTS</p>
+    <p>Дуртай кино: Spider-Man</p>
 
-  <h2>🤩 Сонирхолтой фактууд</h2>
-  <p>🍕 Дуртай хоол: пицца</p>
-  <p>🎮 Дуртай тоглоом: Roblox</p>
-  <p>🐶 Гэрт минь Бобби гэдэг нохой байдаг</p>
-  <p>😆 One piece анимийг бүтэн үзсэн!</p>
-  <p>🤫 Хэн ч мэдэхгүй: би зүүн гараараа бичдэг</p>
+    <div class="goal">
+      <h2>AI + кодоор юу хиймээр байна?</h2>
+      <p>Найзуудтайгаа тоглох өөрийн тоглоом</p>
+    </div>
 
-  <p>🎵 Миний зохиосон дуу:</p>
-  <audio src="my-song.mp3" controls></audio>
+    <div class="goal">
+      <h2>Ямар ур чадвар сурмаар байна?</h2>
+      <p>Вэб сайт хийх, AI-д зөв даалгавар өгөх</p>
+    </div>
 
-  <p>📺 Дуртай аниме бичлэг:</p>
-  <iframe width="400" height="220" src="https://www.youtube.com/embed/xxxxx"></iframe>
+    <h2>Сонирхолтой фактууд</h2>
+    <p>Дуртай хоол: пицца</p>
+    <p>Дуртай тоглоом: Roblox</p>
+    <p>Гэрт минь Бобби гэдэг нохой байдаг</p>
+    <p>One Piece анимийг бүтэн үзсэн!</p>
+    <p>Хэн ч мэдэхгүй: би зүүн гараараа бичдэг</p>
+
+    <h2>Дуртай бичлэг</h2>
+    <iframe width="400" height="220" src="https://www.youtube.com/embed/xxxxx"></iframe>
+  </div>
 </body>
 
 </html>

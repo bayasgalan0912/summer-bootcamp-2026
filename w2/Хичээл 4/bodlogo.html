@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Хичээл 4 — Бодлого</title>
+</head>
+
+<body>
+  <h1>F12 → Console-оо нээ</h1>
+
+  <script>
+    // Шалгагч — бүү өөрчил
+    function check(name, got, want) {
+      const ok = JSON.stringify(got) === JSON.stringify(want);
+      console.log(ok ? "✅" : "❌", name, "→", got);
+    }
+
+    // 1. Мэндчилгээ: "Сайн уу, Бат" гэж гаргах
+    let name = "Бат";
+    let greet = null; // ← "Сайн уу, " + name
+    check("1", greet, "Сайн уу, Бат");
+
+    // 2. 10 жилийн дараа хэдэн настай вэ?
+    let age = 13;
+    let after10 = null;
+    check("2", after10, 23);
+
+    // 3. Хоёр тооны нийлбэр ба үржвэр
+    let a = 7;
+    let b = 5;
+    let sum = null;
+    let product = null;
+    check("3a", sum, 12);
+    check("3b", product, 35);
+
+    // 4. Гурван шалгалтын дундаж оноо
+    let s1 = 80;
+    let s2 = 90;
+    let s3 = 100;
+    let average = null;
+    check("4", average, 90);
+
+    // 5. 135 секунд = ? минут ? секунд
+    // Зөвлөгөө: Math.floor(135 / 60) ба 135 % 60
+    let seconds = 135;
+    let minutes = null;
+    let rest = null;
+    check("5a", minutes, 2);
+    check("5b", rest, 15);
+
+    // 6. 8 зүсэм пиццаг 3 хүнд тэнцүү хуваавал хүн бүр хэдийг авах, хэд үлдэх вэ?
+    let slices = 8;
+    let people = 3;
+    let each = null;
+    let left = null;
+    check("6a", each, 2);
+    check("6b", left, 2);
+
+    // Бонус: x ба y-ийн утгыг соль (гурав дахь хайрцаг ашигла)
+    let x = 1;
+    let y = 2;
+    // ← энд бич
+    check("бонус", [x, y], [2, 1]);
+  </script>
+</body>
+
+</html>

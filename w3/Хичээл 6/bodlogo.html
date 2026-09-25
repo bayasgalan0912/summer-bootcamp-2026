@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Хичээл 6 — Бодлого</title>
+</head>
+
+<body>
+  <h1>F12 → Console-оо нээ</h1>
+
+  <script>
+    // Шалгагч — бүү өөрчил
+    function check(name, got, want) {
+      const ok = JSON.stringify(got) === JSON.stringify(want);
+      console.log(ok ? "✅" : "❌", name, "→", got);
+    }
+
+    // 1. 1-ээс 100 хүртэлх тоонуудын нийлбэр
+    let sum1 = 0;
+    // ← энд бич
+    check("1", sum1, 5050);
+
+    // 2. 1-ээс 10 хүртэлх ТЭГШ тоонуудын нийлбэр (2+4+6+8+10)
+    let sum2 = 0;
+    // ← энд бич
+    check("2", sum2, 30);
+
+    // 3. 5! = 1 × 2 × 3 × 4 × 5
+    let fact = 1;
+    // ← энд бич
+    check("3", fact, 120);
+
+    // 4. "ha"-г 3 удаа залга → "hahaha"
+    let laugh = "";
+    // ← энд бич
+    check("4", laugh, "hahaha");
+
+    // 5. 1-ээс 100 хүртэл 3-т ЭСВЭЛ 5-д хуваагддаг тоо хэд байна?
+    let count = 0;
+    // ← энд бич
+    check("5", count, 47);
+
+    // 6. 1000₮ жил бүр 2 дахин өсвөл хэдэн жилийн дараа 10000₮-өөс давах вэ? (while)
+    let money = 1000;
+    let years = 0;
+    // ← энд бич
+    check("6", years, 4);
+
+    // Бонус: Console-д шат зур
+    // *
+    // **
+    // ***
+    // ****
+    // Зөвлөгөө: "*".repeat(i)
+  </script>
+</body>
+
+</html>

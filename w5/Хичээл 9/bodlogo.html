@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Code Cup</title>
+</head>
+
+<body>
+  <h1>Code Cup — F12 → Console</h1>
+
+  <script>
+    // Шалгагч — бүү өөрчил
+    function check(name, got, want) {
+      const ok = JSON.stringify(got) === JSON.stringify(want);
+      console.log(ok ? "✅" : "❌", name, "→", got);
+    }
+
+    // ========== РАУНД 2 — Дулаацах (2 оноо) ==========
+
+    // 2.1 Цельс → Фаренгейт: F = C × 9 / 5 + 32
+    function toF(c) {
+      // ← энд бич
+    }
+    check("2.1a", toF(0), 32);
+    check("2.1b", toF(100), 212);
+
+    // 2.2 Массивт хэдэн сөрөг тоо байна?
+    function countNegative(arr) {
+      // ← энд бич
+    }
+    check("2.2", countNegative([3, -1, 0, -7, 5]), 2);
+
+    // 2.3 Нас → ангилал: 0–12 "хүүхэд", 13–17 "өсвөр", 18+ "том хүн"
+    function ageGroup(age) {
+      // ← энд бич
+    }
+    check("2.3a", ageGroup(9), "хүүхэд");
+    check("2.3b", ageGroup(15), "өсвөр");
+    check("2.3c", ageGroup(30), "том хүн");
+
+    // ========== РАУНД 3 — Дунд (3 оноо) ==========
+
+    // 3.1 Тооны цифрүүдийн нийлбэр: 472 → 4 + 7 + 2
+    // Зөвлөгөө: n % 10 = сүүлийн цифр, Math.floor(n / 10) = түүнийг хасна
+    function digitSum(n) {
+      // ← энд бич
+    }
+    check("3.1a", digitSum(472), 13);
+    check("3.1b", digitSum(9), 9);
+
+    // 3.2 Эгшиг (а, э, и, о, у, ө, ү) хэд байна?
+    function countVowels(text) {
+      // ← энд бич
+    }
+    check("3.2", countVowels("монгол улс"), 3);
+
+    // 3.3 Хоёр массивт хоёуланд нь байгаа тоонууд
+    function common(a, b) {
+      // ← энд бич
+    }
+    check("3.3", common([1, 3, 5, 7], [3, 4, 5, 6]), [3, 5]);
+
+    // ========== РАУНД 4 — Босс (5 оноо) ==========
+
+    // 4.1 Leaderboard: онооноос нь их → бага эрэмбэлж, эхний 3-ын НЭРИЙГ буцаа
+    // .sort() ашиглахгүй!
+    function top3(players) {
+      // ← энд бич
+    }
+    check("4.1", top3([
+      { name: "Бат", score: 40 },
+      { name: "Сараа", score: 95 },
+      { name: "Дорж", score: 70 },
+      { name: "Номин", score: 88 },
+      { name: "Тэмүүлэн", score: 12 },
+    ]), ["Сараа", "Номин", "Дорж"]);
+  </script>
+</body>
+
+</html>
