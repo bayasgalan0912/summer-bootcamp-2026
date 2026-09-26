@@ -18,7 +18,7 @@
 
 | Цаг    | Сэдэв                                                                                                                                 |
 | ------ | ------------------------------------------------------------------------------------------------------------------------------------- |
-| 15 мин | [✨Kahoot тест (PIN: 02607784)](https://kahoot.it/challenge/02607784?challenge-id=52e8dc11-25fb-4f0e-bbb7-bfe2b8499817_1782053153131) |
+| 15 мин | [✨Kahoot тест](https://play.kahoot.it/v2/?quizId=7a62dfab-fbdd-4715-b2e8-7e309d532b9a&hostId=52e8dc11-25fb-4f0e-bbb7-bfe2b8499817) |
 | 15 мин | [✨Type racer](https://typer.io/)                                                                                                     |
 | 20 мин | [🎬 Google AI Studio танилцуулга](https://www.youtube.com/watch?v=meUr8fjy8lQ)                                                        |
 | 30 мин | [🌐 Portfolio site (AI Studio)](#sec-aistudio)                                                                                        |
