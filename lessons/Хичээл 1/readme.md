@@ -163,7 +163,33 @@
 ---
 
 <details>
-<summary><b>5. Зураг нэмэх (Gemini)</b></summary>
+<summary><b>5. Зураг нэмэх</b></summary>
+
+<br>
+
+**А. Интернэтээс (хялбар)**
+
+1. [Google Images](https://images.google.com)-оос дуртай зургаа хай.
+2. Зураг дээр **баруун товч** → **Copy image address**.
+3. `src`-д хуулсан хаягаа тавь:
+
+```html
+<img src="https://....jpg" width="250" />
+```
+
+<details>
+<summary>Зураг гарахгүй байна уу?</summary>
+
+<br>
+
+- Хаяг `.jpg`, `.png`, `.webp`-ээр төгссөн эсэхийг шалга.
+- `data:image...` гэж эхэлбэл — зургийг нэг дарж томруулаад дахин хуул.
+- Эсвэл **Save image as** → `my-photo.png` нэрээр HTML файлтайгаа нэг хавтсанд хадгал.
+
+</details>
+
+<details>
+<summary><b>Б. Gemini-ээр зуруулах (заавал биш)</b></summary>
 
 <br>
 
@@ -177,11 +203,6 @@
 
 Зураг гарсны дараа **Download** → **`my-photo.png`** нэрээр HTML файлтайгаа **нэг хавтсанд** хадгал.
 
-<details>
-<summary>Өөр санаа</summary>
-
-<br>
-
 | Юуг солих | Жишээ                                    |
 | --------- | ---------------------------------------- |
 | Стиль     | cartoon, pixel art, 3D, Pixar            |
@@ -190,11 +211,11 @@
 
 Өөрийн жинхэнэ зургаа бүү оруул — зохиомол дүр үүсгэ.
 
-</details>
-
 ```html
 <img src="my-photo.png" width="250" />
 ```
+
+</details>
 
 </details>
 
@@ -234,7 +255,7 @@
 5. First code
    1. Vs code
    2. Html?
-   3. Introduce yourself: Gemini image, YouTube
+   3. Introduce yourself: internet image (or Gemini), YouTube
 6. What is next: show modern website
 7. Homework
    1. Gmail

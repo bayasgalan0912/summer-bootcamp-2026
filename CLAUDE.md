@@ -17,7 +17,7 @@
 
 | Хичээл | Сэдэв |
 | ------ | ----- |
-| 1 | Вэбийн бүтэц, HTML таг (`h1`, `h2`, `p`, `img`), `<style>` өнгө, Gemini зураг, VSCode Open Folder |
+| 1 | Вэбийн бүтэц, HTML таг (`h1`, `h2`, `p`, `img`), `<style>` өнгө, зураг (интернэт хаяг / Gemini), VSCode Open Folder |
 | 2 | VSCode товчлол (Ctrl+Enter, Win+←/→ хагаслах, Ctrl+Shift+P → Format Document), `div`, `class`, `id`, хайрцагт өнгө; YouTube `iframe` embed, `<video>` файлаар |
 | 3 *(төлөвлөсөн)* | VSCode код бөглөлт (Emmet), `<a>` таг, 2 хуудас холбох, Flexbox (`display`, `gap`, `justify-content`, `flex-wrap`) — HTML/CSS төгсгөл |
 | 4 *(төлөвлөсөн)* | Google AI Studio: prompt-оор portfolio сайт, AI-г зөв хэрэглэх |
