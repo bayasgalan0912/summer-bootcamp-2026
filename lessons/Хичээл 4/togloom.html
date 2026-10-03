@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="mn">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Flexbox тоглоом — Малаа хашаандаа</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fef9ef;
+      color: #1f2937;
+    }
+
+    header {
+      background: #7c3aed;
+      color: white;
+      padding: 12px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .levels {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .levels button {
+      width: 34px;
+      height: 34px;
+      border: none;
+      border-radius: 8px;
+      background: #ede9fe;
+      color: #4c1d95;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .levels button.done {
+      background: #22c55e;
+      color: white;
+    }
+
+    .levels button.now {
+      outline: 3px solid #fbbf24;
+    }
+
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 16px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .left {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .right {
+      flex: 1.3;
+      min-width: 280px;
+    }
+
+    .new {
+      display: inline-block;
+      background: #fef3c7;
+      color: #92400e;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-family: monospace;
+      font-size: 15px;
+    }
+
+    .task {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .task code,
+    .hint code {
+      background: #ede9fe;
+      padding: 1px 6px;
+      border-radius: 5px;
+    }
+
+    .editor {
+      background: #272822;
+      color: #f8f8f2;
+      font-family: monospace;
+      font-size: 18px;
+      padding: 14px;
+      border-radius: 12px;
+      line-height: 1.6;
+    }
+
+    .editor .fixed {
+      color: #a6a6a6;
+      padding-left: 20px;
+      white-space: pre;
+    }
+
+    .editor .sel {
+      color: #a6e22e;
+    }
+
+    .editor textarea {
+      width: calc(100% - 20px);
+      margin-left: 20px;
+      background: #3e3d32;
+      color: #fff;
+      border: 2px solid #75715e;
+      border-radius: 6px;
+      font-family: monospace;
+      font-size: 18px;
+      padding: 6px;
+      resize: vertical;
+    }
+
+    .editor textarea:focus {
+      outline: none;
+      border-color: #fbbf24;
+    }
+
+    .warn {
+      color: #b91c1c;
+      min-height: 22px;
+      margin: 8px 0;
+      font-size: 15px;
+    }
+
+    .row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .btn {
+      border: none;
+      border-radius: 10px;
+      padding: 10px 18px;
+      font-size: 16px;
+      cursor: pointer;
+      background: #ede9fe;
+      color: #4c1d95;
+    }
+
+    .btn.next {
+      background: #22c55e;
+      color: white;
+      font-weight: bold;
+    }
+
+    .btn:disabled {
+      opacity: 0.4;
+      cursor: default;
+    }
+
+    .hint {
+      background: #fff;
+      border: 2px dashed #c4b5fd;
+      border-radius: 10px;
+      padding: 10px;
+      margin-top: 10px;
+    }
+
+    .msg {
+      font-size: 20px;
+      font-weight: bold;
+      color: #16a34a;
+      min-height: 30px;
+      margin: 10px 0;
+    }
+
+    /* Хашаа */
+    .stage {
+      position: relative;
+      width: 100%;
+      background: #86efac;
+      border: 8px solid #a16207;
+      border-radius: 14px;
+      overflow: hidden;
+      transition: border-color 0.3s;
+    }
+
+    .stage.win {
+      border-color: #fbbf24;
+    }
+
+    .layer {
+      position: absolute;
+      inset: 0;
+      padding: 12px;
+    }
+
+    .item {
+      width: 64px;
+      height: 64px;
+      flex-shrink: 0;
+      font-size: 44px;
+      line-height: 64px;
+      text-align: center;
+    }
+
+    #ghost .item {
+      border: 3px dashed #166534;
+      border-radius: 50%;
+      opacity: 0.45;
+      font-size: 30px;
+    }
+
+    #ghost .item span {
+      opacity: 0.5;
+    }
+
+    #field {
+      z-index: 1;
+    }
+
+    #field .item {
+      transition: transform 0.3s;
+    }
+
+    .stage.win #field .item {
+      animation: hop 0.5s;
+    }
+
+    @keyframes hop {
+      50% {
+        transform: translateY(-14px);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .right {
+        order: -1;
+      }
+    }
+
+    .legend {
+      font-size: 14px;
+      color: #6b7280;
+      margin-top: 6px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Малаа хашаандаа оруул</h1>
+    <div class="levels" id="levels"></div>
+  </header>
+
+  <main>
+    <div class="left">
+      <p><b id="lvlTitle"></b> &nbsp; <span class="new" id="newProp"></span></p>
+      <p class="task" id="task"></p>
+
+      <div class="editor">
+        <div class="sel">.hashaa {</div>
+        <div class="fixed" id="fixed"></div>
+        <textarea id="code" rows="2" spellcheck="false" autocomplete="off"></textarea>
+        <div class="sel">}</div>
+      </div>
+
+      <div class="warn" id="warn"></div>
+
+      <div class="row">
+        <button class="btn" id="hintBtn">Сануулга</button>
+        <button class="btn next" id="nextBtn" disabled>Дараах →</button>
+      </div>
+      <div class="hint" id="hint" hidden></div>
+
+      <div class="msg" id="msg"></div>
+    </div>
+
+    <div class="right">
+      <div class="stage" id="stage">
+        <div class="layer" id="ghost"></div>
+        <div class="layer" id="field"></div>
+      </div>
+      <p class="legend">Тасархай дугуй = мал очих ёстой газар</p>
+    </div>
+  </main>
+
+  <script>
+    const LEVELS = [
+      {
+        prop: "display: flex",
+        task: "Хонинууд дээрээс доош эгнэчихжээ. <b>Хажуу хажууд</b> нь эгнүүл.",
+        hint: "Хайрцгийг flex болго: <code>display: flex;</code>",
+        animals: "🐑🐑🐑",
+        fixed: "",
+        answer: "display: flex;",
+      },
+      {
+        prop: "justify-content: center",
+        task: "Ямаануудыг хашааны <b>голд</b> нь оруул.",
+        hint: "<code>justify-content</code> — сумын дагуу (→) хаана байх вэ?",
+        animals: "🐐🐐🐐",
+        fixed: "display: flex;",
+        answer: "justify-content: center;",
+      },
+      {
+        prop: "justify-content: flex-end",
+        task: "Үхрүүд <b>баруун</b> талд очмоор байна.",
+        hint: "<code>flex-end</code> = сумын төгсгөл",
+        animals: "🐄🐄🐄",
+        fixed: "display: flex;",
+        answer: "justify-content: flex-end;",
+      },
+      {
+        prop: "justify-content: space-between",
+        task: "Адуунууд хоорондоо муудалцжээ. <b>Хоёр захад</b> нь тараа.",
+        hint: "between = хооронд. Зай зөвхөн хооронд нь.",
+        animals: "🐎🐎🐎",
+        fixed: "display: flex;",
+        answer: "justify-content: space-between;",
+      },
+      {
+        prop: "justify-content: space-around",
+        task: "Тэмээнүүд <b>тойроод</b> ижил зайтай байх дуртай. Захад ч зай бий.",
+        hint: "around = эргэн тойронд",
+        animals: "🐫🐫🐫",
+        fixed: "display: flex;",
+        answer: "justify-content: space-around;",
+      },
+      {
+        prop: "gap",
+        task: "Хонинууд голдоо байна, гэхдээ шахцалдаад байна. Хооронд нь <b>40px</b> зай гарга.",
+        hint: "<code>gap: 40px;</code> — хүүхдүүдийн хоорондын зай",
+        animals: "🐑🐑🐑",
+        fixed: "display: flex;\njustify-content: center;",
+        answer: "gap: 40px;",
+      },
+      {
+        prop: "align-items: center",
+        task: "Одоо <b>босоо</b> чиглэлд голдоо оруул.",
+        hint: "<code>align-items</code> — хөндлөн сумын (↓) дагуу",
+        animals: "🐐🐐🐐",
+        fixed: "display: flex;",
+        answer: "align-items: center;",
+      },
+      {
+        prop: "align-items: flex-end",
+        task: "Үхрүүд хашааны <b>доод</b> хэсэгт ус ууна.",
+        hint: "Хөндлөн сумын төгсгөл",
+        animals: "🐄🐄🐄",
+        fixed: "display: flex;",
+        answer: "align-items: flex-end;",
+      },
+      {
+        prop: "Яг голд нь!",
+        task: "Нэг адуу байна. Хашааны <b>яг голд</b> нь оруул. 2 мөр хэрэгтэй.",
+        hint: "→ чиглэлд голдоо + ↓ чиглэлд голдоо",
+        animals: "🐎",
+        fixed: "display: flex;",
+        answer: "justify-content: center;\nalign-items: center;",
+      },
+      {
+        prop: "flex-direction: column",
+        task: "Тэмээнүүд <b>цуваа</b> болж дээрээс доош явна.",
+        hint: "<code>flex-direction</code> — сумын чиглэл. Босоо = column",
+        animals: "🐫🐫🐫",
+        fixed: "display: flex;",
+        answer: "flex-direction: column;",
+      },
+      {
+        prop: "Анхаар: сум эргэлээ!",
+        task: "Цуваа хонинуудыг <b>хэвтээ</b> чиглэлд голд нь оруул. <br>column үед → ба ↓ солигддог!",
+        hint: "column үед <code>justify-content</code> = ↓, <code>align-items</code> = →",
+        animals: "🐑🐑🐑",
+        fixed: "display: flex;\nflex-direction: column;",
+        answer: "align-items: center;",
+      },
+      {
+        prop: "flex-wrap: wrap",
+        task: "Ямаа их олон болжээ — хашаанаас гарчихлаа! <b>Доод мөр</b> рүү шилжүүл.",
+        hint: "wrap = ороох. Багтахгүй бол доош бууна.",
+        animals: "🐐🐐🐐🐐🐐🐐🐐🐐🐐🐐🐐🐐",
+        fixed: "display: flex;\ngap: 10px;",
+        answer: "flex-wrap: wrap;",
+        height: 240,
+      },
+      {
+        prop: "Босс 1",
+        task: "Цэс шиг: 🏠 <b>зүүн</b> захад, 🎮 <b>баруун</b> захад, хоёулаа <b>босоо голдоо</b>.",
+        hint: "3-р хичээлийн цэсийг санаарай. 2 мөр.",
+        animals: "🏠🎮",
+        fixed: "display: flex;",
+        answer: "justify-content: space-between;\nalign-items: center;",
+      },
+      {
+        prop: "Босс 2",
+        task: "Таван хошуу мал <b>цуваа</b> болоод <b>баруун доод</b> буланд ирэв.",
+        hint: "3 мөр: чиглэл + ↓ + →. column үед сум солигдохыг сана!",
+        animals: "🐑🐐🐄🐎🐫",
+        fixed: "display: flex;",
+        answer: "flex-direction: column;\njustify-content: flex-end;\nalign-items: flex-end;",
+        height: 400,
+      },
+    ];
+
+    const $ = (id) => document.getElementById(id);
+    let cur = 0;
+    let done = [];
+
+    try {
+      done = JSON.parse(localStorage.getItem("flex-done") || "[]");
+      cur = Number(localStorage.getItem("flex-cur") || 0);
+    } catch (e) { }
+    if (!(cur >= 0 && cur < LEVELS.length)) cur = 0;
+
+    function save() {
+      try {
+        localStorage.setItem("flex-done", JSON.stringify(done));
+        localStorage.setItem("flex-cur", cur);
+      } catch (e) { }
+    }
+
+    function drawLevels() {
+      $("levels").innerHTML = "";
+      LEVELS.forEach((_, i) => {
+        const b = document.createElement("button");
+        b.textContent = i + 1;
+        if (done.includes(i)) b.classList.add("done");
+        if (i === cur) b.classList.add("now");
+        b.onclick = () => load(i);
+        $("levels").appendChild(b);
+      });
+    }
+
+    function makeItems(layer, animals, ghost) {
+      layer.innerHTML = "";
+      for (const a of Array.from(animals)) {
+        const d = document.createElement("div");
+        d.className = "item";
+        d.innerHTML = ghost ? "<span>" + a + "</span>" : a;
+        layer.appendChild(d);
+      }
+    }
+
+    function load(i) {
+      cur = i;
+      const L = LEVELS[i];
+      $("lvlTitle").textContent = "Түвшин " + (i + 1) + " / " + LEVELS.length;
+      $("newProp").textContent = L.prop;
+      $("task").innerHTML = L.task;
+      $("fixed").textContent = L.fixed;
+      $("fixed").hidden = !L.fixed;
+      $("hint").innerHTML = L.hint;
+      $("hint").hidden = true;
+      $("code").value = "";
+      $("code").rows = L.answer.split("\n").length + 1;
+      $("stage").style.height = (L.height || 300) + "px";
+
+      makeItems($("ghost"), L.animals, true);
+      makeItems($("field"), L.animals, false);
+      $("ghost").style.cssText = L.fixed + L.answer;
+
+      drawLevels();
+      save();
+      update();
+      $("code").focus();
+    }
+
+    // Буруу бичсэн мөрийг олох
+    function findTypos(text) {
+      const bad = [];
+      text.split(";").forEach((part) => {
+        const p = part.trim();
+        if (!p) return;
+        const k = p.indexOf(":");
+        if (k < 0) {
+          bad.push(p);
+          return;
+        }
+        const prop = p.slice(0, k).trim();
+        const val = p.slice(k + 1).trim();
+        if (!CSS.supports(prop, val)) bad.push(p);
+      });
+      return bad;
+    }
+
+    function update() {
+      const L = LEVELS[cur];
+      const text = $("code").value.replace(/[{}]/g, "");
+      $("field").style.cssText = L.fixed + text;
+
+      const bad = findTypos(text);
+      $("warn").textContent = bad.length
+        ? "Энэ мөрийг шалга: " + bad.join(" | ") + "  (үсэг, : ба ; зөв үү?)"
+        : "";
+
+      const g = $("ghost").children;
+      const f = $("field").children;
+      let ok = true;
+      for (let k = 0; k < g.length; k++) {
+        const a = g[k].getBoundingClientRect();
+        const b = f[k].getBoundingClientRect();
+        if (Math.abs(a.left - b.left) > 1 || Math.abs(a.top - b.top) > 1) ok = false;
+      }
+
+      $("stage").classList.toggle("win", ok);
+      $("nextBtn").disabled = !ok || cur === LEVELS.length - 1;
+      if (ok) {
+        if (!done.includes(cur)) done.push(cur);
+        $("msg").textContent =
+          done.length === LEVELS.length ? "Бүгдийг давлаа! Flexbox мастер 🏆" : "Зөв! 🎉";
+        drawLevels();
+        save();
+      } else {
+        $("msg").textContent = "";
+      }
+    }
+
+    $("code").addEventListener("input", update);
+    $("hintBtn").onclick = () => ($("hint").hidden = !$("hint").hidden);
+    $("nextBtn").onclick = () => load(cur + 1);
+    window.addEventListener("resize", update);
+
+    load(cur);
+  </script>
+</body>
+
+</html>

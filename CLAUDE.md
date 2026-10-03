@@ -12,6 +12,7 @@
 - `reference/` — Өмнөх хичээлийн сэдвүүд
 - Хичээл бүрийн `readme.md` эхэнд `> **Агуулга:**` мөр — ангид **бодитоор юу заасныг** 1–2 өгүүлбэрээр. Хичээл орсны дараа шинэчил.
 - Гэрийн даалгавар: хичээлийн `readme.md`-ийн төгсгөлд эсвэл `homework.md`.
+- CSS тоглоом: `togloom.html` (түвшинтэй, автомат шалгагчтай). Төсөл: `tusul.html` + `ehlel.png`/`zorilgo.png`.
 - JS хичээл: `readme.md` (хүүхдэд), `bodlogo.html` (бодлого + `check()` шалгагч, браузерийн Console), `bagsh.md` (багшид: явц, тэмцээн, хариу).
 
 ## Заасан зүйл (дараагийн хичээлд давтахгүй, үндэслэж ашигла)
@@ -20,8 +21,9 @@
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1                | Вэбийн бүтэц, HTML таг (`h1`, `h2`, `p`, `img`), `<style>` өнгө, зураг (интернэт хаяг / Gemini), VSCode Open Folder                                           |
 | 2                | VSCode товчлол (Ctrl+Enter, Win+←/→ хагаслах, Ctrl+Shift+P → Format Document), `div`, `class`, `id`, хайрцагт өнгө; YouTube `iframe` embed, `<video>` файлаар |
-| 3 _(төлөвлөсөн)_ | VSCode код бөглөлт (Emmet), `<a>` таг, 2 хуудас холбох, Flexbox (`display`, `gap`, `justify-content`, `flex-wrap`) — HTML/CSS төгсгөл                         |
-| 4 _(төлөвлөсөн)_ | Google AI Studio: prompt-оор portfolio сайт, AI-г зөв хэрэглэх                                                                                                |
+| 3                | VSCode код бөглөлт (Emmet), `<a>` таг, 2 хуудас холбох, Flexbox танилцуулга (nav: `display`, `gap`, `justify-content`, `flex-wrap`)                          |
+| 4 _(төлөвлөсөн)_ | Flexbox гүнзгий: эцэг/хүүхэд, `justify-content`, `align-items`, `flex-direction`, `gap`, `flex-wrap` — "Малаа хашаандаа" тоглоом, `tusul.html` — HTML/CSS төгсгөл |
+| 5 _(төлөвлөсөн)_ | Google AI Studio: prompt-оор portfolio сайт, AI-г зөв хэрэглэх                                                                                                |
 
 CSS-д **сүүдэр (shadow) заагаагүй** — жишээ кодонд бүү оруул.
 
