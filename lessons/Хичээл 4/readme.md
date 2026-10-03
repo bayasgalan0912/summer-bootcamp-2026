@@ -1,8 +1,8 @@
 # Хичээл 4
 
-### Өнөөдөр **Flexbox**-ыг тоглоомоор сурч, бүтэн хуудсыг flex-ээр цэгцэлнэ. HTML, CSS хэсгийн сүүлийн хичээл.
+### Өнөөдөр **Flexbox**-ыг 3 хайрцгаар ойлгож, тоглоомоор дасгалжуулж, бүтэн хуудсыг flex-ээр цэгцэлнэ. HTML, CSS хэсгийн сүүлийн хичээл.
 
-> **Агуулга:** Flexbox — эцэг/хүүхэд хайрцаг, `justify-content`, `align-items`, `flex-direction`, `gap`, `flex-wrap`. "Малаа хашаандаа" тоглоом (14 түвшин), тоглоомын сайтын хуудсыг flex-ээр цэгцлэх.
+> **Агуулга:** Flexbox — эцэг/хүүхэд хайрцаг, `justify-content`, `align-items`, `flex-direction`, `gap`, `flex-wrap`. 3 хайрцгийн жишээ, "Малаа хашаандаа" тоглоом (14 түвшин), тоглоомын сайтын хуудас. Гэрийн даалгавар: YouTube нүүр хуудас.
 
 ---
 
@@ -11,30 +11,79 @@
 ---
 
 <details>
-<summary><b>1. Гол дүрэм — flex-ийг ЭЦЭГ хайрцагт бичнэ</b></summary>
+<summary><b>1. 3 хайрцаг — flex-ийг ЭЦЭГТ бичнэ</b></summary>
 
 <br>
 
-**Эцэг** хайрцаг = хашаа. Дотор нь байгаа **хүүхдүүд** = мал.
-Хашаанд тушаал өгвөл мал дотроо байраа солино.
+**[hairtsag.html](hairtsag.html)**-ийг VSCode-д нээ. Нэг **эцэг** хайрцаг (тасархай хүрээ), дотор нь 3 **хүүхэд**.
 
 ```html
-<div class="nav">          <!-- эцэг: flex энд -->
-  <a href="#">Нүүр</a>     <!-- хүүхэд -->
-  <a href="#">Тоглоом</a>  <!-- хүүхэд -->
+<div class="parent">          <!-- эцэг: flex энд -->
+  <div class="box">1</div>    <!-- хүүхэд -->
+  <div class="box">2</div>
+  <div class="box">3</div>
 </div>
 ```
 
+`.parent { }` дотор мөр нэмээд хадгал → браузерт хар.
+
+| flex-гүй — дээрээс доош              | `display: flex` — хажуу хажууд        |
+| ------------------------------------ | ------------------------------------- |
+| <img src="images/00-flex-gui.png" width="300" /> | <img src="images/01-display-flex.png" width="300" /> |
+
 | ✅ Зөв                         | ❌ Буруу                         |
 | ------------------------------ | -------------------------------- |
-| `.nav { display: flex; }`      | `.nav a { display: flex; }`      |
+| `.parent { display: flex; }`   | `.box { display: flex; }`        |
+
+</details>
+
+---
 
 <details>
-<summary>3-р хичээлийн цэс яагаад ажилласан бэ?</summary>
+<summary><b>2. → Хэвтээ: justify-content</b></summary>
 
 <br>
 
-`display: flex`-ийг холбоосуудад биш, тэднийг агуулсан `.nav` хайрцагт бичсэн.
+`display: flex;`-ийн доор нэмж, утгыг нь сольж үз:
+
+| `center`                              | `flex-end`                             |
+| ------------------------------------- | -------------------------------------- |
+| <img src="images/02-center.png" width="300" /> | <img src="images/03-flex-end.png" width="300" /> |
+| **`space-between`**                   | **`space-around`**                     |
+| <img src="images/04-space-between.png" width="300" /> | <img src="images/05-space-around.png" width="300" /> |
+
+Хоорондоо зай: `gap`
+
+<img src="images/06-gap.png" width="300" />
+
+</details>
+
+---
+
+<details>
+<summary><b>3. ↓ Босоо: align-items</b></summary>
+
+<br>
+
+Эцэг хайрцаг **өндөртэй** байх ёстой (`height`) — тэгэхгүй бол доош явах зай алга.
+
+| `align-items: center`                 | `align-items: flex-end`                |
+| ------------------------------------- | -------------------------------------- |
+| <img src="images/07-align-center.png" width="300" /> | <img src="images/08-align-end.png" width="300" /> |
+
+**Яг голд нь** — хоёуланг нь:
+
+<img src="images/09-yag-gold.png" width="300" />
+
+<details>
+<summary>Цээжлэх</summary>
+
+<br>
+
+| Сум          | Хэн удирдах        |
+| ------------ | ------------------ |
+| **→** хэвтээ | `justify-content`  |
+| **↓** босоо  | `align-items`      |
 
 </details>
 
@@ -43,45 +92,28 @@
 ---
 
 <details>
-<summary><b>2. Хоёр сум</b></summary>
+<summary><b>4. column ба wrap</b></summary>
 
 <br>
 
-`display: flex` бичмэгц хайрцагт **хоёр сум** гарч ирнэ:
+`flex-direction: column` → дахиад дээрээс доош, гэхдээ одоо flex удирдана.
 
-| Сум            | Хэн удирдах         | Утгууд                                                     |
-| -------------- | ------------------- | ---------------------------------------------------------- |
-| **→** гол сум  | `justify-content`   | `flex-start` `center` `flex-end` `space-between` `space-around` |
-| **↓** хөндлөн  | `align-items`       | `flex-start` `center` `flex-end`                           |
+| `column`                              | `column` + `align-items: center`       |
+| ------------------------------------- | -------------------------------------- |
+| <img src="images/10-column.png" width="300" /> | <img src="images/11-column-center.png" width="300" /> |
 
-Бусад:
+**Анхаар:** column үед сум **эргэнэ** — `align-items` хэвтээ, `justify-content` босоо болно.
 
-| Шинж                      | Юу хийх                         |
-| ------------------------- | ------------------------------- |
-| `gap: 20px`               | Хүүхдүүдийн хоорондын зай       |
-| `flex-direction: column`  | Дээрээс доош цуваа              |
-| `flex-wrap: wrap`         | Багтахгүй бол доод мөр рүү      |
+`flex-wrap: wrap` → багтахгүй бол доод мөр рүү:
 
-<details>
-<summary>Анхаар: column үед сум эргэнэ</summary>
-
-<br>
-
-`flex-direction: column` бичвэл гол сум **↓** болно:
-
-| | row (энгийн) | column |
-| --- | --- | --- |
-| `justify-content` | → | ↓ |
-| `align-items`     | ↓ | → |
-
-</details>
+<img src="images/12-wrap.png" width="300" />
 
 </details>
 
 ---
 
 <details>
-<summary><b>3. Тоглоом — Малаа хашаандаа оруул 🐑</b></summary>
+<summary><b>5. Дасгал — Малаа хашаандаа оруул 🐑</b></summary>
 
 <br>
 
@@ -100,7 +132,7 @@
 
 - **Сануулга** товч дар
 - Улаан бичиг гарвал: үсэг, `:` ба `;` зөв эсэх
-- Дээрх **2. Хоёр сум** хүснэгтийг хар
+- 2–4-р алхмын зургуудыг хар
 
 </details>
 
@@ -109,7 +141,7 @@
 ---
 
 <details>
-<summary><b>4. Жинхэнэ хуудас — Тоглоомын сайт</b></summary>
+<summary><b>6. Жинхэнэ хуудас — Тоглоомын сайт</b></summary>
 
 <br>
 
@@ -145,21 +177,7 @@ CSS дотор `/* ← энд ... мөр */` гэсэн **5** газрыг бө�
 ---
 
 <details>
-<summary><b>5. Өөрийн хуудсандаа</b></summary>
-
-<br>
-
-`my-first-page.html`-ээ нээ. Flex-ийг **2** газар нэм:
-
-- Цэс: нэрээ зүүн, холбоосууд баруун (`space-between`)
-- Хайрцгууд: голдоо, `gap`, `flex-wrap`
-
-</details>
-
----
-
-<details>
-<summary><b>6. ✨ Бонус</b></summary>
+<summary><b>7. ✨ Бонус</b></summary>
 
 <br>
 
@@ -168,22 +186,40 @@ CSS дотор `/* ← энд ... мөр */` гэсэн **5** газрыг бө�
 | [Flexbox Froggy](https://flexboxfroggy.com)                 | Мэлхийг навчинд — 24 түвшин |
 | [Flexbox Defense](http://www.flexboxdefense.com)            | Цамхгаа flex-ээр байрлуул  |
 
-`tusul.html`-д 5 дахь карт нэм, өнгөө өөрчил.
-
 </details>
 
 ---
 
 <details>
-<summary><b>Гэрийн даалгавар</b></summary>
+<summary><b>Гэрийн даалгавар — YouTube нүүр хуудас</b></summary>
 
 <br>
 
+**[youtube.html](youtube.html)**-ийг нээ. HTML бэлэн — flex-ээр YouTube шиг болго.
+
+| Эхлэл                                    | Зорилго                                    |
+| ---------------------------------------- | ------------------------------------------ |
+| <img src="youtube-ehlel.png" width="300" /> | <img src="youtube-zorilgo.png" width="300" /> |
+
+CSS дотор `/* ← энд ... мөр */` гэсэн **9** газрыг бөглө:
+
+| #   | Хэсэг       | Хүсэлт                                         |
+| --- | ----------- | ---------------------------------------------- |
+| 1   | `.header`   | Лого зүүн, хайлт голд, дүрс баруун, босоо голдоо |
+| 2   | `.search`   | input ба товч хажуу хажууд                     |
+| 3   | `.icons`    | Хажуу хажууд, 15px зай                         |
+| 4   | `.page`     | Зүүн цэс ба видеонууд хажуу хажууд             |
+| 5   | `.sidebar`  | Дээрээс доош, 20px зай                         |
+| 6   | `.chips`    | Хажуу хажууд, 10px зай                         |
+| 7   | `.videos`   | Хажуу хажууд, 20px зай, багтахгүй бол доош      |
+| 8   | `.thumb`    | Emoji яг голд нь                               |
+| 9   | `.info`     | Дугуй зураг ба текст хажуу хажууд, 10px зай     |
+
 | #   | Юу хийх                                                      | ✔️  |
 | --- | ------------------------------------------------------------ | --- |
-| 1   | "Малаа хашаандаа" — 14 түвшнээ **бүгдийг** ногоон болго      | ⬜  |
-| 2   | `tusul.html`-ийг дуусга, screenshot-ыг Discord-д тавь         | ⬜  |
-| 3   | `my-first-page.html`-д цэс + хайрцгуудаа flex-ээр цэгцэл      | ⬜  |
+| 1   | `youtube.html`-ийн 9 газрыг бөглө                            | ⬜  |
+| 2   | Өөрийн дуртай 3 видео нэм (нэр, өнгө, emoji)                 | ⬜  |
+| 3   | Screenshot-оо Discord-д тавь                                 | ⬜  |
 
 Дараагийн хичээлд: AI Studio-оор энэ бүхнийг **хэдхэн минутад** хийлгэнэ.
 

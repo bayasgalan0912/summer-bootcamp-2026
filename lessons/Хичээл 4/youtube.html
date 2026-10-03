@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>YouTube</title>
+  <style>
+    body {
+      margin: 0;
+      background: #0f0f0f;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    /* 1. Толгой: лого ЗҮҮН, хайлт ГОЛД, дүрсүүд БАРУУН, босоо голдоо */
+    .header {
+      padding: 10px 20px;
+      /* ← энд 3 мөр */
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    /* 2. Хайлт: input ба товч хажуу хажууд */
+    .search {
+      /* ← энд 1 мөр */
+    }
+
+    .search input {
+      width: 300px;
+      padding: 8px 12px;
+      background: #121212;
+      border: 1px solid #303030;
+      color: white;
+      border-radius: 20px 0 0 20px;
+    }
+
+    .search button {
+      padding: 8px 16px;
+      background: #272727;
+      border: 1px solid #303030;
+      color: white;
+      border-radius: 0 20px 20px 0;
+    }
+
+    /* 3. Дүрсүүд: хажуу хажууд, 15px зай */
+    .icons {
+      font-size: 22px;
+      /* ← энд 2 мөр */
+    }
+
+    /* 4. Хуудас: зүүн цэс ба видеонууд хажуу хажууд */
+    .page {
+      /* ← энд 1 мөр */
+    }
+
+    /* 5. Зүүн цэс: дээрээс доош, 20px зай */
+    .sidebar {
+      width: 160px;
+      padding: 20px;
+      /* ← энд 3 мөр */
+    }
+
+    .main {
+      flex: 1;
+      padding: 10px 20px;
+    }
+
+    /* 6. Ангилал: хажуу хажууд, 10px зай */
+    .chips {
+      margin-bottom: 20px;
+      /* ← энд 2 мөр */
+    }
+
+    .chips span {
+      background: #272727;
+      padding: 6px 12px;
+      border-radius: 8px;
+    }
+
+    .chips .on {
+      background: white;
+      color: black;
+    }
+
+    /* 7. Видеонууд: хажуу хажууд, 20px зай, багтахгүй бол доош */
+    .videos {
+      /* ← энд 3 мөр */
+    }
+
+    .video {
+      width: 280px;
+    }
+
+    /* 8. Зураг: emoji-г ЯГ ГОЛД нь */
+    .thumb {
+      height: 158px;
+      border-radius: 12px;
+      font-size: 60px;
+      /* ← энд 3 мөр */
+    }
+
+    /* 9. Мэдээлэл: дугуй зураг ба текст хажуу хажууд, 10px зай */
+    .info {
+      margin-top: 10px;
+      /* ← энд 2 мөр */
+    }
+
+    .avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #7c3aed;
+      flex-shrink: 0;
+    }
+
+    .info p {
+      margin: 0;
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .info b {
+      display: block;
+      margin-bottom: 4px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <div class="logo">▶️ YouTube</div>
+    <div class="search">
+      <input placeholder="Хайх" />
+      <button>🔍</button>
+    </div>
+    <div class="icons">
+      <span>🔔</span>
+      <span>👤</span>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="sidebar">
+      <span>🏠 Нүүр</span>
+      <span>⚡ Shorts</span>
+      <span>📺 Subscriptions</span>
+      <span>🕘 Түүх</span>
+    </div>
+
+    <div class="main">
+      <div class="chips">
+        <span class="on">Бүгд</span>
+        <span>Тоглоом</span>
+        <span>Хөгжим</span>
+        <span>Спорт</span>
+        <span>Шинжлэх ухаан</span>
+      </div>
+
+      <div class="videos">
+        <div class="video">
+          <div class="thumb" style="background: #ef4444">🎮</div>
+          <div class="info">
+            <div class="avatar"></div>
+            <div>
+              <b>Minecraft-д байшин барих</b>
+              <p>Бат Games · 12K үзсэн</p>
+            </div>
+          </div>
+        </div>
+        <div class="video">
+          <div class="thumb" style="background: #f59e0b">⚽</div>
+          <div class="info">
+            <div class="avatar"></div>
+            <div>
+              <b>Шилдэг 10 гоол</b>
+              <p>Спорт TV · 50K үзсэн</p>
+            </div>
+          </div>
+        </div>
+        <div class="video">
+          <div class="thumb" style="background: #22c55e">🐎</div>
+          <div class="info">
+            <div class="avatar"></div>
+            <div>
+              <b>Наадмын хурдан морь</b>
+              <p>Монгол · 8K үзсэн</p>
+            </div>
+          </div>
+        </div>
+        <div class="video">
+          <div class="thumb" style="background: #3b82f6">🚀</div>
+          <div class="info">
+            <div class="avatar"></div>
+            <div>
+              <b>Пуужин хэрхэн нисдэг вэ?</b>
+              <p>Шинжлэх ухаан · 30K үзсэн</p>
+            </div>
+          </div>
+        </div>
+        <div class="video">
+          <div class="thumb" style="background: #ec4899">🎵</div>
+          <div class="info">
+            <div class="avatar"></div>
+            <div>
+              <b>Гитар тоглож сурах</b>
+              <p>Хөгжим · 5K үзсэн</p>
+            </div>
+          </div>
+        </div>
+        <div class="video">
+          <div class="thumb" style="background: #14b8a6">🐍</div>
+          <div class="info">
+            <div class="avatar"></div>
+            <div>
+              <b>Могой тоглоом хийх</b>
+              <p>Код Клуб · 20K үзсэн</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
