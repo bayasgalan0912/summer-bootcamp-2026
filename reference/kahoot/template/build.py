@@ -29,6 +29,27 @@ FONTS = [                   # mono фонт, Кирилл дэмждэг
     "/usr/share/fonts/dejavu/DejaVuSansMono.ttf",
 ]
 
+# ---- preview: ```preview блок -> хуудасны screenshot (headless Chrome) ----
+PREVIEW_CSS = """
+body { margin: 0; height: 100vh; display: flex; align-items: center;
+       justify-content: center; background: #ffffff; font-family: Arial, sans-serif; }
+.parent { width: 1100px; height: 560px; box-sizing: border-box;
+          border: 8px dashed #7c3aed; background: #f5f3ff; }
+.box { width: 140px; height: 140px; color: #fff; font: bold 64px/140px Arial;
+       text-align: center; border-radius: 20px; }
+.box:nth-child(6n+1) { background: #ef4444; }
+.box:nth-child(6n+2) { background: #f59e0b; }
+.box:nth-child(6n+3) { background: #22c55e; }
+.box:nth-child(6n+4) { background: #3b82f6; }
+.box:nth-child(6n+5) { background: #ec4899; }
+.box:nth-child(6n+6) { background: #14b8a6; }
+"""
+CHROMES = [
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    "C:/Program Files/Google/Chrome/Application/chrome.exe",
+    "google-chrome", "chromium", "chromium-browser",
+]
+
 # ---- Kahoot хязгаар -----------------------------------------------------
 LIMIT_Q, LIMIT_A = 120, 75
 TIMES = (5, 10, 20, 30, 60, 90, 120, 240)
@@ -159,6 +180,22 @@ def render(code, lang, path, fontpath):
     img.save(path)
 
 
+def render_preview(html, path):
+    """HTML-ийг 1600x900 хуудас болгож screenshot. .parent, .box бэлэн style-тэй."""
+    import shutil
+    import subprocess
+    import tempfile
+    chrome = next((c for c in CHROMES if Path(c).exists() or shutil.which(c)), None)
+    if not chrome:
+        sys.exit("Chrome олдсонгүй: preview зураг хийхэд хэрэгтэй")
+    with tempfile.TemporaryDirectory() as d:
+        f = Path(d) / "p.html"
+        f.write_text(f"<!doctype html><meta charset='utf-8'><style>{PREVIEW_CSS}</style>{html}", encoding="utf-8")
+        subprocess.run([chrome, "--headless=new", "--disable-gpu", "--hide-scrollbars",
+                        f"--window-size={W},{H}", f"--screenshot={Path(path).resolve()}", f.as_uri()],
+                       check=True, capture_output=True)
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("md", help="kahoot-N.md")
@@ -179,12 +216,14 @@ def main():
     write_xlsx(qs, out / f"{md.stem}.xlsx", a.time)
     font = find_font(a.font)
     for x in qs:
-        if x["code"]:
+        if x["lang"] == "preview":
+            render_preview(x["code"], out / f"q{x['n']:02d}.png")
+        elif x["code"]:
             render(x["code"], x["lang"], out / f"q{x['n']:02d}.png", font)
 
     print(f"{out}  ({len(qs)} асуулт, {a.time} сек)")
     for x in qs:
-        print(f"  Q{x['n']:>2}  зөв={x['correct']}  зураг={'тийм' if x['code'] else '-'}  {x['q'][:50]}")
+        print(f"  Q{x['n']:>2}  зөв={x['correct']}  зураг={'хуудас' if x['lang'] == 'preview' else 'код' if x['code'] else '-'}  {x['q'][:50]}")
 
 
 if __name__ == "__main__":

@@ -45,6 +45,21 @@ python3 kahoot/template/build.py kahoot/kahoot-3.md
 
 Зөв хариу (✅) асуулт бүрд яг 1. Хариулт 2–4.
 
+## Хуудасны зураг — ` ```preview `
+
+"Зургаас кодыг сонгох" асуултад: код блокийн хэлийг `preview` гэж бич → HTML нь headless **Chrome**-оор 1600×900 screenshot болно (код харагдахгүй, зөвхөн үр дүн).
+
+````
+```preview
+<style>.parent { display: flex; justify-content: center; }</style>
+<div class="parent">
+  <div class="box">1</div><div class="box">2</div><div class="box">3</div>
+</div>
+```
+````
+
+Бэлэн style (`PREVIEW_CSS`): `.parent` — тасархай нил хүрээтэй хүрээлж буй хайрцаг (1100×560), `.box` — 140px өнгөтэй хайрцаг (1, 2, 3 … өнгө автомат). Өөр зүйлд `<style>` дотор бич.
+
 ## Кодын зургийн style
 
 | | |
