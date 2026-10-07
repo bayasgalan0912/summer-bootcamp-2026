@@ -12,6 +12,7 @@
 - `reference/` — Өмнөх хичээлийн сэдвүүд
 - Хичээл бүрийн `readme.md` эхэнд `> **Агуулга:**` мөр — ангид **бодитоор юу заасныг** 1–2 өгүүлбэрээр. Хичээл орсны дараа шинэчил.
 - Гэрийн даалгавар: хичээлийн `readme.md`-ийн төгсгөлд эсвэл `homework.md`.
+- **Portfolio:** Хичээл 6-аас хойш хүүхэд бүр `portfolio/` хавтастай. Хичээл бүрийн бүтээлийг тэнд карт болгон **гараараа** нэмүүл (Хичээл 6, 6-р алхам). Demo Day дээр эндээс үзүүлнэ.
 - CSS хичээл: тайлбарын жишээ + `images/` screenshot (playwright-аар), тоглоом `togloom.html` (түвшин, автомат шалгагч), төсөл `tusul.html` + `ehlel.png`/`zorilgo.png`.
 - JS хичээл: `readme.md` (хүүхдэд), `bodlogo.html` (бодлого + `check()` шалгагч, браузерийн Console), `bagsh.md` (багшид: явц, тэмцээн, хариу).
 
@@ -23,7 +24,8 @@
 | 2                | VSCode товчлол (Ctrl+Enter, Win+←/→ хагаслах, Ctrl+Shift+P → Format Document), `div`, `class`, `id`, хайрцагт өнгө; YouTube `iframe` embed, `<video>` файлаар |
 | 3                | VSCode код бөглөлт (Emmet), `<a>` таг, 2 хуудас холбох, Flexbox танилцуулга (nav: `display`, `gap`, `justify-content`, `flex-wrap`)                          |
 | 4 _(төлөвлөсөн)_ | Flexbox гүнзгий: эцэг/хүүхэд, `justify-content`, `align-items`, `flex-direction`, `gap`, `flex-wrap` — 3 хайрцаг (`hairtsag.html`), "Малаа хашаандаа" тоглоом, `tusul.html`; ГД: YouTube нүүр — HTML/CSS төгсгөл |
-| 5 _(төлөвлөсөн)_ | Google AI Studio: prompt-оор portfolio сайт, AI-г зөв хэрэглэх                                                                                                |
+| 5 _(төлөвлөсөн)_ | Сайтыг хайрцагт хуваах (3 асуулт: хүрээлж буй хайрцаг, → эсвэл ↓, хаана), YouTube хуваалт, `spotify.html` — зааваргүй flex бөглөх, portfolio ноорог зураг; ГД: `portfolio/` хавтас |
+| 6 _(төлөвлөсөн)_ | Google AI Studio: өөрийн `index.html` + ноорог → portfolio (зөвхөн HTML/CSS), "Миний бүтээлүүд" карт, бүтээлээ гараараа нэмэх, AI-г зөв хэрэглэх |
 
 CSS-д **сүүдэр (shadow) заагаагүй** — жишээ кодонд бүү оруул.
 
