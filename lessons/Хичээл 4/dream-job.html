@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Миний мөрөөдлийн ажил</title>
+  <style>
+    body {
+      margin: 0;
+      background: skyblue;
+      font-family: Arial, sans-serif;
+    }
+
+    /* 1. Толгой: нэр ЗҮҮН, цэс БАРУУН, босоо голдоо */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1e3a8a;
+      color: white;
+      padding: 10px 20px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    .nav a {
+      color: white;
+      background: #7c3aed;
+      padding: 8px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+
+    .page {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+
+    /* 2. Танилцуулга: зураг ЗҮҮН, текст БАРУУН */
+    .intro {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      background: white;
+      padding: 20px;
+      border-radius: 20px;
+    }
+
+    .intro img {
+      width: 300px;
+      border-radius: 20px;
+    }
+
+    .intro-text {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    #job {
+      color: crimson;
+    }
+
+    /* 3. Ур чадвар ба төлөвлөгөө: 2 хайрцаг хажуу хажууд, ижил өргөн */
+    .row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .skills,
+    .plan {
+      flex: 1;
+      min-width: 250px;
+      padding: 10px 20px;
+      border-radius: 20px;
+    }
+
+    .skills {
+      background: #dcfce7;
+    }
+
+    .plan {
+      background: #e0e7ff;
+    }
+
+    /* 4. Бичлэг: видео ЗҮҮН, тайлбар БАРУУН */
+    .video {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      background: white;
+      padding: 20px;
+      border-radius: 20px;
+      margin-top: 20px;
+    }
+
+    .video-text {
+      flex: 1;
+      min-width: 250px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <h2>🎮 Бат</h2>
+    <div class="nav">
+      <a href="my-first-page.html">Нүүр</a>
+      <a href="dream-job.html">Мөрөөдлийн ажил</a>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="intro">
+      <img src="job.jpg" />
+      <div class="intro-text">
+        <h1 id="job">Тоглоом хөгжүүлэгч</h1>
+        <p>10 жилийн дараа би тоглоом бүтээдэг хүн болно.</p>
+        <p>Юу хийдэг вэ: дүр, түвшин, дүрмийг кодоор бүтээдэг.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="skills">
+        <h2>Хэрэгтэй ур чадвар</h2>
+        <p>Код бичих</p>
+        <p>Зураг, дизайн</p>
+        <p>Багаар ажиллах</p>
+      </div>
+
+      <div class="plan">
+        <h2>Миний төлөвлөгөө</h2>
+        <p>Одоо: энэ курст HTML, CSS, JavaScript сурна</p>
+        <p>Энэ жил: өөрийн анхны тоглоомоо хийнэ</p>
+        <p>Сургуульд: математик, англи хэлээ сайжруулна</p>
+        <p>Ирээдүйд: програмчлалын чиглэлээр сурна</p>
+      </div>
+    </div>
+
+    <div class="video">
+      <iframe width="400" height="220" src="https://www.youtube.com/embed/xxxxx"></iframe>
+      <div class="video-text">
+        <h2>Яагаад энэ ажил вэ?</h2>
+        <p>Найзуудтайгаа тоглох өөрийн тоглоомтой болмоор байна.</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
