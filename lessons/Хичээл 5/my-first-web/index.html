@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Миний хуудас</title>
+  <style>
+    body {
+      background: pink;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .nav {
+      display: flex;
+      /* хажуу хажууд */
+      justify-content: center;
+      /* голлуулах */
+      gap: 20px;
+      /* хоорондын зай */
+      margin-bottom: 20px;
+    }
+
+    .nav a {
+      color: white;
+      background: #7c3aed;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      /* доогуур зураасгүй */
+    }
+
+    .card {
+      background: white;
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+      border-radius: 20px;
+    }
+
+    img {
+      width: 150px;
+      border-radius: 50%;
+    }
+
+    #name {
+      color: #7c3aed;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      /* багтахгүй бол доош */
+      gap: 10px;
+    }
+
+    .box {
+      flex: 1;
+      /* ижил өргөн */
+      min-width: 150px;
+      background: #fef3c7;
+      padding: 10px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <a href="index.html">Нүүр</a>
+    <a href="dream-job.html">Мөрөөдлийн ажил</a>
+    <a href="my-youtube.html">Миний YouTube</a>
+  </div>
+
+  <div class="card">
+    <img src="my-photo.png" />
+    <h1 id="name">Сайн уу, намайг Бат гэдэг! 👋</h1>
+    <p>Би 13 настай. Хобби: сагс тоглох</p>
+
+    <div class="row">
+      <div class="box">
+        <h2>Зорилго</h2>
+        <p>Вэб сайт хийж сурах</p>
+      </div>
+      <div class="box">
+        <h2>Бүтээх зүйл</h2>
+        <p>Өөрийн тоглоом</p>
+      </div>
+      <div class="box">
+        <h2>Сонирхолтой факт</h2>
+        <p>Зүүн гараараа бичдэг</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

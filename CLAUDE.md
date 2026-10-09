@@ -12,7 +12,7 @@
 - `reference/` — Өмнөх хичээлийн сэдвүүд
 - Хичээл бүрийн `readme.md` эхэнд `> **Агуулга:**` мөр — ангид **бодитоор юу заасныг** 1–2 өгүүлбэрээр. Хичээл орсны дараа шинэчил.
 - Гэрийн даалгавар: хичээлийн `readme.md`-ийн төгсгөлд эсвэл `homework.md`.
-- **Portfolio:** Хичээл 6-аас хойш хүүхэд бүр `portfolio/` хавтастай. Хичээл бүрийн бүтээлийг тэнд карт болгон **гараараа** нэмүүл (Хичээл 6, 6-р алхам). Demo Day дээр эндээс үзүүлнэ.
+- **Portfolio:** Хичээл 5-аас хойш хүүхэд бүр `my-first-web/` хавтастай (жишээ: `lessons/Хичээл 5/my-first-web/`), Netlify-д байршсан. Хичээл бүрийн бүтээлийг тэнд карт болгон **гараараа** нэмүүл (Хичээл 6, 6-р алхам). Demo Day дээр эндээс үзүүлнэ.
 - CSS хичээл: тайлбарын жишээ + `images/` screenshot (playwright-аар), тоглоом `togloom.html` (түвшин, автомат шалгагч), төсөл `tusul.html` + `ehlel.png`/`zorilgo.png`.
 - JS хичээл: `readme.md` (хүүхдэд), `bodlogo.html` (бодлого + `check()` шалгагч, браузерийн Console), `bagsh.md` (багшид: явц, тэмцээн, хариу).
 
@@ -22,9 +22,9 @@
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1                | Вэбийн бүтэц, HTML таг (`h1`, `h2`, `p`, `img`), `<style>` өнгө, зураг (интернэт хаяг / Gemini), VSCode Open Folder                                           |
 | 2                | VSCode товчлол (Ctrl+Enter, Win+←/→ хагаслах, Ctrl+Shift+P → Format Document), `div`, `class`, `id`, хайрцагт өнгө; YouTube `iframe` embed, `<video>` файлаар |
-| 3                | VSCode код бөглөлт (Emmet), `<a>` таг, 2 хуудас холбох, Flexbox танилцуулга (nav: `display`, `gap`, `justify-content`, `flex-wrap`)                          |
-| 4 _(төлөвлөсөн)_ | Flexbox гүнзгий: эцэг/хүүхэд, `justify-content`, `align-items`, `flex-direction`, `gap`, `flex-wrap` — 3 хайрцаг (`hairtsag.html`), "Малаа хашаандаа" тоглоом, `tusul.html`; ГД: YouTube нүүр — HTML/CSS төгсгөл |
-| 5 _(төлөвлөсөн)_ | Сайтыг хайрцагт хуваах (3 асуулт: хүрээлж буй хайрцаг, → эсвэл ↓, хаана), YouTube хуваалт, `spotify.html` — зааваргүй flex бөглөх, portfolio ноорог зураг; ГД: `portfolio/` хавтас |
+| 3                | VSCode код бөглөлт (Emmet), `<a>` таг, 2 хуудас холбох, Flexbox танилцуулга (nav: `display`, `gap`, `justify-content`, `flex-wrap`), `:hover`                          |
+| 4 _(төлөвлөсөн)_ | Flexbox гүнзгий: эцэг/хүүхэд, `justify-content`, `align-items`, `flex-direction`, `gap`, `flex-wrap` — 3 хайрцаг (`hairtsag.html`), "Малаа хашаандаа" тоглоом, `tusul.html`, `dream-job.html` хуваах; ГД: `youtube.html` бөглөх |
+| 5 _(төлөвлөсөн)_ | YouTube нүүрийг хоосон файлаас алхам алхмаар (`my-youtube.html`): эхлээд хуваалт (`div { border }`), дараа нь элемент; интернэтийн лого/icon/зураг, `input`, `button`, `<a target="_blank">` видео, `:hover`; `my-first-page.html` → `index.html`, хуудсаа `my-first-web/`-д холбож **Netlify Drop**-оор байршуулах — HTML/CSS төгсгөл; ГД: portfolio ноорог |
 | 6 _(төлөвлөсөн)_ | Google AI Studio: өөрийн `index.html` + ноорог → portfolio (зөвхөн HTML/CSS), "Миний бүтээлүүд" карт, бүтээлээ гараараа нэмэх, AI-г зөв хэрэглэх |
 
 CSS-д **сүүдэр (shadow) заагаагүй** — жишээ кодонд бүү оруул.

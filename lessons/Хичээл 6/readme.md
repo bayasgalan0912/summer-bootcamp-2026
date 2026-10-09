@@ -13,20 +13,19 @@
 ---
 
 <details>
-<summary><b>1. Бэлтгэл — portfolio хавтас</b></summary>
+<summary><b>1. Бэлтгэл — my-first-web хавтас</b></summary>
 
 <br>
 
-VSCode → **Open Folder** → `portfolio`. Дотор нь байх ёстой:
+VSCode → **Open Folder** → `my-first-web`. Дотор нь байх ёстой:
 
 | Файл             | Хаанаас        |
 | ---------------- | -------------- |
 | `index.html`     | Хичээл 1–3     |
 | `dream-job.html` | Хичээл 2       |
 | `my-photo.png`   | Хичээл 1       |
-| `youtube.html`   | Хичээл 4       |
-| `spotify.html`   | Хичээл 5       |
-| `noorog.jpg`     | Хичээл 5 ноорог |
+| `my-youtube.html` | Хичээл 5      |
+| `noorog.jpg`     | Хичээл 5 гэрийн даалгавар |
 
 **Хуучнаа хадгал:** `index.html`-ийг хуулж `index-old.html` гэж нэрлэ. Алдаа гарвал буцаана.
 
@@ -65,8 +64,7 @@ VSCode → **Open Folder** → `portfolio`. Дотор нь байх ёстой:
 - Загвар: [бараан] өнгө, [ногоон] тодотгол, том гарчиг, хөдөлгөөнтэй.
 - "Миний бүтээлүүд" хэсэг нэм. Карт бүр холбоос:
   - dream-job.html — Мөрөөдлийн ажил
-  - youtube.html — YouTube хуулбар
-  - spotify.html — Spotify хуулбар
+  - my-youtube.html — Миний YouTube
 - Зөвхөн HTML, CSS. Нэг index.html файл, CSS нь <style> дотор.
 - React, Tailwind бүү ашигла. Энгийн class нэр өг.
 - Бүх текст монгол хэлээр.
@@ -141,13 +139,13 @@ VSCode → **Open Folder** → `portfolio`. Дотор нь байх ёстой:
 
 Цаашид хичээл бүрийн бүтээлээ энд нэмнэ. **AI-гүй**, өөрөө:
 
-1. `index.html` дотор **Ctrl+F** → `spotify.html` гэж хай.
+1. `index.html` дотор **Ctrl+F** → `my-youtube.html` гэж хай.
 2. Тэр картын `<a ...>` … `</a>` хэсгийг бүтнээр нь хуул, доор нь тавь.
 3. `href` болон нэрийг шинэ бүтээлээрээ соль.
 
 ```html
-<a href="spotify.html" class="card">   <!-- AI-ийн class нэр өөр байж болно -->
-  <h3>Spotify хуулбар</h3>
+<a href="my-youtube.html" class="card">   <!-- AI-ийн class нэр өөр байж болно -->
+  <h3>Миний YouTube</h3>
 </a>
 ```
 
@@ -156,7 +154,22 @@ VSCode → **Open Folder** → `portfolio`. Дотор нь байх ёстой:
 ---
 
 <details>
-<summary><b>7. AI-г зөв хэрэглэх</b></summary>
+<summary><b>7. Интернэтэд шинэчлэх</b></summary>
+
+<br>
+
+Хичээл 5-д гаргасан линк чинь хуучин загвартай хэвээр. Шинэчил:
+
+1. [app.netlify.com](https://app.netlify.com) → сайтаа сонго → **Deploys**.
+2. `my-first-web` хавтсаа дахин **чирж** оруул.
+3. Линкээ нээ — шинэ загвар гарч ирнэ. Линк өөрчлөгдөхгүй.
+
+</details>
+
+---
+
+<details>
+<summary><b>8. AI-г зөв хэрэглэх</b></summary>
 
 <br>
 
@@ -197,6 +210,6 @@ AI бол туслагч — шийдэгч нь **чи**.
 | 1   | Сайтаа prompt-оор дор хаяж **3** удаа сайжруул            | ⬜  |
 | 2   | 6-р алхмаар **гараараа** нэг карт нэм (жишээ нь Малаа хашаандаа тоглоом) | ⬜  |
 | 3   | Сайн ажилласан prompt-оо Google Keep-д хадгал            | ⬜  |
-| 4   | Сайтынхаа screenshot-ыг Discord-д тавь                   | ⬜  |
+| 4   | Netlify-д дахин байршуулж, линкээ Discord-д тавь          | ⬜  |
 
 </details>

@@ -8,7 +8,7 @@
 | [2](lessons/Хичээл%202) | VSCode товчлол, div, class, id, бичлэг |
 | [3](lessons/Хичээл%203) | Холбоос (a), код бөглөлт, Flexbox |
 | [4](lessons/Хичээл%204) | Flexbox — тоглоом, хуудас цэгцлэх |
-| [5](lessons/Хичээл%205) | Сайтыг хайрцагт хуваах — Flexbox давтлага, portfolio ноорог |
+| [5](lessons/Хичээл%205) | YouTube нүүрийг хоосноос бүтээх, хуудсаа холбож Netlify-д гаргах |
 | [6](lessons/Хичээл%206) | Google AI Studio — өөрийн сайтаа portfolio болгох |
 | 7– | JavaScript + алгоритм: хувьсагч, if/else, давталт, массив, Code Cup 🏆 |
 | … | AI-аар апп, тоглоом бүтээх, Demo Day |

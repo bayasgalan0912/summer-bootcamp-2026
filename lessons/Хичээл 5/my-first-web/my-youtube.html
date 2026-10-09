@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Миний YouTube</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .page {
+      display: flex;
+    }
+
+    .sidebar {
+      width: 200px;
+    }
+
+    .main {
+      flex: 1;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo-img {
+      width: 90px;
+    }
+
+    .icon {
+      width: 24px;
+    }
+
+    .search {
+      display: flex;
+    }
+
+    .search input {
+      width: 400px;
+      padding: 10px 15px;
+      border: 1px solid #ccc;
+      border-radius: 20px 0 0 20px;
+    }
+
+    .search button {
+      padding: 6px 20px;
+      border: 1px solid #ccc;
+      border-radius: 0 20px 20px 0;
+    }
+
+    .icons {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .profile {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+    }
+
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding: 10px;
+    }
+
+    .sidebar a {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 10px;
+      border-radius: 10px;
+      color: black;
+      text-decoration: none;
+    }
+
+    .sidebar a:hover {
+      background: #f2f2f2;
+    }
+
+    .main {
+      padding: 10px 20px;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .chips span {
+      background: #f2f2f2;
+      padding: 8px 12px;
+      border-radius: 8px;
+    }
+
+    .chips span:hover {
+      background: #e5e5e5;
+    }
+
+    .chips .on {
+      background: black;
+      color: white;
+    }
+
+    .videos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .video {
+      width: 300px;
+      color: black;
+      text-decoration: none;
+    }
+
+    .thumb {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .video:hover .thumb {
+      border-radius: 0;
+    }
+
+    .info {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+    }
+
+    .info p {
+      margin: 4px 0;
+      color: gray;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <div class="logo">
+      <img class="icon" src="https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/menu/default/24px.svg" />
+      <img class="logo-img" src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" />
+    </div>
+    <div class="search">
+      <input placeholder="Хайх" />
+      <button>
+        <img class="icon" src="https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/search/default/24px.svg" />
+      </button>
+    </div>
+    <div class="icons">
+      <img class="icon" src="https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/video_call/default/24px.svg" />
+      <img class="icon" src="https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/notifications/default/24px.svg" />
+      <img class="profile" src="my-photo.png" />
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="sidebar">
+      <a href="index.html">
+        <img class="icon" src="https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/home/default/24px.svg" />
+        Нүүр
+      </a>
+      <a href="#">
+        <img class="icon" src="https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/bolt/default/24px.svg" />
+        Shorts
+      </a>
+      <a href="#">
+        <img class="icon" src="https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/subscriptions/default/24px.svg" />
+        Subscriptions
+      </a>
+      <a href="#">
+        <img class="icon" src="https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/history/default/24px.svg" />
+        Түүх
+      </a>
+      <a href="#">
+        <img class="icon" src="https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/music_note/default/24px.svg" />
+        Хөгжим
+      </a>
+      <a href="#">
+        <img class="icon" src="https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/sports_esports/default/24px.svg" />
+        Тоглоом
+      </a>
+    </div>
+
+    <div class="main">
+      <div class="chips">
+        <span class="on">Бүгд</span>
+        <span>Хөгжим</span>
+        <span>Тоглоом</span>
+        <span>Live</span>
+        <span>Аниме</span>
+      </div>
+
+      <div class="videos">
+        <a class="video" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+          <img class="thumb" src="https://i.ytimg.com/vi/dQw4w9WgXcQ/mqdefault.jpg" />
+          <div class="info">
+            <img class="avatar" src="https://api.dicebear.com/9.x/bottts/svg?seed=RickAstley" />
+            <div>
+              <b>Never Gonna Give You Up</b>
+              <p>Rick Astley · 1.6B үзсэн</p>
+            </div>
+          </div>
+        </a>
+        <a class="video" href="https://www.youtube.com/watch?v=9bZkp7q19f0" target="_blank">
+          <img class="thumb" src="https://i.ytimg.com/vi/9bZkp7q19f0/mqdefault.jpg" />
+          <div class="info">
+            <img class="avatar" src="https://api.dicebear.com/9.x/bottts/svg?seed=PSY" />
+            <div>
+              <b>Gangnam Style</b>
+              <p>PSY · 5B үзсэн</p>
+            </div>
+          </div>
+        </a>
+        <a class="video" href="https://www.youtube.com/watch?v=kJQP7kiw5Fk" target="_blank">
+          <img class="thumb" src="https://i.ytimg.com/vi/kJQP7kiw5Fk/mqdefault.jpg" />
+          <div class="info">
+            <img class="avatar" src="https://api.dicebear.com/9.x/bottts/svg?seed=LuisFonsi" />
+            <div>
+              <b>Despacito</b>
+              <p>Luis Fonsi · 8B үзсэн</p>
+            </div>
+          </div>
+        </a>
+        <a class="video" href="https://www.youtube.com/watch?v=OPf0YbXqDm0" target="_blank">
+          <img class="thumb" src="https://i.ytimg.com/vi/OPf0YbXqDm0/mqdefault.jpg" />
+          <div class="info">
+            <img class="avatar" src="https://api.dicebear.com/9.x/bottts/svg?seed=MarkRonson" />
+            <div>
+              <b>Uptown Funk</b>
+              <p>Mark Ronson · 5B үзсэн</p>
+            </div>
+          </div>
+        </a>
+        <a class="video" href="https://www.youtube.com/watch?v=JGwWNGJdvx8" target="_blank">
+          <img class="thumb" src="https://i.ytimg.com/vi/JGwWNGJdvx8/mqdefault.jpg" />
+          <div class="info">
+            <img class="avatar" src="https://api.dicebear.com/9.x/bottts/svg?seed=EdSheeran" />
+            <div>
+              <b>Shape of You</b>
+              <p>Ed Sheeran · 6B үзсэн</p>
+            </div>
+          </div>
+        </a>
+        <a class="video" href="https://www.youtube.com/watch?v=jNQXAC9IVRw" target="_blank">
+          <img class="thumb" src="https://i.ytimg.com/vi/jNQXAC9IVRw/mqdefault.jpg" />
+          <div class="info">
+            <img class="avatar" src="https://api.dicebear.com/9.x/bottts/svg?seed=jawed" />
+            <div>
+              <b>Me at the zoo</b>
+              <p>jawed · 300M үзсэн</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
