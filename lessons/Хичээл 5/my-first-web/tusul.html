@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Миний тоглоомууд</title>
+  <style>
+    body {
+      margin: 0;
+      background: #1e1b4b;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    /* 1. Толгой: лого ЗҮҮН захад, цэс БАРУУН захад, босоо голдоо */
+    .header {
+      background: #7c3aed;
+      padding: 10px 20px;
+      /* ← энд 3 мөр */
+    }
+
+    /* 2. Цэс: холбоосууд хажуу хажууд, 15px зайтай */
+    .nav {
+      /* ← энд 2 мөр */
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* 3. Том хэсэг: доош цуваа, бүх зүйл голдоо */
+    .hero {
+      height: 250px;
+      /* ← энд 4 мөр */
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      margin: 0;
+    }
+
+    /* 4. Картууд: хажуу хажууд, 20px зайтай, багтахгүй бол доош */
+    .cards {
+      padding: 20px;
+      /* ← энд 4 мөр (голлуулахаа мартав аа!) */
+    }
+
+    .card {
+      width: 200px;
+      background: #312e81;
+      border-radius: 15px;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .icon {
+      font-size: 60px;
+    }
+
+    /* 5. Картын доод хэсэг: оноо ЗҮҮН, товч БАРУУН, босоо голдоо */
+    .bottom {
+      /* ← энд 3 мөр */
+    }
+
+    .bottom a {
+      background: #fbbf24;
+      color: #1e1b4b;
+      padding: 6px 12px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <h2>🎮 Бат Games</h2>
+    <div class="nav">
+      <a href="#">Нүүр</a>
+      <a href="#">Тоглоомууд</a>
+      <a href="#">Холбоо барих</a>
+    </div>
+  </div>
+
+  <div class="hero">
+    <h1>Миний дуртай тоглоомууд</h1>
+    <p>Flexbox-оор хийсэн хуудас</p>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <div class="icon">🐦</div>
+      <h3>Flappy Bird</h3>
+      <div class="bottom">
+        <span>⭐ 4.5</span>
+        <a href="#">Тоглох</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="icon">🐍</div>
+      <h3>Могой</h3>
+      <div class="bottom">
+        <span>⭐ 4.8</span>
+        <a href="#">Тоглох</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="icon">⚽</div>
+      <h3>Хөлбөмбөг</h3>
+      <div class="bottom">
+        <span>⭐ 4.2</span>
+        <a href="#">Тоглох</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="icon">🧩</div>
+      <h3>Тетрис</h3>
+      <div class="bottom">
+        <span>⭐ 4.9</span>
+        <a href="#">Тоглох</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

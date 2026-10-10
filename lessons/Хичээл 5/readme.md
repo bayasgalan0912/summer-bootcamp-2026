@@ -466,9 +466,14 @@ my-first-web/
   index.html        ← my-first-page.html-ийн нэрийг соль (заавал!)
   dream-job.html
   my-youtube.html
+  hairtsag.html     ← Хичээл 4-ийн дасгалууд
+  tusul.html
+  togloom.html
   my-photo.png
   job.jpg
 ```
+
+> **Нэг сайт, нэг линк.** Өнгөрсөн дасгалуудаа (Хичээл 4: `hairtsag.html`, `tusul.html`, `togloom.html`) энэ хавтсанд хуулна. `index.html`-ийн доор "Миний дасгалууд" хэсэгт холбоос болгоно. Netlify-д **нэг** линк гарна, бүх хуудас түүнээс нээгдэнэ.
 
 1. `my-first-page.html` → **`index.html`** болгож нэрийг соль (интернэтэд нүүр хуудас заавал ийм нэртэй).
 2. Бүх хуудасны цэсийг ижил болго:
@@ -479,7 +484,18 @@ my-first-web/
 <a href="my-youtube.html">Миний YouTube</a>
 ```
 
-3. Браузерт нээгээд **бүх холбоосыг** дар: Нүүр → Мөрөөдлийн ажил → Миний YouTube → Нүүр.
+3. `index.html`-ийн доор нэм (цэсний `<div class="nav">`-ийг хуулж болно):
+
+```html
+<h2>Миний дасгалууд</h2>
+<div class="nav">
+  <a href="hairtsag.html">3 хайрцаг</a>
+  <a href="tusul.html">Тоглоомын сайт</a>
+  <a href="togloom.html">Малаа хашаандаа</a>
+</div>
+```
+
+4. Браузерт нээгээд **бүх холбоосыг** дар: Нүүр → Мөрөөдлийн ажил → Миний YouTube → Нүүр → дасгалууд.
 
 <details>
 <summary>Зураг, холбоос ажиллахгүй бол</summary>
@@ -505,8 +521,8 @@ my-first-web/
 <br>
 
 1. [app.netlify.com/drop](https://app.netlify.com/drop) → **Sign up** (18+ Gmail-ээр).
-2. `my-first-web` хавтсаа хуудас руу **чирж** оруул.
-3. `....netlify.app` гэсэн линк гарна → нээгээд шалга.
+2. `my-first-web` хавтсаа (**бүх** хуудастай нь) хуудас руу **чирж** оруул.
+3. `....netlify.app` гэсэн **нэг** линк гарна → нээгээд шалга: `/dream-job.html`, `/my-youtube.html`, `/tusul.html` … бүгд ажиллах ёстой.
 4. **Site configuration → Change site name** → `bat-web` гэх мэт нэр өг.
 5. Линкээ утсаараа нээ — дэлхийн хаанаас ч харагдана!
 
