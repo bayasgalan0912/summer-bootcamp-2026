@@ -4,7 +4,7 @@
 
 ## Бүтэц
 
-- 2 сар, амралтын 2 өдөр, хичээл бүр ~2 цаг. Хуваарь: [readme.md](readme.md). Хичээлийн тоо тогтмол биш — хөтөлбөр шинэчлэгдэнэ.
+- 2 сар, амралтын 2 өдөр, хичээл бүр ~2 цаг, **нийт 18 хичээл**. Хуваарь: [readme.md](readme.md). Сэдвийн дараалал шинэчлэгдэж болно, тоо нь 18.
 - Дараалал: HTML/CSS → JavaScript + алгоритм (кодын суурь) → AI-аар код бичүүлэх, апп, тоглоом.
 - **`lessons/`** — эцсийн хичээлүүд энд л байна: `lessons/Хичээл 1`, `lessons/Хичээл 2` … Шинэ хичээлийг энд бич.
 - `w1/` … `w8/` — хуучин төлөвлөгөө. Зөвхөн **reference, санаа** авах. Шууд засахгүй, линк хийхгүй.
@@ -12,7 +12,7 @@
 - `reference/` — Өмнөх хичээлийн сэдвүүд
 - Хичээл бүрийн `readme.md` эхэнд `> **Агуулга:**` мөр — ангид **бодитоор юу заасныг** 1–2 өгүүлбэрээр. Хичээл орсны дараа шинэчил.
 - Гэрийн даалгавар: хичээлийн `readme.md`-ийн төгсгөлд эсвэл `homework.md`.
-- **Portfolio:** Хичээл 5-д хүүхэд бүр `my-first-web/` хавтсаа (жишээ: `lessons/Хичээл 5/my-first-web/`) Netlify-д байршуулсан. Хичээл 6-аас хойш portfolio = AI Studio Build апп (хуучин хуудсууд руу Netlify линкээр холбоно), Хичээл 7-оос GitHub `my-portfolio` → Vercel. Цаашид HTML/CSS дасгал бага — portfolio-гоо AI Studio-д vibe coding-оор сайжруулж, JS + алгоритм үзнэ. Хичээл бүрийн бүтээлийг карт болгон **гараараа** нэмүүл (Хичээл 6, 6-р алхам). Demo Day дээр Vercel линкээр үзүүлнэ.
+- **Portfolio:** Хүүхэд бүр `my-first-web/` хавтсаа (жишээ: `lessons/Хичээл 5/my-first-web/`) Netlify-д байршуулна (Хичээл 5, 6-д амжаагүй → Хичээл 7-ийн эхэнд). Хичээл 7-оос хойш portfolio = AI Studio Build апп (хуучин хуудсууд руу Netlify линкээр холбоно), Хичээл 8-аас GitHub `my-portfolio` → Vercel. Цаашид HTML/CSS дасгал бага — portfolio-гоо AI Studio-д vibe coding-оор сайжруулж, JS + алгоритм үзнэ. Хичээл бүрийн бүтээлийг карт болгон **гараараа** нэмүүл (Хичээл 7, 6-р алхам). Demo Day дээр Vercel линкээр үзүүлнэ.
 - CSS хичээл: тайлбарын жишээ + `images/` screenshot (playwright-аар), тоглоом `togloom.html` (түвшин, автомат шалгагч), төсөл `tusul.html` + `ehlel.png`/`zorilgo.png`.
 - JS хичээл: `readme.md` (хүүхдэд), `bodlogo.html` (бодлого + `check()` шалгагч, браузерийн Console), `bagsh.md` (багшид: явц, тэмцээн, хариу).
 
@@ -25,8 +25,9 @@
 | 3                | VSCode код бөглөлт (Emmet), `<a>` таг, 2 хуудас холбох, Flexbox танилцуулга (nav: `display`, `gap`, `justify-content`, `flex-wrap`), `:hover`                          |
 | 4 _(төлөвлөсөн)_ | Flexbox гүнзгий: эцэг/хүүхэд, `justify-content`, `align-items`, `flex-direction`, `gap`, `flex-wrap` — 3 хайрцаг (`hairtsag.html`), "Малаа хашаандаа" тоглоом, `tusul.html`, `dream-job.html` хуваах; ГД: `youtube.html` бөглөх |
 | 5 _(төлөвлөсөн)_ | YouTube нүүрийг хоосон файлаас алхам алхмаар (`my-youtube.html`): эхлээд хуваалт (`div { border }`), дараа нь элемент; интернэтийн лого/icon/зураг, `input`, `button`, `<a target="_blank">` видео, `:hover`; `my-first-page.html` → `index.html`, хуудсаа `my-first-web/`-д холбож **Netlify Drop**-оор байршуулах — HTML/CSS төгсгөл; ГД: portfolio ноорог |
-| 6 _(төлөвлөсөн)_ | Гараар хийсэн сайт vs мэргэжлийн загвар, AI Studio танилцуулга (видео, System instructions), загвар олох 2 арга (motionsites.ai, screenshot) → AI Studio **Build**-д portfolio (Хичээл 5-ын `index.html`-ээс зөвхөн мэдээлэл, хуучин хуудсууд Netlify линкээр), vibe coding, бүтээлээ Code-д гараараа нэмэх, AI-г зөв хэрэглэх. React/JS-ийг заагаагүй |
-| 7 _(төлөвлөсөн)_ | AI Studio → GitHub sync, `git clone` → `npm install` → `npm run dev`, `git pull`, Vercel (Push бүрт автомат) |
+| 6                | HTML/CSS давтлага, `my-first-web`-ийн 3 хуудсаа сайжруулсан. Netlify-д байршуулж амжаагүй |
+| 7 _(төлөвлөсөн)_ | Гараар хийсэн сайт vs мэргэжлийн загвар, AI Studio танилцуулга (видео, System instructions), загвар олох 2 арга (motionsites.ai, screenshot) → AI Studio **Build**-д portfolio (Хичээл 5-ын `index.html`-ээс зөвхөн мэдээлэл, хуучин хуудсууд Netlify линкээр), vibe coding, бүтээлээ Code-д гараараа нэмэх, AI-г зөв хэрэглэх. React/JS-ийг заагаагүй |
+| 8 _(төлөвлөсөн)_ | AI Studio → GitHub sync, `git clone` → `npm install` → `npm run dev`, `git pull`, Vercel (Push бүрт автомат) |
 
 CSS-д **сүүдэр (shadow) заагаагүй** — жишээ кодонд бүү оруул.
 

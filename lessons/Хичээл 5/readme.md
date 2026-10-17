@@ -522,9 +522,10 @@ my-first-web/
 
 1. [app.netlify.com/drop](https://app.netlify.com/drop) → **Sign up** (18+ Gmail-ээр).
 2. `my-first-web` хавтсаа (**бүх** хуудастай нь) хуудас руу **чирж** оруул.
-3. `....netlify.app` гэсэн **нэг** линк гарна → нээгээд шалга: `/dream-job.html`, `/my-youtube.html`, `/tusul.html` … бүгд ажиллах ёстой.
-4. **Site configuration → Change site name** → `bat-web` гэх мэт нэр өг.
-5. Линкээ утсаараа нээ — дэлхийн хаанаас ч харагдана!
+3. **Make public** товч дар — дарахгүй бол бусад хүн сайтыг чинь нээж чадахгүй.
+4. `....netlify.app` гэсэн **нэг** линк гарна → нээгээд шалга: `/dream-job.html`, `/my-youtube.html`, `/tusul.html` … бүгд ажиллах ёстой.
+5. **Site configuration → Change site name** → `bat-web` гэх мэт нэр өг.
+6. Линкээ утсаараа нээ — дэлхийн хаанаас ч харагдана!
 
 <details>
 <summary>Дараа нь өөрчлөх бол</summary>
