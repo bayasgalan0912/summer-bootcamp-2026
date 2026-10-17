@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="250" viewBox="0 0 560 250" font-family="Arial, sans-serif" font-size="17">
+<rect width="560" height="250" fill="white"/>
+<text x="30" y="34" font-size="21" font-weight="bold">Блок схемийн 3 дүрс</text>
+<rect x="30" y="60" width="150" height="46" rx="23.0" fill="#e8f7ee" stroke="#2fb36d" stroke-width="2.5"/>
+<text x="205" y="80" font-weight="bold">Эхлэл / Төгсгөл</text>
+<text x="205" y="100" font-size="15" fill="#555">Програм эхэлж, дуусна</text>
+<polygon points="46,122 180,122 164,168 30,168" fill="#eef0fd" stroke="#4a5bd4" stroke-width="2.5"/>
+<text x="205" y="142" font-weight="bold">Оролт / Гаралт</text>
+<text x="205" y="162" font-size="15" fill="#555">Утга авах, console.log</text>
+<rect x="30" y="184" width="150" height="46" rx="4" fill="#fff4e6" stroke="#f29b30" stroke-width="2.5"/>
+<text x="205" y="204" font-weight="bold">Үйлдэл</text>
+<text x="205" y="224" font-size="15" fill="#555">Хувьсагч, тооцоо: let x = ...</text>
+</svg>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1036" height="704" viewBox="0 0 1036 704" font-family="Arial, sans-serif" font-size="17">
+<defs><marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker></defs>
+<rect width="1036" height="704" fill="white"/>
+<text x="30" y="34" font-size="21" font-weight="bold">Дасгал 5 — Хайрцаг солих</text>
+<text x="165.0" y="72" text-anchor="middle" font-size="15" fill="#777">Блок схем</text>
+<text x="350" y="72" font-size="15" fill="#777">JavaScript</text>
+<text x="786.0" y="72" text-anchor="middle" font-size="15" fill="#777">a</text>
+<text x="878.0" y="72" text-anchor="middle" font-size="15" fill="#777">b</text>
+<text x="970.0" y="72" text-anchor="middle" font-size="15" fill="#777">c</text>
+<rect x="30" y="90" width="270" height="52" rx="26.0" fill="#e8f7ee" stroke="#2fb36d" stroke-width="2.5"/><text x="165.0" y="122.0" text-anchor="middle" font-size="17">Эхлэл</text>
+<rect x="30" y="172" width="270" height="52" rx="4" fill="#fff4e6" stroke="#f29b30" stroke-width="2.5"/><text x="165.0" y="204.0" text-anchor="middle" font-size="17">a = "cola", b = "water"</text>
+<line x1="165.0" y1="142" x2="165.0" y2="170" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<line x1="304" y1="198.0" x2="342" y2="198.0" stroke="#bbb" stroke-width="1.5" stroke-dasharray="4 4"/>
+<rect x="344" y="174" width="380" height="48" rx="6" fill="#272822"/>
+<text x="356" y="194.0" font-family="Consolas, Menlo, monospace" font-size="15" fill="#f8f8f2" xml:space="preserve">let a = "cola";</text>
+<text x="356" y="214.0" font-family="Consolas, Menlo, monospace" font-size="15" fill="#f8f8f2" xml:space="preserve">let b = "water";</text>
+<rect x="746" y="178" width="80" height="40" rx="6" fill="#fff4c2" stroke="#e0b400" stroke-width="2"/>
+<text x="786.0" y="204.0" text-anchor="middle" font-size="16">cola</text>
+<rect x="838" y="178" width="80" height="40" rx="6" fill="#fff4c2" stroke="#e0b400" stroke-width="2"/>
+<text x="878.0" y="204.0" text-anchor="middle" font-size="16">water</text>
+<rect x="930" y="178" width="80" height="40" rx="6" fill="#f6f7fb" stroke="#dde0ea" stroke-width="2"/>
+<text x="970.0" y="204.0" text-anchor="middle" font-size="16">—</text>
+<rect x="30" y="254" width="270" height="52" rx="4" fill="#fff4e6" stroke="#f29b30" stroke-width="2.5"/><text x="165.0" y="286.0" text-anchor="middle" font-size="17">c = a</text>
+<line x1="165.0" y1="224" x2="165.0" y2="252" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<line x1="304" y1="280.0" x2="342" y2="280.0" stroke="#bbb" stroke-width="1.5" stroke-dasharray="4 4"/>
+<rect x="344" y="256" width="380" height="48" rx="6" fill="#272822"/>
+<text x="356" y="286.0" font-family="Consolas, Menlo, monospace" font-size="16" fill="#f8f8f2" xml:space="preserve">let c = a;</text>
+<rect x="746" y="260" width="80" height="40" rx="6" fill="#f6f7fb" stroke="#dde0ea" stroke-width="2"/>
+<text x="786.0" y="286.0" text-anchor="middle" font-size="16">cola</text>
+<rect x="838" y="260" width="80" height="40" rx="6" fill="#f6f7fb" stroke="#dde0ea" stroke-width="2"/>
+<text x="878.0" y="286.0" text-anchor="middle" font-size="16">water</text>
+<rect x="930" y="260" width="80" height="40" rx="6" fill="#fff4c2" stroke="#e0b400" stroke-width="2"/>
+<text x="970.0" y="286.0" text-anchor="middle" font-size="16">cola</text>
+<rect x="30" y="336" width="270" height="52" rx="4" fill="#fff4e6" stroke="#f29b30" stroke-width="2.5"/><text x="165.0" y="368.0" text-anchor="middle" font-size="17">a = b</text>
+<line x1="165.0" y1="306" x2="165.0" y2="334" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<line x1="304" y1="362.0" x2="342" y2="362.0" stroke="#bbb" stroke-width="1.5" stroke-dasharray="4 4"/>
+<rect x="344" y="338" width="380" height="48" rx="6" fill="#272822"/>
+<text x="356" y="368.0" font-family="Consolas, Menlo, monospace" font-size="16" fill="#f8f8f2" xml:space="preserve">a = b;</text>
+<rect x="746" y="342" width="80" height="40" rx="6" fill="#fff4c2" stroke="#e0b400" stroke-width="2"/>
+<text x="786.0" y="368.0" text-anchor="middle" font-size="16">water</text>
+<rect x="838" y="342" width="80" height="40" rx="6" fill="#f6f7fb" stroke="#dde0ea" stroke-width="2"/>
+<text x="878.0" y="368.0" text-anchor="middle" font-size="16">water</text>
+<rect x="930" y="342" width="80" height="40" rx="6" fill="#f6f7fb" stroke="#dde0ea" stroke-width="2"/>
+<text x="970.0" y="368.0" text-anchor="middle" font-size="16">cola</text>
+<rect x="30" y="418" width="270" height="52" rx="4" fill="#fff4e6" stroke="#f29b30" stroke-width="2.5"/><text x="165.0" y="450.0" text-anchor="middle" font-size="17">b = c</text>
+<line x1="165.0" y1="388" x2="165.0" y2="416" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<line x1="304" y1="444.0" x2="342" y2="444.0" stroke="#bbb" stroke-width="1.5" stroke-dasharray="4 4"/>
+<rect x="344" y="420" width="380" height="48" rx="6" fill="#272822"/>
+<text x="356" y="450.0" font-family="Consolas, Menlo, monospace" font-size="16" fill="#f8f8f2" xml:space="preserve">b = c;</text>
+<rect x="746" y="424" width="80" height="40" rx="6" fill="#f6f7fb" stroke="#dde0ea" stroke-width="2"/>
+<text x="786.0" y="450.0" text-anchor="middle" font-size="16">water</text>
+<rect x="838" y="424" width="80" height="40" rx="6" fill="#fff4c2" stroke="#e0b400" stroke-width="2"/>
+<text x="878.0" y="450.0" text-anchor="middle" font-size="16">cola</text>
+<rect x="930" y="424" width="80" height="40" rx="6" fill="#f6f7fb" stroke="#dde0ea" stroke-width="2"/>
+<text x="970.0" y="450.0" text-anchor="middle" font-size="16">cola</text>
+<polygon points="46,500 300,500 284,552 30,552" fill="#eef0fd" stroke="#4a5bd4" stroke-width="2.5"/><text x="165.0" y="532.0" text-anchor="middle" font-size="17">a, b гаргах</text>
+<line x1="165.0" y1="470" x2="165.0" y2="498" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<line x1="304" y1="526.0" x2="342" y2="526.0" stroke="#bbb" stroke-width="1.5" stroke-dasharray="4 4"/>
+<rect x="344" y="502" width="380" height="48" rx="6" fill="#272822"/>
+<text x="356" y="532.0" font-family="Consolas, Menlo, monospace" font-size="16" fill="#f8f8f2" xml:space="preserve">console.log(a, b);</text>
+<rect x="30" y="582" width="270" height="52" rx="26.0" fill="#e8f7ee" stroke="#2fb36d" stroke-width="2.5"/><text x="165.0" y="614.0" text-anchor="middle" font-size="17">Төгсгөл</text>
+<line x1="165.0" y1="552" x2="165.0" y2="580" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<text x="30" y="680" font-size="16" fill="#555">Шар = тэр мөрөнд өөрчлөгдсөн хайрцаг.  Гаралт:  water cola</text>
+</svg>

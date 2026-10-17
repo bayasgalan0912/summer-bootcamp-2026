@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="336" viewBox="0 0 750 336" font-family="Arial, sans-serif" font-size="17">
+<defs><marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker></defs>
+<rect width="750" height="336" fill="white"/>
+<text x="30" y="34" font-size="21" font-weight="bold">Hello world</text>
+<text x="165.0" y="72" text-anchor="middle" font-size="15" fill="#777">Блок схем</text>
+<text x="350" y="72" font-size="15" fill="#777">JavaScript</text>
+<rect x="30" y="90" width="270" height="52" rx="26.0" fill="#e8f7ee" stroke="#2fb36d" stroke-width="2.5"/><text x="165.0" y="122.0" text-anchor="middle" font-size="17">Эхлэл</text>
+<polygon points="46,172 300,172 284,224 30,224" fill="#eef0fd" stroke="#4a5bd4" stroke-width="2.5"/><text x="165.0" y="204.0" text-anchor="middle" font-size="17">"HELLO WORLD" гаргах</text>
+<line x1="165.0" y1="142" x2="165.0" y2="170" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<line x1="304" y1="198.0" x2="342" y2="198.0" stroke="#bbb" stroke-width="1.5" stroke-dasharray="4 4"/>
+<rect x="344" y="174" width="380" height="48" rx="6" fill="#272822"/>
+<text x="356" y="204.0" font-family="Consolas, Menlo, monospace" font-size="16" fill="#f8f8f2" xml:space="preserve">console.log("HELLO WORLD");</text>
+<rect x="30" y="254" width="270" height="52" rx="26.0" fill="#e8f7ee" stroke="#2fb36d" stroke-width="2.5"/><text x="165.0" y="286.0" text-anchor="middle" font-size="17">Төгсгөл</text>
+<line x1="165.0" y1="224" x2="165.0" y2="252" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+</svg>

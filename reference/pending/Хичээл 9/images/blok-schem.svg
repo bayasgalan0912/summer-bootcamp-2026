@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="520" viewBox="0 0 600 520" font-family="Arial, sans-serif" font-size="18">
+<defs><marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker></defs>
+<rect width="600" height="520" fill="white"/>
+<text x="20" y="32" font-size="20" font-weight="bold">Шагнал — блок схем</text>
+<rect x="220.0" y="57.0" width="160" height="46" rx="23.0" fill="#e8f7ee" stroke="#2fb36d" stroke-width="2.5"/>
+<text x="300" y="86" text-anchor="middle">Эхлэл</text>
+<polygon points="216.0,137.0 400.0,137.0 384.0,183.0 200.0,183.0" fill="#eef0fd" stroke="#4a5bd4" stroke-width="2.5"/>
+<text x="300" y="166" text-anchor="middle">Оноо оруулах</text>
+<polygon points="300,215.0 410.0,260 300,305.0 190.0,260" fill="#f3ecfc" stroke="#8a4fd8" stroke-width="2.5"/>
+<text x="300" y="266" text-anchor="middle">оноо ≥ 80 ?</text>
+<polygon points="56.0,347.0 220.0,347.0 204.0,393.0 40.0,393.0" fill="#eef0fd" stroke="#4a5bd4" stroke-width="2.5"/>
+<text x="130" y="376" text-anchor="middle">"Алтан"</text>
+<polygon points="396.0,347.0 560.0,347.0 544.0,393.0 380.0,393.0" fill="#eef0fd" stroke="#4a5bd4" stroke-width="2.5"/>
+<text x="470" y="376" text-anchor="middle">"Мөнгөн"</text>
+<rect x="220.0" y="447.0" width="160" height="46" rx="23.0" fill="#e8f7ee" stroke="#2fb36d" stroke-width="2.5"/>
+<text x="300" y="476" text-anchor="middle">Төгсгөл</text>
+<polyline points="300,103 300,135" fill="none" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<polyline points="300,183 300,213" fill="none" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<polyline points="190,260 130,260 130,345" fill="none" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<text x="140" y="250" font-size="16" fill="#555">Тийм</text>
+<polyline points="410,260 470,260 470,345" fill="none" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<text x="420" y="250" font-size="16" fill="#555">Үгүй</text>
+<polyline points="130,393 130,470 218,470" fill="none" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<polyline points="470,393 470,470 382,470" fill="none" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+</svg>

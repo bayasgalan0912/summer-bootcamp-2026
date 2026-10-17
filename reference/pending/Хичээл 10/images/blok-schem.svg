@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="545" viewBox="0 0 640 545" font-family="Arial, sans-serif" font-size="18">
+<defs><marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker></defs>
+<rect width="640" height="545" fill="white"/>
+<text x="20" y="32" font-size="20" font-weight="bold">1-ээс N хүртэл нэмэх — блок схем</text>
+<rect x="180.0" y="53.0" width="160" height="44" rx="22.0" fill="#e8f7ee" stroke="#2fb36d" stroke-width="2.5"/>
+<text x="260" y="81" text-anchor="middle">Эхлэл</text>
+<polygon points="186.0,123.0 350.0,123.0 334.0,167.0 170.0,167.0" fill="#eef0fd" stroke="#4a5bd4" stroke-width="2.5"/>
+<text x="260" y="151" text-anchor="middle">N оруулах</text>
+<rect x="170.0" y="193.0" width="180" height="44" rx="4" fill="#fff4e6" stroke="#f29b30" stroke-width="2.5"/>
+<text x="260" y="221" text-anchor="middle">s = 0,  i = 1</text>
+<polygon points="260,270.0 360.0,315 260,360.0 160.0,315" fill="#f3ecfc" stroke="#8a4fd8" stroke-width="2.5"/>
+<text x="260" y="321" text-anchor="middle">i ≤ N ?</text>
+<rect x="170.0" y="403.0" width="180" height="44" rx="4" fill="#fff4e6" stroke="#f29b30" stroke-width="2.5"/>
+<text x="260" y="431" text-anchor="middle">s = s + i</text>
+<rect x="170.0" y="473.0" width="180" height="44" rx="4" fill="#fff4e6" stroke="#f29b30" stroke-width="2.5"/>
+<text x="260" y="501" text-anchor="middle">i = i + 1</text>
+<polygon points="456.0,293.0 600.0,293.0 584.0,337.0 440.0,337.0" fill="#eef0fd" stroke="#4a5bd4" stroke-width="2.5"/>
+<text x="520" y="321" text-anchor="middle">s гаргах</text>
+<rect x="450.0" y="403.0" width="140" height="44" rx="22.0" fill="#e8f7ee" stroke="#2fb36d" stroke-width="2.5"/>
+<text x="520" y="431" text-anchor="middle">Төгсгөл</text>
+<polyline points="260,97 260,121" fill="none" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<polyline points="260,167 260,191" fill="none" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<polyline points="260,237 260,268" fill="none" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<polyline points="260,360 260,401" fill="none" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<text x="270" y="385" font-size="16" fill="#555">Тийм</text>
+<polyline points="260,447 260,471" fill="none" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<polyline points="170,495 90,495 90,315 158,315" fill="none" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<text x="30" y="410" font-size="16" fill="#555">дахин</text>
+<polyline points="360,315 438,315" fill="none" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<text x="375" y="305" font-size="16" fill="#555">Үгүй</text>
+<polyline points="520,337 520,401" fill="none" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+</svg>

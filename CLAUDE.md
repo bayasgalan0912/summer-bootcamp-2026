@@ -4,7 +4,7 @@
 
 ## Бүтэц
 
-- 2 сар, амралтын 2 өдөр, хичээл бүр ~2 цаг, **нийт 18 хичээл**. Хуваарь: [readme.md](readme.md). Сэдвийн дараалал шинэчлэгдэж болно, тоо нь 18.
+- 2 сар, амралтын 2 өдөр, хичээл бүр ~2 цаг, **нийт 18 хичээл**. Хуваарь: [readme.md](readme.md) (7 AI portfolio → 8–12 JS → 13 GitHub/Vercel → 14 Anime → 15 Firestore → 16–17 тулааны тоглоом → 18 Demo Day). Сэдвийн дараалал шинэчлэгдэж болно, тоо нь 18.
 - Дараалал: HTML/CSS → JavaScript + алгоритм (кодын суурь) → AI-аар код бичүүлэх, апп, тоглоом.
 - **`lessons/`** — эцсийн хичээлүүд энд л байна: `lessons/Хичээл 1`, `lessons/Хичээл 2` … Шинэ хичээлийг энд бич.
 - `w1/` … `w8/` — хуучин төлөвлөгөө. Зөвхөн **reference, санаа** авах. Шууд засахгүй, линк хийхгүй.
@@ -12,9 +12,10 @@
 - `reference/` — Өмнөх хичээлийн сэдвүүд
 - Хичээл бүрийн `readme.md` эхэнд `> **Агуулга:**` мөр — ангид **бодитоор юу заасныг** 1–2 өгүүлбэрээр. Хичээл орсны дараа шинэчил.
 - Гэрийн даалгавар: хичээлийн `readme.md`-ийн төгсгөлд эсвэл `homework.md`.
-- **Portfolio:** Хүүхэд бүр `my-first-web/` хавтсаа (жишээ: `lessons/Хичээл 5/my-first-web/`) Netlify-д байршуулна (Хичээл 5, 6-д амжаагүй → Хичээл 7-ийн эхэнд). Хичээл 7-оос хойш portfolio = AI Studio Build апп (хуучин хуудсууд руу Netlify линкээр холбоно), Хичээл 8-аас GitHub `my-portfolio` → Vercel. Цаашид HTML/CSS дасгал бага — portfolio-гоо AI Studio-д vibe coding-оор сайжруулж, JS + алгоритм үзнэ. Хичээл бүрийн бүтээлийг карт болгон **гараараа** нэмүүл (Хичээл 7, 6-р алхам). Demo Day дээр Vercel линкээр үзүүлнэ.
+- **Portfolio:** Хүүхэд бүр `my-first-web/` хавтсаа (жишээ: `lessons/Хичээл 5/my-first-web/`) Netlify-д байршуулна (Хичээл 5, 6-д амжаагүй → Хичээл 7-ийн эхэнд). Хичээл 7-оос хойш portfolio = AI Studio Build апп (хуучин хуудсууд руу Netlify линкээр холбоно), Хичээл 13-аас GitHub `my-portfolio` → Vercel. JS (Хичээл 8–12): `my-first-web/js.html` ("Миний JavaScript") → `js-N.html`, portfolio-д **нэг** "JavaScript" карт (Хичээл 8, 8-р алхам). Цаашид HTML/CSS дасгал бага — portfolio-гоо AI Studio-д vibe coding-оор сайжруулж, JS + алгоритм үзнэ. Хичээл бүрийн бүтээлийг карт болгон **гараараа** нэмүүл (Хичээл 7, 6-р алхам). Demo Day дээр Vercel линкээр үзүүлнэ.
 - CSS хичээл: тайлбарын жишээ + `images/` screenshot (playwright-аар), тоглоом `togloom.html` (түвшин, автомат шалгагч), төсөл `tusul.html` + `ehlel.png`/`zorilgo.png`.
-- JS хичээл: `readme.md` (хүүхдэд), `bodlogo.html` (бодлого + `check()` шалгагч, браузерийн Console), `bagsh.md` (багшид: явц, тэмцээн, хариу).
+- JS хичээл: `readme.md` (хүүхдэд), `js-N.html` (бодлогын карт: HTML/CSS бэлэн, хүүхэд **зөвхөн функцийн дотор** бичиж `return` хийнэ), `helper.js` (карт ↔ функц, `data-test`-ээр автомат ✅, syntax алдааны анхааруулга — хичээл бүрт ижил хуулбар, `Хичээл 8/helper.js` эх), `tulaan-N.html` (тэмцээний карт), `bagsh.md` (явц, тэмцээн, хариу). Хичээл бүр: блок схем 15–20 мин → JS → карт (Анхан/Дунд/Ахисан) → тэмцээн (Code / Debug / Build Battle ээлжилнэ) → `js.html`-д мөр + Netlify.
+- JS-д **DOM заахгүй** (`document`, `querySelector` г.м.) — AI бичнэ. Scratch, Flowgorithm ашиглахгүй — блок схемийг зураг/самбараар.
 
 ## Заасан зүйл (дараагийн хичээлд давтахгүй, үндэслэж ашигла)
 
@@ -27,7 +28,10 @@
 | 5 _(төлөвлөсөн)_ | YouTube нүүрийг хоосон файлаас алхам алхмаар (`my-youtube.html`): эхлээд хуваалт (`div { border }`), дараа нь элемент; интернэтийн лого/icon/зураг, `input`, `button`, `<a target="_blank">` видео, `:hover`; `my-first-page.html` → `index.html`, хуудсаа `my-first-web/`-д холбож **Netlify Drop**-оор байршуулах — HTML/CSS төгсгөл; ГД: portfolio ноорог |
 | 6                | HTML/CSS давтлага, `my-first-web`-ийн 3 хуудсаа сайжруулсан. Netlify-д байршуулж амжаагүй |
 | 7 _(төлөвлөсөн)_ | Гараар хийсэн сайт vs мэргэжлийн загвар, AI Studio танилцуулга (видео, System instructions), загвар олох 2 арга (motionsites.ai, screenshot) → AI Studio **Build**-д portfolio (Хичээл 5-ын `index.html`-ээс зөвхөн мэдээлэл, хуучин хуудсууд Netlify линкээр), vibe coding, бүтээлээ Code-д гараараа нэмэх, AI-г зөв хэрэглэх. React/JS-ийг заагаагүй |
-| 8 _(төлөвлөсөн)_ | AI Studio → GitHub sync, `git clone` → `npm install` → `npm run dev`, `git pull`, Vercel (Push бүрт автомат) |
+| 8 _(төлөвлөсөн)_ | `main.js` + `console.log`, F12 Console (HTML/карттай холбохгүй). Блок схем (эхлэл, оролт/гаралт, үйлдэл) ↔ код, `let` / `const`, текст / тоо / true, `+ - * /`, `( )`, текст нийлүүлэх, `x = x + 1`, хайрцаг солих; `Math.floor`, `%` (бонус); Code Battle |
+| 9 _(төлөвлөсөн)_ | Блок схемийн ромбо, `if / else`, `else if` (дараалал), `>` `<` `>=` `<=` `===` `!==`, `%`, `&&` `\|\|`; Debug Battle |
+| 10 _(төлөвлөсөн)_ | Буцах сум, `for`, `while`, хуримтлагч (`s = s + i`, `t = t + "⭐"`), давталт дотор `if`; Build Battle (өөрийн карт, `data-test`) |
+| 13 _(төлөвлөсөн)_ | AI Studio → GitHub sync, `git clone` → `npm install` → `npm run dev`, `git pull`, Vercel (Push бүрт автомат) |
 
 CSS-д **сүүдэр (shadow) заагаагүй** — жишээ кодонд бүү оруул.
 

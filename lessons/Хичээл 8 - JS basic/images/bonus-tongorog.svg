@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="852" height="868" viewBox="0 0 852 868" font-family="Arial, sans-serif" font-size="17">
+<defs><marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker></defs>
+<rect width="852" height="868" fill="white"/>
+<text x="30" y="34" font-size="21" font-weight="bold">Бонус — Тонгорогсон тоо</text>
+<text x="165.0" y="72" text-anchor="middle" font-size="15" fill="#777">Блок схем</text>
+<text x="350" y="72" font-size="15" fill="#777">JavaScript</text>
+<text x="786.0" y="72" text-anchor="middle" font-size="15" fill="#777">утга</text>
+<rect x="30" y="90" width="270" height="52" rx="26.0" fill="#e8f7ee" stroke="#2fb36d" stroke-width="2.5"/><text x="165.0" y="122.0" text-anchor="middle" font-size="17">Эхлэл</text>
+<rect x="30" y="172" width="270" height="52" rx="4" fill="#fff4e6" stroke="#f29b30" stroke-width="2.5"/><text x="165.0" y="204.0" text-anchor="middle" font-size="17">too = 1234</text>
+<line x1="165.0" y1="142" x2="165.0" y2="170" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<line x1="304" y1="198.0" x2="342" y2="198.0" stroke="#bbb" stroke-width="1.5" stroke-dasharray="4 4"/>
+<rect x="344" y="174" width="380" height="48" rx="6" fill="#272822"/>
+<text x="356" y="204.0" font-family="Consolas, Menlo, monospace" font-size="16" fill="#f8f8f2" xml:space="preserve">let too = 1234;</text>
+<rect x="746" y="178" width="80" height="40" rx="6" fill="#fff4c2" stroke="#e0b400" stroke-width="2"/>
+<text x="786.0" y="204.0" text-anchor="middle" font-size="16">1234</text>
+<rect x="30" y="254" width="270" height="52" rx="4" fill="#fff4e6" stroke="#f29b30" stroke-width="2.5"/><text x="165.0" y="286.0" text-anchor="middle" font-size="17">n1 = нэгжийн орон</text>
+<line x1="165.0" y1="224" x2="165.0" y2="252" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<line x1="304" y1="280.0" x2="342" y2="280.0" stroke="#bbb" stroke-width="1.5" stroke-dasharray="4 4"/>
+<rect x="344" y="256" width="380" height="48" rx="6" fill="#272822"/>
+<text x="356" y="286.0" font-family="Consolas, Menlo, monospace" font-size="16" fill="#f8f8f2" xml:space="preserve">let n1 = too % 10;</text>
+<rect x="746" y="260" width="80" height="40" rx="6" fill="#fff4c2" stroke="#e0b400" stroke-width="2"/>
+<text x="786.0" y="286.0" text-anchor="middle" font-size="16">4</text>
+<rect x="30" y="336" width="270" height="52" rx="4" fill="#fff4e6" stroke="#f29b30" stroke-width="2.5"/><text x="165.0" y="368.0" text-anchor="middle" font-size="17">n2 = аравтын орон</text>
+<line x1="165.0" y1="306" x2="165.0" y2="334" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<line x1="304" y1="362.0" x2="342" y2="362.0" stroke="#bbb" stroke-width="1.5" stroke-dasharray="4 4"/>
+<rect x="344" y="338" width="380" height="48" rx="6" fill="#272822"/>
+<text x="356" y="368.0" font-family="Consolas, Menlo, monospace" font-size="16" fill="#f8f8f2" xml:space="preserve">let n2 = Math.floor(too / 10) % 10;</text>
+<rect x="746" y="342" width="80" height="40" rx="6" fill="#fff4c2" stroke="#e0b400" stroke-width="2"/>
+<text x="786.0" y="368.0" text-anchor="middle" font-size="16">3</text>
+<rect x="30" y="418" width="270" height="52" rx="4" fill="#fff4e6" stroke="#f29b30" stroke-width="2.5"/><text x="165.0" y="450.0" text-anchor="middle" font-size="17">n3 = зуутын орон</text>
+<line x1="165.0" y1="388" x2="165.0" y2="416" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<line x1="304" y1="444.0" x2="342" y2="444.0" stroke="#bbb" stroke-width="1.5" stroke-dasharray="4 4"/>
+<rect x="344" y="420" width="380" height="48" rx="6" fill="#272822"/>
+<text x="356" y="450.0" font-family="Consolas, Menlo, monospace" font-size="16" fill="#f8f8f2" xml:space="preserve">let n3 = Math.floor(too / 100) % 10;</text>
+<rect x="746" y="424" width="80" height="40" rx="6" fill="#fff4c2" stroke="#e0b400" stroke-width="2"/>
+<text x="786.0" y="450.0" text-anchor="middle" font-size="16">2</text>
+<rect x="30" y="500" width="270" height="52" rx="4" fill="#fff4e6" stroke="#f29b30" stroke-width="2.5"/><text x="165.0" y="532.0" text-anchor="middle" font-size="17">n4 = мянгатын орон</text>
+<line x1="165.0" y1="470" x2="165.0" y2="498" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<line x1="304" y1="526.0" x2="342" y2="526.0" stroke="#bbb" stroke-width="1.5" stroke-dasharray="4 4"/>
+<rect x="344" y="502" width="380" height="48" rx="6" fill="#272822"/>
+<text x="356" y="532.0" font-family="Consolas, Menlo, monospace" font-size="16" fill="#f8f8f2" xml:space="preserve">let n4 = Math.floor(too / 1000);</text>
+<rect x="746" y="506" width="80" height="40" rx="6" fill="#fff4c2" stroke="#e0b400" stroke-width="2"/>
+<text x="786.0" y="532.0" text-anchor="middle" font-size="16">1</text>
+<rect x="30" y="582" width="270" height="52" rx="4" fill="#fff4e6" stroke="#f29b30" stroke-width="2.5"/><text x="165.0" y="614.0" text-anchor="middle" font-size="17">shine = n1 n2 n3 n4</text>
+<line x1="165.0" y1="552" x2="165.0" y2="580" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<line x1="304" y1="608.0" x2="342" y2="608.0" stroke="#bbb" stroke-width="1.5" stroke-dasharray="4 4"/>
+<rect x="344" y="584" width="380" height="48" rx="6" fill="#272822"/>
+<text x="356" y="604.0" font-family="Consolas, Menlo, monospace" font-size="15" fill="#f8f8f2" xml:space="preserve">let shine = n1*1000 + n2*100</text>
+<text x="356" y="624.0" font-family="Consolas, Menlo, monospace" font-size="15" fill="#f8f8f2" xml:space="preserve">        + n3*10 + n4;</text>
+<rect x="746" y="588" width="80" height="40" rx="6" fill="#fff4c2" stroke="#e0b400" stroke-width="2"/>
+<text x="786.0" y="614.0" text-anchor="middle" font-size="16">4321</text>
+<polygon points="46,664 300,664 284,716 30,716" fill="#eef0fd" stroke="#4a5bd4" stroke-width="2.5"/><text x="165.0" y="696.0" text-anchor="middle" font-size="17">shine гаргах</text>
+<line x1="165.0" y1="634" x2="165.0" y2="662" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<line x1="304" y1="690.0" x2="342" y2="690.0" stroke="#bbb" stroke-width="1.5" stroke-dasharray="4 4"/>
+<rect x="344" y="666" width="380" height="48" rx="6" fill="#272822"/>
+<text x="356" y="696.0" font-family="Consolas, Menlo, monospace" font-size="16" fill="#f8f8f2" xml:space="preserve">console.log(shine);</text>
+<rect x="30" y="746" width="270" height="52" rx="26.0" fill="#e8f7ee" stroke="#2fb36d" stroke-width="2.5"/><text x="165.0" y="778.0" text-anchor="middle" font-size="17">Төгсгөл</text>
+<line x1="165.0" y1="716" x2="165.0" y2="744" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<text x="30" y="844" font-size="16" fill="#555">Гаралт:  4321</text>
+</svg>

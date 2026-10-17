@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS 8 — Code Battle</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6fb;
+      margin: 0;
+      padding: 24px;
+    }
+    .tolgoi {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .tolgoi a { color: #4a5bd4; }
+    #dun {
+      font-size: 24px;
+      font-weight: bold;
+      background-color: white;
+      padding: 8px 16px;
+      border-radius: 12px;
+    }
+    .kartuud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .kart {
+      width: 260px;
+      background-color: white;
+      border: 3px solid #e3e6ef;
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .kart.zov { border-color: #2fb36d; }
+    .kart h3 { margin: 8px 0; }
+    .kart p { margin: 6px 0; }
+    .deed {
+      display: flex;
+      justify-content: space-between;
+    }
+    .tuvshin {
+      font-size: 13px;
+      padding: 2px 8px;
+      border-radius: 8px;
+      color: white;
+    }
+    .anhan { background-color: #2fb36d; }
+    .dund { background-color: #f29b30; }
+    .ahisan { background-color: #8a4fd8; }
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 8px;
+      margin: 4px 0;
+      font-size: 16px;
+    }
+    button {
+      width: 100%;
+      padding: 8px;
+      font-size: 16px;
+      background-color: #4a5bd4;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover { background-color: #3443b0; }
+    .hariu {
+      font-size: 20px;
+      font-weight: bold;
+      white-space: pre-line;
+    }
+    .tailbar {
+      font-size: 13px;
+      color: #c0392b;
+      white-space: pre-line;
+    }
+    details { font-size: 14px; color: #555; }
+  </style>
+</head>
+<body>
+
+  <div class="tolgoi">
+    <div>
+      <a href="js.html">← Миний JavaScript</a>
+      <h1>Code Battle 🏆</h1>
+    </div>
+    <p id="dun"></p>
+  </div>
+
+  <div class="kartuud">
+
+    <div class="kart" data-fn="sar" data-test='[[[2],60],[[12],360]]'>
+      <div class="deed"><span class="tuvshin dund">1 · Раунд</span><span class="tuluv"></span></div>
+      <h3>Сар → өдөр</h3>
+      <p>Хэдэн сар → хэдэн өдөр? (сар = 30 өдөр)</p>
+      <input type="number" placeholder="Сар">
+      <button>Ажиллуулах</button>
+      <p class="hariu"></p>
+      <p class="tailbar"></p>
+    </div>
+
+    <div class="kart" data-fn="towch" data-test='[[["Бат",12],"Бат 12 настай"],[["Сараа",10],"Сараа 10 настай"]]'>
+      <div class="deed"><span class="tuvshin dund">2 · Раунд</span><span class="tuluv"></span></div>
+      <h3>Нэр + нас</h3>
+      <p>Бат, 12 → <b>Бат 12 настай</b></p>
+      <input type="text" placeholder="Нэр">
+      <input type="number" placeholder="Нас">
+      <button>Ажиллуулах</button>
+      <p class="hariu"></p>
+      <p class="tailbar"></p>
+    </div>
+
+    <div class="kart" data-fn="perimetr" data-test='[[[3,4],14],[[10,1],22]]'>
+      <div class="deed"><span class="tuvshin dund">3 · Раунд</span><span class="tuluv"></span></div>
+      <h3>Периметр</h3>
+      <p>Тэгш өнцөгтийн урт, өргөн → периметр</p>
+      <input type="number" placeholder="Урт">
+      <input type="number" placeholder="Өргөн">
+      <button>Ажиллуулах</button>
+      <p class="hariu"></p>
+      <p class="tailbar"></p>
+    </div>
+
+    <div class="kart" data-fn="tsalin" data-test='[[[10000,8],400000],[[5000,4],100000]]'>
+      <div class="deed"><span class="tuvshin dund">4 · Раунд</span><span class="tuluv"></span></div>
+      <h3>Цалин</h3>
+      <p>Цагийн хөлс, өдөрт ажилласан цаг → 5 өдрийн цалин</p>
+      <input type="number" placeholder="Цагийн хөлс">
+      <input type="number" placeholder="Цаг">
+      <button>Ажиллуулах</button>
+      <p class="hariu"></p>
+      <p class="tailbar"></p>
+    </div>
+
+    <div class="kart" data-fn="tsag" data-test='[[[125],"2 минут 5 секунд"],[[60],"1 минут 0 секунд"],[[59],"0 минут 59 секунд"]]'>
+      <div class="deed"><span class="tuvshin dund">5 · Раунд</span><span class="tuluv"></span></div>
+      <h3>Секунд → минут</h3>
+      <p>125 секунд → <b>2 минут 5 секунд</b></p>
+      <input type="number" placeholder="Секунд">
+      <button>Ажиллуулах</button>
+      <p class="hariu"></p>
+      <p class="tailbar"></p>
+    </div>
+
+  </div>
+
+  <script src="helper.js"></script>
+  <script>
+    // ✏️ Зөвхөн функцийн ДОТОР бич. Функцийн нэрийг бүү өөрчил.
+    // Хадгал (Ctrl+S) → браузераа refresh → ✅ гарч байна уу?
+
+    // 1. Сар → өдөр
+    function sar(sar) {
+      return 0;
+    }
+
+    // 2. Нэр + нас
+    function towch(ner, nas) {
+      return "";
+    }
+
+    // 3. Периметр
+    function perimetr(urt, urgun) {
+      return 0;
+    }
+
+    // 4. Цалин
+    function tsalin(huls, tsag) {
+      return 0;
+    }
+
+    // 5. Секунд → минут
+    function tsag(sekund) {
+      return "";
+    }
+  </script>
+
+</body>
+</html>

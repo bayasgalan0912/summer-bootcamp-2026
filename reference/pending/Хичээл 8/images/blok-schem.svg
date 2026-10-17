@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="530" viewBox="0 0 640 530" font-family="Arial, sans-serif" font-size="18">
+<defs><marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker></defs>
+<rect width="640" height="530" fill="white"/>
+<text x="20" y="32" font-size="20" font-weight="bold">Ирээдүйн нас — блок схем</text>
+<rect x="80.0" y="56.0" width="240" height="48" rx="24.0" fill="#e8f7ee" stroke="#2fb36d" stroke-width="2.5"/>
+<text x="200" y="86" text-anchor="middle">Эхлэл</text>
+<polygon points="96.0,136.0 320.0,136.0 304.0,184.0 80.0,184.0" fill="#eef0fd" stroke="#4a5bd4" stroke-width="2.5"/>
+<text x="200" y="166" text-anchor="middle">Нас оруулах</text>
+<rect x="80.0" y="216.0" width="240" height="48" rx="4" fill="#fff4e6" stroke="#f29b30" stroke-width="2.5"/>
+<text x="200" y="246" text-anchor="middle">жил = 2030 − 2026</text>
+<rect x="80.0" y="296.0" width="240" height="48" rx="4" fill="#fff4e6" stroke="#f29b30" stroke-width="2.5"/>
+<text x="200" y="326" text-anchor="middle">шинэНас = нас + жил</text>
+<polygon points="96.0,376.0 320.0,376.0 304.0,424.0 80.0,424.0" fill="#eef0fd" stroke="#4a5bd4" stroke-width="2.5"/>
+<text x="200" y="406" text-anchor="middle">шинэНас гаргах</text>
+<rect x="80.0" y="456.0" width="240" height="48" rx="24.0" fill="#e8f7ee" stroke="#2fb36d" stroke-width="2.5"/>
+<text x="200" y="486" text-anchor="middle">Төгсгөл</text>
+<polyline points="200,104 200,134" fill="none" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<polyline points="200,184 200,214" fill="none" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<polyline points="200,264 200,294" fill="none" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<polyline points="200,344 200,374" fill="none" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<polyline points="200,424 200,454" fill="none" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<rect x="385.0" y="90.0" width="90" height="40" rx="20.0" fill="#e8f7ee" stroke="#2fb36d" stroke-width="2.5"/>
+<text x="430" y="116" text-anchor="middle"></text>
+<text x="490" y="116" font-size="16">Эхлэл, төгсгөл</text>
+<polygon points="401.0,152.0 475.0,152.0 459.0,192.0 385.0,192.0" fill="#eef0fd" stroke="#4a5bd4" stroke-width="2.5"/>
+<text x="430" y="178" text-anchor="middle"></text>
+<text x="490" y="178" font-size="16">Оролт, гаралт</text>
+<rect x="385.0" y="214.0" width="90" height="40" rx="4" fill="#fff4e6" stroke="#f29b30" stroke-width="2.5"/>
+<text x="430" y="240" text-anchor="middle"></text>
+<text x="490" y="240" font-size="16">Үйлдэл, хувьсагч</text>
+<polygon points="430,276.0 475.0,296 430,316.0 385.0,296" fill="#f3ecfc" stroke="#8a4fd8" stroke-width="2.5"/>
+<text x="430" y="302" text-anchor="middle"></text>
+<text x="490" y="302" font-size="16">Нөхцөл (Хичээл 9)</text>
+</svg>

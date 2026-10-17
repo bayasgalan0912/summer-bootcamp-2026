@@ -11,8 +11,15 @@
 | [5](lessons/Хичээл%205) | YouTube нүүрийг хоосноос бүтээх, хуудсаа холбож Netlify-д гаргах |
 | [6](lessons/Хичээл%206) | HTML, CSS давтлага — 3 хуудсаа сайжруулах |
 | [7](lessons/Хичээл%207) | Google AI Studio — өөрийн сайтаа portfolio болгох |
-| [8](lessons/Хичээл%208) | GitHub, Vercel — portfolio-гоо интернэтэд гаргах |
-| 9–17 | Алгоритм, JavaScript, AI апп, тоглоом _(төлөвлөж байна)_ |
+| [8](lessons/Хичээл%208%20-%20JS%20basic) | JavaScript танилцуулга: console.log, блок схем, хувьсагч · Code Battle |
+| [9](lessons/Хичээл%209) | JavaScript: нөхцөл if/else · Debug Battle |
+| [10](lessons/Хичээл%2010) | JavaScript: давталт for/while · Build Battle |
+| 11 | JavaScript: массив |
+| 12 | JavaScript: функц · Code Cup 🏆 |
+| [13](lessons/Хичээл%2013) | GitHub, Vercel — portfolio-гоо интернэтэд гаргах |
+| 14 | Anime guesser — JSON дата |
+| 15 | Firestore — leaderboard, холбоо барих форм |
+| 16–17 | Тулааны тоглоом (Street Fighter) |
 | 18 | Demo Day |
 
 Сэдвийн дараалал шинэчлэгдэж болно.
@@ -33,6 +40,6 @@
 
 ---
 
-JS хичээл бүрт: `readme.md` — хүүхдэд · `bodlogo.html` — бодлого, автомат шалгагчтай · `bagsh.md` — багшид (явц, тэмцээн, хариу).
+JS хичээл бүрт: `readme.md` — хүүхдэд · `js-N.html` — бодлогын картууд, автомат ✅ шалгагчтай · `helper.js` · `tulaan-N.html` — тэмцээн · `bagsh.md` — багшид (явц, тэмцээн, хариу).
 
 Хуучин материал: [\_archive](_archive)

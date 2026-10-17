@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS 8 — Хувьсагч</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6fb;
+      margin: 0;
+      padding: 24px;
+    }
+    .tolgoi {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .tolgoi a { color: #4a5bd4; }
+    #dun {
+      font-size: 24px;
+      font-weight: bold;
+      background-color: white;
+      padding: 8px 16px;
+      border-radius: 12px;
+    }
+    .kartuud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .kart {
+      width: 260px;
+      background-color: white;
+      border: 3px solid #e3e6ef;
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .kart.zov { border-color: #2fb36d; }
+    .kart h3 { margin: 8px 0; }
+    .kart p { margin: 6px 0; }
+    .deed {
+      display: flex;
+      justify-content: space-between;
+    }
+    .tuvshin {
+      font-size: 13px;
+      padding: 2px 8px;
+      border-radius: 8px;
+      color: white;
+    }
+    .anhan { background-color: #2fb36d; }
+    .dund { background-color: #f29b30; }
+    .ahisan { background-color: #8a4fd8; }
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 8px;
+      margin: 4px 0;
+      font-size: 16px;
+    }
+    button {
+      width: 100%;
+      padding: 8px;
+      font-size: 16px;
+      background-color: #4a5bd4;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover { background-color: #3443b0; }
+    .hariu {
+      font-size: 20px;
+      font-weight: bold;
+      white-space: pre-line;
+    }
+    .tailbar {
+      font-size: 13px;
+      color: #c0392b;
+      white-space: pre-line;
+    }
+    details { font-size: 14px; color: #555; }
+  </style>
+</head>
+<body>
+
+  <div class="tolgoi">
+    <div>
+      <a href="js.html">← Миний JavaScript</a>
+      <h1>Хичээл 8 — Хувьсагч</h1>
+    </div>
+    <p id="dun"></p>
+  </div>
+
+  <div class="kartuud">
+
+    <div class="kart" data-fn="irehNas" data-test='[[[12],16],[[10],14],[[0],4]]'>
+      <div class="deed"><span class="tuvshin anhan">1 · Хамт</span><span class="tuluv"></span></div>
+      <h3>Ирээдүйн нас</h3>
+      <p>Насаа оруул → 2030 онд хэдэн настай болох вэ?</p>
+      <input type="number" placeholder="Нас">
+      <button>Ажиллуулах</button>
+      <p class="hariu"></p>
+      <p class="tailbar"></p>
+    </div>
+
+    <div class="kart" data-fn="mend" data-test='[[["Бат"],"Сайн уу, Бат!"],[["Сараа"],"Сайн уу, Сараа!"]]'>
+      <div class="deed"><span class="tuvshin anhan">2 · Анхан</span><span class="tuluv"></span></div>
+      <h3>Мэндчилгээ</h3>
+      <p>Нэрээ оруул → <b>Сайн уу, Бат!</b></p>
+      <input type="text" placeholder="Нэр">
+      <button>Ажиллуулах</button>
+      <p class="hariu"></p>
+      <p class="tailbar"></p>
+    </div>
+
+    <div class="kart" data-fn="sekund" data-test='[[[1],60],[[5],300],[[0],0]]'>
+      <div class="deed"><span class="tuvshin anhan">3 · Анхан</span><span class="tuluv"></span></div>
+      <h3>Минут → секунд</h3>
+      <p>Минут оруул → хэдэн секунд вэ?</p>
+      <input type="number" placeholder="Минут">
+      <button>Ажиллуулах</button>
+      <p class="hariu"></p>
+      <p class="tailbar"></p>
+    </div>
+
+    <div class="kart" data-fn="talbai" data-test='[[[3,4],12],[[10,5],50]]'>
+      <div class="deed"><span class="tuvshin anhan">4 · Анхан</span><span class="tuluv"></span></div>
+      <h3>Өрөөний талбай</h3>
+      <p>Урт, өргөн оруул → талбай хэд вэ?</p>
+      <input type="number" placeholder="Урт">
+      <input type="number" placeholder="Өргөн">
+      <button>Ажиллуулах</button>
+      <p class="hariu"></p>
+      <p class="tailbar"></p>
+    </div>
+
+    <div class="kart" data-fn="hyamdral" data-test='[[[10000],8000],[[15000],12000],[[2500],2000]]'>
+      <div class="deed"><span class="tuvshin dund">5 · Дунд</span><span class="tuluv"></span></div>
+      <h3>20% хямдрал</h3>
+      <p>Үнэ оруул → хямдарсан үнэ хэд вэ?</p>
+      <input type="number" placeholder="Үнэ">
+      <button>Ажиллуулах</button>
+      <p class="hariu"></p>
+      <p class="tailbar"></p>
+    </div>
+
+    <div class="kart" data-fn="dundaj" data-test='[[[80,90,100],90],[[70,80,93],81],[[5,5,8],6]]'>
+      <div class="deed"><span class="tuvshin dund">6 · Дунд</span><span class="tuluv"></span></div>
+      <h3>Дундаж оноо</h3>
+      <p>3 шалгалтын оноо → дундаж нь хэд вэ?</p>
+      <input type="number" placeholder="Оноо 1">
+      <input type="number" placeholder="Оноо 2">
+      <input type="number" placeholder="Оноо 3">
+      <button>Ажиллуулах</button>
+      <p class="hariu"></p>
+      <p class="tailbar"></p>
+      <details><summary>Зөвлөгөө</summary>80, 90, 100 → 90 гарах ёстой. 240 гарч байвал хаалт хэрэгтэй.</details>
+    </div>
+
+    <div class="kart" data-fn="fahrenheit" data-test='[[[0],32],[[100],212],[[37],98.6]]'>
+      <div class="deed"><span class="tuvshin ahisan">7 · Ахисан</span><span class="tuluv"></span></div>
+      <h3>Цельс → Фаренгейт</h3>
+      <p>Америкт 0°C = 32°F. Томъёо: <b>C × 9 / 5 + 32</b></p>
+      <input type="number" placeholder="°C">
+      <button>Ажиллуулах</button>
+      <p class="hariu"></p>
+      <p class="tailbar"></p>
+    </div>
+
+    <div class="kart" data-fn="pizza" data-test='[[[8,3],"Хүн бүр 2, үлдэгдэл 2"],[[12,4],"Хүн бүр 3, үлдэгдэл 0"],[[10,3],"Хүн бүр 3, үлдэгдэл 1"]]'>
+      <div class="deed"><span class="tuvshin ahisan">8 · Ахисан</span><span class="tuluv"></span></div>
+      <h3>Пицца хуваах</h3>
+      <p>8 зүсэм, 3 хүн → <b>Хүн бүр 2, үлдэгдэл 2</b></p>
+      <input type="number" placeholder="Зүсэм">
+      <input type="number" placeholder="Хүн">
+      <button>Ажиллуулах</button>
+      <p class="hariu"></p>
+      <p class="tailbar"></p>
+      <details><summary>Зөвлөгөө</summary><code>Math.floor(8 / 3)</code> → 2 (бүхэл хэсэг). <code>8 % 3</code> → 2 (үлдэгдэл).</details>
+    </div>
+
+  </div>
+
+  <script src="helper.js"></script>
+  <script>
+    // ✏️ Зөвхөн функцийн ДОТОР бич. Функцийн нэрийг бүү өөрчил.
+    // Хадгал (Ctrl+S) → браузераа refresh → ✅ гарч байна уу?
+
+    // 1. Ирээдүйн нас — хамт
+    function irehNas(nas) {
+      return 0;
+    }
+
+    // 2. Мэндчилгээ
+    function mend(ner) {
+      return "";
+    }
+
+    // 3. Минут → секунд
+    function sekund(minut) {
+      return 0;
+    }
+
+    // 4. Өрөөний талбай
+    function talbai(urt, urgun) {
+      return 0;
+    }
+
+    // 5. 20% хямдрал
+    function hyamdral(une) {
+      return 0;
+    }
+
+    // 6. Дундаж оноо
+    function dundaj(a, b, c) {
+      return 0;
+    }
+
+    // 7. Цельс → Фаренгейт
+    function fahrenheit(c) {
+      return 0;
+    }
+
+    // 8. Пицца хуваах
+    function pizza(zusem, hun) {
+      return "";
+    }
+  </script>
+
+</body>
+</html>

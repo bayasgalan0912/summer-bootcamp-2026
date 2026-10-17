@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS 9 — Debug Battle</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6fb;
+      margin: 0;
+      padding: 24px;
+    }
+    .tolgoi {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .tolgoi a { color: #4a5bd4; }
+    #dun {
+      font-size: 24px;
+      font-weight: bold;
+      background-color: white;
+      padding: 8px 16px;
+      border-radius: 12px;
+    }
+    .kartuud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .kart {
+      width: 260px;
+      background-color: white;
+      border: 3px solid #e3e6ef;
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .kart.zov { border-color: #2fb36d; }
+    .kart h3 { margin: 8px 0; }
+    .kart p { margin: 6px 0; }
+    .deed {
+      display: flex;
+      justify-content: space-between;
+    }
+    .tuvshin {
+      font-size: 13px;
+      padding: 2px 8px;
+      border-radius: 8px;
+      color: white;
+    }
+    .anhan { background-color: #2fb36d; }
+    .dund { background-color: #f29b30; }
+    .ahisan { background-color: #8a4fd8; }
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 8px;
+      margin: 4px 0;
+      font-size: 16px;
+    }
+    button {
+      width: 100%;
+      padding: 8px;
+      font-size: 16px;
+      background-color: #4a5bd4;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover { background-color: #3443b0; }
+    .hariu {
+      font-size: 20px;
+      font-weight: bold;
+      white-space: pre-line;
+    }
+    .tailbar {
+      font-size: 13px;
+      color: #c0392b;
+      white-space: pre-line;
+    }
+    details { font-size: 14px; color: #555; }
+  </style>
+</head>
+<body>
+
+  <div class="tolgoi">
+    <div>
+      <a href="js.html">← Миний JavaScript</a>
+      <h1>Debug Battle 🐞</h1>
+    </div>
+    <p id="dun"></p>
+  </div>
+
+  <div class="kartuud">
+
+    <div class="kart" data-fn="dBaga" data-test='[[[12],"Хүүхэд"],[[13],"Өсвөр"]]'>
+      <div class="deed"><span class="tuvshin dund">1 · Раунд</span><span class="tuluv"></span></div>
+      <h3>Хүүхэд үү?</h3>
+      <p>13-аас бага → <b>Хүүхэд</b>, бусад → <b>Өсвөр</b></p>
+      <input type="number" placeholder="Нас">
+      <button>Ажиллуулах</button>
+      <p class="hariu"></p>
+      <p class="tailbar"></p>
+    </div>
+
+    <div class="kart" data-fn="dTegsh" data-test='[[[4],"Тэгш"],[[5],"Сондгой"]]'>
+      <div class="deed"><span class="tuvshin dund">2 · Раунд</span><span class="tuluv"></span></div>
+      <h3>Тэгш үү?</h3>
+      <p>Тэгш → <b>Тэгш</b>, бусад → <b>Сондгой</b></p>
+      <input type="number" placeholder="Тоо">
+      <button>Ажиллуулах</button>
+      <p class="hariu"></p>
+      <p class="tailbar"></p>
+    </div>
+
+    <div class="kart" data-fn="dDun" data-test='[[[95],"A"],[[75],"B"],[[50],"C"]]'>
+      <div class="deed"><span class="tuvshin dund">3 · Раунд</span><span class="tuluv"></span></div>
+      <h3>Үнэлгээ</h3>
+      <p>90+ → A, 70+ → B, бусад → C</p>
+      <input type="number" placeholder="Оноо">
+      <button>Ажиллуулах</button>
+      <p class="hariu"></p>
+      <p class="tailbar"></p>
+    </div>
+
+    <div class="kart" data-fn="dHaalga" data-test='[[[7,1],"Нээгдлээ"],[[7,0],"Хаалттай"],[[3,1],"Хаалттай"]]'>
+      <div class="deed"><span class="tuvshin dund">4 · Раунд</span><span class="tuluv"></span></div>
+      <h3>Хаалга</h3>
+      <p>Нууц код 7 <b>болон</b> түлхүүртэй (1) → <b>Нээгдлээ</b>, бусад → <b>Хаалттай</b></p>
+      <input type="number" placeholder="Код">
+      <input type="number" placeholder="Түлхүүр 1/0">
+      <button>Ажиллуулах</button>
+      <p class="hariu"></p>
+      <p class="tailbar"></p>
+    </div>
+
+    <div class="kart" data-fn="dTemp" data-test='[[[-5],"Хүйтэн"],[[30],"Халуун"],[[20],"Сайхан"],[[0],"Сайхан"]]'>
+      <div class="deed"><span class="tuvshin dund">5 · Раунд</span><span class="tuluv"></span></div>
+      <h3>Цаг агаар</h3>
+      <p>0-оос бага → <b>Хүйтэн</b>, 25-аас их → <b>Халуун</b>, бусад → <b>Сайхан</b></p>
+      <input type="number" placeholder="°C">
+      <button>Ажиллуулах</button>
+      <p class="hariu"></p>
+      <p class="tailbar"></p>
+    </div>
+
+  </div>
+
+  <script src="helper.js"></script>
+  <script>
+    // ✏️ Зөвхөн функцийн ДОТОР бич. Функцийн нэрийг бүү өөрчил.
+    // Хадгал (Ctrl+S) → браузераа refresh → ✅ гарч байна уу?
+    // Код бүрт 1 алдаа бий. Олж зас!
+
+    // 1. Хүүхэд үү?
+    function dBaga(nas) {
+      if (nas > 13) {
+        return "Хүүхэд";
+      } else {
+        return "Өсвөр";
+      }
+    }
+
+    // 2. Тэгш үү?
+    function dTegsh(n) {
+      if (n / 2 === 0) {
+        return "Тэгш";
+      } else {
+        return "Сондгой";
+      }
+    }
+
+    // 3. Үнэлгээ
+    function dDun(onoo) {
+      if (onoo >= 70) {
+        return "B";
+      } else if (onoo >= 90) {
+        return "A";
+      } else {
+        return "C";
+      }
+    }
+
+    // 4. Хаалга
+    function dHaalga(kod, tulhuur) {
+      if (kod === 7 || tulhuur === 1) {
+        return "Нээгдлээ";
+      } else {
+        return "Хаалттай";
+      }
+    }
+
+    // 5. Цаг агаар
+    function dTemp(t) {
+      if (t < 0) {
+        return "Хүйтэн";
+      }
+      if (t > 25) {
+        return "Халуун";
+      }
+      return "Хүйтэн";
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS 9 — Нөхцөл</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6fb;
+      margin: 0;
+      padding: 24px;
+    }
+    .tolgoi {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .tolgoi a { color: #4a5bd4; }
+    #dun {
+      font-size: 24px;
+      font-weight: bold;
+      background-color: white;
+      padding: 8px 16px;
+      border-radius: 12px;
+    }
+    .kartuud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .kart {
+      width: 260px;
+      background-color: white;
+      border: 3px solid #e3e6ef;
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .kart.zov { border-color: #2fb36d; }
+    .kart h3 { margin: 8px 0; }
+    .kart p { margin: 6px 0; }
+    .deed {
+      display: flex;
+      justify-content: space-between;
+    }
+    .tuvshin {
+      font-size: 13px;
+      padding: 2px 8px;
+      border-radius: 8px;
+      color: white;
+    }
+    .anhan { background-color: #2fb36d; }
+    .dund { background-color: #f29b30; }
+    .ahisan { background-color: #8a4fd8; }
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 8px;
+      margin: 4px 0;
+      font-size: 16px;
+    }
+    button {
+      width: 100%;
+      padding: 8px;
+      font-size: 16px;
+      background-color: #4a5bd4;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover { background-color: #3443b0; }
+    .hariu {
+      font-size: 20px;
+      font-weight: bold;
+      white-space: pre-line;
+    }
+    .tailbar {
+      font-size: 13px;
+      color: #c0392b;
+      white-space: pre-line;
+    }
+    details { font-size: 14px; color: #555; }
+  </style>
+</head>
+<body>
+
+  <div class="tolgoi">
+    <div>
+      <a href="js.html">← Миний JavaScript</a>
+      <h1>Хичээл 9 — Нөхцөл</h1>
+    </div>
+    <p id="dun"></p>
+  </div>
+
+  <div class="kartuud">
+
+    <div class="kart" data-fn="shagnal" data-test='[[[85],"Алтан"],[[80],"Алтан"],[[79],"Мөнгөн"]]'>
+      <div class="deed"><span class="tuvshin anhan">1 · Хамт</span><span class="tuluv"></span></div>
+      <h3>Шагнал</h3>
+      <p>Оноо 80 ба түүнээс дээш → <b>Алтан</b>, бусад → <b>Мөнгөн</b></p>
+      <input type="number" placeholder="Оноо">
+      <button>Ажиллуулах</button>
+      <p class="hariu"></p>
+      <p class="tailbar"></p>
+    </div>
+
+    <div class="kart" data-fn="kino" data-test='[[[13],"Үзэж болно"],[[15],"Үзэж болно"],[[12],"Болохгүй"]]'>
+      <div class="deed"><span class="tuvshin anhan">2 · Анхан</span><span class="tuluv"></span></div>
+      <h3>Кино үзэх эрх</h3>
+      <p>13 ба түүнээс дээш → <b>Үзэж болно</b>, бусад → <b>Болохгүй</b></p>
+      <input type="number" placeholder="Нас">
+      <button>Ажиллуулах</button>
+      <p class="hariu"></p>
+      <p class="tailbar"></p>
+    </div>
+
+    <div class="kart" data-fn="tegsh" data-test='[[[4],"Тэгш"],[[7],"Сондгой"],[[0],"Тэгш"]]'>
+      <div class="deed"><span class="tuvshin anhan">3 · Анхан</span><span class="tuluv"></span></div>
+      <h3>Тэгш үү, сондгой юу?</h3>
+      <p>Тоо оруул → <b>Тэгш</b> эсвэл <b>Сондгой</b></p>
+      <input type="number" placeholder="Тоо">
+      <button>Ажиллуулах</button>
+      <p class="hariu"></p>
+      <p class="tailbar"></p>
+      <details><summary>Зөвлөгөө</summary><code>7 % 2</code> → 1 (үлдэгдэл). Тэгш тоонд үлдэгдэл 0.</details>
+    </div>
+
+    <div class="kart" data-fn="ih" data-test='[[[3,9],9],[[12,5],12],[[7,7],7]]'>
+      <div class="deed"><span class="tuvshin anhan">4 · Анхан</span><span class="tuluv"></span></div>
+      <h3>Аль нь их вэ?</h3>
+      <p>2 тоо → ихийг нь буцаа</p>
+      <input type="number" placeholder="a">
+      <input type="number" placeholder="b">
+      <button>Ажиллуулах</button>
+      <p class="hariu"></p>
+      <p class="tailbar"></p>
+    </div>
+
+    <div class="kart" data-fn="nuuts" data-test='[[["bat123"],"Нэвтэрлээ"],[["Bat123"],"Буруу нууц үг"],[["123"],"Буруу нууц үг"]]'>
+      <div class="deed"><span class="tuvshin anhan">5 · Анхан</span><span class="tuluv"></span></div>
+      <h3>Нууц үг</h3>
+      <p>Нууц үг <b>bat123</b> бол → <b>Нэвтэрлээ</b>, бусад → <b>Буруу нууц үг</b></p>
+      <input type="text" placeholder="Нууц үг">
+      <button>Ажиллуулах</button>
+      <p class="hariu"></p>
+      <p class="tailbar"></p>
+      <details><summary>Зөвлөгөө</summary>Тэнцүү эсэхийг <code>===</code>-оор шалгана. <code>=</code> бол хайрцагт хийх.</details>
+    </div>
+
+    <div class="kart" data-fn="unelgee" data-test='[[[95],"A"],[[90],"A"],[[85],"B"],[[70],"C"],[[61],"D"],[[30],"F"]]'>
+      <div class="deed"><span class="tuvshin dund">6 · Дунд</span><span class="tuluv"></span></div>
+      <h3>Үнэлгээ</h3>
+      <p>90+ → A, 80+ → B, 70+ → C, 60+ → D, бусад → F</p>
+      <input type="number" placeholder="Оноо">
+      <button>Ажиллуулах</button>
+      <p class="hariu"></p>
+      <p class="tailbar"></p>
+      <details><summary>Зөвлөгөө</summary><code>else if</code>. Дарааллаа бод: 95 бол 60-аас ч их.</details>
+    </div>
+
+    <div class="kart" data-fn="hpTuluv" data-test='[[[0],"KO"],[[-5],"KO"],[[29],"Аюултай"],[[30],"Тулалдана"],[[100],"Тулалдана"]]'>
+      <div class="deed"><span class="tuvshin dund">7 · Дунд</span><span class="tuluv"></span></div>
+      <h3>Тоглоомын амь</h3>
+      <p>0 ба доош → <b>KO</b>, 30-аас бага → <b>Аюултай</b>, бусад → <b>Тулалдана</b></p>
+      <input type="number" placeholder="HP">
+      <button>Ажиллуулах</button>
+      <p class="hariu"></p>
+      <p class="tailbar"></p>
+    </div>
+
+    <div class="kart" data-fn="kinoTeatr" data-test='[[[14,6000],"Орж болно"],[[13,5000],"Орж болно"],[[11,9000],"Нас хүрэхгүй"],[[15,3000],"Мөнгө хүрэхгүй"],[[10,100],"Нас хүрэхгүй"]]'>
+      <div class="deed"><span class="tuvshin ahisan">8 · Ахисан</span><span class="tuluv"></span></div>
+      <h3>Кино театр</h3>
+      <p>13+ нас <b>болон</b> 5000₮+ мөнгө → <b>Орж болно</b>. Нас хүрэхгүй → <b>Нас хүрэхгүй</b>. Мөнгө хүрэхгүй → <b>Мөнгө хүрэхгүй</b></p>
+      <input type="number" placeholder="Нас">
+      <input type="number" placeholder="Мөнгө">
+      <button>Ажиллуулах</button>
+      <p class="hariu"></p>
+      <p class="tailbar"></p>
+      <details><summary>Зөвлөгөө</summary><code>&&</code> = болон. Насыг эхэлж шалга.</details>
+    </div>
+
+    <div class="kart" data-fn="undurJil" data-test='[[[2024],"Өндөр жил"],[[2026],"Энгийн жил"],[[1900],"Энгийн жил"],[[2000],"Өндөр жил"]]'>
+      <div class="deed"><span class="tuvshin ahisan">9 · Ахисан</span><span class="tuluv"></span></div>
+      <h3>Өндөр жил</h3>
+      <p>4-т хуваагдана, гэхдээ 100-д хуваагдвал үгүй, 400-д хуваагдвал тийм → <b>Өндөр жил</b> / <b>Энгийн жил</b></p>
+      <input type="number" placeholder="Он">
+      <button>Ажиллуулах</button>
+      <p class="hariu"></p>
+      <p class="tailbar"></p>
+      <details><summary>Зөвлөгөө</summary><code>||</code> = эсвэл. Эхлээд 3 тохиолдлоо блок схемээр зур.</details>
+    </div>
+
+  </div>
+
+  <script src="helper.js"></script>
+  <script>
+    // ✏️ Зөвхөн функцийн ДОТОР бич. Функцийн нэрийг бүү өөрчил.
+    // Хадгал (Ctrl+S) → браузераа refresh → ✅ гарч байна уу?
+
+    // 1. Шагнал — хамт
+    function shagnal(onoo) {
+      return "";
+    }
+
+    // 2. Кино үзэх эрх
+    function kino(nas) {
+      return "";
+    }
+
+    // 3. Тэгш үү, сондгой юу?
+    function tegsh(n) {
+      return "";
+    }
+
+    // 4. Аль нь их вэ?
+    function ih(a, b) {
+      return 0;
+    }
+
+    // 5. Нууц үг
+    function nuuts(ug) {
+      return "";
+    }
+
+    // 6. Үнэлгээ
+    function unelgee(onoo) {
+      return "";
+    }
+
+    // 7. Тоглоомын амь
+    function hpTuluv(hp) {
+      return "";
+    }
+
+    // 8. Кино театр
+    function kinoTeatr(nas, mungu) {
+      return "";
+    }
+
+    // 9. Өндөр жил
+    function undurJil(on) {
+      return "";
+    }
+  </script>
+
+</body>
+</html>
