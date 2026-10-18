@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="750" height="540" viewBox="0 0 750 540" font-family="Arial, sans-serif" font-size="17">
 <defs><marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker></defs>
 <rect width="750" height="540" fill="white"/>
-<text x="30" y="34" font-size="21" font-weight="bold">Дасгал 4 — Ирээдүйн нас (бөглө)</text>
+<text x="30" y="34" font-size="21" font-weight="bold">Дасгал 3 — Ирээдүйн нас (бөглө)</text>
 <text x="165.0" y="72" text-anchor="middle" font-size="15" fill="#777">Блок схем</text>
 <text x="350" y="72" font-size="15" fill="#777">JavaScript</text>
 <rect x="30" y="90" width="270" height="52" rx="26.0" fill="#e8f7ee" stroke="#2fb36d" stroke-width="2.5"/><text x="165.0" y="122.0" text-anchor="middle" font-size="17">Эхлэл</text>

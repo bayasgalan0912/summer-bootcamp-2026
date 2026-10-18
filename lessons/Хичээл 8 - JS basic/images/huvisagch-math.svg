@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="330" viewBox="0 0 700 330" font-family="Arial, sans-serif" font-size="17">
+<rect width="700" height="330" fill="white"/>
+<text x="30" y="34" font-size="21" font-weight="bold">Хувьсагч = математикийн x</text>
+<text x="30" y="72" font-size="15" fill="#777">Математик</text>
+<text x="330" y="72" font-size="15" fill="#777">JavaScript</text>
+<rect x="30" y="86" width="260" height="120" rx="8" fill="#e8f1ff" stroke="#3b7ddd" stroke-width="2.5"/>
+<text x="50" y="122" font-size="22" font-family="Cambria, Georgia, serif" font-style="italic">x = 5</text>
+<text x="50" y="156" font-size="22" font-family="Cambria, Georgia, serif" font-style="italic">y = x + 3</text>
+<text x="50" y="190" font-size="22" font-family="Cambria, Georgia, serif" font-style="italic">y = 8</text>
+<line x1="296" y1="146" x2="322" y2="146" stroke="#bbb" stroke-width="1.5" stroke-dasharray="4 4"/>
+<rect x="330" y="86" width="340" height="120" rx="6" fill="#272822"/>
+<text x="346" y="120" font-family="Consolas, Menlo, monospace" font-size="17" fill="#f8f8f2" xml:space="preserve">let x = 5;</text>
+<text x="346" y="152" font-family="Consolas, Menlo, monospace" font-size="17" fill="#f8f8f2" xml:space="preserve">let y = x + 3;</text>
+<text x="346" y="184" font-family="Consolas, Menlo, monospace" font-size="17" fill="#f8f8f2" xml:space="preserve">console.log(y);  <tspan fill="#75715e">// 8</tspan></text>
+<rect x="30" y="226" width="640" height="82" rx="8" fill="#fff4e6" stroke="#f29b30" stroke-width="2.5"/>
+<text x="50" y="258" font-size="17"><tspan font-weight="bold">Ялгаа:</tspan> JS-д <tspan font-family="Consolas, Menlo, monospace">=</tspan> нь «тэнцүү» биш, «утга өгөх».</text>
+<text x="50" y="290" font-size="17">Тиймээс <tspan font-family="Consolas, Menlo, monospace">x = x + 1</tspan> болно, текст ч хадгална: <tspan font-family="Consolas, Menlo, monospace">ner = "Бат"</tspan></text>
+</svg>

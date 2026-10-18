@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1036" height="704" viewBox="0 0 1036 704" font-family="Arial, sans-serif" font-size="17">
 <defs><marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker></defs>
 <rect width="1036" height="704" fill="white"/>
-<text x="30" y="34" font-size="21" font-weight="bold">Дасгал 5 — Хайрцаг солих</text>
+<text x="30" y="34" font-size="21" font-weight="bold">Дасгал 4 — Утга солих</text>
 <text x="165.0" y="72" text-anchor="middle" font-size="15" fill="#777">Блок схем</text>
 <text x="350" y="72" font-size="15" fill="#777">JavaScript</text>
 <text x="786.0" y="72" text-anchor="middle" font-size="15" fill="#777">a</text>
@@ -60,5 +60,5 @@
 <text x="356" y="532.0" font-family="Consolas, Menlo, monospace" font-size="16" fill="#f8f8f2" xml:space="preserve">console.log(a, b);</text>
 <rect x="30" y="582" width="270" height="52" rx="26.0" fill="#e8f7ee" stroke="#2fb36d" stroke-width="2.5"/><text x="165.0" y="614.0" text-anchor="middle" font-size="17">Төгсгөл</text>
 <line x1="165.0" y1="552" x2="165.0" y2="580" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
-<text x="30" y="680" font-size="16" fill="#555">Шар = тэр мөрөнд өөрчлөгдсөн хайрцаг.  Гаралт:  water cola</text>
+<text x="30" y="680" font-size="16" fill="#555">Шар = тэр мөрөнд өөрчлөгдсөн хувьсагч.  Гаралт:  water cola</text>
 </svg>
