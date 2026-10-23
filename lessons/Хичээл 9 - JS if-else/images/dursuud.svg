@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="330" viewBox="0 0 600 330" font-family="Arial, sans-serif" font-size="17">
+<defs><marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker></defs>
+<rect width="600" height="330" fill="white"/>
+<text x="30" y="34" font-size="21" font-weight="bold">Блок схемийн 4 дүрс</text>
+<rect x="30.0" y="61.0" width="150" height="46" rx="23.0" fill="#e8f7ee" stroke="#2fb36d" stroke-width="2.5"/>
+<text x="105" y="90" text-anchor="middle" font-size="17" fill="#222"></text>
+<text x="205" y="80" text-anchor="start" font-size="17" fill="#222" font-weight="bold">Эхлэл / Төгсгөл</text>
+<text x="205" y="102" text-anchor="start" font-size="15" fill="#555">Програм эхэлж, дуусна</text>
+<polygon points="46.0,127.0 180.0,127.0 164.0,173.0 30.0,173.0" fill="#eef0fd" stroke="#4a5bd4" stroke-width="2.5"/>
+<text x="105" y="156" text-anchor="middle" font-size="17" fill="#222"></text>
+<text x="205" y="146" text-anchor="start" font-size="17" fill="#222" font-weight="bold">Оролт / Гаралт</text>
+<text x="205" y="168" text-anchor="start" font-size="15" fill="#555">Утга авах, console.log</text>
+<rect x="30.0" y="193.0" width="150" height="46" rx="4" fill="#fff4e6" stroke="#f29b30" stroke-width="2.5"/>
+<text x="105" y="222" text-anchor="middle" font-size="17" fill="#222"></text>
+<text x="205" y="212" text-anchor="start" font-size="17" fill="#222" font-weight="bold">Үйлдэл</text>
+<text x="205" y="234" text-anchor="start" font-size="15" fill="#555">Хувьсагч, тооцоо: let x = ...</text>
+<polygon points="105,254.0 180.0,282 105,310.0 30.0,282" fill="#fdecf3" stroke="#d6336c" stroke-width="2.5"/>
+<text x="105" y="288" text-anchor="middle" font-size="17" fill="#222"></text>
+<text x="205" y="278" text-anchor="start" font-size="17" fill="#222" font-weight="bold">Нөхцөл — ШИНЭ</text>
+<text x="205" y="300" text-anchor="start" font-size="15" fill="#555">Тийм / Үгүй гэж 2 зам салгана: if</text>
+</svg>

@@ -63,6 +63,8 @@ CSS-д **сүүдэр (shadow) заагаагүй** — жишээ кодонд 
 ### Kahoot template (`reference/kahoot/template/`)
 
 - `kahoot-N.md` бичсэний дараа: `python3 reference/kahoot/template/build.py reference/kahoot/kahoot-N.md` → `reference/kahoot/out/kahoot-N/` дотор `kahoot-N.xlsx` (Kahoot import) + `qNN.png` (кодтой асуулт бүрийн зураг). Гараар screenshot хийхгүй.
+- Блок схемийн асуулт: ` ```flow ` блок (`start` / `io` / `op` / `end`, `op!` = шар "?" дүрс) → хичээлийн SVG-тэй ижил өнгийн зураг. Cover: ` ```cover ` блок → `cover.png`, Kahoot Settings → Cover image-д заавал upload хий.
+- Kahoot дээрх асуултын текст асуулт бүрд өөр, тодорхой байх (бүгд "Юу гарах вэ?" биш).
 - Кодын зургийн style тогтмол: Monokai, 1600×900, дэвсгэр `#272822`, mono фонт. Өөрчлөхгүй; шаардлагатай бол `build.py`-ийн `STYLE` хэсэгт.
 - `.md`-д `<` `>` , backtick бүү санаа зов — script Kahoot-д тохируулж цэвэрлэнэ. Хязгаар хэтэрвэл script алдаа өгнө.
 - Kahoot-д оруулах алхам, style-ийн дэлгэрэнгүй, **өмнө гарсан алдаанууд**: [reference/kahoot/template/README.md](reference/kahoot/template/README.md). Шинэ алдаа гарвал тэнд нэм.

@@ -5,7 +5,7 @@
     python3 kahoot/template/build.py kahoot/kahoot-3.md
     python3 kahoot/template/build.py kahoot/kahoot-3.md --time 60 --out kahoot/out
 
-Гарц: <out>/<md нэр>/  ->  kahoot-N.xlsx  +  qNN.png (кодтой асуулт бүрд)
+Гарц: <out>/<md нэр>/  ->  kahoot-N.xlsx  +  qNN.png (кодтой асуулт бүрд)  +  cover.png (```cover байвал)
 Хэрэгтэй сан: pip install openpyxl pillow pygments
 """
 import argparse
@@ -48,6 +48,28 @@ CHROMES = [
     "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
     "C:/Program Files/Google/Chrome/Application/chrome.exe",
     "google-chrome", "chromium", "chromium-browser",
+]
+
+# ---- flow: ```flow блок -> блок схемийн зураг (хичээлийн SVG-тэй ижил өнгө) ----
+FLOW_SHAPES = {             # дүрс: (дүүргэлт, хүрээ)
+    "start": ("#e8f7ee", "#2fb36d"), "end": ("#e8f7ee", "#2fb36d"),   # Эхлэл / Төгсгөл — зууван
+    "io": ("#eef0fd", "#4a5bd4"),                                     # Оролт / Гаралт — налуу
+    "op": ("#fff4e6", "#f29b30"),                                     # Үйлдэл — тэгш өнцөгт
+}
+FLOW_MARK = ("#fde68a", "#d97706")   # `op!` / `io!` — тодотгосон ("?" бөглөх) дүрс
+SANS_FONTS = [
+    "/System/Library/Fonts/Supplemental/Arial.ttf",
+    "/Library/Fonts/Arial.ttf",
+    "C:/Windows/Fonts/arial.ttf",
+    "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+    "/usr/share/fonts/dejavu/DejaVuSans.ttf",
+]
+SANS_BOLD = [
+    "/System/Library/Fonts/Supplemental/Arial Bold.ttf",
+    "/Library/Fonts/Arial Bold.ttf",
+    "C:/Windows/Fonts/arialbd.ttf",
+    "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+    "/usr/share/fonts/dejavu/DejaVuSans-Bold.ttf",
 ]
 
 # ---- Kahoot хязгаар -----------------------------------------------------
@@ -196,6 +218,103 @@ def render_preview(html, path):
                        check=True, capture_output=True)
 
 
+def first_font(paths):
+    p = next((p for p in paths if Path(p).exists()), None)
+    if not p:
+        sys.exit(f"Фонт олдсонгүй: {paths}")
+    return p
+
+
+def draw_flow_shape(d, kind, box, fill, stroke, w=5):
+    x0, y0, x1, y1 = box
+    if kind in ("start", "end"):
+        d.rounded_rectangle(box, radius=(y1 - y0) // 2, fill=fill, outline=stroke, width=w)
+    elif kind == "io":
+        k = 30
+        d.polygon([(x0 + k, y0), (x1, y0), (x1 - k, y1), (x0, y1)], fill=fill, outline=stroke, width=w)
+    else:
+        d.rounded_rectangle(box, radius=8, fill=fill, outline=stroke, width=w)
+
+
+def render_flow(src, path):
+    """```flow: мөр бүр `start|io|op|end[!] текст`. Дээрээс доош сумтай блок схем."""
+    from PIL import Image, ImageDraw, ImageFont
+    items = []
+    for ln in src.strip().splitlines():
+        kind, _, text = ln.strip().partition(" ")
+        mark = kind.endswith("!")
+        kind = kind.rstrip("!")
+        if kind not in FLOW_SHAPES:
+            sys.exit(f"flow: '{kind}' буруу (start, io, op, end)")
+        items.append((kind, text.strip(), mark))
+    n = len(items)
+    sh = min(110, int((H - 2 * 45) / (n + (n - 1) * 0.35)))   # дүрсний өндөр
+    gap = int(sh * 0.35)
+    size = min(48, int(sh * 0.46))
+    font = ImageFont.truetype(first_font(SANS_FONTS), size)
+    bold = ImageFont.truetype(first_font(SANS_BOLD), size)
+    sw = max(720, int(max(font.getlength(t) for _, t, _ in items)) + 160)
+    img = Image.new("RGB", (W, H), "white")
+    d = ImageDraw.Draw(img)
+    x0 = (W - sw) // 2
+    y = (H - (n * sh + (n - 1) * gap)) // 2
+    for i, (kind, text, mark) in enumerate(items):
+        fill, stroke = FLOW_MARK if mark else FLOW_SHAPES[kind]
+        draw_flow_shape(d, kind, (x0, y, x0 + sw, y + sh), fill, stroke)
+        d.text((W / 2, y + sh / 2), text, font=bold if mark else font, fill="#222", anchor="mm")
+        if i < n - 1:   # сум
+            ax, ay0, ay1 = W // 2, y + sh + 4, y + sh + gap - 4
+            d.line((ax, ay0, ax, ay1 - 14), fill="#333", width=4)
+            d.polygon([(ax - 11, ay1 - 16), (ax + 11, ay1 - 16), (ax, ay1)], fill="#333")
+        y += sh + gap
+    img.save(path)
+
+
+def render_cover(src, path, monofont):
+    """```cover: 1-р мөр жижиг шошго, 2-р мөр гарчиг, 3-р мөр дэд гарчиг, 4-р мөр код."""
+    from PIL import Image, ImageDraw, ImageFont
+    from pygments.lexers import get_lexer_by_name
+    from pygments.styles import get_style_by_name
+    label, title, sub, code = (src.strip().splitlines() + [""] * 4)[:4]
+    img = Image.new("RGB", (W, H), BG)
+    d = ImageDraw.Draw(img)
+    bold = lambda s: ImageFont.truetype(first_font(SANS_BOLD), s)
+    reg = lambda s: ImageFont.truetype(first_font(SANS_FONTS), s)
+    L = 130
+    # шошго
+    f = bold(44)
+    tw = f.getlength(label)
+    d.rounded_rectangle((L, 150, L + tw + 56, 230), radius=40, fill="#e6db74")
+    d.text((L + 28, 190), label, font=f, fill=BG, anchor="lm")
+    # гарчиг, дэд гарчиг
+    d.text((L, 270), title, font=bold(150), fill=DEFAULT_FG, anchor="lt")
+    d.text((L, 460), sub, font=reg(50), fill="#a6e22e", anchor="lt")
+    # кодын мөр (Monokai)
+    if code:
+        mf = ImageFont.truetype(monofont, 52)
+        style = get_style_by_name(PYGMENTS_STYLE)
+        toks = [(v, "#" + (style.style_for_token(t)["color"] or "f8f8f2"))
+                for t, v in get_lexer_by_name("js").get_tokens(code) if v != "\n"]
+        cw = sum(mf.getlength(v) for v, _ in toks)
+        d.rounded_rectangle((L, 600, L + cw + 80, 720), radius=18, fill="#1e1f1a", outline="#49483e", width=3)
+        x = L + 40
+        for v, c in toks:
+            d.text((x, 660), v, font=mf, fill=c, anchor="lm")
+            x += mf.getlength(v)
+    # баруун талд жижиг блок схем
+    sx0, sx1, sh, gap = 1150, 1470, 70, 40
+    y = 200
+    for kind in ("start", "op", "io", "end"):
+        fill, stroke = FLOW_SHAPES[kind]
+        draw_flow_shape(d, kind, (sx0, y, sx1, y + sh), fill, stroke, w=4)
+        if kind != "end":
+            ax = (sx0 + sx1) // 2
+            d.line((ax, y + sh + 4, ax, y + sh + gap - 14), fill="#cfcfc2", width=4)
+            d.polygon([(ax - 10, y + sh + gap - 16), (ax + 10, y + sh + gap - 16), (ax, y + sh + gap - 2)], fill="#cfcfc2")
+        y += sh + gap
+    img.save(path)
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("md", help="kahoot-N.md")
@@ -215,15 +334,20 @@ def main():
 
     write_xlsx(qs, out / f"{md.stem}.xlsx", a.time)
     font = find_font(a.font)
+    cover = re.search(r"```cover\n(.*?)\n```", md.read_text(encoding="utf-8"), re.S)
+    if cover:
+        render_cover(cover.group(1), out / "cover.png", font)
     for x in qs:
-        if x["lang"] == "preview":
+        if x["lang"] == "flow":
+            render_flow(x["code"], out / f"q{x['n']:02d}.png")
+        elif x["lang"] == "preview":
             render_preview(x["code"], out / f"q{x['n']:02d}.png")
         elif x["code"]:
             render(x["code"], x["lang"], out / f"q{x['n']:02d}.png", font)
 
     print(f"{out}  ({len(qs)} асуулт, {a.time} сек)")
     for x in qs:
-        print(f"  Q{x['n']:>2}  зөв={x['correct']}  зураг={'хуудас' if x['lang'] == 'preview' else 'код' if x['code'] else '-'}  {x['q'][:50]}")
+        print(f"  Q{x['n']:>2}  зөв={x['correct']}  зураг={'схем' if x['lang'] == 'flow' else 'хуудас' if x['lang'] == 'preview' else 'код' if x['code'] else '-'}  {x['q'][:50]}")
 
 
 if __name__ == "__main__":

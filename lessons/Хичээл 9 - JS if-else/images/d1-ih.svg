@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560" font-family="Arial, sans-serif" font-size="17">
+<defs><marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker></defs>
+<rect width="1000" height="560" fill="white"/>
+<text x="30" y="34" font-size="21" font-weight="bold">Дасгал 1 — Аль нь их вэ? (бөглө)</text>
+<text x="250" y="72" text-anchor="middle" font-size="15" fill="#777">Блок схем</text>
+<text x="540" y="72" text-anchor="start" font-size="15" fill="#777">JavaScript</text>
+<rect x="150.0" y="92.0" width="200" height="46" rx="23.0" fill="#e8f7ee" stroke="#2fb36d" stroke-width="2.5"/>
+<text x="250" y="121" text-anchor="middle" font-size="17" fill="#222">Эхлэл</text>
+<rect x="120.0" y="172.0" width="260" height="46" rx="4" fill="#fff4e6" stroke="#f29b30" stroke-width="2.5"/>
+<text x="250" y="201" text-anchor="middle" font-size="17" fill="#222">a = 56, b = 78</text>
+<polyline points="250,138 250,170" fill="none" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<polygon points="250,248.0 360.0,290 250,332.0 140.0,290" fill="#fdecf3" stroke="#d6336c" stroke-width="2.5"/>
+<text x="250" y="296" text-anchor="middle" font-size="17" fill="#222">a &gt; b ?</text>
+<polyline points="250,218 250,246" fill="none" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<polygon points="26.0,375.0 220.0,375.0 204.0,425.0 10.0,425.0" fill="#eef0fd" stroke="#4a5bd4" stroke-width="2.5"/>
+<text x="115" y="406" text-anchor="middle" font-size="17" fill="#222">a их</text>
+<polygon points="296.0,375.0 490.0,375.0 474.0,425.0 280.0,425.0" fill="#eef0fd" stroke="#4a5bd4" stroke-width="2.5"/>
+<text x="385" y="406" text-anchor="middle" font-size="17" fill="#222">b их</text>
+<polyline points="140,290 115,290 115,373" fill="none" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<text x="110" y="280" text-anchor="middle" font-size="15" fill="#2fb36d" font-weight="bold">Тийм</text>
+<polyline points="360,290 385,290 385,373" fill="none" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<text x="390" y="280" text-anchor="middle" font-size="15" fill="#d6336c" font-weight="bold">Үгүй</text>
+<rect x="150.0" y="467.0" width="200" height="46" rx="23.0" fill="#e8f7ee" stroke="#2fb36d" stroke-width="2.5"/>
+<text x="250" y="496" text-anchor="middle" font-size="17" fill="#222">Төгсгөл</text>
+<polyline points="115,425 115,490 148,490" fill="none" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<polyline points="385,425 385,490 352,490" fill="none" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<rect x="540" y="92" width="330" height="212" rx="6" fill="#272822"/>
+<text x="558" y="120" font-family="Consolas, Menlo, monospace" font-size="16" fill="#f8f8f2" xml:space="preserve">let a = 56;</text>
+<text x="558" y="144" font-family="Consolas, Menlo, monospace" font-size="16" fill="#f8f8f2" xml:space="preserve">let b = 78;</text>
+<text x="558" y="168" font-family="Consolas, Menlo, monospace" font-size="16" fill="#f8f8f2" xml:space="preserve"></text>
+<text x="558" y="192" font-family="Consolas, Menlo, monospace" font-size="16" fill="#f8f8f2" xml:space="preserve">if (...) {</text>
+<text x="558" y="216" font-family="Consolas, Menlo, monospace" font-size="16" fill="#f8f8f2" xml:space="preserve">  console.log("a их");</text>
+<rect x="544" y="200" width="5" height="21" fill="#2fb36d"/>
+<text x="880" y="216" text-anchor="start" font-size="15" fill="#2fb36d" font-weight="bold">Тийм</text>
+<text x="558" y="240" font-family="Consolas, Menlo, monospace" font-size="16" fill="#f8f8f2" xml:space="preserve">} else {</text>
+<text x="558" y="264" font-family="Consolas, Menlo, monospace" font-size="16" fill="#f8f8f2" xml:space="preserve">  ...</text>
+<rect x="544" y="248" width="5" height="21" fill="#d6336c"/>
+<text x="880" y="264" text-anchor="start" font-size="15" fill="#d6336c" font-weight="bold">Үгүй</text>
+<text x="558" y="288" font-family="Consolas, Menlo, monospace" font-size="16" fill="#f8f8f2" xml:space="preserve">}</text>
+<text x="30" y="540" text-anchor="start" font-size="16" fill="#555">a = 56, b = 78  →  b их   ·   a = 10, b = 9  →  a их</text>
+</svg>

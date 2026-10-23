@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1090" height="720" viewBox="0 0 1090 720" font-family="Arial, sans-serif" font-size="17">
+<defs><marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker></defs>
+<rect width="1090" height="720" fill="white"/>
+<text x="30" y="34" font-size="21" font-weight="bold">else if — дээрээс доош шалгаж, ЭХНИЙ тийм дээр зогсоно</text>
+<text x="200" y="72" text-anchor="middle" font-size="15" fill="#777">Блок схем</text>
+<text x="620" y="72" text-anchor="start" font-size="15" fill="#777">JavaScript</text>
+<rect x="110.0" y="88.0" width="180" height="44" rx="22.0" fill="#e8f7ee" stroke="#2fb36d" stroke-width="2.5"/>
+<text x="200" y="116" text-anchor="middle" font-size="17" fill="#222">Эхлэл</text>
+<rect x="90.0" y="158.0" width="220" height="44" rx="4" fill="#fff4e6" stroke="#f29b30" stroke-width="2.5"/>
+<text x="200" y="186" text-anchor="middle" font-size="17" fill="#222">temp = 25</text>
+<polyline points="200,132 200,156" fill="none" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<polyline points="200,202 200,232" fill="none" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<polygon points="200,232.0 305.0,270 200,308.0 95.0,270" fill="#fdecf3" stroke="#d6336c" stroke-width="2.5"/>
+<text x="200" y="276" text-anchor="middle" font-size="17" fill="#222">temp &gt; 30 ?</text>
+<polygon points="376.0,247.0 550.0,247.0 534.0,293.0 360.0,293.0" fill="#eef0fd" stroke="#4a5bd4" stroke-width="2.5"/>
+<text x="455" y="276" text-anchor="middle" font-size="17" fill="#222">Шорт</text>
+<polyline points="305,270 358,270" fill="none" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<text x="345" y="260" text-anchor="middle" font-size="15" fill="#2fb36d" font-weight="bold">Тийм</text>
+<polyline points="550,270 590,270" fill="none" stroke="#333" stroke-width="2"/>
+<polyline points="200,308 200,344" fill="none" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<text x="230" y="332" text-anchor="middle" font-size="15" fill="#d6336c" font-weight="bold">Үгүй</text>
+<polygon points="200,344.0 305.0,382 200,420.0 95.0,382" fill="#fdecf3" stroke="#d6336c" stroke-width="2.5"/>
+<text x="200" y="388" text-anchor="middle" font-size="17" fill="#222">temp &gt; 20 ?</text>
+<polygon points="376.0,359.0 550.0,359.0 534.0,405.0 360.0,405.0" fill="#eef0fd" stroke="#4a5bd4" stroke-width="2.5"/>
+<text x="455" y="388" text-anchor="middle" font-size="17" fill="#222">Нимгэн цамц</text>
+<polyline points="305,382 358,382" fill="none" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<text x="345" y="372" text-anchor="middle" font-size="15" fill="#2fb36d" font-weight="bold">Тийм</text>
+<polyline points="550,382 590,382" fill="none" stroke="#333" stroke-width="2"/>
+<polyline points="200,420 200,456" fill="none" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<text x="230" y="444" text-anchor="middle" font-size="15" fill="#d6336c" font-weight="bold">Үгүй</text>
+<polygon points="200,456.0 305.0,494 200,532.0 95.0,494" fill="#fdecf3" stroke="#d6336c" stroke-width="2.5"/>
+<text x="200" y="500" text-anchor="middle" font-size="17" fill="#222">temp &gt; 10 ?</text>
+<polygon points="376.0,471.0 550.0,471.0 534.0,517.0 360.0,517.0" fill="#eef0fd" stroke="#4a5bd4" stroke-width="2.5"/>
+<text x="455" y="500" text-anchor="middle" font-size="17" fill="#222">Өмд цамц</text>
+<polyline points="305,494 358,494" fill="none" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<text x="345" y="484" text-anchor="middle" font-size="15" fill="#2fb36d" font-weight="bold">Тийм</text>
+<polyline points="550,494 590,494" fill="none" stroke="#333" stroke-width="2"/>
+<polyline points="200,532 200,568" fill="none" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<text x="230" y="556" text-anchor="middle" font-size="15" fill="#d6336c" font-weight="bold">Үгүй</text>
+<polygon points="111.0,573.0 305.0,573.0 289.0,619.0 95.0,619.0" fill="#eef0fd" stroke="#4a5bd4" stroke-width="2.5"/>
+<text x="200" y="602" text-anchor="middle" font-size="17" fill="#222">Гадуур хувцас</text>
+<polyline points="200,619 200,663" fill="none" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<rect x="110.0" y="664.0" width="180" height="44" rx="22.0" fill="#e8f7ee" stroke="#2fb36d" stroke-width="2.5"/>
+<text x="200" y="692" text-anchor="middle" font-size="17" fill="#222">Төгсгөл</text>
+<polyline points="590,270 590,686 292,686" fill="none" stroke="#333" stroke-width="2" marker-end="url(#m)"/>
+<rect x="620" y="92" width="340" height="284" rx="6" fill="#272822"/>
+<text x="638" y="120" font-family="Consolas, Menlo, monospace" font-size="15" fill="#f8f8f2" xml:space="preserve">let temp = 25;</text>
+<text x="638" y="144" font-family="Consolas, Menlo, monospace" font-size="15" fill="#f8f8f2" xml:space="preserve"></text>
+<text x="638" y="168" font-family="Consolas, Menlo, monospace" font-size="15" fill="#f8f8f2" xml:space="preserve">if (temp &gt; 30) {</text>
+<text x="638" y="192" font-family="Consolas, Menlo, monospace" font-size="15" fill="#f8f8f2" xml:space="preserve">  console.log("Шорт");</text>
+<rect x="624" y="176" width="5" height="21" fill="#2fb36d"/>
+<text x="970" y="192" text-anchor="start" font-size="15" fill="#2fb36d" font-weight="bold">1</text>
+<text x="638" y="216" font-family="Consolas, Menlo, monospace" font-size="15" fill="#f8f8f2" xml:space="preserve">} else if (temp &gt; 20) {</text>
+<text x="638" y="240" font-family="Consolas, Menlo, monospace" font-size="15" fill="#f8f8f2" xml:space="preserve">  console.log("Нимгэн цамц");</text>
+<rect x="624" y="224" width="5" height="21" fill="#2fb36d"/>
+<text x="970" y="240" text-anchor="start" font-size="15" fill="#2fb36d" font-weight="bold">2</text>
+<text x="638" y="264" font-family="Consolas, Menlo, monospace" font-size="15" fill="#f8f8f2" xml:space="preserve">} else if (temp &gt; 10) {</text>
+<text x="638" y="288" font-family="Consolas, Menlo, monospace" font-size="15" fill="#f8f8f2" xml:space="preserve">  console.log("Өмд цамц");</text>
+<rect x="624" y="272" width="5" height="21" fill="#2fb36d"/>
+<text x="970" y="288" text-anchor="start" font-size="15" fill="#2fb36d" font-weight="bold">3</text>
+<text x="638" y="312" font-family="Consolas, Menlo, monospace" font-size="15" fill="#f8f8f2" xml:space="preserve">} else {</text>
+<text x="638" y="336" font-family="Consolas, Menlo, monospace" font-size="15" fill="#f8f8f2" xml:space="preserve">  console.log("Гадуур хувцас");</text>
+<rect x="624" y="320" width="5" height="21" fill="#d6336c"/>
+<text x="970" y="336" text-anchor="start" font-size="15" fill="#d6336c" font-weight="bold">бүгд үгүй</text>
+<text x="638" y="360" font-family="Consolas, Menlo, monospace" font-size="15" fill="#f8f8f2" xml:space="preserve">}</text>
+<text x="620" y="420" text-anchor="start" font-size="15" fill="#555">temp = 25: 30-аас их үү? Үгүй → 20-оос их үү? Тийм</text>
+<text x="620" y="444" text-anchor="start" font-size="15" fill="#555">→ "Нимгэн цамц". Доорхыг шалгахгүй.</text>
+<text x="620" y="486" text-anchor="start" font-size="15" fill="#555">2-р нөхцөлд temp &lt;= 30 гэж бичих хэрэггүй —</text>
+<text x="620" y="510" text-anchor="start" font-size="15" fill="#555">дээрх нөхцөл үгүй гэсэн учраас мэдэгдэж байна.</text>
+</svg>

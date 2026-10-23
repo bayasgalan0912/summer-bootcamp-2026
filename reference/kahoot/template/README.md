@@ -5,15 +5,15 @@
 ## Ашиглах
 
 ```bash
-python3 kahoot/template/build.py kahoot/kahoot-3.md
+python3 reference/kahoot/template/build.py reference/kahoot/kahoot-3.md
 ```
 
-Гарц: `kahoot/out/kahoot-3/` → `kahoot-3.xlsx`, `q01.png` … (кодтой асуулт бүрд)
+Гарц: `reference/kahoot/out/kahoot-3/` → `kahoot-3.xlsx`, `q01.png` … (зурагтай асуулт бүрд), `cover.png`
 
 | Сонголт | Тайлбар |
 | ------- | ------- |
 | `--time 60` | Бүх асуултын хугацаа. Default **60**. Зөвхөн 5, 10, 20, 30, 60, 90, 120, 240 |
-| `--out ХАВТАС` | Гарцын хавтас (default `kahoot/out`) |
+| `--out ХАВТАС` | Гарцын хавтас (default `reference/kahoot/out`) |
 | `--font ФАЙЛ` | Mono фонт олдохгүй бол |
 
 Сан: `pip install openpyxl pillow pygments`
@@ -22,7 +22,7 @@ python3 kahoot/template/build.py kahoot/kahoot-3.md
 
 1. create.kahoot.it → **Create** → **Add** → **Import** → **Import spreadsheet** → `.xlsx` сонгох → Upload → Add questions
 2. Кодтой асуулт бүрд `qNN.png`-г **Upload file**-оор оруул (Q-ийн дугаар = зургийн дугаар)
-3. Settings: нэр, **Private** (Kahoot анхнаасаа Public тавьдаг) → Done → Save
+3. Settings: нэр, **Cover image → Change → `cover.png`** (Kahoot өөрөө AI cover тавьдаг), **Private** (Kahoot анхнаасаа Public тавьдаг) → Done → Save
 4. Хугацаа өөрчлөх: асуулт → Time limit → **Apply to all questions**
 
 ## `kahoot-N.md` формат (script үүнийг уншина)
@@ -60,6 +60,40 @@ python3 kahoot/template/build.py kahoot/kahoot-3.md
 
 Бэлэн style (`PREVIEW_CSS`): `.parent` — тасархай нил хүрээтэй хүрээлж буй хайрцаг (1100×560), `.box` — 140px өнгөтэй хайрцаг (1, 2, 3 … өнгө автомат). Өөр зүйлд `<style>` дотор бич.
 
+## Блок схем — ` ```flow `
+
+Мөр бүр: `дүрс текст`. Зураг дээр зөвхөн дүрс, текст харагдана (`start`, `op` гэх үг харагдахгүй). Өнгө нь хичээлийн SVG-тэй ижил.
+
+| Дүрс | Утга |
+| ---- | ---- |
+| `start` / `end` | Эхлэл / Төгсгөл — зууван |
+| `io` | Оролт / Гаралт — налуу |
+| `op` | Үйлдэл — тэгш өнцөгт |
+| `op!`, `io!` | Шараар тодотгоно ("?" бөглөх дүрс) |
+
+````
+```flow
+start Эхлэл
+op x = 5
+op! ?
+io x гаргах
+end Төгсгөл
+```
+````
+
+## Cover — ` ```cover `
+
+Эхний асуултын өмнө. 4 мөр: шошго, гарчиг, дэд гарчиг, JS кодын мөр → `cover.png` (Monokai, баруун талд жижиг блок схем).
+
+````
+```cover
+Хичээл 8
+JavaScript
+Хувьсагч · Тооцоо · Блок схем
+console.log("Сайн уу!");
+```
+````
+
 ## Кодын зургийн style
 
 | | |
@@ -82,3 +116,6 @@ Style-г өөрчлөх бол `build.py`-ийн дээд талын `STYLE` х�
 | Kahoot Public болсон | Settings дээр Private болго |
 | Асуулт >120, хариулт >75 тэмдэгт | Script import хийхээс өмнө алдаа өгнө |
 | Кодгүй асуулт (жишээ нь товчлол) | Зураг үүсэхгүй, зүгээр |
+| Cover-ыг Kahoot AI сонгосон | `cover.png`-г Settings → Cover image-д заавал upload хий |
+| Kahoot дээр асуултын текст бүгд ижил ("Юу гарах вэ?") | Асуулт бүрийн текстийг тухайн кодод тохируулж өөр, тодорхой бич |
+| Импортын дараа хоосон эхний асуулт үлдэнэ | Устга |

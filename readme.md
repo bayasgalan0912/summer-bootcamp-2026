@@ -12,7 +12,7 @@
 | [6](lessons/Хичээл%206) | HTML, CSS давтлага — 3 хуудсаа сайжруулах |
 | [7](lessons/Хичээл%207) | Google AI Studio — өөрийн сайтаа portfolio болгох |
 | [8](lessons/Хичээл%208%20-%20JS%20basic) | JavaScript танилцуулга: console.log, блок схем, хувьсагч · Code Battle |
-| [9](lessons/Хичээл%209) | JavaScript: нөхцөл if/else · Debug Battle |
+| [9](lessons/Хичээл%209%20-%20JS%20if-else) | JavaScript: нөхцөл if/else · Debug Battle |
 | [10](lessons/Хичээл%2010) | JavaScript: давталт for/while · Build Battle |
 | 11 | JavaScript: массив |
 | 12 | JavaScript: функц · Code Cup 🏆 |
