@@ -55,7 +55,9 @@ FLOW_SHAPES = {             # дүрс: (дүүргэлт, хүрээ)
     "start": ("#e8f7ee", "#2fb36d"), "end": ("#e8f7ee", "#2fb36d"),   # Эхлэл / Төгсгөл — зууван
     "io": ("#eef0fd", "#4a5bd4"),                                     # Оролт / Гаралт — налуу
     "op": ("#fff4e6", "#f29b30"),                                     # Үйлдэл — тэгш өнцөгт
+    "dec": ("#fdecf3", "#d6336c"),                                    # Нөхцөл — ромбо
 }
+FLOW_YES, FLOW_NO = "#2fb36d", "#d6336c"   # `|` салааны Тийм (зүүн) / Үгүй (баруун)
 FLOW_MARK = ("#fde68a", "#d97706")   # `op!` / `io!` — тодотгосон ("?" бөглөх) дүрс
 SANS_FONTS = [
     "/System/Library/Fonts/Supplemental/Arial.ttf",
@@ -232,41 +234,96 @@ def draw_flow_shape(d, kind, box, fill, stroke, w=5):
     elif kind == "io":
         k = 30
         d.polygon([(x0 + k, y0), (x1, y0), (x1 - k, y1), (x0, y1)], fill=fill, outline=stroke, width=w)
+    elif kind == "dec":
+        cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
+        d.polygon([(cx, y0), (x1, cy), (cx, y1), (x0, cy)], fill=fill, outline=stroke, width=w)
     else:
         d.rounded_rectangle(box, radius=8, fill=fill, outline=stroke, width=w)
 
 
 def render_flow(src, path):
-    """```flow: мөр бүр `start|io|op|end[!] текст`. Дээрээс доош сумтай блок схем."""
+    """```flow: мөр бүр `start|io|op|dec|end[!] текст`. Дээрээс доош сумтай блок схем.
+    `dec` (ромбо)-ийн дараах мөр `| io Тийм-зам | io Үгүй-зам` — хоёр салаа, дараагийн дүрс дээр нийлнэ."""
     from PIL import Image, ImageDraw, ImageFont
-    items = []
-    for ln in src.strip().splitlines():
-        kind, _, text = ln.strip().partition(" ")
+
+    def shape(txt):
+        kind, _, text = txt.strip().partition(" ")
         mark = kind.endswith("!")
         kind = kind.rstrip("!")
         if kind not in FLOW_SHAPES:
-            sys.exit(f"flow: '{kind}' буруу (start, io, op, end)")
-        items.append((kind, text.strip(), mark))
-    n = len(items)
-    sh = min(110, int((H - 2 * 45) / (n + (n - 1) * 0.35)))   # дүрсний өндөр
-    gap = int(sh * 0.35)
-    size = min(48, int(sh * 0.46))
+            sys.exit(f"flow: '{kind}' буруу (start, io, op, dec, end)")
+        return (kind, text.strip(), mark)
+
+    rows = []   # ("one", shape) эсвэл ("two", (зүүн, баруун))
+    for ln in src.strip().splitlines():
+        if ln.strip().startswith("|"):
+            parts = [x for x in ln.strip().split("|") if x.strip()]
+            if len(parts) != 2:
+                sys.exit("flow: `|` мөрөнд яг 2 салаа")
+            if not rows or rows[-1][0] != "one" or rows[-1][1][0] != "dec":
+                sys.exit("flow: `|` мөр `dec`-ийн дараа л байна")
+            rows.append(("two", (shape(parts[0]), shape(parts[1]))))
+        else:
+            rows.append(("one", shape(ln)))
+    n = len(rows)
+    hs = lambda r: 1.5 if r[0] == "one" and r[1][0] == "dec" else 1   # ромбо өндөр
+    units = sum(hs(r) for r in rows) + (n - 1) * 0.5
+    sh = min(110, int((H - 2 * 40) / units))   # дүрсний өндөр
+    gap = int(sh * 0.5)
+    size = min(46, int(sh * 0.44))
     font = ImageFont.truetype(first_font(SANS_FONTS), size)
     bold = ImageFont.truetype(first_font(SANS_BOLD), size)
-    sw = max(720, int(max(font.getlength(t) for _, t, _ in items)) + 160)
+    lab = ImageFont.truetype(first_font(SANS_BOLD), int(size * 0.85))
+    singles = [r[1] for r in rows if r[0] == "one" and r[1][0] != "dec"]
+    sw = max(560, int(max((font.getlength(t) for _, t, _ in singles), default=0)) + 160)
+    branches = [b for r in rows if r[0] == "two" for b in r[1]]
+    bw = max(380, int(max((font.getlength(t) for _, t, _ in branches), default=0)) + 120)
     img = Image.new("RGB", (W, H), "white")
     d = ImageDraw.Draw(img)
-    x0 = (W - sw) // 2
-    y = (H - (n * sh + (n - 1) * gap)) // 2
-    for i, (kind, text, mark) in enumerate(items):
+
+    def arrow(x, y0, y1):
+        d.line((x, y0, x, y1 - 14), fill="#333", width=4)
+        d.polygon([(x - 11, y1 - 16), (x + 11, y1 - 16), (x, y1)], fill="#333")
+
+    def put(s, box):
+        kind, text, mark = s
         fill, stroke = FLOW_MARK if mark else FLOW_SHAPES[kind]
-        draw_flow_shape(d, kind, (x0, y, x0 + sw, y + sh), fill, stroke)
-        d.text((W / 2, y + sh / 2), text, font=bold if mark else font, fill="#222", anchor="mm")
-        if i < n - 1:   # сум
-            ax, ay0, ay1 = W // 2, y + sh + 4, y + sh + gap - 4
-            d.line((ax, ay0, ax, ay1 - 14), fill="#333", width=4)
-            d.polygon([(ax - 11, ay1 - 16), (ax + 11, ay1 - 16), (ax, ay1)], fill="#333")
-        y += sh + gap
+        draw_flow_shape(d, kind, box, fill, stroke)
+        d.text(((box[0] + box[2]) / 2, (box[1] + box[3]) / 2), text, font=bold if mark else font, fill="#222", anchor="mm")
+
+    cx = W // 2
+    y = (H - units * sh) // 2
+    prev = None   # өмнөх мөрийн доод цэг(үүд): [(x, y)]
+    dec_mid = None
+    for kind_row, item in rows:
+        h = int(hs((kind_row, item)) * sh)
+        if kind_row == "one":
+            if prev and len(prev) == 2:   # салаа нийлэх
+                my = y - gap // 2
+                for px, py in prev:
+                    d.line((px, py, px, my), fill="#333", width=4)
+                d.line((prev[0][0], my, prev[1][0], my), fill="#333", width=4)
+                arrow(cx, my, y)
+            elif prev:
+                arrow(cx, prev[0][1] + 4, y - 4)
+            if item[0] == "dec":
+                dw = max(560, int(font.getlength(item[1]) * 1.6) + 200)
+                put(item, (cx - dw // 2, y, cx + dw // 2, y + h))
+                dec_mid = (cx - dw // 2, cx + dw // 2, y + h // 2)
+            else:
+                put(item, (cx - sw // 2, y, cx + sw // 2, y + h))
+            prev = [(cx, y + h)]
+        else:
+            lx, rx, my = dec_mid
+            bx = (min(cx - bw // 2 - 50, lx - 60), max(cx + bw // 2 + 50, rx + 60))   # салааны төв, ромбын гадна
+            for (ex, bxc, label, color) in ((lx, bx[0], "Тийм", FLOW_YES), (rx, bx[1], "Үгүй", FLOW_NO)):
+                d.line((ex, my, bxc, my), fill="#333", width=4)
+                arrow(bxc, my, y - 4)
+                d.text(((ex + bxc) / 2, my - 10), label, font=lab, fill=color, anchor="mb")
+            for b, bxc in zip(item, bx):
+                put(b, (bxc - bw // 2, y, bxc + bw // 2, y + h))
+            prev = [(bx[0], y + h), (bx[1], y + h)]
+        y += h + gap
     img.save(path)
 
 
