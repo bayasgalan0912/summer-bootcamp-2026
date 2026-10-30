@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS 10 — Давталт</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6fb;
+      margin: 0;
+      padding: 24px;
+    }
+    .tolgoi {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .tolgoi a { color: #4a5bd4; }
+    #dun {
+      font-size: 24px;
+      font-weight: bold;
+      background-color: white;
+      padding: 8px 16px;
+      border-radius: 12px;
+    }
+    .kartuud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .kart {
+      width: 260px;
+      background-color: white;
+      border: 3px solid #e3e6ef;
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .kart.zov { border-color: #2fb36d; }
+    .kart h3 { margin: 8px 0; }
+    .kart p { margin: 6px 0; }
+    .deed {
+      display: flex;
+      justify-content: space-between;
+    }
+    .tuvshin {
+      font-size: 13px;
+      padding: 2px 8px;
+      border-radius: 8px;
+      color: white;
+    }
+    .anhan { background-color: #2fb36d; }
+    .dund { background-color: #f29b30; }
+    .ahisan { background-color: #8a4fd8; }
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 8px;
+      margin: 4px 0;
+      font-size: 16px;
+    }
+    button {
+      width: 100%;
+      padding: 8px;
+      font-size: 16px;
+      background-color: #4a5bd4;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover { background-color: #3443b0; }
+    .hariu {
+      font-size: 20px;
+      font-weight: bold;
+      white-space: pre-line;
+    }
+    .tailbar {
+      font-size: 13px;
+      color: #c0392b;
+      white-space: pre-line;
+    }
+    details { font-size: 14px; color: #555; }
+  </style>
+</head>
+<body>
+
+  <div class="tolgoi">
+    <div>
+      <a href="js.html">← Миний JavaScript</a>
+      <h1>Хичээл 10 — Давталт</h1>
+    </div>
+    <p id="dun"></p>
+  </div>
+
+  <div class="kartuud">
+
+    <div class="kart" data-fn="niilber" data-test='[[[5],15],[[1],1],[[100],5050]]'>
+      <div class="deed"><span class="tuvshin anhan">1 · Хамт</span><span class="tuluv"></span></div>
+      <h3>1-ээс N хүртэл нэмэх</h3>
+      <p>5 → 1+2+3+4+5 = <b>15</b></p>
+      <input type="number" placeholder="N">
+      <button>Ажиллуулах</button>
+      <p class="hariu"></p>
+      <p class="tailbar"></p>
+    </div>
+
+    <div class="kart" data-fn="odod" data-test='[[[3],"⭐⭐⭐"],[[1],"⭐"],[[5],"⭐⭐⭐⭐⭐"]]'>
+      <div class="deed"><span class="tuvshin anhan">2 · Анхан</span><span class="tuluv"></span></div>
+      <h3>Одод</h3>
+      <p>3 → <b>⭐⭐⭐</b></p>
+      <input type="number" placeholder="N">
+      <button>Ажиллуулах</button>
+      <p class="hariu"></p>
+      <p class="tailbar"></p>
+      <details><summary>Зөвлөгөө</summary><code>s = s + "⭐"</code> — хоосон текстээс эхэл.</details>
+    </div>
+
+    <div class="kart" data-fn="toolokh" data-test='[[[5],"5 4 3 2 1 Хөөрлөө!"],[[3],"3 2 1 Хөөрлөө!"]]'>
+      <div class="deed"><span class="tuvshin anhan">3 · Анхан</span><span class="tuluv"></span></div>
+      <h3>Тоолох</h3>
+      <p>5 → <b>5 4 3 2 1 Хөөрлөө!</b></p>
+      <input type="number" placeholder="N">
+      <button>Ажиллуулах</button>
+      <p class="hariu"></p>
+      <p class="tailbar"></p>
+      <details><summary>Зөвлөгөө</summary>Давталт буурч болно: <code>i--</code>.</details>
+    </div>
+
+    <div class="kart" data-fn="tegshToo" data-test='[[[10],5],[[7],3],[[1],0]]'>
+      <div class="deed"><span class="tuvshin anhan">4 · Анхан</span><span class="tuluv"></span></div>
+      <h3>Тэгш тоонууд</h3>
+      <p>1-ээс N хүртэл хэдэн тэгш тоо байна вэ? 10 → <b>5</b></p>
+      <input type="number" placeholder="N">
+      <button>Ажиллуулах</button>
+      <p class="hariu"></p>
+      <p class="tailbar"></p>
+      <details><summary>Зөвлөгөө</summary>Давталт дотор Хичээл 9-ийн <code>if</code>.</details>
+    </div>
+
+    <div class="kart" data-fn="urjver" data-test='[[[3],"3 × 1 = 3\n3 × 2 = 6\n3 × 3 = 9\n3 × 4 = 12\n3 × 5 = 15\n3 × 6 = 18\n3 × 7 = 21\n3 × 8 = 24\n3 × 9 = 27\n3 × 10 = 30"],[[7],"7 × 1 = 7\n7 × 2 = 14\n7 × 3 = 21\n7 × 4 = 28\n7 × 5 = 35\n7 × 6 = 42\n7 × 7 = 49\n7 × 8 = 56\n7 × 9 = 63\n7 × 10 = 70"]]'>
+      <div class="deed"><span class="tuvshin dund">5 · Дунд</span><span class="tuluv"></span></div>
+      <h3>Үржвэрийн хүснэгт</h3>
+      <p>3 → <b>3 × 1 = 3</b> … <b>3 × 10 = 30</b> (мөр бүр <code>\n</code>)</p>
+      <input type="number" placeholder="N">
+      <button>Ажиллуулах</button>
+      <p class="hariu"></p>
+      <p class="tailbar"></p>
+      <details><summary>Зөвлөгөө</summary>Шинэ мөр: <code>"\n"</code>. × тэмдгийг эндээс хуул: ×</details>
+    </div>
+
+    <div class="kart" data-fn="faktorial" data-test='[[[5],120],[[1],1],[[10],3628800]]'>
+      <div class="deed"><span class="tuvshin dund">6 · Дунд</span><span class="tuluv"></span></div>
+      <h3>Факториал</h3>
+      <p>5! = 1×2×3×4×5 = <b>120</b></p>
+      <input type="number" placeholder="N">
+      <button>Ажиллуулах</button>
+      <p class="hariu"></p>
+      <p class="tailbar"></p>
+      <details><summary>Зөвлөгөө</summary>Нийлбэр 0-ээс эхэлдэг. Үржвэр хэдээс эхлэх вэ?</details>
+    </div>
+
+    <div class="kart" data-fn="hurimtlal" data-test='[[[300000,40000],8],[[100,50],2],[[100,30],4]]'>
+      <div class="deed"><span class="tuvshin dund">7 · Дунд</span><span class="tuluv"></span></div>
+      <h3>Хуримтлал</h3>
+      <p>Утас 300000₮. Сар бүр 40000₮ хадгална → <b>8</b> сар</p>
+      <input type="number" placeholder="Зорилго">
+      <input type="number" placeholder="Сар бүр">
+      <button>Ажиллуулах</button>
+      <p class="hariu"></p>
+      <p class="tailbar"></p>
+      <details><summary>Зөвлөгөө</summary>Хэдэн удаа давтахаа мэдэхгүй бол <code>while</code>.</details>
+    </div>
+
+    <div class="kart" data-fn="anhnii" data-test='[[[7],"Анхны тоо"],[[2],"Анхны тоо"],[[9],"Анхны биш"],[[1],"Анхны биш"],[[97],"Анхны тоо"]]'>
+      <div class="deed"><span class="tuvshin ahisan">8 · Ахисан</span><span class="tuluv"></span></div>
+      <h3>Анхны тоо</h3>
+      <p>Зөвхөн 1 ба өөртөө хуваагддаг → <b>Анхны тоо</b> / <b>Анхны биш</b></p>
+      <input type="number" placeholder="Тоо">
+      <button>Ажиллуулах</button>
+      <p class="hariu"></p>
+      <p class="tailbar"></p>
+      <details><summary>Зөвлөгөө</summary>2-оос n-1 хүртэлх тоогоор хуваагдах уу? Нэг нь л хуваагдвал анхны биш.</details>
+    </div>
+
+    <div class="kart" data-fn="tsifr" data-test='[[[1234],10],[[9],9],[[505],10]]'>
+      <div class="deed"><span class="tuvshin ahisan">9 · Ахисан</span><span class="tuluv"></span></div>
+      <h3>Цифрийн нийлбэр</h3>
+      <p>1234 → 1+2+3+4 = <b>10</b></p>
+      <input type="number" placeholder="Тоо">
+      <button>Ажиллуулах</button>
+      <p class="hariu"></p>
+      <p class="tailbar"></p>
+      <details><summary>Зөвлөгөө</summary><code>n % 10</code> → сүүлийн цифр. <code>Math.floor(n / 10)</code> → сүүлийн цифрийг хасна.</details>
+    </div>
+
+  </div>
+
+  <script src="helper.js"></script>
+  <script>
+    // ✏️ Зөвхөн функцийн ДОТОР бич. Функцийн нэрийг бүү өөрчил.
+    // Хадгал (Ctrl+S) → браузераа refresh → ✅ гарч байна уу?
+
+    // 1. 1-ээс N хүртэл нэмэх — хамт
+    function niilber(n) {
+      return 0;
+    }
+
+    // 2. Одод
+    function odod(n) {
+      return "";
+    }
+
+    // 3. Тоолох
+    function toolokh(n) {
+      return "";
+    }
+
+    // 4. Тэгш тоонууд
+    function tegshToo(n) {
+      return 0;
+    }
+
+    // 5. Үржвэрийн хүснэгт
+    function urjver(n) {
+      return "";
+    }
+
+    // 6. Факториал
+    function faktorial(n) {
+      return 0;
+    }
+
+    // 7. Хуримтлал
+    function hurimtlal(zorilgo, sarBur) {
+      return 0;
+    }
+
+    // 8. Анхны тоо
+    function anhnii(n) {
+      return "";
+    }
+
+    // 9. Цифрийн нийлбэр
+    function tsifr(n) {
+      return 0;
+    }
+  </script>
+
+</body>
+</html>
