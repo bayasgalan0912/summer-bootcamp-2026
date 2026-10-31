@@ -1,8 +1,13 @@
-// Кодоо энд бичнэ. Ctrl+S → браузерт F5 → F12 → Console
+// Кодоо энд бичнэ. Ctrl+S → браузерт F5
 
-for (let i = 1; i <= 5; i++) {
-  console.log(i);
+let n = Number(prompt("Хэдэн хүртэл тоолох вэ?"));
+let t = "";
+
+for (let i = 1; i <= n; i++) {
+  t = t + i + " ";
 }
+
+alert(t);
 
 // Дасгал 1 — Гахайн хадгаламж
 
