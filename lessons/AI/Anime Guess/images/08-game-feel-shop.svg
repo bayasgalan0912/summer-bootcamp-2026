@@ -1,0 +1,59 @@
+<svg viewBox="0 0 900 360" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg5h" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1026"/>
+      <stop offset="1" stop-color="#161b3d"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="360" rx="24" fill="url(#bg5h)"/>
+  <text x="450" y="48" text-anchor="middle" fill="#ffffff" font-size="29" font-weight="800">🛒 GAME FEEL SHOP</text>
+  <text x="450" y="75" text-anchor="middle" fill="#9aa3d6" font-size="16">Дуртай <tspan fill="#ffd84d" font-weight="700">2</tspan>-ыг сонго — промптоо ӨӨРӨӨ бич</text>
+
+  <!-- 1 COMBO -->
+  <rect x="20" y="95" width="160" height="185" rx="16" fill="#2a2150" stroke="#ff8a3d" stroke-width="3"/>
+  <text x="100" y="140" text-anchor="middle" font-size="38">🔥</text>
+  <text x="100" y="172" text-anchor="middle" fill="#ffb27a" font-size="18" font-weight="800">COMBO</text>
+  <text x="100" y="200" text-anchor="middle" fill="#cdd3f5" font-size="13">Дараалан зөв бол</text>
+  <text x="100" y="220" text-anchor="middle" fill="#cdd3f5" font-size="13">оноо олшрох</text>
+  <rect x="48" y="235" width="104" height="28" rx="8" fill="#0e1430"/>
+  <text x="100" y="254" text-anchor="middle" fill="#ff8a3d" font-size="15" font-weight="800">x2 → x3</text>
+
+  <!-- 2 TIMER -->
+  <rect x="195" y="95" width="160" height="185" rx="16" fill="#1b2348" stroke="#52b9ff" stroke-width="3"/>
+  <text x="275" y="140" text-anchor="middle" font-size="38">⏳</text>
+  <text x="275" y="172" text-anchor="middle" fill="#8dd2ff" font-size="18" font-weight="800">TIMER BAR</text>
+  <text x="275" y="200" text-anchor="middle" fill="#cdd3f5" font-size="13">Асуулт тутам</text>
+  <text x="275" y="220" text-anchor="middle" fill="#cdd3f5" font-size="13">хурдасна</text>
+  <rect x="223" y="238" width="104" height="16" rx="8" fill="#0e1430"/>
+  <rect x="223" y="238" width="62" height="16" rx="8" fill="#52b9ff"/>
+
+  <!-- 3 REVEAL -->
+  <rect x="370" y="95" width="160" height="185" rx="16" fill="#1b2348" stroke="#3ddc97" stroke-width="3"/>
+  <text x="450" y="140" text-anchor="middle" font-size="38">🌫️</text>
+  <text x="450" y="172" text-anchor="middle" fill="#7af0c0" font-size="18" font-weight="800">SLOW REVEAL</text>
+  <text x="450" y="200" text-anchor="middle" fill="#cdd3f5" font-size="13">Эрт таавал</text>
+  <text x="450" y="220" text-anchor="middle" fill="#cdd3f5" font-size="13">илүү оноо</text>
+  <rect x="398" y="235" width="104" height="28" rx="8" fill="#0e1430"/>
+  <text x="450" y="255" text-anchor="middle" font-size="14">🏴‍☠️ ▸ 🏴‍☠️🍖 ▸ 🏴‍☠️🍖👒</text>
+
+  <!-- 4 SUDDEN DEATH -->
+  <rect x="545" y="95" width="160" height="185" rx="16" fill="#3a1c2a" stroke="#ff5d73" stroke-width="3"/>
+  <text x="625" y="140" text-anchor="middle" font-size="38">💀</text>
+  <text x="625" y="172" text-anchor="middle" fill="#ff9aab" font-size="17" font-weight="800">SUDDEN DEATH</text>
+  <text x="625" y="200" text-anchor="middle" fill="#cdd3f5" font-size="13">Амь 1 — нэг буруу</text>
+  <text x="625" y="220" text-anchor="middle" fill="#cdd3f5" font-size="13">бол шууд дуусна</text>
+  <rect x="573" y="235" width="104" height="28" rx="8" fill="#0e1430"/>
+  <text x="625" y="255" text-anchor="middle" fill="#ff5d73" font-size="15" font-weight="800">❤️ x1</text>
+
+  <!-- 5 HOT-SEAT -->
+  <rect x="720" y="95" width="160" height="185" rx="16" fill="#2a2150" stroke="#ffd84d" stroke-width="3"/>
+  <text x="800" y="140" text-anchor="middle" font-size="38">👥</text>
+  <text x="800" y="172" text-anchor="middle" fill="#ffe57a" font-size="18" font-weight="800">HOT-SEAT 1v1</text>
+  <text x="800" y="200" text-anchor="middle" fill="#cdd3f5" font-size="13">2 хүн нэг</text>
+  <text x="800" y="220" text-anchor="middle" fill="#cdd3f5" font-size="13">компьютер дээр</text>
+  <rect x="748" y="235" width="104" height="28" rx="8" fill="#0e1430"/>
+  <text x="800" y="254" text-anchor="middle" fill="#ffd84d" font-size="13" font-weight="700">30 | 20 🏆</text>
+
+  <text x="450" y="320" text-anchor="middle" fill="#ffd84d" font-size="17" font-weight="700">⚠️ Бэлэн промпт бол зөвхөн hint — эхлээд өөрөө бич!</text>
+  <text x="450" y="345" text-anchor="middle" fill="#9aa3d6" font-size="14">Нэг механик нэм → тогло → ажиллавал дараагийнх 🛡️</text>
+</svg>
