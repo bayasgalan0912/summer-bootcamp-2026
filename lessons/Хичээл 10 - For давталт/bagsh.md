@@ -17,7 +17,7 @@
 | 0:05 | Бэлтгэл (0) |
 | 0:10 | **Хүн-давталт:** нэг хүүхэд "компьютер". Багш `n = 4` гэнэ. Тэр алхам бүрт самбарт `i`, `s`-ийг шинэчилж, бусад нь алгаа ташина (1) |
 | 0:20 | for (2) — мөшгих хүснэгтийг хамт. Дасгал 1 хамт |
-| 0:30 | Хуримтлагч (3): Дасгал 2 (одод)-ыг хамт эхлүүл |
+| 0:30 | Хуримтлагч (3): Дасгал 2 (үнэлгээ ⭐)-г хамт эхлүүл |
 | 0:35 | Дасгал 2–8 бие даан |
 | 1:05 | Завсарлага |
 | 1:15 | Бие даан үргэлжлүүлнэ. Түрүүлсэн нь Бонус |
@@ -31,57 +31,57 @@
 | `let s = 0`-ийг давталтын **дотор** бичсэн | Давталт бүрт 0 болж байна — гадна гарга |
 | `console.log` давталтын дотор | Хариу олон мөр гарна — давталтын **дараа** (Дасгал 5-аас бусад) |
 | Факториал → 0 | Үржвэр 1-ээс эхэлнэ |
-| Дасгал 1: 5 → 10 | `i < n` — `<=` хэрэгтэй |
-| `Identifier 'n' has already been declared` | Өөр дасгалын хувьсагчийн нэр давхацсан — readme-д өгсөн нэрийг ашигла |
-| Дасгал 3: `5 4 3 2 1  Хөөрлөө!` | Илүү зай — `t + i + " "` дараа нь `+ "Хөөрлөө!"` |
+| Дасгал 1: 5 → 10000 | `i < odor` — `<=` хэрэгтэй |
+| `Identifier 't' has already been declared` | Өөр дасгалын хувьсагчийн нэр давхацсан — readme-д өгсөн нэрийг ашигла |
+| Дасгал 3: `3 2 1  Шинэ жил мэнд!` | Илүү зай — `t3 + i + " "` дараа нь `+ "Шинэ жил мэнд!"` |
 
 ## Хариу
 
 ```js
 // 1
-let n = 5;
-let s = 0;
-for (let i = 1; i <= n; i++) {
-  s = s + i;
+let odor = 5;
+let niit = 0;
+for (let i = 1; i <= odor; i++) {
+  niit = niit + i * 1000;
 }
-console.log(s);
+console.log(niit);
 
 // 2
-let od = 3;
+let unelgee = 4;
 let t = "";
-for (let i = 1; i <= od; i++) {
+for (let i = 1; i <= unelgee; i++) {
   t = t + "⭐";
 }
 console.log(t);
 
 // 3
-let ehlel = 5;
+let ehlel = 10;
 let t3 = "";
 for (let i = ehlel; i >= 1; i--) {
   t3 = t3 + i + " ";
 }
-console.log(t3 + "Хөөрлөө!");
+console.log(t3 + "Шинэ жил мэнд!");
 
 // 4
-let hyazgaar = 10;
-let tegsh = 0;
-for (let i = 1; i <= hyazgaar; i++) {
+let honog = 10;
+let uslah = 0;
+for (let i = 1; i <= honog; i++) {
   if (i % 2 === 0) {
-    tegsh = tegsh + 1;
+    uslah = uslah + 1;
   }
 }
-console.log(tegsh);
+console.log(uslah);
 
 // 5
-let too = 3;
+let une = 1500;
 for (let i = 1; i <= 10; i++) {
-  console.log(too + " x " + i + " = " + too * i);
+  console.log(i + " бууз: " + une * i + "₮");
 }
 
 // 6
-let f = 5;
+let naiz = 3;
 let u = 1;
-for (let i = 1; i <= f; i++) {
+for (let i = 1; i <= naiz; i++) {
   u = u * i;
 }
 console.log(u);
@@ -92,32 +92,32 @@ let sar = 3;
 let mungu = 0;
 for (let i = 1; i <= sar; i++) {
   mungu = mungu + sarBur;
-  console.log(i + "-р сар: " + mungu);
+  console.log(i + "-р сар: " + mungu + "₮");
 }
 
 // 8
-let x = 97;
+let chiher = 12;
 let huvaagch = 0;
-for (let i = 1; i <= x; i++) {
-  if (x % i === 0) {
+for (let i = 1; i <= chiher; i++) {
+  if (chiher % i === 0) {
+    console.log(i + " хүнд " + chiher / i + " ширхэг");
     huvaagch = huvaagch + 1;
   }
 }
 if (huvaagch === 2) {
   console.log("Анхны тоо");
-} else {
-  console.log("Анхны биш");
 }
 
 // Бонус
-let dees = 10;
-let s35 = 0;
-for (let i = 1; i <= dees; i++) {
-  if (i % 3 === 0 || i % 5 === 0) {
-    s35 = s35 + i;
-  }
+let nud = 4;
+let budaa = 1;
+let niitBudaa = 0;
+for (let i = 1; i <= nud; i++) {
+  niitBudaa = niitBudaa + budaa;
+  budaa = budaa * 2;
 }
-console.log(s35);
+console.log(niitBudaa);
 ```
 
-Дасгал 8-д 1-ээс `x` хүртэл бүх тоогоор хуваана — удаан ч ойлгомжтой. Ахисан хүүхдүүдтэй "2-оос эхлээд хуваагч олдвол зогсож болох уу?" гэж ярилц.
+- Дасгал 8: 1-ээс `chiher` хүртэл бүх тоогоор хуваана — удаан ч ойлгомжтой.
+- Бонус: `nud = 64` → `18446744073709552000`. Жинхэнэ хариу …615 — JS ийм том тоог яг хадгалж чадахгүй. Домгийн утга: дэлхийн бүх будаанаас их.
