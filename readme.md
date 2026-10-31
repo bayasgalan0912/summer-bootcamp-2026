@@ -17,12 +17,14 @@
 | 11 | JavaScript: массив |
 | 12 | JavaScript: функц · Code Cup 🏆 |
 | [13](lessons/Хичээл%2013) | GitHub, Vercel — portfolio-гоо интернэтэд гаргах |
-| 14 | Anime guesser — JSON дата |
+| [14](lessons/AI/Anime%20Guess) | Anime guesser — JSON дата |
 | 15 | Firestore — leaderboard, холбоо барих форм |
 | 16–17 | Тулааны тоглоом (Street Fighter) |
 | 18 | Demo Day |
 
 Сэдвийн дараалал шинэчлэгдэж болно.
+
+**Нэмэлт AI хичээл:** [Idol Coach](lessons/AI/Idol%20Coach) — сайтдаа AI чат · [Live translation, NotebookLM, Claude](lessons/AI/Live%20translation%2C%20Notebook%20LM%2C%20Claude)
 
 **Дараалал:** HTML/CSS → JavaScript (кодын суурь) → AI-аар код бичүүлэх.
 
