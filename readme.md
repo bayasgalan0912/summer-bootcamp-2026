@@ -24,7 +24,7 @@
 
 Сэдвийн дараалал шинэчлэгдэж болно.
 
-**Нэмэлт AI хичээл:** [Idol Coach](lessons/AI/Idol%20Coach) — сайтдаа AI чат · [Live translation, NotebookLM, Claude](lessons/AI/Live%20translation%2C%20Notebook%20LM%2C%20Claude)
+**Нэмэлт AI хичээл:** [Idol Coach](lessons/AI/Idol%20Coach) — сайтдаа AI чат · [Service захиалга](lessons/AI/Service%20захиалга) — Adult 16+: Firestore + Discord · [Live translation, NotebookLM, Claude](lessons/AI/Live%20translation%2C%20Notebook%20LM%2C%20Claude)
 
 **Дараалал:** HTML/CSS → JavaScript (кодын суурь) → AI-аар код бичүүлэх.
 

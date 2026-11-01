@@ -8,7 +8,7 @@
 - Дараалал: HTML/CSS → JavaScript + алгоритм (кодын суурь) → AI-аар код бичүүлэх, апп, тоглоом.
 - **`lessons/`** — эцсийн хичээлүүд энд л байна: `lessons/Хичээл 1`, `lessons/Хичээл 2` … Шинэ хичээлийг энд бич.
 - `w1/` … `w8/` — хуучин төлөвлөгөө. Зөвхөн **reference, санаа** авах. Шууд засахгүй, линк хийхгүй.
-- `lessons/AI/` — AI сэдэвт хичээлүүд: `Anime Guess` (= Хичээл 14, Хичээл 12-ын тоглоомыг JSON-оор сайжруулна), `Idol Coach` (нэмэлт, сайтдаа Gemini чат — key нь Vercel env `GEMINI_API_KEY`), `Live translation…`.
+- `lessons/AI/` — AI сэдэвт хичээлүүд: `Anime Guess` (= Хичээл 14, Хичээл 12-ын тоглоомыг JSON-оор сайжруулна), `Idol Coach` (нэмэлт, сайтдаа Gemini чат — key нь Vercel env `GEMINI_API_KEY`), `Service захиалга` (Adult 16+, for-ийн дараа: portfolio-д үйлчилгээ + форм → Firestore `leads`, Vercel `api/notify.js` → Discord webhook, key нь Vercel env `DISCORD_WEBHOOK_URL`), `Live translation…`.
 - `_archive/` — хуучин round, ашиглахгүй.
 - `reference/` — Өмнөх хичээлийн сэдвүүд
 - Хичээл бүрийн `readme.md` эхэнд `> **Агуулга:**` мөр — ангид **бодитоор юу заасныг** 1–2 өгүүлбэрээр. Хичээл орсны дараа шинэчил.

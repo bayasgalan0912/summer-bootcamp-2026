@@ -1,0 +1,17 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /leads/{id} {
+      // Хэн ч шинэ захиалга ҮҮСГЭЖ болно, гэхдээ зөв талбартай, богино байх
+      allow create: if request.resource.data.keys().hasOnly(['name', 'contact', 'service', 'message', 'createdAt'])
+        && request.resource.data.name is string    && request.resource.data.name.size() > 0    && request.resource.data.name.size() <= 100
+        && request.resource.data.contact is string && request.resource.data.contact.size() > 0 && request.resource.data.contact.size() <= 100
+        && request.resource.data.service is string && request.resource.data.service.size() <= 100
+        && request.resource.data.message is string && request.resource.data.message.size() <= 1000
+        && request.resource.data.createdAt == request.time;
+
+      // Уншиж, засаж, устгаж болохгүй — зөвхөн Firebase console-оос чи харна
+      allow read, update, delete: if false;
+    }
+  }
+}
