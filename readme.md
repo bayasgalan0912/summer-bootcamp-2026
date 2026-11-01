@@ -14,8 +14,8 @@
 | [8](lessons/Хичээл%208%20-%20JS%20basic) | JavaScript танилцуулга: console.log, блок схем, хувьсагч · Code Battle |
 | [9](lessons/Хичээл%209%20-%20JS%20if-else) | JavaScript: нөхцөл if/else · Debug Battle |
 | [10](lessons/Хичээл%2010) | JavaScript: давталт for/while · Build Battle |
-| [11](lessons/Хичээл%2011%20-%20Массив) | JavaScript: массив + for → Anime Guess тоглоом (AI Studio) |
-| 12 | JavaScript: функц · Code Cup 🏆 |
+| [11](lessons/Хичээл%2011%20-%20Массив) | JavaScript: массив + for + if |
+| [12](lessons/Хичээл%2012%20-%20Anime%20Guess) | Anime Guess: массиваас тоглоом → AI Studio |
 | [13](lessons/Хичээл%2013) | GitHub, Vercel — portfolio-гоо интернэтэд гаргах |
 | [14](lessons/AI/Anime%20Guess) | Anime Guess-ээ JSON дататай сайжруулах |
 | 15 | Firestore — leaderboard, холбоо барих форм |

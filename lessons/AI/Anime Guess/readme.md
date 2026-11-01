@@ -1,6 +1,6 @@
 # Anime Guess — JSON дататай таавар тоглоом
 
-> **Агуулга:** JSON (object, array), хүснэгтээс дата бэлдэх, AI-аар датагаа баяжуулах, Хичээл 11-ийн тоглоомоо JSON-оор шинэчлэх, шинэ горим + game feel нэмж сайтдаа байршуулах.
+> **Агуулга:** JSON (object, array), хүснэгтээс дата бэлдэх, AI-аар датагаа баяжуулах, Хичээл 12-ын тоглоомоо JSON-оор шинэчлэх, шинэ горим + game feel нэмж сайтдаа байршуулах.
 
 [Жишээ тоглоом](https://ai.studio/apps/c075aff4-289c-45c8-a050-9207f9afe5ac) · Хэрэгсэл: Google Sheets · [CSVJSON](https://csvjson.com/csv2json) · [JSONLint](https://jsonlint.com) · AI Studio
 
@@ -120,7 +120,7 @@ AI Studio-д JSON-оо хавсаргаад:
 Portfolio-гоо AI Studio-д нээгээд:
 
 ```text
-"Anime Guess" тоглоомоо (Хичээл 11) шинэчил. emoji, answer массивын оронд доорх JSON-ыг ашигла.
+"Anime Guess" тоглоомоо (Хичээл 12) шинэчил. anime, emoji массивын оронд доорх JSON-ыг ашигла.
 
 ЯВЦ:
 - Emoji харуулж, 4 сонголтоос анимийг таалгана.

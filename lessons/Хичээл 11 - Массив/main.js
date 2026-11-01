@@ -1,14 +1,14 @@
-// Кодоо энд бичнэ. Ctrl+S → браузерт F5
+// Кодоо энд бичнэ. Ctrl+S → браузерт F5 → F12 Console
 
-let anime = ["Naruto", "One Piece", "Dragon Ball"];
-alert(anime[0]);
+let jishee = ["Naruto", "One Piece", "Dragon Ball"];
+console.log(jishee[0]);
 
 // Дасгал 1 — Playlist
 let duu = ["Dynamite", "Gangnam Style", "Shape of You", "Baby Shark"];
 
 
-// Дасгал 2 — Алхалт
-let alham = [4200, 8000, 6500, 10000, 3000, 12000, 7300];
+// Дасгал 2 — Тоглоомын цаг
+let minut = [30, 45, 60, 20, 90, 120, 15];
 
 
 // Дасгал 3 — Сагсан бөмбөг
@@ -23,7 +23,14 @@ let shalgalt = [85, 42, 90, 67, 55, 100, 73];
 let record = [1200, 3400, 900, 5100, 2800];
 
 
-// Дасгал 6 — Anime Guess
+// Дасгал 6 — Anime emoji
+let anime = ["Naruto", "One Piece", "Dragon Ball", "Attack on Titan", "Demon Slayer"];
 let emoji = ["🍥🦊🍜", "🏴‍☠️👒🍖", "🐉🟠⭐", "🧱👊⚔️", "👹🗡️🌸"];
-let answer = ["Naruto", "One Piece", "Dragon Ball", "Attack on Titan", "Demon Slayer"];
+
+
+// Дасгал 7 — Хэдэн ангитай вэ (anime массивыг дээрээс ашиглана)
+let angi = [220, 1150, 153, 89, 63];
+
+
+// Бонус — Өнөөдөр юу үзэх вэ?
 
