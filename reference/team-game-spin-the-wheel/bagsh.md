@@ -20,6 +20,13 @@
 | JS: 3 × 1 + 2 × 2 + 2 × 3 | 13 | 4 |
 
 <details>
+<summary><b>Web шийдэл</b></summary>
+
+[shiidel/index.html](shiidel/index.html) — зөвхөн заасан CSS (flex, `border-radius`, `:hover`). Хүүхдэд бүү өг.
+
+</details>
+
+<details>
 <summary><b>JS шийдлүүд (node-оор шалгасан)</b></summary>
 
 ```js
