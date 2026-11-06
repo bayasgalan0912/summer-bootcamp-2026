@@ -35,7 +35,7 @@
 | Дахин эргүүл | 2 | [dahin.png](shagnal/dahin.png) |
 | Цэвэр агаар | 3 | [tsever-agaar.png](shagnal/tsever-agaar.png) |
 
-Нийт 20 нүд. Бодит бэлэг гарвал тэр **1 мөрийг устга** — бэлэг илүү гарахгүй.
+Нийт 20 нүд — 1 нүд = 5% магадлал ([shagnal/prompt.md](shagnal/prompt.md)). Бодит бэлэг гарвал тэр **1 мөрийг устга** — бэлэг илүү гарахгүй.
 
 <details>
 <summary><b>Wheel of Names-д үүсгэх</b></summary>
