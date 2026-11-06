@@ -19,6 +19,58 @@
 | Web: 3 хэсэг × +3 | 9 | 3 |
 | JS: 3 × 1 + 2 × 2 + 2 × 3 | 13 | 4 |
 
+## Хүрд (Wheel of Names)
+
+| Шагнал | Нүд | Зураг |
+| ------ | --- | ----- |
+| Кино билет | 1 | [kino-bilet.png](shagnal/kino-bilet.png) |
+| 20,000₮ | 1 | [20k.png](shagnal/20k.png) |
+| Pepero | 3 | [pepero.png](shagnal/pepero.png) |
+| Супер Контик | 2 | [super-kontik.png](shagnal/super-kontik.png) |
+| Snickers | 2 | [snickers.png](shagnal/snickers.png) |
+| Мульти Витамин | 2 | [juice.png](shagnal/juice.png) |
+| +5 оноо | 2 | [plus5.png](shagnal/plus5.png) |
+| +10 оноо | 1 | [plus10.png](shagnal/plus10.png) |
+| Тасалсан оноо буцаах | 1 | [butsaah.png](shagnal/butsaah.png) |
+| Дахин эргүүл | 2 | [dahin.png](shagnal/dahin.png) |
+| Цэвэр агаар | 3 | [tsever-agaar.png](shagnal/tsever-agaar.png) |
+
+Нийт 20 нүд. Бодит бэлэг гарвал тэр **1 мөрийг устга** — бэлэг илүү гарахгүй.
+
+<details>
+<summary><b>Wheel of Names-д үүсгэх</b></summary>
+
+1. [wheelofnames.com](https://wheelofnames.com) → **Entries**-ийг цэвэрлэ.
+2. Доорх текстийг хуулж тавь.
+3. Мөр бүрийн хажууд зургийн icon → `shagnal/`-аас зохих зургийг сонго.
+4. **Customize** → **Display duplicates** асаалттай эсэхийг шалга.
+5. **Save** (Google-ээр нэвтэрч) → дараагийн удаа **Open**.
+
+```
+Кино билет
+20,000₮
+Pepero
+Pepero
+Pepero
+Супер Контик
+Супер Контик
+Snickers
+Snickers
+Мульти Витамин
+Мульти Витамин
++5 оноо
++5 оноо
++10 оноо
+Тасалсан оноо буцаах
+Дахин эргүүл
+Дахин эргүүл
+Цэвэр агаар
+Цэвэр агаар
+Цэвэр агаар
+```
+
+</details>
+
 <details>
 <summary><b>Web шийдэл</b></summary>
 
