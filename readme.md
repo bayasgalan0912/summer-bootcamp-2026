@@ -15,16 +15,16 @@
 | [9](lessons/Хичээл%209%20-%20JS%20if-else) | JavaScript: нөхцөл if/else · Debug Battle |
 | [10](lessons/Хичээл%2010) | JavaScript: давталт for/while · Build Battle |
 | [11](lessons/Хичээл%2011%20-%20Массив) | JavaScript: массив + for + if |
-| [12](lessons/Хичээл%2012%20-%20Anime%20Guess) | Anime Guess: массиваас тоглоом → AI Studio |
-| [13](lessons/Хичээл%2013) | GitHub, Vercel — portfolio-гоо интернэтэд гаргах |
-| [14](lessons/AI/Anime%20Guess) | Anime Guess-ээ JSON дататай сайжруулах |
+| [12](lessons/Хичээл%2012%20-%20Copilot%20UI) | Copilot Agent — JS бодлогуудаа апп болгож Netlify-д гаргах |
+| [13](lessons/Хичээл%2013%20-%20Anime%20Guess) | Anime Guess: массиваас тоглоом → AI Studio |
+| 14 | GitHub, Vercel — portfolio-гоо интернэтэд гаргах |
 | 15 | Firestore — leaderboard, холбоо барих форм |
 | 16–17 | Тулааны тоглоом (Street Fighter) |
 | 18 | Demo Day |
 
 Сэдвийн дараалал шинэчлэгдэж болно.
 
-**Нэмэлт AI хичээл:** [Idol Coach](lessons/AI/Idol%20Coach) — сайтдаа AI чат · [Service захиалга](lessons/AI/Service%20захиалга) — Adult 16+: Firestore + Discord · [Live translation, NotebookLM, Claude](lessons/AI/Live%20translation%2C%20Notebook%20LM%2C%20Claude)
+**Нэмэлт AI хичээл:** [Anime Guess JSON](lessons/AI/Anime%20Guess) — тоглоомоо JSON дататай сайжруулах · [Idol Coach](lessons/AI/Idol%20Coach) — сайтдаа AI чат · [Service захиалга](lessons/AI/Service%20захиалга) — Adult 16+: Firestore + Discord · [Live translation, NotebookLM, Claude](lessons/AI/Live%20translation%2C%20Notebook%20LM%2C%20Claude)
 
 **Дараалал:** HTML/CSS → JavaScript (кодын суурь) → AI-аар код бичүүлэх.
 

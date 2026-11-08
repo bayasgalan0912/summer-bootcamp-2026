@@ -4,16 +4,16 @@
 
 ## Бүтэц
 
-- 2 сар, амралтын 2 өдөр, хичээл бүр ~2 цаг, **нийт 18 хичээл**. Хуваарь: [readme.md](readme.md) (7 AI portfolio → 8–12 JS → 13 GitHub/Vercel → 14 Anime → 15 Firestore → 16–17 тулааны тоглоом → 18 Demo Day). Сэдвийн дараалал шинэчлэгдэж болно, тоо нь 18.
+- 2 сар, амралтын 2 өдөр, хичээл бүр ~2 цаг, **нийт 18 хичээл**. Хуваарь: [readme.md](readme.md) (7 AI portfolio → 8–11 JS → 12 Copilot UI + Netlify → 13 Anime Guess → 14 GitHub/Vercel → 15 Firestore → 16–17 тулааны тоглоом → 18 Demo Day). Сэдвийн дараалал шинэчлэгдэж болно, тоо нь 18.
 - Дараалал: HTML/CSS → JavaScript + алгоритм (кодын суурь) → AI-аар код бичүүлэх, апп, тоглоом.
 - **`lessons/`** — эцсийн хичээлүүд энд л байна: `lessons/Хичээл 1`, `lessons/Хичээл 2` … Шинэ хичээлийг энд бич.
 - `w1/` … `w8/` — хуучин төлөвлөгөө. Зөвхөн **reference, санаа** авах. Шууд засахгүй, линк хийхгүй.
-- `lessons/AI/` — AI сэдэвт хичээлүүд: `Anime Guess` (= Хичээл 14, Хичээл 12-ын тоглоомыг JSON-оор сайжруулна), `Idol Coach` (нэмэлт, сайтдаа Gemini чат — key нь Vercel env `GEMINI_API_KEY`), `Service захиалга` (Adult 16+, for-ийн дараа: portfolio-д үйлчилгээ + форм → Firestore `leads`, Vercel `api/notify.js` → Discord webhook, key нь Vercel env `DISCORD_WEBHOOK_URL`), `Live translation…`.
+- `lessons/AI/` — AI сэдэвт хичээлүүд: `Anime Guess` (нэмэлт, Хичээл 13-ын тоглоомыг JSON-оор сайжруулна), `Idol Coach` (нэмэлт, сайтдаа Gemini чат — key нь Vercel env `GEMINI_API_KEY`), `Service захиалга` (Adult 16+, for-ийн дараа: portfolio-д үйлчилгээ + форм → Firestore `leads`, Vercel `api/notify.js` → Discord webhook, key нь Vercel env `DISCORD_WEBHOOK_URL`), `Live translation…`.
 - `_archive/` — хуучин round, ашиглахгүй.
 - `reference/` — Өмнөх хичээлийн сэдвүүд
 - Хичээл бүрийн `readme.md` эхэнд `> **Агуулга:**` мөр — ангид **бодитоор юу заасныг** 1–2 өгүүлбэрээр. Хичээл орсны дараа шинэчил.
 - Гэрийн даалгавар: хичээлийн `readme.md`-ийн төгсгөлд эсвэл `homework.md`.
-- **Portfolio:** Хүүхэд бүр `my-first-web/` хавтсаа (жишээ: `lessons/Хичээл 5/my-first-web/`) Netlify-д байршуулна (Хичээл 5, 6-д амжаагүй → Хичээл 7-ийн эхэнд). Хичээл 7-оос хойш portfolio = AI Studio Build апп (хуучин хуудсууд руу Netlify линкээр холбоно), Хичээл 13-аас GitHub `my-portfolio` → Vercel. JS (Хичээл 8–12): `my-first-web/js.html` ("Миний JavaScript") → `js-N.html`, portfolio-д **нэг** "JavaScript" карт (Хичээл 8, 8-р алхам). Цаашид HTML/CSS дасгал бага — portfolio-гоо AI Studio-д vibe coding-оор сайжруулж, JS + алгоритм үзнэ. Хичээл бүрийн бүтээлийг карт болгон **гараараа** нэмүүл (Хичээл 7, 6-р алхам). Demo Day дээр Vercel линкээр үзүүлнэ.
+- **Portfolio:** Хүүхэд бүр `my-first-web/` хавтсаа (жишээ: `lessons/Хичээл 5/my-first-web/`) Netlify-д байршуулна (Хичээл 5, 6-д амжаагүй → Хичээл 7-ийн эхэнд). Хичээл 7-оос хойш portfolio = AI Studio Build апп (хуучин хуудсууд руу Netlify линкээр холбоно), Хичээл 14-өөс GitHub `my-portfolio` → Vercel. JS (Хичээл 8–12): `my-first-web/js.html` ("Миний JavaScript") → `js-N.html`, portfolio-д **нэг** "JavaScript" карт (Хичээл 8, 8-р алхам). Цаашид HTML/CSS дасгал бага — portfolio-гоо AI Studio-д vibe coding-оор сайжруулж, JS + алгоритм үзнэ. Хичээл бүрийн бүтээлийг карт болгон **гараараа** нэмүүл (Хичээл 7, 6-р алхам). Demo Day дээр Vercel линкээр үзүүлнэ.
 - CSS хичээл: тайлбарын жишээ + `images/` screenshot (playwright-аар), тоглоом `togloom.html` (түвшин, автомат шалгагч), төсөл `tusul.html` + `ehlel.png`/`zorilgo.png`.
 - JS хичээл: `readme.md` (хүүхдэд), `js-N.html` (бодлогын карт: HTML/CSS бэлэн, хүүхэд **зөвхөн функцийн дотор** бичиж `return` хийнэ), `helper.js` (карт ↔ функц, `data-test`-ээр автомат ✅, syntax алдааны анхааруулга — хичээл бүрт ижил хуулбар, `Хичээл 8/helper.js` эх), `tulaan-N.html` (тэмцээний карт). Хичээл бүр: блок схем 15–20 мин → JS → карт (Анхан/Дунд/Ахисан) → тэмцээн (Code / Debug / Build Battle ээлжилнэ) → `js.html`-д мөр + Netlify.
 - JS-д **DOM заахгүй** (`document`, `querySelector` г.м.) — AI бичнэ. Scratch, Flowgorithm ашиглахгүй — блок схемийг зураг/самбараар.
@@ -33,8 +33,9 @@
 | 9 _(төлөвлөсөн)_ | Блок схемийн ромбо, `if / else`, `else if` (дараалал), `>` `<` `>=` `<=` `===` `!==`, `%`, `&&` `\|\|`; Debug Battle |
 | 10 _(төлөвлөсөн)_ | Буцах сум, `for`, хуримтлагч (`s = s + i`, `t = t + "⭐"`), давталт дотор `if`; `main.js`, оролт `Number(prompt())`, гаралт `alert` (`"\n"` олон мөр), 10 дасгал + бонус |
 | 11 _(төлөвлөсөн)_ | Массив `[ ]`, `a[i]` (0-ээс), `.length`, `for (i = 0; i < a.length)`, for + if (шүүж тоолох), нийлбэр / дундаж / хамгийн их, 2 массив зэрэгцүүлэх (`anime[i]` ↔ `emoji[i]`), гаралт `console.log`; `Math.random` (бонус) |
-| 12 _(төлөвлөсөн)_ | Anime Guess: 2 массив + `prompt` + `===` → оноо; AI Studio-д portfolio дээрээ тоглоом, AI-ийн кодоос массиваа олох |
-| 13 _(төлөвлөсөн)_ | AI Studio → GitHub sync, `git clone` → `npm install` → `npm run dev`, `git pull`, Vercel (Push бүрт автомат) |
+| 12 _(төлөвлөсөн)_ | VSCode GitHub Copilot **Agent** mode: Хичээл 8–11-ээс 4 бодлогоо (`main.js`-ийн тооцоо хэвээр) UI-тай апп болгох, `js-projects/` нүүр хуудас, Netlify Drop (шинэ сайт), AI Studio portfolio-д "JS Projects" карт гараараа |
+| 13 _(төлөвлөсөн)_ | Anime Guess: 2 массив + `prompt` + `===` → оноо; AI Studio-д portfolio дээрээ тоглоом, AI-ийн кодоос массиваа олох |
+| 14 _(төлөвлөсөн)_ | AI Studio → GitHub sync, `git clone` → `npm install` → `npm run dev`, `git pull`, Vercel (Push бүрт автомат) |
 
 CSS-д **сүүдэр (shadow) заагаагүй** — жишээ кодонд бүү оруул.
 
