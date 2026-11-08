@@ -33,7 +33,7 @@
 | 9 _(төлөвлөсөн)_ | Блок схемийн ромбо, `if / else`, `else if` (дараалал), `>` `<` `>=` `<=` `===` `!==`, `%`, `&&` `\|\|`; Debug Battle |
 | 10 _(төлөвлөсөн)_ | Буцах сум, `for`, хуримтлагч (`s = s + i`, `t = t + "⭐"`), давталт дотор `if`; `main.js`, оролт `Number(prompt())`, гаралт `alert` (`"\n"` олон мөр), 10 дасгал + бонус |
 | 11 _(төлөвлөсөн)_ | Массив `[ ]`, `a[i]` (0-ээс), `.length`, `for (i = 0; i < a.length)`, for + if (шүүж тоолох), нийлбэр / дундаж / хамгийн их, 2 массив зэрэгцүүлэх (`anime[i]` ↔ `emoji[i]`), гаралт `console.log`; `Math.random` (бонус) |
-| 12 _(төлөвлөсөн)_ | VSCode GitHub Copilot **Agent** mode: Хичээл 8–11-ээс 4 бодлогоо UI-тай апп болгох (`js-projects/` = 14 бодолттой `prompt`/`alert` бодлого + `js-projects.zip`, бодоогүй хүүхэд татна; файл засвал zip-ийг дахин үүсгэ), нүүр хуудас, Netlify Drop (шинэ сайт), AI Studio portfolio-д "JS Projects" карт гараараа |
+| 12 _(төлөвлөсөн)_ | VSCode GitHub Copilot **Agent** mode: Хичээл 8–11-ийн **8** бодлого (багш сонгосон, `js-projects/` бодолттой `prompt`/`alert` + `js-projects.zip`; файл засвал zip-ийг дахин үүсгэ) → **нэг ерөнхий prompt**-оор `index.html`-ээс сонгодог UI апп, шалгах хүснэгт, Netlify Drop (шинэ сайт), AI Studio portfolio-д "JS Projects" карт **prompt-оор** |
 | 13 _(төлөвлөсөн)_ | Anime Guess: 2 массив + `prompt` + `===` → оноо; AI Studio-д portfolio дээрээ тоглоом, AI-ийн кодоос массиваа олох |
 | 14 _(төлөвлөсөн)_ | AI Studio → GitHub sync, `git clone` → `npm install` → `npm run dev`, `git pull`, Vercel (Push бүрт автомат) |
 
