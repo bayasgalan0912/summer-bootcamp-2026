@@ -16,9 +16,9 @@
 | [10](lessons/Хичээл%2010) | JavaScript: давталт for/while · Build Battle |
 | [11](lessons/Хичээл%2011%20-%20Массив) | JavaScript: массив + for + if |
 | [12](lessons/Хичээл%2012%20-%20Copilot%20UI) | Copilot Agent — JS бодлогуудаа апп болгож Netlify-д гаргах |
-| [13](lessons/Хичээл%2013%20-%20Anime%20Guess) | Anime Guess: массиваас тоглоом → AI Studio |
+| [13](lessons/Хичээл%2013%20-%20Anime%20Guess) | Anime Guess: JSON дата, 3 горим, Firestore leaderboard |
 | 14 | GitHub, Vercel — portfolio-гоо интернэтэд гаргах |
-| 15 | Firestore — leaderboard, холбоо барих форм |
+| 15 | Firestore — холбоо барих форм |
 | 16–17 | Тулааны тоглоом (Street Fighter) |
 | 18 | Demo Day |
 

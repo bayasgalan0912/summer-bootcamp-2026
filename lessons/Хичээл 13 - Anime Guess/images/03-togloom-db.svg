@@ -1,0 +1,61 @@
+<svg viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg7d" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1026"/>
+      <stop offset="1" stop-color="#161b3d"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="520" rx="24" fill="url(#bg7d)"/>
+  <text x="450" y="52" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="800">🎮 Тоглоом ↔ 📒 Database хэрхэн ярьдаг вэ?</text>
+
+  <!-- Frontend / Game -->
+  <rect x="50" y="110" width="320" height="300" rx="18" fill="#1b2348" stroke="#52b9ff" stroke-width="3"/>
+  <text x="210" y="150" text-anchor="middle" fill="#8dd2ff" font-size="22" font-weight="800">🎮 Тоглоом (Frontend)</text>
+  <text x="210" y="176" text-anchor="middle" fill="#9aa3d6" font-size="14">= хүүхдийн харж буй сайт</text>
+
+  <!-- game screen -->
+  <rect x="90" y="200" width="240" height="90" rx="12" fill="#0e1430" stroke="#52b9ff" stroke-width="2"/>
+  <text x="210" y="235" text-anchor="middle" fill="#fff" font-size="16">🦸 Баатрыг таалаа!</text>
+  <text x="210" y="266" text-anchor="middle" fill="#ffd84d" font-size="20" font-weight="800">⭐ Оноо: 95</text>
+
+  <!-- name input -->
+  <rect x="90" y="310" width="240" height="70" rx="12" fill="#0e1430" stroke="#7af0c0" stroke-width="2"/>
+  <text x="210" y="338" text-anchor="middle" fill="#9aa3d6" font-size="13">Нэрээ бич:</text>
+  <text x="210" y="364" text-anchor="middle" fill="#7af0c0" font-size="18" font-weight="800">"Сараа"</text>
+
+  <!-- Database / Firestore -->
+  <rect x="530" y="110" width="320" height="300" rx="18" fill="#2a2150" stroke="#ffb74d" stroke-width="3"/>
+  <text x="690" y="150" text-anchor="middle" fill="#ffd84d" font-size="22" font-weight="800">📒 Firestore (DB)</text>
+  <text x="690" y="176" text-anchor="middle" fill="#9aa3d6" font-size="14">= үүлэн дэх дэвтэр ☁️</text>
+
+  <rect x="570" y="200" width="240" height="180" rx="12" fill="#1b2348" stroke="#ffb74d" stroke-width="2"/>
+  <text x="690" y="228" text-anchor="middle" fill="#ffe57a" font-size="15" font-weight="700">📂 "scores"</text>
+  <g font-size="15">
+    <text x="590" y="262" fill="#fff">📄 Сараа <tspan fill="#ffd84d">95</tspan></text>
+    <text x="590" y="296" fill="#fff">📄 Ану <tspan fill="#ffd84d">88</tspan></text>
+    <text x="590" y="330" fill="#fff">📄 Болд <tspan fill="#ffd84d">80</tspan></text>
+    <text x="590" y="364" fill="#9aa3d6">…</text>
+  </g>
+
+  <!-- WRITE arrow (game -> db) -->
+  <path d="M 375 220 L 520 220" stroke="#7af0c0" stroke-width="4" fill="none" marker-end="url(#arrGreen)"/>
+  <text x="447" y="205" text-anchor="middle" fill="#7af0c0" font-size="16" font-weight="800">✍️ Хадгалах</text>
+  <text x="447" y="245" text-anchor="middle" fill="#9aa3d6" font-size="13">name + score</text>
+
+  <!-- READ arrow (db -> game) -->
+  <path d="M 520 320 L 375 320" stroke="#ffd84d" stroke-width="4" fill="none" marker-end="url(#arrYellow)"/>
+  <text x="447" y="308" text-anchor="middle" fill="#ffd84d" font-size="16" font-weight="800">📖 Унших</text>
+  <text x="447" y="348" text-anchor="middle" fill="#9aa3d6" font-size="13">🏆 Leaderboard</text>
+
+  <defs>
+    <marker id="arrGreen" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#7af0c0"/>
+    </marker>
+    <marker id="arrYellow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#ffd84d"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="450" text-anchor="middle" fill="#7af0c0" font-size="17" font-weight="700">✍️ Тоглоом оноог DB рүү хадгална → 📖 DB-с уншиж Leaderboard харуулна</text>
+  <text x="450" y="485" text-anchor="middle" fill="#9aa3d6" font-size="14">Тийм болохоор Refresh хийсэн ч оноо мартагдахгүй 🎉</text>
+</svg>

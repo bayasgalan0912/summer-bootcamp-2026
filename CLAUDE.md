@@ -4,11 +4,11 @@
 
 ## Бүтэц
 
-- 2 сар, амралтын 2 өдөр, хичээл бүр ~2 цаг, **нийт 18 хичээл**. Хуваарь: [readme.md](readme.md) (7 AI portfolio → 8–11 JS → 12 Copilot UI + Netlify → 13 Anime Guess → 14 GitHub/Vercel → 15 Firestore → 16–17 тулааны тоглоом → 18 Demo Day). Сэдвийн дараалал шинэчлэгдэж болно, тоо нь 18.
+- 2 сар, амралтын 2 өдөр, хичээл бүр ~2 цаг, **нийт 18 хичээл**. Хуваарь: [readme.md](readme.md) (7 AI portfolio → 8–11 JS → 12 Copilot UI + Netlify → 13 Anime Guess + Firestore leaderboard → 14 GitHub/Vercel → 15 Firestore форм → 16–17 тулааны тоглоом → 18 Demo Day). Сэдвийн дараалал шинэчлэгдэж болно, тоо нь 18.
 - Дараалал: HTML/CSS → JavaScript + алгоритм (кодын суурь) → AI-аар код бичүүлэх, апп, тоглоом.
 - **`lessons/`** — эцсийн хичээлүүд энд л байна: `lessons/Хичээл 1`, `lessons/Хичээл 2` … Шинэ хичээлийг энд бич.
 - `w1/` … `w8/` — хуучин төлөвлөгөө. Зөвхөн **reference, санаа** авах. Шууд засахгүй, линк хийхгүй.
-- `lessons/AI/` — AI сэдэвт хичээлүүд: `Anime Guess` (нэмэлт, Хичээл 13-ын тоглоомыг JSON-оор сайжруулна), `Idol Coach` (нэмэлт, сайтдаа Gemini чат — key нь Vercel env `GEMINI_API_KEY`), `Service захиалга` (Adult 16+, for-ийн дараа: portfolio-д үйлчилгээ + форм → Firestore `leads`, Vercel `api/notify.js` → Discord webhook, key нь Vercel env `DISCORD_WEBHOOK_URL`), `Live translation…`.
+- `lessons/AI/` — AI сэдэвт хичээлүүд: `Anime Guess` (нэмэлт, хуучин хувилбар — JSON нь одоо Хичээл 13-д орсон), `Idol Coach` (нэмэлт, сайтдаа Gemini чат — key нь Vercel env `GEMINI_API_KEY`), `Service захиалга` (Adult 16+, for-ийн дараа: portfolio-д үйлчилгээ + форм → Firestore `leads`, Vercel `api/notify.js` → Discord webhook, key нь Vercel env `DISCORD_WEBHOOK_URL`), `Live translation…`.
 - `_archive/` — хуучин round, ашиглахгүй.
 - `reference/` — Өмнөх хичээлийн сэдвүүд
 - Хичээл бүрийн `readme.md` эхэнд `> **Агуулга:**` мөр — ангид **бодитоор юу заасныг** 1–2 өгүүлбэрээр. Хичээл орсны дараа шинэчил.
@@ -34,7 +34,7 @@
 | 10 _(төлөвлөсөн)_ | Буцах сум, `for`, хуримтлагч (`s = s + i`, `t = t + "⭐"`), давталт дотор `if`; `main.js`, оролт `Number(prompt())`, гаралт `alert` (`"\n"` олон мөр), 10 дасгал + бонус |
 | 11 _(төлөвлөсөн)_ | Массив `[ ]`, `a[i]` (0-ээс), `.length`, `for (i = 0; i < a.length)`, for + if (шүүж тоолох), нийлбэр / дундаж / хамгийн их, 2 массив зэрэгцүүлэх (`anime[i]` ↔ `emoji[i]`), гаралт `console.log`; `Math.random` (бонус) |
 | 12 _(төлөвлөсөн)_ | VSCode GitHub Copilot **Agent** mode: Хичээл 8–11-ийн **8** бодлого (багш сонгосон, `js-projects/` бодолттой `prompt`/`alert` + `js-projects.zip`; файл засвал zip-ийг дахин үүсгэ) → **нэг ерөнхий prompt**-оор `index.html`-ээс сонгодог UI апп, шалгах хүснэгт, Netlify Drop (шинэ сайт), AI Studio portfolio-д "JS Projects" карт **prompt-оор** |
-| 13 _(төлөвлөсөн)_ | Anime Guess: 2 массив + `prompt` + `===` → оноо; AI Studio-д portfolio дээрээ тоглоом, AI-ийн кодоос массиваа олох |
+| 13 _(төлөвлөсөн)_ | Anime Guess: массив → object (JSON array), `data.json`-д 3 асуултаа өөрөө + ChatGPT-аар 10–15, AI Studio-д 3 горим (Emoji / Anime зураг / Баатар), Firestore `scores` + Leaderboard |
 | 14 _(төлөвлөсөн)_ | AI Studio → GitHub sync, `git clone` → `npm install` → `npm run dev`, `git pull`, Vercel (Push бүрт автомат) |
 
 CSS-д **сүүдэр (shadow) заагаагүй** — жишээ кодонд бүү оруул.
