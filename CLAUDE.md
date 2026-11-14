@@ -34,7 +34,7 @@
 | 10 _(төлөвлөсөн)_ | Буцах сум, `for`, хуримтлагч (`s = s + i`, `t = t + "⭐"`), давталт дотор `if`; `main.js`, оролт `Number(prompt())`, гаралт `alert` (`"\n"` олон мөр), 10 дасгал + бонус |
 | 11 _(төлөвлөсөн)_ | Массив `[ ]`, `a[i]` (0-ээс), `.length`, `for (i = 0; i < a.length)`, for + if (шүүж тоолох), нийлбэр / дундаж / хамгийн их, 2 массив зэрэгцүүлэх (`anime[i]` ↔ `emoji[i]`), гаралт `console.log`; `Math.random` (бонус) |
 | 12 _(төлөвлөсөн)_ | VSCode GitHub Copilot **Agent** mode: Хичээл 8–11-ийн **8** бодлого (багш сонгосон, `js-projects/` бодолттой `prompt`/`alert` + `js-projects.zip`; файл засвал zip-ийг дахин үүсгэ) → **нэг ерөнхий prompt**-оор `index.html`-ээс сонгодог UI апп, шалгах хүснэгт, Netlify Drop (шинэ сайт), AI Studio portfolio-д "JS Projects" карт **prompt-оор** |
-| 13 _(төлөвлөсөн)_ | Anime Guess: массив → object (JSON array), `data.json`-д 3 асуултаа өөрөө + ChatGPT-аар 10–15, AI Studio-д 3 горим (Emoji / Anime зураг / Баатар), Firestore `scores` + Leaderboard |
+| 13 _(төлөвлөсөн)_ | Anime Guess: массив → object (JSON array), `data.json`-д 3 асуултаа өөрөө + ChatGPT-аар 10–15, AI Studio-д "Тоглоомууд" жагсаалт (тусдаа цонх/modal) + 3 горим (Emoji / Anime зураг / Баатар), хариулсны дараа зураг; зөвхөн датаг сольж өөр төрөл (Sport, Movie…); Firestore `scores` + Leaderboard |
 | 14 _(төлөвлөсөн)_ | AI Studio → GitHub sync, `git clone` → `npm install` → `npm run dev`, `git pull`, Vercel (Push бүрт автомат) |
 
 CSS-д **сүүдэр (shadow) заагаагүй** — жишээ кодонд бүү оруул.
