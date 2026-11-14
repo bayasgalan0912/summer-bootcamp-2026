@@ -9,6 +9,7 @@
 - **`lessons/`** — эцсийн хичээлүүд энд л байна: `lessons/Хичээл 1`, `lessons/Хичээл 2` … Шинэ хичээлийг энд бич.
 - `w1/` … `w8/` — хуучин төлөвлөгөө. Зөвхөн **reference, санаа** авах. Шууд засахгүй, линк хийхгүй.
 - `lessons/AI/` — AI сэдэвт хичээлүүд: `Anime Guess` (нэмэлт, хуучин хувилбар — JSON нь одоо Хичээл 13-д орсон), `Idol Coach` (нэмэлт, сайтдаа Gemini чат — key нь Vercel env `GEMINI_API_KEY`), `Service захиалга` (Adult 16+, for-ийн дараа: portfolio-д үйлчилгээ + форм → Firestore `leads`, Vercel `api/notify.js` → Discord webhook, key нь Vercel env `DISCORD_WEBHOOK_URL`), `Админ хэсэг` (Adult 16+, Service захиалгын дараа: Firebase Auth email/нууц үг, Rules-д админ UID, `#/admin` — dashboard, `leads` хүснэгт, `status`, `notes` subcollection; эх: GitHub `adult` branch Lab 3,4 + Lab 5), `Live translation…`.
+- Street Fighter (Хичээл 16–17): тоглоомын код тусдаа repo — `bayasgalan0912/vibe-fighter` (Phaser 4 + Vite). Сурагч зураг **засахгүй**: Gemini-ийн түүхий sheet-ийг `public/assets/<id>/`-д (`idle` `walk` `punch` `kick` `hit` `ko` + бонус) хийж `myFighters.ts`-д 1 мөр нэмнэ; тоглоом ачаалахдаа дэвсгэр арилгаж, pose салгаж, 256px нүдэнд тааруулна (`src/game/rawSheet.ts`, дүрэм: repo-ийн `ADD_CHARACTER.md`). Хуучин `teenage` branch-ийн `w3/Хичээл 7, 8` (remove.bg, ezgif, sprites.json, хитбокс) — зөвхөн reference.
 - `_archive/` — хуучин round, ашиглахгүй.
 - `reference/` — Өмнөх хичээлийн сэдвүүд
 - Хичээл бүрийн `readme.md` эхэнд `> **Агуулга:**` мөр — ангид **бодитоор юу заасныг** 1–2 өгүүлбэрээр. Хичээл орсны дараа шинэчил.
@@ -36,6 +37,8 @@
 | 12 _(төлөвлөсөн)_ | VSCode GitHub Copilot **Agent** mode: Хичээл 8–11-ийн **8** бодлого (багш сонгосон, `js-projects/` бодолттой `prompt`/`alert` + `js-projects.zip`; файл засвал zip-ийг дахин үүсгэ) → **нэг ерөнхий prompt**-оор `index.html`-ээс сонгодог UI апп, шалгах хүснэгт, Netlify Drop (шинэ сайт), AI Studio portfolio-д "JS Projects" карт **prompt-оор** |
 | 13 _(төлөвлөсөн)_ | Anime Guess: массив → object (JSON array), `data.json`-д 3 асуултаа өөрөө + ChatGPT-аар 10–15, AI Studio-д "Тоглоомууд" жагсаалт (тусдаа цонх/modal) + 3 горим (Emoji / Anime зураг / Баатар), хариулсны дараа зураг; зөвхөн датаг сольж өөр төрөл (Sport, Movie…); Firestore `scores` + Leaderboard |
 | 14 _(төлөвлөсөн)_ | AI Studio → GitHub sync, `git clone` → `npm install` → `npm run dev`, `git pull`, Vercel (Push бүрт автомат) |
+| 16 _(төлөвлөсөн)_ | Street Fighter 1: [`vibe-fighter`](https://github.com/bayasgalan0912/vibe-fighter) repo-г AI Studio Build-д import, жишээ дүр (`jishee/` 6 зураг), Gemini-ээр эх зураг → sprite sheet-ийн 7 дүрэм (цул ногоон дэвсгэр, нэг эгнээ 3–6 pose, зайтай, бүтэн бие, зүүн тийш, 1-р pose зогсоо, текст/сүүдэргүй) → `idle` `walk` `punch`; `public/assets/<id>/` + `src/game/myFighters.ts`-д 1 мөр |
+| 17 _(төлөвлөсөн)_ | Street Fighter 2: `kick` `hit` `ko`, `portrait.png`, `fighterConfig.ts` тааруулах (prompt-оор), бонус `special` `jump` `block` `crouch`, өөрийн арена, portfolio-д карт, ангийн тэмцээн; ГД: Demo Day бэлтгэл |
 
 CSS-д **сүүдэр (shadow) заагаагүй** — жишээ кодонд бүү оруул.
 
