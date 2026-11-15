@@ -1,23 +1,27 @@
-# Хичээл 16 — Street Fighter 1: Өөрийн дүрээ бүтээх
+# Хичээл 16 — Street Fighter 1: Баатраа нэмэх
 
 > **Агуулга:** _(хичээл орсны дараа бөглөнө)_
 
-### Бэлэн тулааны тоглоомыг AI Studio-д оруулаад, **өөрийн дүрээ** Gemini-ээр зуруулж тоглоомдоо нэмнэ.
+### Бэлэн тулааны тоглоомыг AI Studio-д оруулаад, **алдартай баатар** болон **өөрийгөө** тоглоомдоо нэмнэ.
 
 [Эх видео](https://www.youtube.com/watch?v=rLLBq8E18SA) · [Тоглоомын код](https://github.com/bayasgalan0912/vibe-fighter) · Хэрэгсэл: [AI Studio](https://aistudio.google.com) · [Gemini](https://gemini.google.com)
 
-| #   | Алхам                              | Хугацаа |
-| --- | ---------------------------------- | ------- |
-| 1   | Тоглоомоо AI Studio-д оруулж тоглох | 15 мин  |
-| 2   | Жишээ дүр нэмж турших              | 15 мин  |
-| 3   | Дүрээ зохиох — эх зураг            | 20 мин  |
-| 4   | Sheet-ийн 7 дүрэм                  | 10 мин  |
-| 5   | idle, walk, punch зуруулах         | 35 мин  |
-| 6   | Дүрээ тоглоомдоо оруулах           | 15 мин  |
+| #   | Алхам                                  | Хугацаа |
+| --- | -------------------------------------- | ------- |
+| 1   | Тоглоомоо AI Studio-д оруулж тоглох     | 10 мин  |
+| 2   | Жишээ дүр нэмэх                        | 10 мин  |
+| 3   | Sheet-ийн 7 дүрэм                      | 10 мин  |
+| 4   | Алдартай баатар — AI Studio-оор шууд    | 15 мин  |
+| 5   | Өөрийгөө баатар болгох — эх зураг       | 20 мин  |
+| 6   | idle, walk, punch зуруулах             | 35 мин  |
+| 7   | Өөрийгөө тоглоомдоо оруулах            | 15 мин  |
 
 > Алхам бүр дээр **дарж нээнэ**.
 
-**Гол санаа:** зураг засахгүй, код бичихгүй. **Зураг → хавтас → 1 мөр.**
+| Баатар | Зургийг хэн зурах вэ | Хаана |
+| ------ | -------------------- | ----- |
+| Алдартай (Naruto, Goku…) | AI Studio өөрөө | 4-р алхам |
+| **Чи өөрөө** | Gemini, чиний зургаас | 5–7-р алхам |
 
 ---
 
@@ -40,53 +44,39 @@
 | Special        | `V`       | `L`       |
 | Дүр сонгох     | `A D` + `Space` | `← →` + `Enter` |
 
-<details>
-<summary>Import товч байхгүй бол</summary>
-
-Багшийн өгсөн апп-ын линкийг нээгээд **Remix** (хуулбарлах) дар.
-
-</details>
-
 </details>
 
 ---
 
 <details>
-<summary><b>2. Жишээ дүр нэмж турших</b></summary>
+<summary><b>2. Жишээ дүр нэмэх</b></summary>
 
 <br>
 
-Өөрийн дүрээ зурахаас өмнө **бэлэн 6 зургаар** яаж ажилладгийг үзнэ.
+Бэлэн 6 зургаар баатар яаж нэмэгддэгийг үзнэ.
 
 1. [`jishee/`](jishee) хавтасны 6 зургийг тат: `idle` `walk` `punch` `kick` `hit` `ko`.
-2. AI Studio → **Code** → `public/assets/` дотор **`my-hero`** хавтас үүсгээд 6 зургаа оруул.
-3. `src/game/myFighters.ts` файлыг нээгээд нэг мөр нэм:
+2. AI Studio-ийн chat-д 6 зургаа **хавсаргаад** бич:
 
-```ts
-export const MY_FIGHTERS: MyFighter[] = [
-  { id: 'my-hero', name: 'My Hero' },
-];
+```text
+ADD_CHARACTER.md-г уншаад дага.
+Хавсаргасан 6 зургаар баатар нэм. id: my-hero, нэр: My Hero.
+Зургуудыг өөрчлөхгүй, файлын нэрээр нь хадгал.
 ```
 
-4. Preview-г дахин ачаал → **Select Fighter** дээр хамгийн эхэнд гарна.
+3. **Select Fighter** дээр хамгийн эхэнд гарна. Тоглож үз.
 
 ![Дүр сонгох дэлгэц](images/02-songoh.png)
 
-| Талбар | Утга |
-| ------ | ---- |
-| `id`   | хавтасны нэр — **яг ижил** байна |
-| `name` | тоглоомд харагдах нэр |
-
 <details>
-<summary>Тоглоом зургийг яаж ойлгодог вэ?</summary>
+<summary>AI Studio юу хийсэн бэ?</summary>
 
-Тоглоом эхлэхдээ зураг бүрийг өөрөө боловсруулна:
+| Хийсэн зүйл | Хаана |
+| ----------- | ----- |
+| 6 зургийг хадгалсан | `public/assets/my-hero/` |
+| 1 мөр нэмсэн | `src/game/myFighters.ts` → `{ id: 'my-hero', name: 'My Hero' }` |
 
-1. Ногоон дэвсгэрийг арилгана.
-2. Pose-уудыг **хоорондох зайгаар** нь салгана.
-3. Бүгдийг ижил өндөртэй болгож, хөлийг нэг шугамд тавина.
-
-Тиймээс чи зургаа тайрах, жижигрүүлэх, дэвсгэр арилгах шаардлагагүй.
+Үлдсэнийг **тоглоом өөрөө** хийнэ: ногоон дэвсгэрийг арилгаж, pose-уудыг зайгаар нь салгаж, ижил хэмжээтэй болгоно.
 
 </details>
 
@@ -95,53 +85,7 @@ export const MY_FIGHTERS: MyFighter[] = [
 ---
 
 <details>
-<summary><b>3. Дүрээ зохиох — эх зураг</b></summary>
-
-<br>
-
-Эхлээд **ганц** зураг — дүрийн "паспорт". Дараагийн бүх зургийг үүнээс гаргана.
-
-| Зам | Жишээ |
-| --- | ----- |
-| Дуртай дүр | Naruto, Goku, Spider-Man |
-| Өөрөө | өөрийн зургаа хавсаргаад pixel art тулаанч болгох |
-| Зохиох | бөх, харваач, кибер нинжа, тулаанч муур |
-
-[Gemini](https://gemini.google.com) → **Create image**:
-
-```text
-Create a 2D fighting game character in 16-bit pixel art style.
-Character: [ДҮРЭЭ ЭНД ТАЙЛБАРЛА — үс, хувцас, өнгө]
-One character, full body, side view, facing LEFT, fighting stance.
-Plain solid green background (#00FF00).
-No text, no shadow, no effects.
-```
-
-5. Таалагдсан зургаа тат → `eh-zurag.png` гэж хадгал.
-
-| Шалгах | |
-| ------ | --- |
-| Бүтэн бие (толгойноос хөл хүртэл) | ☐ |
-| Зүүн тийш харсан | ☐ |
-| Хувцсанд **ногоон өнгө байхгүй** | ☐ |
-
-> Ногоон хувцастай дүр бол prompt-ын `green (#00FF00)`-г `magenta (#FF00FF)` болго.
-
-<details>
-<summary>Дүрэм</summary>
-
-- Бусдын (найз, багш) зургийг **зөвшөөрөлгүй** дүр болгохгүй.
-- Цус, шарх зуруулахгүй.
-- Дуртай дүр (Naruto г.м.) ашиглавал "Fan-made" гэж бич — зохиогч нь өөр хүн.
-
-</details>
-
-</details>
-
----
-
-<details>
-<summary><b>4. Sheet-ийн 7 дүрэм</b></summary>
+<summary><b>3. Sheet-ийн 7 дүрэм</b></summary>
 
 <br>
 
@@ -149,92 +93,209 @@ No text, no shadow, no effects.
 
 ![Зөв, буруу sheet](images/01-sheet-durem.png)
 
-| #   | Дүрэм | Яагаад |
-| --- | ----- | ------ |
-| 1   | Цул **ногоон** дэвсгэр | тоглоом өөрөө арилгана |
-| 2   | **Нэг эгнээ**, 3–6 pose | зүүнээс баруун тийш тоглуулна |
-| 3   | Pose хоорондоо **зайтай** | зайгаар нь салгадаг |
-| 4   | **Бүтэн бие**, ижил хэмжээ | тасарсан хөл = гажсан хөдөлгөөн |
-| 5   | **Зүүн** тийш харсан | тоглоом өөрөө эргүүлнэ |
-| 6   | 1-р pose = **зогсоо** | дүрийн хэмжээг үүгээр тааруулна |
+| #   | Дүрэм | Зөрчвөл |
+| --- | ----- | ------- |
+| 1   | Цул **ногоон** дэвсгэр | дүрийн эргэн тойронд ногоон үлдэнэ |
+| 2   | **Нэг эгнээ**, 4 pose | хөдөлгөөн будилна |
+| 3   | Pose хоорондоо **зайтай**, шүргэлцэхгүй | нэг frame-д 2 бие |
+| 4   | **Бүтэн бие**, ижил хэмжээ | хөл, гар тасарна |
+| 5   | **Зүүн** тийш харсан | арагшаа алхана |
+| 6   | 1-р pose = **зогсоо** | хөдөлгөөн бүрт том, жижиг болно |
 | 7   | Текст, сүүдэр, эффект **байхгүй** | дүрийн хэсэг болчихно |
+
+> AI зурсан ч, Gemini зурсан ч **шалгах нь чиний ажил**.
 
 </details>
 
 ---
 
 <details>
-<summary><b>5. idle, walk, punch зуруулах</b></summary>
+<summary><b>4. Алдартай баатар — AI Studio-оор шууд</b></summary>
 
 <br>
 
-1. Gemini-д **шинэ chat** нээ → `eh-zurag.png`-ээ **хавсарга**.
-2. Доорх prompt-ын `[ХӨДӨЛГӨӨН]`-ийг хүснэгтээс сольж явуул.
+1. AI Studio chat (`Naruto`, `naruto`-г өөрийнхөөрөө соль):
 
 ```text
-Use this exact character: same face, same clothes, same colors.
-Make a sprite sheet of 4 poses in ONE horizontal row, with empty space between the poses.
-Animation: [ХӨДӨЛГӨӨН]
-Every pose: full body, same size, side view, facing LEFT, feet on the same ground line.
-Plain solid green background (#00FF00).
-No text, no numbers, no shadow, no effects. Wide 16:9 image.
+ADD_CHARACTER.md-г бүтнээр нь уншаад 4B хэсгийг яг дага.
+Naruto баатрыг нэм. id: naruto.
+Эхлээд reference зураг, дараа нь түүнээс idle, walk, punch, kick, hit, ko зур.
+Зураг бүрийг хадгалахаасаа өмнө шалгах хүснэгтээр шалга.
+Аль зураг орсон, аль нь ороогүйг надад хэл.
 ```
 
-| Файл        | `[ХӨДӨЛГӨӨН]` |
-| ----------- | ------------- |
-| `idle.png`  | `standing ready and breathing. Pose 1 normal stance, pose 2 chest slightly up, pose 3 normal, pose 4 slightly down` |
-| `walk.png`  | `walking forward, 4 steps of a walk cycle. Pose 1 normal stance` |
-| `punch.png` | `a punch. Pose 1 normal stance, pose 2 fist pulled back, pose 3 arm fully straight punching forward, pose 4 arm coming back` |
+2. Тоглоод хөдөлгөөн бүрийг **7 дүрмээр** шалга.
 
-3. Зураг бүрийг 4-р алхмын **7 дүрмээр** шалга → татаж, хүснэгтийн нэрээр хадгал.
+| Товч | Хөдөлгөөн | Зураг |
+| ---- | --------- | ----- |
+| юу ч дарахгүй | зогсох | `idle` |
+| `A` `D` | алхах | `walk` |
+| `F` | цохих | `punch` |
+| `G` | өшиглөх | `kick` |
+| цохиулах | хазайх | `hit` |
+| HP дуусах | унах | `ko` |
+
+3. Буруу гарсан зургийг **ганцааранг** нь дахин зуруул:
+
+```text
+naruto-ийн kick зураг буруу: [ЮУ БУРУУ — жишээ: 2 pose шүргэлцсэн].
+ADD_CHARACTER.md-ийн 7 дүрмээр зөвхөн kick.png-г дахин зур. Бусдыг бүү өөрчил.
+```
+
+> Naruto, Goku нар зохиогчтой. Тоглоомдоо "Fan-made" гэж бич.
+
+</details>
+
+---
+
+<details>
+<summary><b>5. Өөрийгөө баатар болгох — эх зураг</b></summary>
+
+<br>
+
+Эхлээд **ганц** зураг — баатрын "паспорт". Бүх хөдөлгөөнийг үүнээс гаргана.
+
+1. Өөрийн зургаа ав (бүтэн бие бол илүү сайн).
+2. [Gemini](https://gemini.google.com) → зургаа **хавсаргаад**:
+
+```text
+Turn the person in this photo into a 2D fighting game character in 16-bit pixel art style.
+Keep my face shape and hairstyle. Outfit: [ХУВЦСАА БИЧ — жишээ: blue hoodie, black pants].
+One character only, whole body from head to feet, side view, facing LEFT, fighting stance.
+Background: one flat pure green colour (#00FF00), no floor, no gradient.
+No text, no shadow, no effects.
+```
+
+3. Таалагдсаныг тат → `eh-zurag.png` гэж хадгал.
+
+| Шалгах | |
+| ------ | --- |
+| Надтай төстэй | ☐ |
+| Бүтэн бие (толгойноос хөл хүртэл) | ☐ |
+| Зүүн тийш харсан | ☐ |
+| Хувцсанд **ногоон өнгө байхгүй** | ☐ |
+
+<details>
+<summary>Дүрэм</summary>
+
+- Зөвхөн **өөрийн** зураг. Найз, багшийн зургийг зөвшөөрөлгүй ашиглахгүй.
+- Жинхэнэ зургаа тоглоомд **оруулахгүй** — зөвхөн pixel art хувилбарыг.
+- Цус, шарх зуруулахгүй.
+
+</details>
+
+</details>
+
+---
+
+<details>
+<summary><b>6. idle, walk, punch зуруулах</b></summary>
+
+<br>
+
+1. Gemini-д **шинэ chat** → `eh-zurag.png`-ээ **хавсарга**.
+2. Доорх prompt-ын `[ХӨДӨЛГӨӨН]` мөрийг хүснэгтийн блокоор сольж явуул. Зураг бүрд **шинэ chat**.
+
+```text
+Sprite sheet of the attached character. Same face, hair, clothes and colours as the attached image.
+
+LAYOUT
+- Exactly 4 poses of the same character, side by side in ONE horizontal row.
+- Wide 16:9 image. Each pose stays inside its own quarter of the width.
+- Wide empty green gap between neighbouring poses. No pose touches or overlaps another.
+
+EVERY POSE
+- Whole body from head to feet, nothing cut off by the image edge.
+- Same body size in all 4 poses. Feet on the same horizontal line.
+- Side view, facing LEFT.
+
+[ХӨДӨЛГӨӨН]
+
+BACKGROUND
+- One flat pure green colour (#00FF00) everywhere. No floor, no gradient, no pattern.
+
+DO NOT DRAW
+- No text, numbers, labels, frames or grid lines.
+- No shadows, dust, speed lines, glow, energy or projectiles.
+- No second character.
+```
+
+**`idle.png`**
+
+```text
+MOVE: standing ready and breathing
+- Pose 1: normal fighting stance
+- Pose 2: same stance, chest slightly up
+- Pose 3: normal fighting stance
+- Pose 4: same stance, slightly lower
+```
+
+**`walk.png`**
+
+```text
+MOVE: walking forward
+- Pose 1: normal fighting stance
+- Pose 2: front foot stepping forward
+- Pose 3: legs passing each other
+- Pose 4: back foot stepping forward
+```
+
+**`punch.png`**
+
+```text
+MOVE: a punch
+- Pose 1: normal fighting stance
+- Pose 2: fist pulled back
+- Pose 3: arm fully straight, punching forward
+- Pose 4: arm coming back
+```
+
+3. Зураг бүрийг **7 дүрмээр** шалга → татаж, дээрх нэрээр хадгал.
 
 | Буруу гарвал | Тэр chat-даа бич |
 | ------------ | ---------------- |
-| Дүр өөр хүн болсон | `Keep the exact same character as the attached image. Change only the pose.` |
-| Pose шүргэлцсэн | `Add more empty space between the poses.` |
+| Pose шүргэлцсэн | `Make the gaps between the poses twice as wide. Nothing may touch.` |
+| Өөр хүн болсон | `Keep the exact same character as the attached image. Change only the pose.` |
 | Баруун тийш харсан | `Make every pose face LEFT.` |
-| Текст, сүүдэр орсон | `Remove all text and shadows. Only the character on plain green.` |
+| Текст, сүүдэр орсон | `Remove all text and shadows. Only the character on flat green.` |
+| Хөл, толгой тасарсан | `Show the whole body in every pose, with green space above the head and below the feet.` |
 
-> Зураг үүсгэх **limit**-тэй. Шаардлагаа нэг мессежид багтаа, гарсан зургаа тэр даруй хадгал.
+> Зураг үүсгэх **limit**-тэй. 2 удаа засаад болохгүй бол шинэ chat-аас эхэл.
 
 </details>
 
 ---
 
 <details>
-<summary><b>6. Дүрээ тоглоомдоо оруулах</b></summary>
+<summary><b>7. Өөрийгөө тоглоомдоо оруулах</b></summary>
 
 <br>
 
-2-р алхамтай **яг адил**, зөвхөн өөрийн нэрээр.
+1. AI Studio chat-д `idle.png`, `walk.png`, `punch.png`-ээ **хавсаргаад** (`bayasaa`-г өөрийн нэрээр, англи жижиг үсгээр):
 
-1. `public/assets/` дотор дүрийнхээ хавтсыг үүсгэ. Нэр: **англи, жижиг үсэг, зайгүй** (`naruto`, `cyber-ninja`).
-2. `idle.png`, `walk.png`, `punch.png`-ээ оруул.
-3. `src/game/myFighters.ts`-д мөр нэм:
-
-```ts
-export const MY_FIGHTERS: MyFighter[] = [
-  { id: 'naruto', name: 'Naruto' },
-  { id: 'my-hero', name: 'My Hero' },
-];
+```text
+ADD_CHARACTER.md-г уншаад 4A хэсгийг дага.
+Хавсаргасан зургуудаар баатар нэм. id: bayasaa, нэр: Bayasaa.
+Зургуудыг өөрчлөхгүй, файлын нэрээр нь хадгал. Шинэ зураг бүү зур.
 ```
 
-4. Preview-г дахин ачаалж, дүрээрээ тогло.
+2. Өөрөөрөө тогло.
 
 ![Тулаан](images/03-tulaan.png)
 
-> `kick`, `hit`, `ko` зураг хараахан байхгүй — тоглоом оронд нь `punch`, `idle`-г ашиглана. Дараагийн хичээлд нэмнэ.
+> `kick`, `hit`, `ko` хараахан байхгүй — тоглоом оронд нь `punch`, `idle`-г ашиглана. Дараагийн хичээлд нэмнэ.
 
-**Шалгах:** `F12` → Console. Дүр бүрд нэг мөр гарна:
+**Шалгах:** `F12` → Console:
 
 ```text
-[my-fighter] naruto: idle 4, walk 4, punch 4, kick -, hit -, ko -, jump -, crouch -, block -, special -
+[my-fighter] bayasaa: idle 4, walk 4, punch 4, kick -, hit -, ko -, jump -, crouch -, block -, special -
 ```
 
 | Тэмдэг | Утга |
 | ------ | ---- |
 | `4`    | 4 pose олсон |
-| `-`    | зураг олдоогүй — хавтас, файлын нэрээ шалга |
+| `-`    | зураг байхгүй |
+| `1`, `2` | pose шүргэлцсэн — дахин зуруул |
 
 </details>
 
@@ -247,12 +308,13 @@ export const MY_FIGHTERS: MyFighter[] = [
 
 | Асуудал | Шийдэл |
 | ------- | ------ |
-| Дүр жагсаалтад гарахгүй | `id` ба хавтасны нэр **яг ижил** үү? Том үсэг, зай байгаа юу? |
-| Саарал "?" дүр гарсан | `idle.png` олдоогүй — нэр, хавтсаа шалга |
-| Нэг frame-д 2 бие | Pose шүргэлцсэн — дахин зуруул. Эсвэл `frames: { punch: 4 }` нэм |
-| Дүрийн эргэн тойронд ногоон хүрээ | Дэвсгэр цул ногоон биш — дахин зуруул |
-| Дүрийн хэсэг алга болсон | Хувцас дэвсгэртэй ижил өнгөтэй — magenta дэвсгэрээр зуруул |
-| Дүр буруу тийш харна | `{ id: 'naruto', name: 'Naruto', flip: true }` |
+| Баатар жагсаалтад гарахгүй | AI Studio-д: `ADD_CHARACTER.md-ийн 3-р хэсгээр myFighters.ts-ийг шалга` |
+| Саарал "?" дүр гарсан | `idle` зураг ороогүй — дахин хавсаргаж өг |
+| Нэг frame-д 2 бие | Pose шүргэлцсэн — тэр зургийг дахин зуруул |
+| Эргэн тойронд ногоон хүрээ | Дэвсгэр цул ногоон биш — дахин зуруул |
+| Биеийн хэсэг алга болсон | Хувцас ногоон өнгөтэй — хувцасны өнгөө соль |
+| Буруу тийш харна | AI Studio-д: `bayasaa баатарт flip: true нэм` |
+| AI Studio зургийг өөрчилчихсөн | `Зургийг өөрчлөхгүй, яг хавсаргаснаар нь дахин хадгал` |
 
 </details>
 
@@ -261,9 +323,17 @@ export const MY_FIGHTERS: MyFighter[] = [
 
 <br>
 
-1. Амжаагүй бол `idle`, `walk`, `punch`-аа дуусга.
-2. 5-р алхмын prompt-оор `kick.png` зуруулж үз:
-   `a high kick. Pose 1 normal stance, pose 2 knee lifted, pose 3 leg fully straight kicking forward, pose 4 leg coming down`
-3. Дүрийнхээ **special** цохилтыг бод — нэр, ямар хөдөлгөөн.
+1. Амжаагүй бол өөрийн `idle`, `walk`, `punch`-аа дуусга.
+2. 6-р алхмын prompt-оор `kick.png` зуруулж үз:
+
+```text
+MOVE: a high kick
+- Pose 1: normal fighting stance
+- Pose 2: knee lifted
+- Pose 3: leg fully straight, kicking forward
+- Pose 4: leg coming down
+```
+
+3. Өөрийнхөө **special** цохилтыг бод — нэр, ямар хөдөлгөөн.
 
 </details>

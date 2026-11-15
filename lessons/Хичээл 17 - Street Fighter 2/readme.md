@@ -18,7 +18,10 @@
 
 > Алхам бүр дээр **дарж нээнэ**.
 
-**Сануулга:** зураг → `public/assets/<дүрийн id>/` хавтас. Шинэ мөр бичихгүй — дүр чинь аль хэдийн бүртгэлтэй.
+| Баатар | Энэ хичээлд |
+| ------ | ----------- |
+| **Чи өөрөө** | Gemini-ээр үлдсэн зургаа зуруулж, AI Studio-д хавсаргана |
+| Алдартай | 6 зураг нь бий — буруу гарсныг AI Studio-оор дахин зуруулна |
 
 ---
 
@@ -27,30 +30,78 @@
 
 <br>
 
-1. Gemini-д шинэ chat → `eh-zurag.png`-ээ **хавсарга**.
-2. Хичээл 16-гийн prompt, `[ХӨДӨЛГӨӨН]`-ийг хүснэгтээс:
+Хичээл 16-д **өөрийгөө** `idle`, `walk`, `punch`-тай оруулсан. Одоо үлдсэн 3-ыг нэмнэ.
+
+1. Gemini-д **шинэ chat** → `eh-zurag.png`-ээ **хавсарга**.
+2. Доорх prompt-ын `[ХӨДӨЛГӨӨН]` мөрийг блокоор сольж явуул. Зураг бүрд **шинэ chat**.
 
 ```text
-Use this exact character: same face, same clothes, same colors.
-Make a sprite sheet of 4 poses in ONE horizontal row, with empty space between the poses.
-Animation: [ХӨДӨЛГӨӨН]
-Every pose: full body, same size, side view, facing LEFT, feet on the same ground line.
-Plain solid green background (#00FF00).
-No text, no numbers, no shadow, no effects. Wide 16:9 image.
+Sprite sheet of the attached character. Same face, hair, clothes and colours as the attached image.
+
+LAYOUT
+- Exactly 4 poses of the same character, side by side in ONE horizontal row.
+- Wide 16:9 image. Each pose stays inside its own quarter of the width.
+- Wide empty green gap between neighbouring poses. No pose touches or overlaps another.
+
+EVERY POSE
+- Whole body from head to feet, nothing cut off by the image edge.
+- Same body size in all 4 poses. Feet on the same horizontal line.
+- Side view, facing LEFT.
+
+[ХӨДӨЛГӨӨН]
+
+BACKGROUND
+- One flat pure green colour (#00FF00) everywhere. No floor, no gradient, no pattern.
+
+DO NOT DRAW
+- No text, numbers, labels, frames or grid lines.
+- No shadows, dust, speed lines, glow, energy or projectiles.
+- No second character.
 ```
 
-| Файл       | `[ХӨДӨЛГӨӨН]` |
-| ---------- | ------------- |
-| `kick.png` | `a high kick. Pose 1 normal stance, pose 2 knee lifted, pose 3 leg fully straight kicking forward, pose 4 leg coming down` |
-| `hit.png`  | `getting hit in the face. Pose 1 normal stance, pose 2 head snapping back, pose 3 leaning back in pain, pose 4 recovering` |
-| `ko.png`   | `getting knocked out. Pose 1 standing and hit, pose 2 falling backward, pose 3 landing on the ground, pose 4 lying flat on the ground` |
+**`kick.png`**
 
-3. [7 дүрмээр](../Хичээл%2016%20-%20Street%20Fighter%201/readme.md) шалга → дүрийнхээ хавтаст оруул → Preview дахин ачаал.
+```text
+MOVE: a high kick
+- Pose 1: normal fighting stance
+- Pose 2: knee lifted
+- Pose 3: leg fully straight, kicking forward
+- Pose 4: leg coming down
+```
+
+**`hit.png`**
+
+```text
+MOVE: getting hit in the face
+- Pose 1: normal fighting stance
+- Pose 2: head snapping back
+- Pose 3: leaning back in pain
+- Pose 4: recovering to the stance
+```
+
+**`ko.png`**
+
+```text
+MOVE: getting knocked out
+- Pose 1: standing, hit hard
+- Pose 2: falling backward
+- Pose 3: landing on the ground
+- Pose 4: lying flat on the ground
+```
+
+3. [7 дүрмээр](../Хичээл%2016%20-%20Street%20Fighter%201/readme.md) шалга → татаж, дээрх нэрээр хадгал.
+4. AI Studio chat-д 3 зургаа **хавсаргаад** (`bayasaa`-г өөрийн `id`-аар):
+
+```text
+ADD_CHARACTER.md-г уншаад 4A хэсгийг дага.
+Хавсаргасан зургуудыг bayasaa баатарт нэм.
+Зургуудыг өөрчлөхгүй, файлын нэрээр нь хадгал. Шинэ зураг бүү зур.
+```
 
 **Шалгах:** `F12` → Console:
 
 ```text
-[my-fighter] naruto: idle 4, walk 4, punch 4, kick 4, hit 4, ko 4, jump -, crouch -, block -, special -
+[my-fighter] bayasaa: idle 4, walk 4, punch 4, kick 4, hit 4, ko 4, jump -, crouch -, block -, special -
 ```
 
 | Товч | Юу харагдах ёстой |
@@ -68,15 +119,22 @@ No text, no numbers, no shadow, no effects. Wide 16:9 image.
 
 <br>
 
-Portrait байхгүй бол тоглоом `idle`-ийн эхний pose-ыг харуулна. Өөрийнхийг хийе:
+Portrait байхгүй бол тоглоом `idle`-ийн эхний pose-ыг харуулна.
+
+1. Gemini → `eh-zurag.png`-ээ хавсаргаад:
 
 ```text
-Use this exact character.
-Make a character select portrait: head and shoulders, facing the viewer, confident look.
-16-bit pixel art style, simple dark background. Square 1:1 image. No text.
+Character select portrait of the attached character. Same face, hair, clothes and colours.
+Head and shoulders only, facing the viewer, confident look.
+16-bit pixel art style, simple dark background. Square 1:1 image.
+No text, no frame.
 ```
 
-Татаад **`portrait.png`** гэж нэрлэж, дүрийнхээ хавтаст оруул.
+2. Татаад **`portrait.png`** гэж нэрлэ → AI Studio-д хавсаргаад:
+
+```text
+Хавсаргасан portrait.png-г bayasaa баатрын хавтаст өөрчлөхгүйгээр нэм.
+```
 
 </details>
 
@@ -87,10 +145,10 @@ Make a character select portrait: head and shoulders, facing the viewer, confide
 
 <br>
 
-AI Studio-ийн chat-д (`naruto`-г өөрийн `id`-аар соль):
+AI Studio-ийн chat-д (`bayasaa`-г өөрийн `id`-аар соль):
 
 ```text
-src/game/fighterConfig.ts файлд 'naruto' дүрд тохиргоо нэм:
+src/game/fighterConfig.ts файлд 'bayasaa' дүрд тохиргоо нэм:
 - FIGHTER_STAT_OVERRIDES: scale 1.5, walkSpeed 260
 - FIGHTER_COMBAT_OVERRIDES: maxHealth 100, highDamage 8, lowDamage 12
 Өөр юу ч бүү өөрчил.
@@ -116,18 +174,63 @@ src/game/fighterConfig.ts файлд 'naruto' дүрд тохиргоо нэм:
 
 <br>
 
-1-р алхмын prompt-оор. Файл байхгүй бол тоглоом өөр зургаар орлуулна — тиймээс **дуртайгаа** л хий.
+1-р алхмын prompt, зөвхөн `[ХӨДӨЛГӨӨН]` өөр. Зураг байхгүй бол тоглоом өөр зургаар орлуулна — **дуртайгаа** л хий.
 
-| Файл          | Товч | `[ХӨДӨЛГӨӨН]` |
-| ------------- | ---- | ------------- |
-| `special.png` | `V`  | `a special attack: [ӨӨРИЙН SPECIAL]. Pose 1 normal stance, pose 2 charging, pose 3 the attack fully extended forward, pose 4 finishing` |
-| `jump.png`    | `W`  | `a jump. Pose 1 normal stance, pose 2 crouching to jump, pose 3 in the air with knees up, pose 4 landing` |
-| `block.png`   | `C`  | `blocking. Pose 1 normal stance, pose 2 raising both arms, pose 3 arms covering the face, pose 4 arms covering the face` |
-| `crouch.png`  | `S`  | `crouching down. Pose 1 normal stance, pose 2 knees bending, pose 3 crouched low, pose 4 crouched low` |
+| Файл          | Товч |
+| ------------- | ---- |
+| `special.png` | `V` (meter дүүрсэн үед) |
+| `jump.png`    | `W`  |
+| `block.png`   | `C`  |
+| `crouch.png`  | `S`  |
 
-> Special-д галт бөмбөг зэрэг **эффект зуруулахгүй** — зөвхөн биеийн хөдөлгөөн. Эффект pose-уудыг хооронд нь нийлүүлчихдэг.
+**`special.png`**
 
-Special нь **meter** дүүрсэн үед л ажиллана (цохих тусам дүүрнэ).
+```text
+MOVE: a special attack: [ӨӨРИЙН SPECIAL — жишээ: spinning kick]
+- Pose 1: normal fighting stance
+- Pose 2: charging, body pulled back
+- Pose 3: the attack fully extended forward
+- Pose 4: finishing, returning to the stance
+```
+
+**`jump.png`**
+
+```text
+MOVE: a jump
+- Pose 1: normal fighting stance
+- Pose 2: crouching to jump
+- Pose 3: in the air with knees up
+- Pose 4: landing with bent knees
+```
+
+**`block.png`**
+
+```text
+MOVE: blocking
+- Pose 1: normal fighting stance
+- Pose 2: raising both arms
+- Pose 3: both arms covering the face
+- Pose 4: both arms covering the face
+```
+
+**`crouch.png`**
+
+```text
+MOVE: crouching down
+- Pose 1: normal fighting stance
+- Pose 2: knees bending
+- Pose 3: crouched low
+- Pose 4: crouched low
+```
+
+> Special-д галт бөмбөг, гэрэл **зуруулахгүй** — зөвхөн биеийн хөдөлгөөн. Эффект pose-уудыг хооронд нь нийлүүлчихдэг (7-р дүрэм).
+
+Алдартай баатартаа нэмэх бол AI Studio-д:
+
+```text
+ADD_CHARACTER.md-ийн 4B хэсгээр naruto баатарт special.png, jump.png нэм.
+Одоо байгаа idle.png-г reference болгож ашигла. Бусад зургийг бүү өөрчил.
+```
 
 </details>
 
@@ -194,7 +297,7 @@ width [ӨРГӨН], height [ӨНДӨР]. Бусад арена шиг яг иж�
 | Дүрэм | |
 | ----- | --- |
 | Горим | **1v1**, нэг компьютер, нэг гар |
-| Дүр | хоёулаа **өөрийн** дүрээр (зочны дүрийг `my-hero`-гоор) |
+| Дүр | хоёулаа **өөрөөрөө** (өөрийн зурсан баатраар) |
 | Ялагч | 2 раунд түрүүлж авсан нь |
 | Тохиргоо | 3-р алхмын хязгаараас хэтрээгүй байх |
 
@@ -215,7 +318,7 @@ width [ӨРГӨН], height [ӨНДӨР]. Бусад арена шиг яг иж�
 | HP дуусахад дүр унахгүй | `ko.png`-ийн сүүлийн pose **хэвтсэн** байх ёстой — дахин зуруул |
 | Дүр хөдөлгөөн бүрт том, жижиг болно | 1-р pose **зогсоо** биш байна (6-р дүрэм) |
 | Special ажиллахгүй | Meter дүүрээгүй — эхлээд хэд цохи |
-| Console-д `kick 2` (4 биш) | Pose шүргэлцсэн — `frames: { kick: 4 }` нэм эсвэл дахин зуруул |
+| Console-д `kick 2` (4 биш) | Pose шүргэлцсэн — дахин зуруул: `Make the gaps between the poses twice as wide.` |
 
 </details>
 
@@ -227,7 +330,7 @@ width [ӨРГӨН], height [ӨНДӨР]. Бусад арена шиг яг иж�
 Хичээл 18-д portfolio-гоо **3 минутад** танилцуулна.
 
 1. Portfolio-гийн бүх карт (линк) ажиллаж байгааг шалга.
-2. Тулааны дүрээ дуусга — дор хаяж `idle` `walk` `punch` `kick` `hit` `ko`.
+2. Өөрийн баатраа дуусга — дор хаяж `idle` `walk` `punch` `kick` `hit` `ko`.
 3. 3 өгүүлбэр бэлд: **юу хийсэн**, **юу хамгийн хэцүү байсан**, **юугаараа бахархдаг**.
 
 </details>
