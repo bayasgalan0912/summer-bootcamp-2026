@@ -344,7 +344,10 @@ def render_cover(src, path, monofont):
     d.rounded_rectangle((L, 150, L + tw + 56, 230), radius=40, fill="#e6db74")
     d.text((L + 28, 190), label, font=f, fill=BG, anchor="lm")
     # гарчиг, дэд гарчиг
-    d.text((L, 270), title, font=bold(150), fill=DEFAULT_FG, anchor="lt")
+    ts = 150   # гарчиг баруун талын блок схемд хүрэхгүй болтол жижигрүүлнэ
+    while ts > 80 and bold(ts).getlength(title) > 1150 - 60 - L:
+        ts -= 6
+    d.text((L, 270 + (150 - ts) // 2), title, font=bold(ts), fill=DEFAULT_FG, anchor="lt")
     d.text((L, 460), sub, font=reg(50), fill="#a6e22e", anchor="lt")
     # кодын мөр (Monokai)
     if code:
