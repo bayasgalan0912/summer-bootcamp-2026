@@ -20,8 +20,8 @@
 | 14 | GitHub, Vercel — portfolio-гоо интернэтэд гаргах |
 | 15 | Firestore — холбоо барих форм |
 | [16](lessons/Хичээл%2016%20-%20Street%20Fighter%201) | Street Fighter 1: тоглоомоо AI Studio-д оруулах, алдартай баатар (AI Studio), өөрийгөө баатар болгох (Gemini: эх зураг, idle / walk / punch) |
-| [17](lessons/Хичээл%2017%20-%20Street%20Fighter%202) | Street Fighter 2: kick / hit / ko, portrait, тааруулах, portfolio-д нэмэх, ангийн тэмцээн |
-| 18 | Demo Day |
+| [17](lessons/Хичээл%2017%20-%20Street%20Fighter%202) | Тоглоомоо дуусгах (kick / hit / ko), Vercel, "Миний сургалтын аялал", Demo Day-ийн илтгэл давтах |
+| [18](lessons/Хичээл%2018%20-%20Demo%20Day) | Demo Day — эцэг эхийн өмнө 3 минутын демо, сертификат |
 
 Сэдвийн дараалал шинэчлэгдэж болно.
 
