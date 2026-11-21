@@ -4,7 +4,7 @@
 
 ### Энэхүү хичээлээр Claude AI-ийн "Skill" функцийг ашиглан давтагддаг ажлуудыг хэрхэн нэг удаагийн заавраар автоматжуулах талаар суралцах болно.
 
-Өмнөх: [Админ хэсэг](../AI/Админ%20хэсэг) · Дараах: [Хичээл 18 — Demo Day](../Хичээл%2018%20-%20Demo%20Day/adult.md) · Хүүхэд: [readme.md](readme.md) · Хэрэгсэл: [Claude.ai](https://claude.ai) · [Gemini](https://gemini.google.com)
+Өмнөх: [Админ хэсэг](../AI/Админ%20хэсэг) · Дараах: [Хичээл 18 — Demo Day](../Хичээл%2018%20-%20Demo%20Day) · Хүүхэд: [readme.md](readme.md) · Хэрэгсэл: [Claude.ai](https://claude.ai) · [Gemini](https://gemini.google.com)
 
 | #   | Хэсэг |
 | --- | ----- |
