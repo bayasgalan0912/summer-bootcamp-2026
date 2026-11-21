@@ -19,8 +19,8 @@
 
 | Slide | Хэсэг |
 | ----- | ----- |
-| [1. Intro](https://docs.google.com/presentation/d/1CQKTDe4kxYD-lWDL0FaGTSulUzDJE23p-y16ysk3RrM/edit#slide=id.h243f9c914e481bf6_0_298) | 2. Багшийн илтгэл |
-| [2. Q&A + Next curriculum + Certificate](https://docs.google.com/presentation/d/1CQKTDe4kxYD-lWDL0FaGTSulUzDJE23p-y16ysk3RrM/edit#slide=id.h243f9c914e481bf6_0_424) | 4, 5, 6, 7 |
+| [1. Intro](https://docs.google.com/presentation/d/1ah018kntYtmo1oTblRQHs4EtIvmhdOMWzFdl6BOATcI/edit) | 2. Багшийн илтгэл |
+| [2. Q&A + Next curriculum + Certificate](https://docs.google.com/presentation/d/1CQKTDe4kxYD-lWDL0FaGTSulUzDJE23p-y16ysk3RrM/edit) | 4–7 (хүүхдүүд демогоо үзүүлээд орж ирсний дараа) |
 
 > Хэсэг бүр дээр **дарж нээнэ**.
 
@@ -42,7 +42,7 @@
 
 <br>
 
-Slide: [Intro](https://docs.google.com/presentation/d/1CQKTDe4kxYD-lWDL0FaGTSulUzDJE23p-y16ysk3RrM/edit#slide=id.h243f9c914e481bf6_0_298)
+Slide: [Intro](https://docs.google.com/presentation/d/1ah018kntYtmo1oTblRQHs4EtIvmhdOMWzFdl6BOATcI/edit)
 
 | Сэдэв | Агуулга |
 | ----- | ------- |
@@ -88,6 +88,8 @@ Slide: [Intro](https://docs.google.com/presentation/d/1CQKTDe4kxYD-lWDL0FaGTSulU
 <summary><b>4. Асуулт хариулт, эцэг эхийн санал</b> · 10 мин</summary>
 
 <br>
+
+Хүүхдүүд демогоо үзүүлээд орж ирсний дараа [2-р slide](https://docs.google.com/presentation/d/1CQKTDe4kxYD-lWDL0FaGTSulUzDJE23p-y16ysk3RrM/edit)-ийг эхлүүлнэ.
 
 Slide: [Асуулт хариулт](https://docs.google.com/presentation/d/1CQKTDe4kxYD-lWDL0FaGTSulUzDJE23p-y16ysk3RrM/edit#slide=id.h243f9c914e481bf6_0_424)
 
