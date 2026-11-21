@@ -17,6 +17,11 @@
 | 7   | Сертификат, хамтын зураг                       | 10 мин  |
 |     | **Нийт**                                       | **90 мин** |
 
+| Slide | Хэсэг |
+| ----- | ----- |
+| [1. Intro](https://docs.google.com/presentation/d/1CQKTDe4kxYD-lWDL0FaGTSulUzDJE23p-y16ysk3RrM/edit#slide=id.h243f9c914e481bf6_0_298) | 2. Багшийн илтгэл |
+| [2. Q&A + Next curriculum + Certificate](https://docs.google.com/presentation/d/1CQKTDe4kxYD-lWDL0FaGTSulUzDJE23p-y16ysk3RrM/edit#slide=id.h243f9c914e481bf6_0_424) | 4, 5, 6, 7 |
+
 > Хэсэг бүр дээр **дарж нээнэ**.
 
 ---
@@ -36,6 +41,8 @@
 <summary><b>2. Багшийн илтгэл — Бидний сургалтын аялал</b> · 10 мин</summary>
 
 <br>
+
+Slide: [Intro](https://docs.google.com/presentation/d/1CQKTDe4kxYD-lWDL0FaGTSulUzDJE23p-y16ysk3RrM/edit#slide=id.h243f9c914e481bf6_0_298)
 
 | Сэдэв | Агуулга |
 | ----- | ------- |
@@ -82,6 +89,8 @@
 
 <br>
 
+Slide: [Асуулт хариулт](https://docs.google.com/presentation/d/1CQKTDe4kxYD-lWDL0FaGTSulUzDJE23p-y16ysk3RrM/edit#slide=id.h243f9c914e481bf6_0_424)
+
 - Эцэг эхийн асуулт
 - Сурагчдын сэтгэгдэл
 - Эцэг эхийн санал хүсэлт
@@ -92,6 +101,8 @@
 <summary><b>5. Цаашид юу хийх вэ? — Дараагийн AI Coding аялал</b> · 15 мин</summary>
 
 <br>
+
+Slide: [Дараагийн хөтөлбөр (3–9)](https://docs.google.com/presentation/d/1CQKTDe4kxYD-lWDL0FaGTSulUzDJE23p-y16ysk3RrM/edit#slide=id.h243f9c914e481bf6_0_329)
 
 | Төсөл | Сэдэв | Жишээ |
 | ----- | ----- | ----- |
@@ -115,6 +126,8 @@
 <summary><b>7. Сертификат, хамтын зураг</b> · 10 мин</summary>
 
 <br>
+
+Slide: [Эцэг эхчүүдэд (10)](https://docs.google.com/presentation/d/1CQKTDe4kxYD-lWDL0FaGTSulUzDJE23p-y16ysk3RrM/edit#slide=id.h243f9c914e481bf6_0_240) · [Баяр хүргэе, төгсөгчид өө (11)](https://docs.google.com/presentation/d/1CQKTDe4kxYD-lWDL0FaGTSulUzDJE23p-y16ysk3RrM/edit#slide=id.h243f9c914e481bf6_0_268)
 
 - Сертификат гардуулах
 - Хувийн зураг
