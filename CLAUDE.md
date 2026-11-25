@@ -4,7 +4,7 @@
 
 ## Бүтэц
 
-- 2 сар, амралтын 2 өдөр, хичээл бүр ~2 цаг, **нийт 18 хичээл**. Хуваарь: [readme.md](readme.md) (7 AI portfolio → 8–11 JS → 12 Copilot UI + Netlify → 13 Anime Guess + Firestore leaderboard → 14 GitHub/Vercel → 15 Firestore форм → 16–17 тулааны тоглоом → 18 Demo Day). Сэдвийн дараалал шинэчлэгдэж болно, тоо нь 18.
+- 2 сар, амралтын 2 өдөр, хичээл бүр ~2 цаг, **нийт 18 хичээл**. Хуваарь: [readme.md](readme.md) (7 AI portfolio → 8–11 JS → 12 Copilot UI + Netlify → 13 Anime Guess + Firestore leaderboard → 14 GitHub/Vercel → 15 Firestore форм → 16 тулааны тоглоом → 17 тоглоом сайжруулах + Demo бэлтгэл / Adult Claude Skill → 18 Demo Day). Сэдвийн дараалал шинэчлэгдэж болно, тоо нь 18.
 - Дараалал: HTML/CSS → JavaScript + алгоритм (кодын суурь) → AI-аар код бичүүлэх, апп, тоглоом.
 - **`lessons/`** — эцсийн хичээлүүд энд л байна: `lessons/Хичээл 1`, `lessons/Хичээл 2` … Шинэ хичээлийг энд бич.
 - `w1/` … `w8/` — хуучин төлөвлөгөө. Зөвхөн **reference, санаа** авах. Шууд засахгүй, линк хийхгүй.
@@ -38,7 +38,8 @@
 | 13 _(төлөвлөсөн)_ | Anime Guess: массив → object (JSON array), `data.json`-д 3 асуултаа өөрөө + ChatGPT-аар 10–15, AI Studio-д "Тоглоомууд" жагсаалт (тусдаа цонх/modal) + 3 горим (Emoji / Anime зураг / Баатар), хариулсны дараа зураг; зөвхөн датаг сольж өөр төрөл (Sport, Movie…); Firestore `scores` + Leaderboard |
 | 14 _(төлөвлөсөн)_ | AI Studio → GitHub sync, `git clone` → `npm install` → `npm run dev`, `git pull`, Vercel (Push бүрт автомат) |
 | 16 _(төлөвлөсөн)_ | Street Fighter 1: [`vibe-fighter`](https://github.com/bayasgalan0912/vibe-fighter) repo-г AI Studio Build-д **Import from GitHub**, жишээ дүр (`jishee/` 6 зургийг chat-д хавсаргаж prompt-оор), sprite sheet-ийн 7 дүрэм (цул ногоон дэвсгэр, нэг эгнээ 4 pose, зайтай, бүтэн бие, зүүн тийш, 1-р pose зогсоо, текст/сүүдэргүй), **алдартай баатар** — AI Studio өөрөө зурна (`ADD_CHARACTER.md` 4B), **өөрийгөө баатар болгох** — Gemini-д өөрийн зураг → эх зураг → `idle` `walk` `punch` (дүрэмтэй prompt) → AI Studio-д хавсаргаж нэмэх (4A) |
-| 17 _(төлөвлөсөн)_ | Street Fighter 2: өөрийн `kick` `hit` `ko`, `portrait.png`, `fighterConfig.ts` тааруулах (prompt-оор), бонус `special` `jump` `block` `crouch`, өөрийн арена, portfolio-д карт, ангийн тэмцээн; ГД: Demo Day бэлтгэл |
+| 17 _(төлөвлөсөн)_ | Хүүхэд (`readme.md`) + Adult (`adult.md`) тусдаа файл. Kahoot → Хүүхэд: тоглоомоо сайжруулах (өөрийгөө баатар болгох эсвэл portrait / тааруулах; нэмэлт хөдөлгөөн, арена **хасагдсан** — AI Studio өөрөө үүсгэдэг) → AI Studio → GitHub → **Vercel** → "Тоглоомууд"-д Vercel линк. Adult (`adult.md`, тоглоом хийгээгүй): **Claude Skill** — эх: `adult` branch `Lab 8 - Claude/1-cowork/claude-cowork-skill.md` (агуулгыг өөрчлөхгүй; Skill гэж юу, Customize Claude → Skills → Create Skill, Skill Creator, Save / `/` дуудах / Download `.skill`, дасгал: `fashion-shoot-prompt` → Gemini постер) + 8. даалгавар: Skill-ийг өөрийн үйлчилгээнд тааруулж постер → сайтын banner (AI Studio → Vercel). Хүүхэд: "Миний сургалтын аялал" (Би хэн бэ / Юу бүтээсэн, сурсан / Хамгийн хэцүү, гоё мөч — дэвтэрт өөрийн үгээр → prompt, slide-гүй) → Demo Day давтлага |
+| 18 _(төлөвлөсөн)_ | Demo Day — нэг `readme.md` (хүүхэд + Adult хамт, 90 мин): угтах + Kahoot, багшийн илтгэл (сурагчдын сайтын линк), сурагчдын төсөл 30 мин (эцэг эх 3 асуулт), Q&A, дараагийн курс (Project 01 бодит апп, 02 AI-аар асуудал шийдэх), бүртгэл, сертификат + зураг |
 
 CSS-д **сүүдэр (shadow) заагаагүй** — жишээ кодонд бүү оруул.
 
