@@ -19,7 +19,7 @@ description: Хүний нүүрний зурагнаас үс засалт (3x3
 4. Хаана ажиллуулахыг хэл: Gemini эсвэл ChatGPT (зураг хавсаргаад prompt-ыг хуул).
 
 ## Template
-- Үс: [../../prompts/hair.md](../../prompts/hair.md) — Image 1 = үс засалт, Image 2 = хэрэглэгч.
+- Үс: [Хичээл 1 prompts/hair.md](../../../Хичээл%201%20-%20Agentic%20AI/prompts/hair.md) — Image 1 = үс засалт, Image 2 = хэрэглэгч.
 - Өнгө: [../../prompts/color.md](../../prompts/color.md) — шошго зөвхөн Монголоор.
 
 ## Дүрэм

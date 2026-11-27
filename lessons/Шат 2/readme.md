@@ -32,10 +32,10 @@
 
 | # | Сэдэв | AI tool |
 | - | ----- | ------- |
-| 1 | [Agentic AI](Хичээл%201%20-%20Agentic%20AI): бүтээлийн харьцуулалт, чатбот vs агент, Black Friday deal хайх → `deal-finder` skill | Codex (Claude, Antigravity — ижил санаа) |
-| 2 | [AI стилист](Хичээл%202%20-%20AI%20стилист): үс засалт 3x3, тохирох өнгө → `ai-stylist` skill · ГД: эцэг эх дээрээ турших | Codex, Gemini / ChatGPT зураг |
+| 1 | [Agentic AI](Хичээл%201%20-%20Agentic%20AI): бүтээлийн харьцуулалт, чатбот vs агент, Black Friday deal хайх → `deal-finder` skill, үс засалт 3x3 | Codex (Claude, Antigravity — ижил санаа), Gemini / ChatGPT зураг |
+| 2 | [Claude + AI стилист](Хичээл%202%20-%20AI%20стилист): Claude-ийн боломжууд, skill үүсгэх, тохирох өнгө → `ai-stylist` skill · ГД: эцэг эх дээрээ турших | Claude (багш), Codex |
 
-Эх материал: `adult` branch — `Lab 8 - Claude` (Cowork, Skill). n8n хувилбар: [backup](backup/n8n%20AI%20Lab).
+Эх материал: [reference/Lab 8 - Claude](../../reference/Lab%208%20-%20Claude) (`adult` branch-аас хуулсан). n8n хувилбар: [backup](backup/n8n%20AI%20Lab).
 
 </details>
 
