@@ -1,6 +1,6 @@
 # Шат 2 — Асуудал шийдэж, бизнес бүтээх
 
-2 сар · Бямба, Ням · 2 цаг · **18 хичээл** · Хүүхэд + Adult хамт (Adult-д бонус даалгавар)
+2 сар · Бямба, Ням · 2 цаг · **20 хичээл** (18 + Agentic AI 2 — нэмэгдсэн, тэмдэглэл) · Хүүхэд + Adult хамт (Adult-д бонус даалгавар)
 
 Шат 1: код, технологи, AI-ийн суурь → вэб сайт, тоглоом.
 Шат 2: **асуудал → шийдэл → хэрэглэгч → мөнгө**. Код бол хэрэгсэл.
@@ -16,78 +16,93 @@
 
 | Модуль | Хичээл | Үр дүн |
 | ------ | ------ | ------ |
-| A. Санаа → Төлөвлөгөө | 1–2 | Ангийн төсөл сонгогдож, analysis + MVP төлөвлөгөө бэлэн |
-| B. Систем бүтээх | 3–6 | Ажилладаг сайт: каталог, захиалга, админ, төлбөр |
-| C. Сурталчилгаа + Launch | 7–11 | Брэнд, content, automation, анхны бодит борлуулалт |
-| D. Өөрийн төсөл | 12–17 | A → C-г бие даан давтана |
-| Pitch Day | 18 | Эцэг эх, зочдын өмнө pitch |
+| 0. Agentic AI | 1–2 | AI агент, skill: `deal-finder`, `ai-stylist` |
+| A. Санаа → Төлөвлөгөө | 3–4 | Ангийн төсөл сонгогдож, analysis + MVP төлөвлөгөө бэлэн |
+| B. Систем бүтээх | 5–8 | Ажилладаг сайт: каталог, захиалга, админ, төлбөр |
+| C. Сурталчилгаа + Launch | 9–13 | Брэнд, content, automation, анхны бодит борлуулалт |
+| D. Өөрийн төсөл | 14–19 | A → C-г бие даан давтана |
+| Pitch Day | 20 | Эцэг эх, зочдын өмнө pitch |
 
 > Модуль бүр дээр **дарж нээнэ**.
 
 <details>
-<summary><b>A. Санаа → Төлөвлөгөө</b> · Хичээл 1–2</summary>
+<summary><b>0. Agentic AI</b> · Хичээл 1–2</summary>
 
 <br>
 
 | # | Сэдэв | AI tool |
 | - | ----- | ------- |
-| 1 | **Kickoff:** технологи = асуудал шийдэх (бодит жишээ), багшийн 4 санаанаас **санал хураах** | Gemini / ChatGPT-ээс зөв асуух |
-| 2 | **Analysis + төлөвлөгөө:** хэрэглэгч хэн, өрсөлдөгч, Lean canvas, MVP, user flow, wireframe, task board · ГД: Google Forms судалгаа | Gemini / Perplexity-ээр судалгаа |
+| 1 | [Agentic AI](Хичээл%201%20-%20Agentic%20AI): бүтээлийн харьцуулалт, чатбот vs агент, Black Friday deal хайх → `deal-finder` skill | Codex (Claude, Antigravity — ижил санаа) |
+| 2 | [AI стилист](Хичээл%202%20-%20AI%20стилист): үс засалт 3x3, тохирох өнгө → `ai-stylist` skill · ГД: эцэг эх дээрээ турших | Codex, Gemini / ChatGPT зураг |
+
+Эх материал: `adult` branch — `Lab 8 - Claude` (Cowork, Skill). n8n хувилбар: [backup](backup/n8n%20AI%20Lab).
 
 </details>
 
 <details>
-<summary><b>B. Систем бүтээх</b> · Хичээл 3–6</summary>
+<summary><b>A. Санаа → Төлөвлөгөө</b> · Хичээл 3–4</summary>
 
 <br>
 
 | # | Сэдэв | AI tool |
 | - | ----- | ------- |
-| 3 | Landing page — AI Studio → GitHub → Vercel | — |
-| 4 | Бүтээгдэхүүн / үйлчилгээний жагсаалт — Firestore | Sheets + Gemini (дата бэлдэх) |
-| 5 | Захиалгын форм → Firestore + Discord / Telegram мэдэгдэл | — |
-| 6 | Админ + төлбөр (банк шилжүүлэг / QPay QR), өртөг, үнэ, ашиг | Sheets-ээр ашиг тооцох |
-
-Эх материал: [Service захиалга](../AI/Service%20захиалга) (5), [Админ хэсэг](../AI/Админ%20хэсэг) (6).
+| 3 | **Kickoff:** технологи = асуудал шийдэх (бодит жишээ), багшийн 4 санаанаас **санал хураах** | Gemini / ChatGPT-ээс зөв асуух |
+| 4 | **Analysis + төлөвлөгөө:** хэрэглэгч хэн, өрсөлдөгч, Lean canvas, MVP, user flow, wireframe, task board · ГД: Google Forms судалгаа | Gemini / Perplexity-ээр судалгаа |
 
 </details>
 
 <details>
-<summary><b>C. Сурталчилгаа + Launch</b> · Хичээл 7–11</summary>
+<summary><b>B. Систем бүтээх</b> · Хичээл 5–8</summary>
 
 <br>
 
 | # | Сэдэв | AI tool |
 | - | ----- | ------- |
-| 7 | **AI tool өдөр — сургууль, хичээл** (дадлага) | NotebookLM, Gemini Live, quiz / flashcards |
-| 8 | Брэнд: нэр, лого, өнгө, постер | Gemini image, Canva AI, Claude Skill |
-| 9 | Content: hook, caption, reel / short | CapCut, AI video |
-| 10 | Automation + **Launch**: пост хуваарь, авто хариулт, анхны борлуулалт, хэмжих | Make / n8n, Meta Business Suite |
-| 11 | **AI tool өдөр — ажил, бизнес** (дадлага) | Gamma, Gmail / Calendar AI, Claude |
+| 5 | Landing page — AI Studio → GitHub → Vercel | — |
+| 6 | Бүтээгдэхүүн / үйлчилгээний жагсаалт — Firestore | Sheets + Gemini (дата бэлдэх) |
+| 7 | Захиалгын форм → Firestore + Discord / Telegram мэдэгдэл | — |
+| 8 | Админ + төлбөр (банк шилжүүлэг / QPay QR), өртөг, үнэ, ашиг | Sheets-ээр ашиг тооцох |
 
-Эх материал: [NotebookLM](../AI/NotebookLM) (7), [Хичээл 17 adult.md](../Хичээл%2017%20-%20Street%20Fighter%202/adult.md) — Claude Skill, постер (8).
+Эх материал: [Service захиалга](../AI/Service%20захиалга) (7), [Админ хэсэг](../AI/Админ%20хэсэг) (8).
 
 </details>
 
 <details>
-<summary><b>D. Өөрийн төсөл</b> · Хичээл 12–17</summary>
+<summary><b>C. Сурталчилгаа + Launch</b> · Хичээл 9–13</summary>
+
+<br>
+
+| # | Сэдэв | AI tool |
+| - | ----- | ------- |
+| 9 | **AI tool өдөр — сургууль, хичээл** (дадлага) | NotebookLM, Gemini Live, quiz / flashcards |
+| 10 | Брэнд: нэр, лого, өнгө, постер | Gemini image, Canva AI, Claude Skill |
+| 11 | Content: hook, caption, reel / short | CapCut, AI video |
+| 12 | Automation + **Launch**: пост хуваарь, авто хариулт, анхны борлуулалт, хэмжих | Make / n8n, Meta Business Suite |
+| 13 | **AI tool өдөр — ажил, бизнес** (дадлага) | Gamma, Gmail / Calendar AI, Claude |
+
+Эх материал: [NotebookLM](../AI/NotebookLM) (9), [Хичээл 17 adult.md](../Хичээл%2017%20-%20Street%20Fighter%202/adult.md) — Claude Skill, постер (10).
+
+</details>
+
+<details>
+<summary><b>D. Өөрийн төсөл</b> · Хичээл 14–19</summary>
 
 <br>
 
 | # | Сэдэв |
 | - | ----- |
-| 12 | Баг бүрдүүлэх, санаа сонгох, analysis + төлөвлөгөө (Хичээл 1–2-ыг нэг хичээлд) |
-| 13 | MVP эхлэх |
-| 14 | MVP дуусгах + төлбөр |
-| 15 | Сурталчилгаа + бодит хэрэглэгч |
-| 16 | Тоо баримт, сайжруулах |
-| 17 | Pitch deck (Gamma) + давтлага |
-| 18 | **Pitch Day** — асуудал, шийдэл, хэрэглэгч, орлого |
+| 14 | Баг бүрдүүлэх, санаа сонгох, analysis + төлөвлөгөө (Хичээл 3–4-ийг нэг хичээлд) |
+| 15 | MVP эхлэх |
+| 16 | MVP дуусгах + төлбөр |
+| 17 | Сурталчилгаа + бодит хэрэглэгч |
+| 18 | Тоо баримт, сайжруулах |
+| 19 | Pitch deck (Gamma) + давтлага |
+| 20 | **Pitch Day** — асуудал, шийдэл, хэрэглэгч, орлого |
 
 </details>
 
 <details>
-<summary><b>Хичээл 1-ийн санал хураалтын 4 санаа</b></summary>
+<summary><b>Хичээл 3-ын санал хураалтын 4 санаа</b></summary>
 
 <br>
 
@@ -107,7 +122,7 @@
 
 <br>
 
-- Бодит борлуулалт — **эцэг эхийн зөвшөөрөлтэй**, төлбөр эцэг эхийн данс руу (зөвшөөрлийн хуудас Хичээл 1-д).
+- Бодит борлуулалт — **эцэг эхийн зөвшөөрөлтэй**, төлбөр эцэг эхийн данс руу (зөвшөөрлийн хуудас Хичээл 1-д, **нүүрний зураг** AI-д оруулах заалттай).
 - Хэрэглэгчийн мэдээлэл (утас, хаяг) — Firestore Rules-ээр хамгаална, нийтэд харуулахгүй.
 
 </details>
