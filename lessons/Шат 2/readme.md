@@ -33,7 +33,7 @@
 | # | Сэдэв | AI tool |
 | - | ----- | ------- |
 | 1 | [Agentic AI](Хичээл%201%20-%20Agentic%20AI): бүтээлийн харьцуулалт, чатбот vs агент, Black Friday deal хайх → `deal-finder` skill, үс засалт 3x3 | Codex (Claude, Antigravity — ижил санаа), Gemini / ChatGPT зураг |
-| 2 | [Claude + AI стилист](Хичээл%202%20-%20AI%20стилист): Claude-ийн боломжууд, skill үүсгэх, тохирох өнгө → `ai-stylist` skill · ГД: эцэг эх дээрээ турших | Claude (багш), Codex |
+| 2 | [Claude + AI стилист](Хичээл%202%20-%20AI%20стилист): Claude-ийн боломжууд, skill үүсгэх, тохирох өнгө → `ai-stylist` skill · Гэрийн даалгавар: эцэг эх дээрээ турших | Claude (багш), Codex |
 
 Эх материал: [reference/Lab 8 - Claude](../../reference/Lab%208%20-%20Claude) (`adult` branch-аас хуулсан). n8n хувилбар: [backup](backup/n8n%20AI%20Lab).
 
@@ -47,7 +47,7 @@
 | # | Сэдэв | AI tool |
 | - | ----- | ------- |
 | 3 | **Kickoff:** технологи = асуудал шийдэх (бодит жишээ), багшийн 4 санаанаас **санал хураах** | Gemini / ChatGPT-ээс зөв асуух |
-| 4 | **Analysis + төлөвлөгөө:** хэрэглэгч хэн, өрсөлдөгч, Lean canvas, MVP, user flow, wireframe, task board · ГД: Google Forms судалгаа | Gemini / Perplexity-ээр судалгаа |
+| 4 | **Analysis + төлөвлөгөө:** хэрэглэгч хэн, өрсөлдөгч, Lean canvas, MVP, user flow, wireframe, task board · Гэрийн даалгавар: Google Forms судалгаа | Gemini / Perplexity-ээр судалгаа |
 
 </details>
 
