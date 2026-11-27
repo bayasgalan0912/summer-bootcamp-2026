@@ -23,7 +23,7 @@
 
 <br>
 
-Claude = чатлах хэрэгсэл биш, таны өмнөөс ажилладаг **дижитал ажилтан**. Багш [claude.com/download](https://claude.com/download)-аас суулгасан desktop app дээр үзүүлнэ (Claude 18+).
+Claude = чатлах хэрэгсэл биш, таны өмнөөс ажилладаг **дижитал ажилтан**. [claude.com/download](https://claude.com/download)-аас суулгасан desktop app дээр үзнэ (Claude 18+).
 
 | Боломж | Юу хийдэг | Жишээ |
 | ------ | --------- | ----- |
@@ -39,11 +39,11 @@ Claude = чатлах хэрэгсэл биш, таны өмнөөс ажилл�
 | **Chrome** | Browser tab-тай ажиллана | Сайтаас мэдээлэл цуглуулах |
 
 <details>
-<summary>Багшид — demo санаа (5 мин)</summary>
+<summary>Demo санаа (5 мин)</summary>
 
 - Connectors: Calendar холбоод "Энэ 7 хоногийн хуваарийг хүснэгтээр гарга".
 - Artifacts: "Хичээл 1-ийн Black Friday хүснэгтийг гоё вэб хуудас болго".
-- Global instructions-ээ харуул (Монголоор, эргэлзвэл асуух, товч).
+- Global instructions-ийг хар (Монголоор, эргэлзвэл асуух, товч).
 
 </details>
 
