@@ -30,15 +30,16 @@
 
 Санаа ижил, нэр л өөр.
 
-| Юу хийдэг                          | Claude desktop  | ChatGPT desktop                            |
-| ---------------------------------- | --------------- | ------------------------------------------ |
-| Компьютер дээр ажилладаг агент     | Cowork          | **Work**                                   |
-| Кодын агент                        | Code            | **Codex**                                  |
-| Дахин ашиглах заавар               | Skills          | **Skills**                                 |
-| Gmail, Calendar г.м. апп холбох    | Connectors      | **Plugins** (хуучин нэр Apps / Connectors) |
-| Утаснаас компьютерт даалгавар өгөх | Dispatch        | **Remote**                                 |
-| Цагт нь автоматаар ажиллах         | Scheduled tasks | **Scheduled**                              |
-| Дэлгэц харж, товч дарах            | Computer use    | **Computer use**                           |
+| Юу хийдэг                          | Claude desktop   | ChatGPT desktop                            |
+| ---------------------------------- | ---------------- | ------------------------------------------ |
+| Компьютер дээр ажилладаг агент     | Cowork           | **Work**                                   |
+| Кодын агент                        | Code             | **Codex**                                  |
+| Дахин ашиглах заавар               | Skills           | **Skills**                                 |
+| Gmail, Calendar г.м. апп холбох    | Connectors       | **Plugins** (хуучин нэр Apps / Connectors) |
+| Утаснаас компьютерт даалгавар өгөх | Dispatch         | **Remote**                                 |
+| Цагт нь автоматаар ажиллах         | Scheduled tasks  | **Scheduled**                              |
+| Дэлгэц харж, товч дарах            | Computer use     | **Computer use**                           |
+| Нэвтэрсэн Chrome-оо ашиглах        | Claude in Chrome | **@Chrome** extension                      |
 
 </details>
 
