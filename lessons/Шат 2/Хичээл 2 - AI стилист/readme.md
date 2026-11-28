@@ -23,7 +23,7 @@
 
 <br>
 
-Claude = чатлах хэрэгсэл биш, таны өмнөөс ажилладаг **дижитал ажилтан**. [claude.com/download](https://claude.com/download)-аас суулгасан desktop app дээр үзнэ (Claude 18+).
+Claude = чатлах хэрэгсэл биш, таны өмнөөс ажилладаг **дижитал ажилтан**. [claude.com/download](https://claude.com/download)-аас суулгасан desktop app дээр үзнэ.
 
 | Боломж | Юу хийдэг | Жишээ |
 | ------ | --------- | ----- |

@@ -7,11 +7,11 @@ AI-г зөвхөн чатлах хэрэгсэл биш, таны өмнөөс �
 
 | #   | Хэсэг                                 | Хугацаа |
 | --- | ------------------------------------- | ------- |
-| 1   | AI-ийн бүтээлүүд, харьцуулалт         | 10 мин  |
+| 1   | AI-ийн бүтээлүүд                      | 5 мин   |
 | 2   | Чатбот vs Агент                       | 10 мин  |
 | 3   | Agentic tool-ууд = нэг санаа          | 5 мин   |
-| 4   | ChatGPT desktop setup → хувийн туслах | 25 мин  |
-| 5   | Дасгал ажил: Дасгал 1, 2              | 65 мин  |
+| 4   | ChatGPT desktop setup → хувийн туслах | 35 мин  |
+| 5   | Дасгал ажил: Дасгал 1, 2              | 60 мин  |
 | 6   | Дүгнэлт, гэрийн даалгавар             | 5 мин   |
 
 > Хэсэг бүр дээр **дарж нээнэ**.
@@ -19,7 +19,7 @@ AI-г зөвхөн чатлах хэрэгсэл биш, таны өмнөөс �
 ---
 
 <details>
-<summary><b>1. AI-ийн бүтээлүүд, харьцуулалт</b> · 10 мин</summary>
+<summary><b>1. AI-ийн бүтээлүүд</b> · 5 мин</summary>
 
 <br>
 
@@ -29,23 +29,6 @@ AI-г зөвхөн чатлах хэрэгсэл биш, таны өмнөөс �
 | 2   | Claude Fable 5.2                | [Instagram](https://www.instagram.com/p/DfmVFX0kg7T/?img_index=5) · [2](https://www.instagram.com/p/DfosPNZkqC0/?img_index=4) |
 | 3   | GPT Astra / Sol, Opus           | [N1njaCodex profile](https://www.instagram.com/N1njaCodex/)                                                                   |
 | 4   | Gemini (хамгийн сүүлийн загвар) | _(линк)_                                                                                                                      |
-
-**Харьцуулалт** — самбар дээр ангиараа оноо өгнө (1–5):
-
-| Шалгуур               | Opus | Fable | GPT | Gemini |
-| --------------------- | :--: | :---: | :-: | :----: |
-| Гоё харагдах          |      |       |     |        |
-| Prompt-ыг зөв дагасан |      |       |     |        |
-| Хурд                  |      |       |     |        |
-| Үнэ (free tier)       |      |       |     |        |
-
-<details>
-<summary>Тайлбар</summary>
-
-- Ялагч гэж байхгүй — **даалгавраас** хамаарч өөр загвар сайн байдаг.
-- Нэг prompt-ыг олон загварт өгсөн бүтээл байвал хамгийн тод харьцуулалт болно.
-
-</details>
 
 </details>
 
@@ -88,7 +71,7 @@ ai-lab хавтсанд "өнөөдөр.md" файл үүсгээд өнөөдр
 | Tool                                      | Компани   | Тэмдэглэл                                                |
 | ----------------------------------------- | --------- | -------------------------------------------------------- |
 | **ChatGPT desktop** (Chat / Work / Codex) | OpenAI    | **Бид үүнийг ашиглана** · Codex 2026 оноос энэ апп дотор |
-| Claude desktop (Chat / Cowork / Code)     | Anthropic | 18+ · Хичээл 2-т дэлгэрэнгүй                             |
+| Claude desktop (Chat / Cowork / Code)     | Anthropic | Хичээл 2-т дэлгэрэнгүй                                   |
 | Antigravity                               | Google    | Agentic IDE                                              |
 
 Нийтлэг ойлголт: **prompt → төлөвлөгөө → зөвшөөрөл → үйлдэл → skill**.
@@ -96,11 +79,11 @@ ai-lab хавтсанд "өнөөдөр.md" файл үүсгээд өнөөдр
 </details>
 
 <details>
-<summary><b>4. ChatGPT desktop setup → хувийн туслах</b> · 25 мин</summary>
+<summary><b>4. ChatGPT desktop setup → хувийн туслах</b> · 35 мин</summary>
 
 <br>
 
-**A. Setup** · 12 мин
+**A. Setup** · 10 мин
 
 1. [chatgpt.com/download](https://chatgpt.com/download)-аас ChatGPT desktop (Mac / Windows) суулгаж, account-аараа нэвтэр (хүүхэд — эцэг эхийн зөвшөөрөлтэй).
 2. Дээд талд 3 таб: **Chat**, **Work**, **Codex**. Бид **Work**-ийг ашиглана.
@@ -140,7 +123,23 @@ ai-lab хавтсанд "өнөөдөр.md" файл үүсгээд өнөөдр
 
 </details>
 
-**B. Хувийн туслах: Daily Digest** · 13 мин
+**Монголоор дуугаар prompt бичих (Chimege)** · 5 мин — бичихээс 3 дахин хурдан.
+
+1. Утсандаа **Chimege Keyboard** суулга: [App Store](https://apps.apple.com/us/app/id1521445021) · Google Play-д `Chimege` гэж хай.
+2. Утасны Settings → Keyboard → Chimege-ийг нэмж, бүрэн эрх (Full Access) зөвшөөр.
+3. Утасны ChatGPT app-аа компьютертэйгээ **нэг account**-аар нээ → keyboard-оо Chimege болго → микрофон дараад монголоор ярь.
+4. Илгээсэн чат компьютерийн ChatGPT-д ч гарч ирнэ.
+
+<details>
+<summary>Тайлбар</summary>
+
+- Нэг удаа ~10 секунд л бичдэг — **богино хэсэгчлэн** ярь.
+- Илгээхээсээ өмнө текстээ уншаад алдааг засаарай.
+- Англи нэр томъёог (skill, Chrome) гараар бичих нь найдвартай.
+
+</details>
+
+**B. Хувийн туслах: Daily Digest** · 10 мин
 
 Өглөө бүр 07:00-д ChatGPT өөрөө Calendar, Gmail-ийг уншаад өдрийн товчоо бэлдэнэ.
 
@@ -169,31 +168,28 @@ ai-lab хавтсанд "өнөөдөр.md" файл үүсгээд өнөөдр
 
 </details>
 
+**C. ChatGPT-г хувийн туслах шиг ашиглах trick** · 10 мин
+
+| Trick | Яаж |
+| ----- | --- |
+| Санах ой | `Санаж ав: би 7-р ангид сурдаг, математикт дуртай.` → дахин хэлэх хэрэггүй. Settings → Personalization → **Memory**-д харж, устгана |
+| Эхлээд асуулга | Prompt-ын төгсгөлд `Хариулахаасаа өмнө надаас 3 асуулт асуу.` |
+| Хэлбэр заах | `хүснэгтээр`, `3 мөрөөр`, `12 настай хүүхдэд ойлгогдохоор` |
+| Screenshot | Ойлгомжгүй зүйлийн зургийг хавсаргаад `Энэ юу гэсэн үг вэ?` |
+| Project | Нэг сэдвийн чатыг (жишээ нь "Хичээл") **Project**-д цуглуул — файл, заавар нь санагдана |
+| Temporary chat | Хувийн зүйл асуухдаа — санах ойд үлдэхгүй |
+| Дуут чат | Voice mode-оор ярилцаж англи хэлээ давтах |
+
+Нэгийг сонгоод одоо турш.
+
 Гэртээ: утаснаас компьютерт даалгавар өгөх (Remote), өөр scheduled санаа — [chatgpt-desktop.md](chatgpt-desktop.md).
 
 <details>
-<summary>Claude desktop setup (Adult 18+)</summary>
+<summary>Claude desktop setup</summary>
 
 <br>
 
-ChatGPT-ийн оронд Claude ашиглаж болно — дасгалууд ижил. Дэлгэрэнгүй: [claude-cowork.md](../../../reference/Lab%208%20-%20Claude/1-cowork/claude-cowork.md) (1.2 Тохиргоо).
-
-1. [claude.com/download](https://claude.com/download)-аас суулгаж нэвтэр. Дээд талд 3 таб: **Chat**, **Cowork**, **Code**.
-2. **Cowork** табыг сонгоод `ai-lab` хавтсаа ажлын хавтас болго.
-3. Settings → **Capabilities** → Artifacts, Inline Visualizations-ийг асаа.
-4. Settings → **General** → Instructions for Claude-д хуул:
-
-```text
-- Монгол хэлээр харилцах (Англи нэршил)
-- Эргэлзээтэй зүйл дээр таахын оронд асууж байх
-- Нэг гаргасан алдаагаа дахин гаргахгүйн тулд тэмдэглэж байх
-- Нуршсан текстын оронд богино, тодорхой хариулт өгөх
-```
-
-5. **Chrome extension** суулгаж холбо — Дасгал 1-д вэб хайхад хэрэгтэй.
-6. Тест: `Сайн уу! Чи юу хийж чадах вэ? 3 мөрөөр хариул.`
-
-Connectors, Dispatch, Memory import — Хичээл 2-т.
+ChatGPT-ийн оронд Claude ашиглаж болно — дасгалууд ижил. Setup заавар: [claude-cowork.md — 1.2 Тохиргоо](../../../reference/Lab%208%20-%20Claude/1-cowork/claude-cowork.md#12-тохиргоо-setup).
 
 </details>
 
@@ -206,14 +202,14 @@ Connectors, Dispatch, Memory import — Хичээл 2-т.
 
 | #   | Дасгал                                  | Хугацаа |
 | --- | --------------------------------------- | ------- |
-| 1   | Black Friday deal → `deal-finder` skill | 40 мин  |
+| 1   | Black Friday deal → `deal-finder` skill | 35 мин  |
 | 2   | Үс засалт 3x3                           | 25 мин  |
 
 ### Дасгал 1: Black Friday deal → `deal-finder` skill
 
 **Зорилго:** AI агент интернэтээс хямдрал хайж, **эх сурвалжтай** хүснэгт гаргана → дараа нь skill болгоно.
 
-**A. Хайх** · 25 мин
+**A. Хайх** · 22 мин
 
 1. Нэг бараа сонго (жишээ нь AirPods, пүүз, гоо сайхан).
 2. Prompt өг:
@@ -241,7 +237,7 @@ Facebook, Instagram-ийн ихэнх пост нэвтрэлт (login) шаар
 
 </details>
 
-**B. Skill болгох** · 15 мин
+**B. Skill болгох** · 13 мин
 
 **Skill** = нэг удаа заагаад, олон удаа ашиглах заавар. Prompt-оо дахин бичихгүй.
 
